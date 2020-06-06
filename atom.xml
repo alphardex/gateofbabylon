@@ -6,7 +6,7 @@
   <link href="/gateofbabylon/atom.xml" rel="self"/>
   
   <link href="https://alphardex.github.io/gateofbabylon/"/>
-  <updated>2020-06-06T12:45:57.684Z</updated>
+  <updated>2020-06-06T13:11:05.211Z</updated>
   <id>https://alphardex.github.io/gateofbabylon/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>我写CSS的常用套路</title>
-    <link href="https://alphardex.github.io/gateofbabylon/2020/06/06/%E6%88%91%E5%86%99CSS%E7%9A%84%E5%B8%B8%E7%94%A8%E5%A5%97%E8%B7%AF/"/>
-    <id>https://alphardex.github.io/gateofbabylon/2020/06/06/%E6%88%91%E5%86%99CSS%E7%9A%84%E5%B8%B8%E7%94%A8%E5%A5%97%E8%B7%AF/</id>
+    <link href="https://alphardex.github.io/gateofbabylon/posts/17061/"/>
+    <id>https://alphardex.github.io/gateofbabylon/posts/17061/</id>
     <published>2020-06-06T09:23:00.000Z</published>
-    <updated>2020-06-06T12:45:57.684Z</updated>
+    <updated>2020-06-06T13:11:05.211Z</updated>
     
     <summary type="html">
     
@@ -41,10 +41,10 @@
   
   <entry>
     <title>DOM的常用API速查表</title>
-    <link href="https://alphardex.github.io/gateofbabylon/2020/06/06/DOM%E7%9A%84%E5%B8%B8%E7%94%A8API%E9%80%9F%E6%9F%A5%E8%A1%A8/"/>
-    <id>https://alphardex.github.io/gateofbabylon/2020/06/06/DOM%E7%9A%84%E5%B8%B8%E7%94%A8API%E9%80%9F%E6%9F%A5%E8%A1%A8/</id>
+    <link href="https://alphardex.github.io/gateofbabylon/posts/20873/"/>
+    <id>https://alphardex.github.io/gateofbabylon/posts/20873/</id>
     <published>2020-06-06T09:22:00.000Z</published>
-    <updated>2020-06-06T12:45:57.684Z</updated>
+    <updated>2020-06-06T13:11:05.211Z</updated>
     
     <summary type="html">
     
@@ -67,10 +67,10 @@
   
   <entry>
     <title>JavaScript的常用API速查表</title>
-    <link href="https://alphardex.github.io/gateofbabylon/2020/06/06/JavaScript%E7%9A%84%E5%B8%B8%E7%94%A8API%E9%80%9F%E6%9F%A5%E8%A1%A8/"/>
-    <id>https://alphardex.github.io/gateofbabylon/2020/06/06/JavaScript%E7%9A%84%E5%B8%B8%E7%94%A8API%E9%80%9F%E6%9F%A5%E8%A1%A8/</id>
+    <link href="https://alphardex.github.io/gateofbabylon/posts/59160/"/>
+    <id>https://alphardex.github.io/gateofbabylon/posts/59160/</id>
     <published>2020-06-06T09:13:00.000Z</published>
-    <updated>2020-06-06T12:45:57.684Z</updated>
+    <updated>2020-06-06T13:11:05.211Z</updated>
     
     <summary type="html">
     
@@ -90,10 +90,10 @@
   
   <entry>
     <title>CSS的常用属性速查表</title>
-    <link href="https://alphardex.github.io/gateofbabylon/2020/06/06/CSS%E7%9A%84%E5%B8%B8%E7%94%A8%E5%B1%9E%E6%80%A7%E9%80%9F%E6%9F%A5%E8%A1%A8/"/>
-    <id>https://alphardex.github.io/gateofbabylon/2020/06/06/CSS%E7%9A%84%E5%B8%B8%E7%94%A8%E5%B1%9E%E6%80%A7%E9%80%9F%E6%9F%A5%E8%A1%A8/</id>
+    <link href="https://alphardex.github.io/gateofbabylon/posts/28164/"/>
+    <id>https://alphardex.github.io/gateofbabylon/posts/28164/</id>
     <published>2020-06-06T09:11:00.000Z</published>
-    <updated>2020-06-06T12:45:57.684Z</updated>
+    <updated>2020-06-06T13:11:05.211Z</updated>
     
     <summary type="html">
     
@@ -114,10 +114,10 @@
   
   <entry>
     <title>前端必备的实用工具</title>
-    <link href="https://alphardex.github.io/gateofbabylon/2020/06/06/%E5%89%8D%E7%AB%AF%E5%BF%85%E5%A4%87%E7%9A%84%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/"/>
-    <id>https://alphardex.github.io/gateofbabylon/2020/06/06/%E5%89%8D%E7%AB%AF%E5%BF%85%E5%A4%87%E7%9A%84%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/</id>
+    <link href="https://alphardex.github.io/gateofbabylon/posts/16823/"/>
+    <id>https://alphardex.github.io/gateofbabylon/posts/16823/</id>
     <published>2020-06-06T09:10:00.000Z</published>
-    <updated>2020-06-06T12:45:57.684Z</updated>
+    <updated>2020-06-06T13:11:05.211Z</updated>
     
     <summary type="html">
     
@@ -135,10 +135,10 @@
   
   <entry>
     <title>JavaScript语言专属特性</title>
-    <link href="https://alphardex.github.io/gateofbabylon/2020/06/06/hello-world/"/>
-    <id>https://alphardex.github.io/gateofbabylon/2020/06/06/hello-world/</id>
+    <link href="https://alphardex.github.io/gateofbabylon/posts/32589/"/>
+    <id>https://alphardex.github.io/gateofbabylon/posts/32589/</id>
     <published>2020-06-06T08:57:00.000Z</published>
-    <updated>2020-06-06T12:45:57.684Z</updated>
+    <updated>2020-06-06T13:11:05.211Z</updated>
     
     <summary type="html">
     
