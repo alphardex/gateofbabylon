@@ -16,8 +16,8 @@ timezone: 'Asia/Shanghai'
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://gateofbabylon.com
-root: /
+url: https://alphardex.github.io/gateofbabylon/
+root: /gateofbabylon/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
