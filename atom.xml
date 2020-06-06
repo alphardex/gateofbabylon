@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>A大的图书馆</title>
+  
+  <subtitle>我乃CSS魔法师是也！</subtitle>
+  <link href="/gateofbabylon/atom.xml" rel="self"/>
+  
+  <link href="https://alphardex.github.io/gateofbabylon/"/>
+  <updated>2020-06-06T12:45:57.684Z</updated>
+  <id>https://alphardex.github.io/gateofbabylon/</id>
+  
+  <author>
+    <name>alphardex</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>我写CSS的常用套路</title>
+    <link href="https://alphardex.github.io/gateofbabylon/2020/06/06/%E6%88%91%E5%86%99CSS%E7%9A%84%E5%B8%B8%E7%94%A8%E5%A5%97%E8%B7%AF/"/>
+    <id>https://alphardex.github.io/gateofbabylon/2020/06/06/%E6%88%91%E5%86%99CSS%E7%9A%84%E5%B8%B8%E7%94%A8%E5%A5%97%E8%B7%AF/</id>
+    <published>2020-06-06T09:23:00.000Z</published>
+    <updated>2020-06-06T12:45:57.684Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;本文是笔者写CSS时常用的套路。不论效果再怎么华丽，万变不离其宗。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="https://alphardex.github.io/gateofbabylon/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="CSS" scheme="https://alphardex.github.io/gateofbabylon/tags/CSS/"/>
+    
+      <category term="Tricks" scheme="https://alphardex.github.io/gateofbabylon/tags/Tricks/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>DOM的常用API速查表</title>
+    <link href="https://alphardex.github.io/gateofbabylon/2020/06/06/DOM%E7%9A%84%E5%B8%B8%E7%94%A8API%E9%80%9F%E6%9F%A5%E8%A1%A8/"/>
+    <id>https://alphardex.github.io/gateofbabylon/2020/06/06/DOM%E7%9A%84%E5%B8%B8%E7%94%A8API%E9%80%9F%E6%9F%A5%E8%A1%A8/</id>
+    <published>2020-06-06T09:22:00.000Z</published>
+    <updated>2020-06-06T12:45:57.684Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;大多数情况下，笔者坚信能用CSS解决的，就不会用JS来解决&lt;/p&gt;
+&lt;p&gt;但是，CSS在某些情况下还是有一定的局限性，比如跟踪鼠标事件，监视页面滚动等&lt;/p&gt;
+&lt;p&gt;这时，我们就要借助强大的DOM API了，在不用框架的基础上，就能用原生JS华丽地解决一些常见但CSS做不到的需求&lt;/p&gt;
+&lt;p&gt;本文罗列了笔者平时最常用的DOM API&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="https://alphardex.github.io/gateofbabylon/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="JavaScript" scheme="https://alphardex.github.io/gateofbabylon/tags/JavaScript/"/>
+    
+      <category term="DOM" scheme="https://alphardex.github.io/gateofbabylon/tags/DOM/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript的常用API速查表</title>
+    <link href="https://alphardex.github.io/gateofbabylon/2020/06/06/JavaScript%E7%9A%84%E5%B8%B8%E7%94%A8API%E9%80%9F%E6%9F%A5%E8%A1%A8/"/>
+    <id>https://alphardex.github.io/gateofbabylon/2020/06/06/JavaScript%E7%9A%84%E5%B8%B8%E7%94%A8API%E9%80%9F%E6%9F%A5%E8%A1%A8/</id>
+    <published>2020-06-06T09:13:00.000Z</published>
+    <updated>2020-06-06T12:45:57.684Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文罗列了JavaScript的常用API。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="https://alphardex.github.io/gateofbabylon/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="Cheatsheet" scheme="https://alphardex.github.io/gateofbabylon/tags/Cheatsheet/"/>
+    
+      <category term="JavaScript" scheme="https://alphardex.github.io/gateofbabylon/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS的常用属性速查表</title>
+    <link href="https://alphardex.github.io/gateofbabylon/2020/06/06/CSS%E7%9A%84%E5%B8%B8%E7%94%A8%E5%B1%9E%E6%80%A7%E9%80%9F%E6%9F%A5%E8%A1%A8/"/>
+    <id>https://alphardex.github.io/gateofbabylon/2020/06/06/CSS%E7%9A%84%E5%B8%B8%E7%94%A8%E5%B1%9E%E6%80%A7%E9%80%9F%E6%9F%A5%E8%A1%A8/</id>
+    <published>2020-06-06T09:11:00.000Z</published>
+    <updated>2020-06-06T12:45:57.684Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;要想写出优美的CSS作品，想象力固然很重要，然而基础也是不可忽略的。相信大部分人怕写CSS的原因是被它庞大的基础知识体系给吓到了，在此笔者推荐一个叫&lt;a href=&quot;http://freecodecamp.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;freecodecamp&lt;/a&gt;的网站，通过闯关的方式来学习前端三剑客，用它入门CSS是最佳的选择！&lt;/p&gt;
+&lt;p&gt;当你成功地入了门之后，便可以开始探索CSS的全貌了。本文是CSS属性的速查表，配合&lt;a href=&quot;https://devdocs.io&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;在线API文档&lt;/a&gt;使用即可&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="https://alphardex.github.io/gateofbabylon/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="CSS" scheme="https://alphardex.github.io/gateofbabylon/tags/CSS/"/>
+    
+      <category term="Cheatsheet" scheme="https://alphardex.github.io/gateofbabylon/tags/Cheatsheet/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端必备的实用工具</title>
+    <link href="https://alphardex.github.io/gateofbabylon/2020/06/06/%E5%89%8D%E7%AB%AF%E5%BF%85%E5%A4%87%E7%9A%84%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/"/>
+    <id>https://alphardex.github.io/gateofbabylon/2020/06/06/%E5%89%8D%E7%AB%AF%E5%BF%85%E5%A4%87%E7%9A%84%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/</id>
+    <published>2020-06-06T09:10:00.000Z</published>
+    <updated>2020-06-06T12:45:57.684Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;工欲善其事，必先利其器。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="https://alphardex.github.io/gateofbabylon/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="Tools" scheme="https://alphardex.github.io/gateofbabylon/tags/Tools/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript语言专属特性</title>
+    <link href="https://alphardex.github.io/gateofbabylon/2020/06/06/hello-world/"/>
+    <id>https://alphardex.github.io/gateofbabylon/2020/06/06/hello-world/</id>
+    <published>2020-06-06T08:57:00.000Z</published>
+    <updated>2020-06-06T12:45:57.684Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文归纳了笔者最常用的 JavaScript 语言专属特性。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="https://alphardex.github.io/gateofbabylon/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="JavaScript" scheme="https://alphardex.github.io/gateofbabylon/tags/JavaScript/"/>
+    
+  </entry>
+  
+</feed>
