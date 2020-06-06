@@ -1,0 +1,176 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="我写CSS的常用套路"><meta name="keywords" content="CSS,Tricks"><meta name="author" content="alphardex"><meta name="copyright" content="alphardex"><title>我写CSS的常用套路 | A大的图书馆</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.7.0"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script><meta name="generator" content="Hexo 4.2.1"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#交错动画"><span class="toc-number">2.</span> <span class="toc-text">交错动画</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#用JS分割文本"><span class="toc-number">2.1.</span> <span class="toc-text">用JS分割文本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#不同位置的交错动画"><span class="toc-number">2.2.</span> <span class="toc-text">不同位置的交错动画</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#随机粒子动画"><span class="toc-number">2.3.</span> <span class="toc-text">随机粒子动画</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#伪类和伪元素"><span class="toc-number">3.</span> <span class="toc-text">伪类和伪元素</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#伪类"><span class="toc-number">3.1.</span> <span class="toc-text">伪类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#绝对定位实现多重边框"><span class="toc-number">3.1.1.</span> <span class="toc-text">绝对定位实现多重边框</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#伪元素"><span class="toc-number">3.2.</span> <span class="toc-text">伪元素</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#attr-生成文本内容"><span class="toc-number">3.2.1.</span> <span class="toc-text">attr()生成文本内容</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#overflow障眼法"><span class="toc-number">4.</span> <span class="toc-text">overflow障眼法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#自定义input"><span class="toc-number">5.</span> <span class="toc-text">自定义input</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CSS特性"><span class="toc-number">6.</span> <span class="toc-text">CSS特性</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#animation"><span class="toc-number">6.1.</span> <span class="toc-text">animation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#border-radius"><span class="toc-number">6.2.</span> <span class="toc-text">border-radius</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#不规则的曲边形状"><span class="toc-number">6.2.1.</span> <span class="toc-text">不规则的曲边形状</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#box-shadow"><span class="toc-number">6.3.</span> <span class="toc-text">box-shadow</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#内发光"><span class="toc-number">6.3.1.</span> <span class="toc-text">内发光</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#text-shadow"><span class="toc-number">6.4.</span> <span class="toc-text">text-shadow</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#发光文本"><span class="toc-number">6.4.1.</span> <span class="toc-text">发光文本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#霓虹文本"><span class="toc-number">6.4.2.</span> <span class="toc-text">霓虹文本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#伪3D文本"><span class="toc-number">6.4.3.</span> <span class="toc-text">伪3D文本</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#background-clip-text"><span class="toc-number">6.5.</span> <span class="toc-text">background-clip:text</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#gradient"><span class="toc-number">6.6.</span> <span class="toc-text">gradient</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#linear-gradient"><span class="toc-number">6.6.1.</span> <span class="toc-text">linear-gradient</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#radial-gradient"><span class="toc-number">6.6.2.</span> <span class="toc-text">radial-gradient</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#conic-gradient"><span class="toc-number">6.6.3.</span> <span class="toc-text">conic-gradient</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#filter"><span class="toc-number">6.7.</span> <span class="toc-text">filter</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#融合效果"><span class="toc-number">6.7.1.</span> <span class="toc-text">融合效果</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#backdrop-filter"><span class="toc-number">6.8.</span> <span class="toc-text">backdrop-filter</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mix-blend-mode"><span class="toc-number">6.9.</span> <span class="toc-text">mix-blend-mode</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#clip-path"><span class="toc-number">6.10.</span> <span class="toc-text">clip-path</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#故障效果"><span class="toc-number">6.10.1.</span> <span class="toc-text">故障效果</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mask"><span class="toc-number">6.11.</span> <span class="toc-text">mask</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#镂空效果"><span class="toc-number">6.11.1.</span> <span class="toc-text">镂空效果</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#webkit-box-reflect"><span class="toc-number">6.12.</span> <span class="toc-text">-webkit-box-reflect</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web-animations"><span class="toc-number">6.13.</span> <span class="toc-text">web animations</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#跟踪鼠标的位置"><span class="toc-number">6.13.1.</span> <span class="toc-text">跟踪鼠标的位置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS-Houdini"><span class="toc-number">6.14.</span> <span class="toc-text">CSS Houdini</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#让渐变动起来"><span class="toc-number">6.14.1.</span> <span class="toc-text">让渐变动起来</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#彩蛋"><span class="toc-number">7.</span> <span class="toc-text">彩蛋</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#最后"><span class="toc-number">8.</span> <span class="toc-text">最后</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="/img/avatar.png"></div><div class="author-info__name text-center">alphardex</div><div class="author-info__description text-center">分享CSS、JavaScript等前端技术。</div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">6</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">Tags</span><span class="pull-right">6</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">Categories</span><span class="pull-right">1</span></a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://i.loli.net/2019/09/13/i2hKyDUGIE4sVJv.jpg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">A大的图书馆</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a><a class="site-page" href="/about">About</a></span><span class="pull-right"></span></div><div id="post-info"><div id="post-title">我写CSS的常用套路</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-06-06</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本文是笔者写CSS时常用的套路。不论效果再怎么华丽，万变不离其宗。</p>
+<a id="more"></a>
+
+<h1 id="交错动画"><a href="#交错动画" class="headerlink" title="交错动画"></a>交错动画</h1><p><img src="https://user-gold-cdn.xitu.io/2020/2/10/1702ee051447ef55?w=1110&h=726&f=gif&s=135905" alt=""></p>
+<p>有时候，我们需要给多个元素添加同一个动画，播放后，不难发现它们会一起运动，一起结束，这样就会显得很平淡无奇。</p>
+<p>那么如何将动画变得稍微有趣一点呢？很简单，既然它们都是同一时刻开始运动的，那么让它们不在同一时刻运动不就可以了吗。如何让它们不在同一时刻运动呢？注意到CSS动画有延迟（<code>delay</code>）这一属性。举个栗子，比如有十个元素播放十个动画，将第二个元素的动画播放时间设定为比第一个元素晚0.5秒（也就是将延迟设为0.5秒），其他元素以此类推，这样它们就会错开来，形成一种独特的视觉效果。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/2/10/1702ee0514569bd2?w=1110&h=726&f=gif&s=135799" alt=""></p>
+<p>这就是所谓的交错动画：通过设置不同的延迟时间，达到动画交错播放的效果。</p>
+<p>本demo地址：<a href="https://codepen.io/alphardex/pen/XWWWBmQ" target="_blank" rel="noopener">Staggered Wave Loading</a></p>
+<h2 id="用JS分割文本"><a href="#用JS分割文本" class="headerlink" title="用JS分割文本"></a>用JS分割文本</h2><p>还有一种经常用到的玩法：用JS将句子或单词分割成字母，并给每个字母加上不同延时的动画，同样也很华丽</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/2/8/1702507ba8f9dbf3?w=1110&h=726&f=gif&s=903374" alt=""></p>
+<p>本demo地址：<a href="https://codepen.io/alphardex/full/KKwvKGY" target="_blank" rel="noopener">Staggered LandIn Text</a></p>
+<h2 id="不同位置的交错动画"><a href="#不同位置的交错动画" class="headerlink" title="不同位置的交错动画"></a>不同位置的交错动画</h2><p>一般我们都是从第一个元素开始交错的。但如果要从中间元素开始交错的话，就要给当前元素的延时各加上一个值，这个值就是中间元素的下标到当前元素的下标的距离（也就是下标之差的绝对值）与步长的乘积</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/2/10/1702ee051b0e892b?w=1134&h=588&f=gif&s=125063" alt=""></p>
+<p>本demo地址：<a href="https://codepen.io/alphardex/full/eYYMYXJ" target="_blank" rel="noopener">Reveal Text</a></p>
+<h2 id="随机粒子动画"><a href="#随机粒子动画" class="headerlink" title="随机粒子动画"></a>随机粒子动画</h2><p>说到随机性，我们可以实现一种更疯狂的效果：给几百个粒子添加交错动画，并且交错时间随机，位置大小也都是随机。如此一来我们就能用纯CSS模拟出下雪的效果。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/2/10/1702ee051cbfc17a?w=1898&h=787&f=png&s=342134" alt=""></p>
+<p>本demo地址：<a href="https://codepen.io/alphardex/full/dyPorwJ" target="_blank" rel="noopener">Snow (Pure CSS)</a></p>
+<h1 id="伪类和伪元素"><a href="#伪类和伪元素" class="headerlink" title="伪类和伪元素"></a>伪类和伪元素</h1><h2 id="伪类"><a href="#伪类" class="headerlink" title="伪类"></a>伪类</h2><p><img src="https://user-gold-cdn.xitu.io/2020/2/10/1702ee051cf6ac5e?w=1110&h=726&f=gif&s=25256" alt=""></p>
+<p>HTML元素的状态是可以动态变化的。举个栗子，当你的鼠标悬浮到一个按钮上时，按钮就会变成“悬浮”状态，这时我们就可以利用伪类<code>:hover</code>来选中这一状态的按钮，并对其样式进行改变。</p>
+<p><code>:hover</code>是笔者最最常用的一个伪类。还有一个很常用的伪类是<code>:nth-child</code>，用于选中元素的某一个子元素。其他的类似<code>:focus</code>、<code>:focus-within</code>等也有一定的使用。</p>
+<p>本demo地址：<a href="https://codepen.io/alphardex/pen/pooYKVa" target="_blank" rel="noopener">Button Hover Border Stroke With Float Text</a></p>
+<h3 id="绝对定位实现多重边框"><a href="#绝对定位实现多重边框" class="headerlink" title="绝对定位实现多重边框"></a>绝对定位实现多重边框</h3><p>谁规定按钮只能有一套边框的？利用绝对定位和<code>padding</code>，我们可以给按钮做出3套大小不一的边框来，这样效果更炫了</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/2/10/1702ee05232b8519?w=1312&h=669&f=gif&s=18569" alt=""></p>
+<p>本demo地址：<a href="https://codepen.io/alphardex/full/ZEYXomW" target="_blank" rel="noopener">Button Hover Multiple Border Stroke</a></p>
+<h2 id="伪元素"><a href="#伪元素" class="headerlink" title="伪元素"></a>伪元素</h2><p><img src="https://user-gold-cdn.xitu.io/2020/2/10/1702ee056d1fae71?w=1110&h=726&f=gif&s=40196" alt=""></p>
+<p>简而言之，伪元素就是在原先的元素基础上插入额外的元素，而且这个元素不充当HTML的标签，这样就能保持HTML结构的整洁。</p>
+<p>我们知道每个元素都有<code>::before</code>和<code>::after</code>这两个伪元素，也就是说每个元素都提供了3个矩形（元素本身1个，伪元素2个）来供我们进行形状的绘制。现在又有了<code>clip-path</code>这个属性，几乎任意的形状都可以被绘制出来，全凭你的想象力</p>
+<p>上面的动图是条子划过文本的动画，条子就是每个文本所对应的伪元素，对每个文本和其伪元素应用动画，就能达到上图的效果了</p>
+<p>本demo地址：<a href="https://codepen.io/alphardex/pen/jOEOEzZ" target="_blank" rel="noopener">Header With Slide Bar</a></p>
+<h3 id="attr-生成文本内容"><a href="#attr-生成文本内容" class="headerlink" title="attr()生成文本内容"></a>attr()生成文本内容</h3><p>元素可以有自定义的属性值，它的命名格式通常为<code>data-*</code></p>
+<p><code>attr()</code>用于获取元素的这种自定义属性值，并赋值给其伪元素的<code>content</code>作为其生成的内容</p>
+<p>利用这个函数，我们可以用伪元素在原先文本的基础上“复制”出另一个文本，如下图所示</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/2/10/1702ee05bd378d59?w=750&h=398&f=png&s=21239" alt="attr_text.png"></p>
+<p>看上去有点乱糟糟的对吧？没事，给它加上<code>overflow: hidden</code>，把多余的文本遮住。通过JS分割文本并应用交错动画，就得到了如下的效果，这也是接下来本文要讲的<code>overflow</code>障眼法</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/2/10/1702ee07142525a2?w=1381&h=669&f=gif&s=101942" alt="attr_text_hidden.gif"></p>
+<p>本demo地址：<a href="https://codepen.io/alphardex/full/wvBeXjd" target="_blank" rel="noopener">Staggered Float Text Menu</a></p>
+<h1 id="overflow障眼法"><a href="#overflow障眼法" class="headerlink" title="overflow障眼法"></a>overflow障眼法</h1><p>之前有做过闪光按钮的效果：鼠标悬浮按钮上时一道光从左到右划过去。</p>
+<p>笔者就用渐变来模拟那道光，通过<code>transform: translateX()</code>将其平移至右边</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/2/10/1702ee05e9a4d10a?w=1110&h=726&f=gif&s=318104" alt=""></p>
+<p>但这样明显不对啊，这光为啥能被看见呢？不应该把它给“挡”起来吗？</p>
+<p>于是乎，给按钮加上<code>overflow: hidden</code>，光在按钮外的位置时就被隐藏起来了</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/2/10/1702ee05f2da6fd5?w=1110&h=726&f=gif&s=134168" alt=""></p>
+<p>本demo地址：<a href="https://codepen.io/alphardex/pen/eYYzXBZ" target="_blank" rel="noopener">Button Hover Shining</a></p>
+<h1 id="自定义input"><a href="#自定义input" class="headerlink" title="自定义input"></a>自定义input</h1><p>默认的<code>input</code>太丑怎么办？那就把它先抹掉，设置<code>opacity: 0</code>即可</p>
+<p>与<code>input</code>密切相关的是<code>label</code>元素，因为当用户点击<code>label</code>元素时同样会触发<code>input</code>状态的变化。利用这一特性，可以给<code>label</code>自定义样式，不仅如此，还可以在<code>label</code>旁边添加更多的元素，用兄弟选择符<code>~</code>选中它们来定义样式，利用<code>:checked</code>伪类监听原<code>input</code>的状态变化，再加上一点动画，就完成了对<code>input</code>的定制</p>
+<p>目前来说，<code>input</code>元素也支持伪元素了，这就带来了另一种思路：用<code>appearance: none</code>消除<code>input</code>的默认样式，再用伪元素对其进行定制，这样<code>label</code>就可以保留它原先的样式了。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/2/10/1702ee063382adbe?w=1312&h=669&f=gif&s=133528" alt=""></p>
+<p>本demo地址：<a href="https://codepen.io/alphardex/full/rNNPQwa" target="_blank" rel="noopener">Todo List</a></p>
+<h1 id="CSS特性"><a href="#CSS特性" class="headerlink" title="CSS特性"></a>CSS特性</h1><p>善用某些CSS特性，也可以为你的作品增色不少哦</p>
+<h2 id="animation"><a href="#animation" class="headerlink" title="animation"></a>animation</h2><p>此处包括<code>transition</code>和<code>transform</code></p>
+<p>以下是我的个人名片，猜猜看里面用到了哪些技巧？</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/2/10/1702ee06bb76a3b3?w=1324&h=705&f=gif&s=441440" alt="profile.gif"></p>
+<p>首先，刚开始的四条边框出现的动画用到了<code>overflow</code>障眼法</p>
+<p>其次，条子划过文本用到了伪元素动画</p>
+<p>最后，社交图标的依次出现用到了交错动画</p>
+<p>本demo地址：<a href="https://codepen.io/alphardex/full/jOExoLp" target="_blank" rel="noopener">Profile Card</a></p>
+<h2 id="border-radius"><a href="#border-radius" class="headerlink" title="border-radius"></a>border-radius</h2><p>为盒子添加圆角，经常用来美化按钮等组件</p>
+<p>如果设定为<code>50%</code>则是圆形，也很常用</p>
+<h3 id="不规则的曲边形状"><a href="#不规则的曲边形状" class="headerlink" title="不规则的曲边形状"></a>不规则的曲边形状</h3><p>调整多个顶点的<code>border-radius</code>可以做出不规则的曲边形状</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/2/10/1702ee06bbbfc49d?w=1128&h=603&f=gif&s=134933" alt=""></p>
+<p>本demo地址：<a href="https://codepen.io/alphardex/full/abbWOPR" target="_blank" rel="noopener">Nav Tab</a></p>
+<h2 id="box-shadow"><a href="#box-shadow" class="headerlink" title="box-shadow"></a>box-shadow</h2><p>为盒子添加阴影，增加盒子的立体感，可以多层叠加，并且会使阴影更加丝滑</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/2/10/1702ee06bc72977a?w=1128&h=603&f=gif&s=68238" alt=""></p>
+<p>本demo地址：<a href="https://codepen.io/alphardex/full/QWwwwpp" target="_blank" rel="noopener">Pagination</a></p>
+<h3 id="内发光"><a href="#内发光" class="headerlink" title="内发光"></a>内发光</h3><p>注意到<code>box-shadow</code>还有个<code>inset</code>，用于盒子内部发光</p>
+<p>利用这个特性我们可以在盒子内部的某个范围内设定颜色，做出一个新月形</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/2/10/1702ee06bdae7a82?w=1152&h=663&f=png&s=7496" alt=""></p>
+<p>再加点动画和滤镜效果，“猩红之月”闪亮登场！</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/2/10/1702ee0710ee13f8?w=1312&h=669&f=gif&s=436447" alt=""></p>
+<p>注意到它散发着淡淡的红光，其实就是2个伪元素应用了模糊滤镜所产生的效果</p>
+<p>本demo地址：<a href="https://codepen.io/alphardex/full/eYmGEGp" target="_blank" rel="noopener">Crimson Crescent Loading</a></p>
+<h2 id="text-shadow"><a href="#text-shadow" class="headerlink" title="text-shadow"></a>text-shadow</h2><p>文本阴影，本质上和<code>box-shadow</code>相同，只不过是相对于文本而言，常用于文本发光，也可通过多层叠加来制作霓虹文本和伪3D文本等效果</p>
+<h3 id="发光文本"><a href="#发光文本" class="headerlink" title="发光文本"></a>发光文本</h3><p><img src="https://user-gold-cdn.xitu.io/2020/2/10/1702ee0751c9e13e?w=1597&h=603&f=gif&s=2015749" alt=""></p>
+<p>本demo地址：<a href="https://codepen.io/alphardex/full/Exxodoq" target="_blank" rel="noopener">Staggered GlowIn Text</a></p>
+<h3 id="霓虹文本"><a href="#霓虹文本" class="headerlink" title="霓虹文本"></a>霓虹文本</h3><p><img src="https://user-gold-cdn.xitu.io/2020/2/10/1702ee076a90febb?w=1312&h=669&f=gif&s=1083873" alt=""></p>
+<p>本demo地址：<a href="https://codepen.io/alphardex/full/rNNwmZz" target="_blank" rel="noopener">Neon Text</a></p>
+<h3 id="伪3D文本"><a href="#伪3D文本" class="headerlink" title="伪3D文本"></a>伪3D文本</h3><p><img src="https://user-gold-cdn.xitu.io/2020/2/10/1702ee0770616364?w=1312&h=669&f=gif&s=454544" alt=""></p>
+<p>本demo地址：<a href="https://codepen.io/alphardex/full/QWWavvx" target="_blank" rel="noopener">Staggered Bouncing 3D Loading</a></p>
+<h2 id="background-clip-text"><a href="#background-clip-text" class="headerlink" title="background-clip:text"></a>background-clip:text</h2><p>能将背景裁剪成文字的前景色，常用来和<code>color: transparent</code>配合生成渐变文本</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/2/10/1702ee07ea23e5ac?w=1597&h=622&f=gif&s=46919" alt=""></p>
+<p>本demo地址：<a href="https://codepen.io/alphardex/full/QWwveZG" target="_blank" rel="noopener">Menu Hover Fill Text</a></p>
+<h2 id="gradient"><a href="#gradient" class="headerlink" title="gradient"></a>gradient</h2><p>渐变可以作为背景图片的一种，具有很强的色彩效果，甚至可以用来模拟光</p>
+<h3 id="linear-gradient"><a href="#linear-gradient" class="headerlink" title="linear-gradient"></a>linear-gradient</h3><p>线性渐变是笔者最常用的渐变</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/2/10/1702ee08051eab40?w=1312&h=669&f=gif&s=731765" alt=""></p>
+<p>这个作品用到了HTML的<code>dialog</code>标签，线性渐变背景，动画以及<code>overflow</code>障眼法，细心的你看出来了吗:)</p>
+<p>本demo地址：<a href="https://codepen.io/alphardex/full/eYYxzBm" target="_blank" rel="noopener">Confirm Modal</a></p>
+<h3 id="radial-gradient"><a href="#radial-gradient" class="headerlink" title="radial-gradient"></a>radial-gradient</h3><p>径向渐变常用于生成圆形背景，上面例子中<a href="https://codepen.io/alphardex/full/dyPorwJ" target="_blank" rel="noopener">Snow的背景</a>就是一个椭圆形的径向渐变</p>
+<p>此外，由于背景可以叠加，我们可以叠加多个不同位置大小的径向渐变来生成圆点群，再加上动画就产生了一种微粒效果，无需多余的<code>div</code>元素</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/2/10/1702ee0834f82a09?w=1074&h=657&f=gif&s=113535" alt="radial-particle.gif"></p>
+<p>本demo地址：<a href="https://codepen.io/alphardex/full/OJPvMGx" target="_blank" rel="noopener">Particle Button</a></p>
+<h3 id="conic-gradient"><a href="#conic-gradient" class="headerlink" title="conic-gradient"></a>conic-gradient</h3><p>圆锥渐变可以用于制作饼图</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/2/10/1702ee08546f0887?w=1138&h=508&f=png&s=14302" alt=""></p>
+<p>用一个伪元素叠在饼图上面，并将<code>content</code>设为某个值（这个值通过CSS变量计算出来），就能制作出度量计的效果，障眼法又一次完成了它的使命</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/2/10/1702ee08695df44f?w=1188&h=577&f=png&s=21433" alt=""></p>
+<p>本demo地址：<a href="https://codepen.io/alphardex/full/BaydVvQ" target="_blank" rel="noopener">Gauge (No SVG)</a></p>
+<h2 id="filter"><a href="#filter" class="headerlink" title="filter"></a>filter</h2><p>PS里的滤镜，<code>blur</code>最常用</p>
+<h3 id="融合效果"><a href="#融合效果" class="headerlink" title="融合效果"></a>融合效果</h3><p>当<code>blur</code>滤镜和<code>contrast</code>滤镜一起使用时，会产生一种融合（<code>gooey</code>）的奇特效果</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/2/10/1702ee089a916bc7?w=1324&h=705&f=gif&s=643477" alt="gooey.gif"></p>
+<p>本demo地址：<a href="https://codepen.io/alphardex/full/BaBevXm" target="_blank" rel="noopener">Snow Scratch</a></p>
+<h2 id="backdrop-filter"><a href="#backdrop-filter" class="headerlink" title="backdrop-filter"></a>backdrop-filter</h2><p>对背景应用滤镜，产生毛玻璃的效果</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/2/10/1702ee08b2840155?w=1597&h=622&f=gif&s=2724918" alt=""></p>
+<p>本demo地址：<a href="https://codepen.io/alphardex/full/pooQMVp" target="_blank" rel="noopener">Frosted Glass</a></p>
+<h2 id="mix-blend-mode"><a href="#mix-blend-mode" class="headerlink" title="mix-blend-mode"></a>mix-blend-mode</h2><p>PS里的混合模式，常用于文本在背景下的特殊效果</p>
+<p>以下利用滤色模式（<code>screen</code>）实现文本视频蒙版效果</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/2/10/1702ee08ca1668c6?w=1381&h=669&f=gif&s=3012320" alt=""></p>
+<p>本demo地址：<a href="https://codepen.io/alphardex/full/wvvLYpV" target="_blank" rel="noopener">Video Mask Text</a></p>
+<h2 id="clip-path"><a href="#clip-path" class="headerlink" title="clip-path"></a>clip-path</h2><p>PS里的裁切，可以制作各种不规则形状。如果和动画结合也会相当有意思</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/2/10/1702ee08d117617e?w=1312&h=669&f=gif&s=271533" alt=""></p>
+<p>本demo地址：<a href="https://codepen.io/alphardex/full/ZEEBRrq" target="_blank" rel="noopener">Name Card Hover Expand</a></p>
+<h3 id="故障效果"><a href="#故障效果" class="headerlink" title="故障效果"></a>故障效果</h3><p>由于<code>clip-path</code>有裁切功能，因此可以将多个文字叠在一起，并按比例裁切成多分，再应用交错动画，就能制作出酷炫的故障效果（<code>glitch</code>）。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/2/10/1702ee090c67ca6a?w=1563&h=577&f=gif&s=34542" alt="glitch.gif"></p>
+<p>本demo地址：<a href="https://codepen.io/alphardex/full/VwLLLNG" target="_blank" rel="noopener">Cross Bar Glitch Text</a></p>
+<h2 id="mask"><a href="#mask" class="headerlink" title="mask"></a>mask</h2><p>PS里的遮罩。所谓遮罩，就是原始图片只显示遮罩图片非透明的部分</p>
+<h3 id="镂空效果"><a href="#镂空效果" class="headerlink" title="镂空效果"></a>镂空效果</h3><p>虽然<code>clip-path</code>能裁切出形状，但它无法镂空，因为形状的里面它管不着</p>
+<p>可能有人（包括我）会用伪元素来“模拟”镂空（通过设置同样的背景色），但这样并非真的镂空，换了个背景或浮在图片上就会暴露出来，这时我们就要求助于遮罩了</p>
+<p>假设，你想制作一个空心的圆环，那么你只需将一个径向渐变作为元素的遮罩，并且第一个<code>color-stop</code>设置为透明，其他的<code>color-stop</code>设置为其他颜色即可，因为遮罩的定义就是只显示遮罩图片非透明的部分</p>
+<p>注意：为了消除锯齿，这个径向渐变的中间需要有一个额外的<code>color-stop</code>用于缓冲，长度设置为原长度加0.5px即可</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/2/13/1703e7bb22182d04?w=1348&h=634&f=gif&s=63533" alt="1LxcPs.gif"></p>
+<p>本demo地址：<a href="https://codepen.io/alphardex/full/MWwadod" target="_blank" rel="noopener">Circle Arrow Nav</a></p>
+<h2 id="webkit-box-reflect"><a href="#webkit-box-reflect" class="headerlink" title="-webkit-box-reflect"></a>-webkit-box-reflect</h2><p>投影效果，不怎么常用，适合立体感强的作品</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/2/10/1702ee091c74c545?w=1632&h=669&f=gif&s=2683334" alt=""></p>
+<p>本demo地址：<a href="https://codepen.io/alphardex/full/ExaZgxp" target="_blank" rel="noopener">Card Flip Reflection</a></p>
+<h2 id="web-animations"><a href="#web-animations" class="headerlink" title="web animations"></a>web animations</h2><p>虽然这并不是一个CSS特性，但是它经常用于完成那些CSS所做不到的事情</p>
+<p>那么何时用它呢？当CSS动画中有属性无法从CSS中获取时，自然就会使用到它了</p>
+<h3 id="跟踪鼠标的位置"><a href="#跟踪鼠标的位置" class="headerlink" title="跟踪鼠标的位置"></a>跟踪鼠标的位置</h3><p>目前CSS还尚未有获取鼠标位置的API，因此考虑用JS来进行</p>
+<p>通过查阅相关的DOM API，发现在监听鼠标事件的API中，可通过<code>e.clientX</code>和<code>e.clientY</code>来获得鼠标当前的位置</p>
+<p>既然能够获取鼠标的位置，那么跟踪鼠标的位置也就不是什么难事了：通过监听<code>mouseenter</code>和<code>mouseleave</code>事件，来获取鼠标出入一个元素时的位置，并用此坐标来当作鼠标的位移距离，监听<code>mousemove</code>事件，来获取鼠标在元素上移动时的位置，同样地用此坐标来当作鼠标的位移距离，这样一个跟踪鼠标的效果就实现了</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/2/10/1702ee0949a76b86?w=1632&h=639&f=gif&s=1805253" alt=""></p>
+<p>本demo地址：<a href="https://codepen.io/alphardex/full/OJPmQGz" target="_blank" rel="noopener">Menu Hover Image</a></p>
+<h2 id="CSS-Houdini"><a href="#CSS-Houdini" class="headerlink" title="CSS Houdini"></a>CSS Houdini</h2><p>CSS Houdini是CSS的底层API，它使我们能够通过这套接口来扩展CSS的功能</p>
+<h3 id="让渐变动起来"><a href="#让渐变动起来" class="headerlink" title="让渐变动起来"></a>让渐变动起来</h3><p>目前来说，我们无法直接给渐变添加动画，因为浏览器不理解要改变的值是什么类型</p>
+<p>这时，我们就可以利用<code>CSS.registerProperty()</code>来注册我们的自定义变量，并声明其语法类型（<code>syntax</code>）为颜色类型<code>&lt;color&gt;</code>，这样浏览器就能理解并对颜色应用插值方法来进行动画</p>
+<p>还记得上文提到的圆锥渐变<code>conic-gradient()</code>吗？既然它可以用来制作饼图，那么我们能不能让饼图动起来呢？答案是肯定的，定义三个变量：<code>--color1</code>、<code>--color2</code>和<code>--pos</code>，其中<code>--pos</code>的语法类型为长度百分比<code>&lt;length-percentage&gt;</code>，将其从<code>0</code>变为<code>100%</code>，饼图就会顺时针旋转出现</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/2/10/1702ee09cad803ba?w=1204&h=573&f=gif&s=4239" alt="conic-animate-basic.gif"></p>
+<p>利用绝对定位和层叠上下文，我们可以叠加多个从小到大的饼图，再给它们设置不同的颜色，应用交错动画，就有了下面这个炫丽的效果</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/2/10/1702ee0a2594a4c1?w=1375&h=898&f=gif&s=204827" alt="mawaru.gif"></p>
+<p>本demo地址：<a href="https://codepen.io/alphardex/full/RwNxpXQ" target="_blank" rel="noopener">Mawaru</a></p>
+<h1 id="彩蛋"><a href="#彩蛋" class="headerlink" title="彩蛋"></a>彩蛋</h1><p><img src="https://user-gold-cdn.xitu.io/2020/2/10/1702ee0a43b8c2ed?w=1110&h=726&f=gif&s=337081" alt=""></p>
+<p>将交错动画和伪类伪元素结合起来写出来的慎重勇者风格的菜单</p>
+<p>本demo地址：<a href="https://codepen.io/alphardex/full/ExavZdV" target="_blank" rel="noopener">Shinchou Menu</a></p>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>恭喜你将本文读完了。不论是过了一场视觉盛宴也好，还是学到了不少东西也好，还是直接从书签那导航到这里也好（笑），CSS的力量始终超乎你的想象。只要敢于创作，你就是这个世界的神。</p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">alphardex</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://gateofbabylon.com/2020/06/06/%E6%88%91%E5%86%99CSS%E7%9A%84%E5%B8%B8%E7%94%A8%E5%A5%97%E8%B7%AF/">https://gateofbabylon.com/2020/06/06/%E6%88%91%E5%86%99CSS%E7%9A%84%E5%B8%B8%E7%94%A8%E5%A5%97%E8%B7%AF/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/CSS/">CSS</a><a class="post-meta__tags" href="/tags/Tricks/">Tricks</a></div><nav id="pagination"><div class="next-post pull-right"><a href="/2020/06/06/DOM%E7%9A%84%E5%B8%B8%E7%94%A8API%E9%80%9F%E6%9F%A5%E8%A1%A8/"><span>DOM的常用API速查表</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="vcomment"></div><script src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var notify = 'false' == 'true';
+var verify = 'false' == 'true';
+var record_ip = 'false' == 'true';
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  recordIP:record_ip,
+  appId:'MUKqiaU6CnxOn2VeT4cUBLdG-gzGzoHsz',
+  appKey:'nxePlNHUgdOaABmHUoWz4TpR',
+  placeholder:'何が言いたいことがある？',
+  avatar:'mm',
+  guest_info:guest_info,
+  pageSize:'10',
+  lang: 'zh-cn'
+})</script></div></div><footer class="footer-bg" style="background-image: url(https://i.loli.net/2019/09/13/i2hKyDUGIE4sVJv.jpg)"><div class="layout" id="footer"><div class="copyright">&copy;2020 By alphardex</div><div class="framework-info"><span>Driven - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.7.0"></script><script src="/js/fancybox.js?version=1.7.0"></script><script src="/js/sidebar.js?version=1.7.0"></script><script src="/js/copy.js?version=1.7.0"></script><script src="/js/fireworks.js?version=1.7.0"></script><script src="/js/transition.js?version=1.7.0"></script><script src="/js/scroll.js?version=1.7.0"></script><script src="/js/head.js?version=1.7.0"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script></body></html>
