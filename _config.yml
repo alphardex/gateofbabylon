@@ -18,7 +18,7 @@ timezone: 'Asia/Shanghai'
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://alphardex.github.io/gateofbabylon/
 root: /gateofbabylon/
-permalink: :year/:month/:day/:title/
+permalink: posts/:abbrlink/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -98,12 +98,6 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: melody
 
-# Deployment
-## Docs: https://hexo.io/docs/deployment.html
-deploy:
-  type: git
-  branch: gh-pages
-
 # RSS Feed
 feed:
   type: atom
@@ -114,3 +108,14 @@ feed:
   content_limit: 140
   content_limit_delim: ' '
   order_by: -date
+
+# abbrlink config
+abbrlink:
+  alg: crc16  #support crc16(default) and crc32
+  rep: dec    #support dec(default) and hex
+
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+  type: git
+  branch: gh-pages

@@ -58,7 +58,7 @@ social:
   codepen fab: https://codepen.io/alphardex
   user fa: https://www.v2ex.com/member/alphardex
   twitter fab: https://twitter.com/alphardex007
-  rss fa: https://alphardex.github.io/atom.xml
+  rss fa: https://alphardex.github.io/gateofbabylon/atom.xml
 
 # Algolia search
 # ---------------
@@ -133,9 +133,9 @@ cdn:
 
 # Post info settings
 # ---------------
-avatar:
+avatar: https://i.loli.net/2020/06/06/J8LvW7ZgimqY26N.jpg
 
-top_img: https://i.loli.net/2019/09/13/i2hKyDUGIE4sVJv.jpg
+top_img: https://i.loli.net/2020/06/06/n1hAqjue5DxGYf3.jpg
 
 top_img_height: 60 # best range: 60 - 100
 
@@ -241,7 +241,7 @@ valine:
 # ---------------
 since: 2020
 
-# footer_custom_text: put custom text directly or put hitokoto to fetch random texts
+footer_custom_text: hitokoto
 
 ICP:
   enable: false
