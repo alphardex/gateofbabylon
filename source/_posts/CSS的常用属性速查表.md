@@ -1,0 +1,515 @@
+title: CSS的常用属性速查表
+author: alphardex
+tags:
+  - CSS
+  - Cheatsheet
+categories:
+  - 前端
+date: 2020-06-06 17:11:00
+---
+要想写出优美的CSS作品，想象力固然很重要，然而基础也是不可忽略的。相信大部分人怕写CSS的原因是被它庞大的基础知识体系给吓到了，在此笔者推荐一个叫[freecodecamp](http://freecodecamp.com/)的网站，通过闯关的方式来学习前端三剑客，用它入门CSS是最佳的选择！
+
+当你成功地入了门之后，便可以开始探索CSS的全貌了。本文是CSS属性的速查表，配合[在线API文档](https://devdocs.io)使用即可
+
+<!--more-->
+
+以下列出的属性知识点都是笔者用到过的
+
+千万不要被数量吓到，其实常用的也就这些：**选择-定位-布局-盒模型-字体-背景-动画-其他**
+
+# Selectors
+
+## Type
+
+元素本身，`p`
+
+## Class
+
+类，`p.class`
+
+## ID
+
+id，`p#id`
+
+## Descendant
+
+后代，`ul li`
+
+## Attribute
+
+属性，`input[type="checkbox"]`
+
+## Sibling
+
+相邻元素，`input ~ label`
+
+## Univarsal
+
+全选，`*`
+
+## Pseudo-class
+
+伪类，用于选择特定状态下的元素
+
+### :hover
+
+鼠标悬浮状态
+
+### :focus
+
+元素本身获得焦点
+
+### :focus-within
+
+元素本身及子元素获得焦点
+
+### :nth-child
+
+第n个子元素
+
+### :not
+
+不处于某个状态
+
+### :target
+
+URL的锚点
+
+### :checked
+
+单/复选框开关`on`的状态
+
+### :disabled
+
+禁用状态
+
+### :valid
+
+校验通过状态
+
+### :invalid
+
+校验不通过状态
+
+### :placeholder-shown
+
+输入框有占位符时的情况（也就是用户还未输入时的情况）
+
+### :empty
+
+空标签元素
+
+常用场景：字段缺失、ajax加载数据为空
+
+## Pseudo-element
+
+伪元素，在原先的元素基础上插入额外的元素，并且它不充当HTML的标签
+
+### ::before | ::after
+
+标签的额外2个可绘制的元素
+
+### ::selection
+
+被用户选中的部分
+
+### ::placeholder
+
+输入框的占位符文本
+
+# Positioning
+
+## position
+
+- relative：相对定位，元素占据文档位置，可以有偏移
+- absolute：绝对定位，元素不占位置，相对于父元素定位
+- fixed：固定在视窗某一位置
+- sticky：“粘”在视窗某一位置
+
+## top | left | bottom | right
+
+上下左右的偏移距离
+
+## z-index
+
+层叠关系
+
+# Display
+
+## display
+
+- block：块级元素
+- inline：内联元素
+- flex：弹性盒子布局
+- grid：网格布局
+
+# Box Model
+
+拿水果举例子：果核是`content`，果肉是`padding`，果皮是`border`，外界是`margin`
+
+## width | height
+
+宽高
+
+## padding | margin
+
+内外边距
+
+## overflow
+
+- visible：超出部分可见
+- hidden：超出部分不可见
+
+# Fonts
+
+常用简写：`<'font-weight'> || <'font-size'> [ / <'line-height'>] || <'font-family'>`
+
+## font-weight
+
+字体粗细
+
+## font-size
+
+字体大小
+
+## font-family
+
+字体种类
+
+## line-height
+
+字体行高
+
+# Text
+
+## text-align
+
+文本对齐
+
+## text-shadow
+
+文本阴影
+
+## text-transform
+
+文本大小写
+
+## text-decoration
+
+文本装饰样式
+
+## -webkit-text-stroke
+
+文本描边
+
+## white-space
+
+空格处理
+
+`white-space: nowrap`使文本不会自动换行
+
+# Color
+
+## color
+
+文本颜色
+
+## opacity
+
+颜色透明度
+
+## transparent
+
+透明色
+
+## currentColor
+
+当前元素`color`的值
+
+# Backgrounds & Borders
+
+背景常用缩写：`<'background-image'> || <'background-position'> [/ <'background-size'> <'background-repeat'>]`
+
+边框常用缩写：`<'border-width'> || <'border-style'> || <'border-color'>`
+
+## background-color
+
+背景颜色
+
+## background-image
+
+背景图片
+
+## background-size
+
+背景大小
+
+## background-position
+
+背景定位
+
+## background-repeat
+
+背景是否重复
+
+## background-clip
+
+背景裁剪
+
+## border-width
+
+边框宽度
+
+## border-style
+
+边框样式
+
+## border-color
+
+边框颜色
+
+## border-radius
+
+边框圆角
+
+## box-shadow
+
+阴影：`offset-x | offset-y | blur-radius | spread-radius | color`
+
+# Images
+
+## linear-gradient
+
+线性渐变
+
+## radial-gradient
+
+径向渐变
+
+## conic-gradient
+
+圆锥渐变
+
+## object-fit
+
+处理替换元素（如`img`）的变形问题
+
+# Filter
+
+## filter
+
+作用于元素本身的滤镜
+
+常用滤镜：
+
+- blur：高斯模糊
+- contrast：对比度
+- drop-shadow：投影
+- greyscale：灰度
+- hue-rotate：色调变换
+
+## backdrop-filter
+
+作用于元素背景的滤镜
+
+# Blending
+
+## mix-blend-mode
+
+常用混合模式
+
+- multiply：正片叠底
+- screen：滤色
+- difference：插值
+
+# SVG
+
+## clip-path
+
+裁剪路径，用来裁剪出各种形状
+
+## mask
+
+蒙版，用于创建镂空效果
+
+## letter-spacing
+
+字母间距
+
+## pointer-events
+
+鼠标事件（通常都设为`none`，表示消除对象的鼠标事件）
+
+# List
+
+## list-style-type
+
+列表的`marker`样式（通常都设为`none`，表示消除列表样式）
+
+## counter-reset
+
+重置某个计数器为某一值
+
+## counter-increment
+
+给某个计数器增加特定的值
+
+# UI
+
+## appearance
+
+元素的默认样式（通常都设为`none`，表示消除默认外观）
+
+## box-sizing
+
+盒模型类型
+
+- content-box：默认，标准盒模型
+- border-box：IE盒模型（将`border`和·`padding`一并算作长宽）
+
+## cursor
+
+光标类型，最常用的是`pointer`，也就是一只手
+
+## outline
+
+轮廓
+
+## user-select
+
+用户是否能选择文本（通常都设为`none`，表示用户无法选中此文本）
+
+# Scroll
+
+## scroll-behavior
+
+- auto：默认滚动行为
+- smooth：丝滑滚动行为
+
+## scroll-snap-type
+
+定义在滚动容器中的一个临时点（snap point）如何被严格的执行
+
+## scroll-snap-align
+
+控制将要聚焦的当前滚动子元素在滚动方向上相对于父容器的对齐方式
+
+# Transforms
+
+## transform
+
+常见的几何变换：
+
+- `translate`：平移
+- `scale`：缩放
+- `rotate`：旋转
+- `skew`：斜切
+
+## transform-origin
+
+变换中心
+
+## transform-style
+
+- flat：默认
+- preserve-3d：3d场景
+
+## perspective
+
+透视距离
+
+## backface-visibility
+
+物体后方是否可视
+
+# Animation
+
+## transition
+
+过渡
+
+## transition-property
+
+过渡属性名
+
+## transition-duration
+
+过渡时间
+
+## transition-delay
+
+过渡延迟
+
+## transition-timing-function
+
+过渡缓动函数，内置：`ease`、`linear`、`ease-in`、`ease-out`、`ease-in-out`、`steps()`
+
+自定义缓动函数：`cubic-bezier()`
+
+## animation
+
+动画
+
+## animation-name
+
+动画名称
+
+## animation-duration
+
+动画时间
+
+## animation-delay
+
+动画延迟
+
+## animation-timing-function
+
+动画缓动函数
+
+## animation-iteration-count
+
+动画播放次数
+
+## animation-fill-mode
+
+动画填充模式
+
+## animation-play-state
+
+动画播放状态
+
+## @keyframes
+
+关键帧
+
+# Motion Path
+
+## offset-path
+
+路径的定义
+
+## offset-distance
+
+对象在路径上的位置
+
+# Others
+
+## attr()
+
+获取自定义属性的值作为`content`生成的内容
+
+## var()
+
+CSS自定义变量
+
+## calc()
+
+计算值
+
+## @media
+
+媒体查询，用于适配不同设备
+
+## -webkit-box-reflect
+
+投影
