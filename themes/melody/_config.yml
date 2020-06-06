@@ -17,11 +17,11 @@
 
 # Main menu navigation
 menu:
-  Home: /
-  Archives: /archives
-  Tags: /tags
-  Categories: /categories
-  About: /about
+  Home: /gateofbabylon/
+  Archives: /gateofbabylon/archives
+  Tags: /gateofbabylon/tags
+  Categories: /gateofbabylon/categories
+  About: /gateofbabylon/about
   #XXX: /xxx
 
 # Favicon
