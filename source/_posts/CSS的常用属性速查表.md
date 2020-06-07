@@ -159,6 +159,7 @@ URL的锚点
 
 - visible：超出部分可见
 - hidden：超出部分不可见
+- scroll：超出部分以滚动条形式显示
 
 # Fonts
 
@@ -185,6 +186,20 @@ URL的锚点
 ## text-align
 
 文本对齐
+
+## text-overflow
+
+文本超出部分截断
+
+常用片段：
+
+```css
+.text-clamp {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+```
 
 ## text-shadow
 
@@ -282,13 +297,19 @@ URL的锚点
 
 线性渐变
 
+常见用途：背景色、模拟光、条纹背景等
+
 ## radial-gradient
 
 径向渐变
 
+常见用途：背景色、斑点背景、卡片镂空、微粒效果等
+
 ## conic-gradient
 
 圆锥渐变
+
+常见用途：饼图、各种花纹的实现
 
 ## object-fit
 
@@ -304,7 +325,7 @@ URL的锚点
 
 - blur：高斯模糊
 - contrast：对比度
-- drop-shadow：投影
+- drop-shadow：投影，常用于给不规则形状进行
 - greyscale：灰度
 - hue-rotate：色调变换
 
@@ -393,6 +414,14 @@ URL的锚点
 ## scroll-snap-align
 
 控制将要聚焦的当前滚动子元素在滚动方向上相对于父容器的对齐方式
+
+## -webkit-overflow-scrolling
+
+设置为`touch`可以恢复移动端的弹性滚动
+
+## overscroll-behavior
+
+设置为`contain`可以禁止连锁滚动效果
 
 # Transforms
 
