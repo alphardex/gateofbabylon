@@ -287,6 +287,10 @@ ajax请求事件
 - removeItem: 删
 - clear: 清
 
+### innerWidth | innerHeight
+
+视窗宽高
+
 ### fetch
 
 从服务器获取数据
