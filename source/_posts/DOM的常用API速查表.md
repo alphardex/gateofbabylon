@@ -287,6 +287,10 @@ ajax请求事件
 - removeItem: 删
 - clear: 清
 
+### scrollTo
+
+将文档滚动到特定的坐标位置
+
 ### innerWidth | innerHeight
 
 视窗宽高
