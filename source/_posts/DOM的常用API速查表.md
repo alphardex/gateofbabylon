@@ -439,8 +439,22 @@ ajax请求
 
 `input`，`select`，`textarea`等元素的`value`改变时触发
 
+### input
+
+`input`，`select`，`textarea`等元素的`value`改变时同步触发
+
 ## Load
 
 ### load
 
 当一个资源以及其依赖的资源加载完毕时出发，常用：`window`
+
+## CSS
+
+### transitionend
+
+当一个过渡完成时触发
+
+### animationend
+
+当一个动画完成时触发

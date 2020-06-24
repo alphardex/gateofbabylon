@@ -423,6 +423,18 @@ URL的锚点
 
 设置为`contain`可以禁止连锁滚动效果
 
+# Writing Modes
+
+## writing-mode
+
+定义了文本水平或垂直排布以及在块级元素中文本的行进方向。
+
+这里我们默认是ltr文本（左对齐文本）
+
+- horizontal-tb：从左到右水平流动，是默认值
+- vertical-lr：从上到下垂直流动，下一垂直行位于上一行右侧
+- vertical-rl：从上到下垂直流动，下一垂直行位于上一行左侧
+
 # Transforms
 
 ## transform
