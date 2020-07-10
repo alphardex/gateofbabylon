@@ -221,7 +221,9 @@ URL的锚点
 
 空格处理
 
-`white-space: nowrap`使文本不会自动换行
+- nowrap：使文本永不换行
+- pre：保留空格和换行符，但无法自动换行
+- pre-wrap：保留空格和换行符，且可以自动换行
 
 # Color
 
