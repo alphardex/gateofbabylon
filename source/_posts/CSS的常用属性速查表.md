@@ -142,6 +142,7 @@ URL的锚点
 - inline：内联元素
 - flex：弹性盒子布局
 - grid：网格布局
+- contents：充当遮罩的元素（比如给`img`套上`a`并能使其不影响布局）
 
 # Box Model
 
