@@ -557,3 +557,11 @@ CSS自定义变量
 ## -webkit-box-reflect
 
 投影
+
+## percentage
+
+一些数值型单位具有百分比写法，那么这些百分比相对的对象是什么呢？有2种：父元素和自身。
+
+相对父元素：`width`、`height`、`top`、`left`、`margin`、`padding`
+
+相对自身：`translateX`、`translateY`
