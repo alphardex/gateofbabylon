@@ -1,3 +1,4 @@
+---
 title: JavaScript的常用API速查表
 author: alphardex
 tags:
@@ -5,6 +6,7 @@ tags:
   - Cheatsheet
 categories:
   - 前端
+abbrlink: 59160
 date: 2020-06-06 17:13:00
 ---
 本文罗列了JavaScript的常用API。

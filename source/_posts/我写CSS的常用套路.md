@@ -1,3 +1,4 @@
+---
 title: 我写CSS的常用套路
 author: alphardex
 tags:
@@ -5,6 +6,7 @@ tags:
   - Tricks
 categories:
   - 前端
+abbrlink: 17061
 date: 2020-06-06 17:23:00
 ---
 # 前言

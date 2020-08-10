@@ -1,9 +1,11 @@
+---
 title: JavaScript语言专属特性
 tags:
   - JavaScript
 categories:
   - 前端
 author: alphardex
+abbrlink: 32589
 date: 2020-06-06 16:57:00
 ---
 本文归纳了笔者最常用的 JavaScript 语言专属特性。

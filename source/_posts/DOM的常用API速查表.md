@@ -1,3 +1,4 @@
+---
 title: DOM的常用API速查表
 author: alphardex
 tags:
@@ -5,6 +6,7 @@ tags:
   - DOM
 categories:
   - 前端
+abbrlink: 20873
 date: 2020-06-06 17:22:00
 ---
 大多数情况下，笔者坚信能用CSS解决的，就不会用JS来解决
