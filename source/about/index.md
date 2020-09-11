@@ -8,7 +8,6 @@ date: 2020-06-06 17:42:47
 | 常用名 | alphardex |
 | 状态 | 中二病晚期 |
 | 性别 | 男 |
-| 简历 | [查看简历](https://alphardex.github.io/resume/) |
 | 追过的番剧 | [bangumi](https://bangumi.tv/anime/list/399538/collect) |
 | 玩过的游戏 | [steam](https://steamcommunity.com/id/namelesswang) |
 | 看过的电影 | [豆瓣电影](https://movie.douban.com/mine?status=collect) |
