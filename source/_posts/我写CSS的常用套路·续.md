@@ -3,9 +3,7 @@ author: alphardex
 abbrlink: 32261
 date: 2020-09-14 10:09:09
 tags:
-
 ---
-
 # 前言
 
 本文正在写作中
@@ -102,11 +100,15 @@ tags:
 }
 ```
 
+## 交错旋转
+
 给多个方块应用交错动画会产生如下效果
 
 ![](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b9b079bad28b4971a438db1960436d43~tplv-k3u1fbpfcp-zoom-1.image?imageView2/2/w/800/q/85)
 
 本 demo 地址：[Spiral Tower](https://codepen.io/alphardex/pen/mdPjLGm)
+
+## 伸缩长度
 
 利用 CSS Houdini，我们可以使方块的长度变量动起来
 
@@ -135,6 +137,8 @@ CSS.registerProperty({
 
 ![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/734029e9456449db98f013dde3d8dcfe~tplv-k3u1fbpfcp-zoom-1.image?imageView2/2/w/800/q/85)
 本 demo 地址：[3D Stair Loading](https://codepen.io/alphardex/pen/YzqrGXb)
+
+## 规律运动
 
 用 gsap 来控制方块的运动也会相当有趣
 
@@ -168,6 +172,8 @@ t1.from(staggeredLandInText.chars, {
 <img src="https://user-gold-cdn.xitu.io/2020/2/8/1702507ba8f9dbf3?imageslim" referrerpolicy="no-referrer"/>
 
 简化版 demo 地址：[SplitText Starter](https://codepen.io/alphardex/pen/ZEWRBJp)
+
+## 关键帧
 
 简单的动画固然可以实现，那么相对复杂一点的动画呢？这时候还是要依靠强大的@keyframes 和 CSS 变量
 
@@ -375,6 +381,14 @@ window.addEventListener("resize", () => {
 本 demo 地址：[Cursor Hover Magnetize](https://codepen.io/alphardex/pen/NWxXGKb)
 
 简化版地址：[Mousemove Starter](https://codepen.io/alphardex/pen/abNKBdJ)
+
+## 残影效果
+
+如果将鼠标跟踪和交错动画结合起来，就能创作出帅气的残影效果
+
+![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ac887df0ffc349c0ab9418307a468161~tplv-k3u1fbpfcp-zoom-1.image?imageView2/2/w/800/q/85)
+
+本 demo 地址：[Motion Table - Delay](https://codepen.io/alphardex/pen/xxVMEYp?editors=0110)
 
 # 遮罩
 
