@@ -384,9 +384,9 @@ window.addEventListener("resize", () => {
 
 ## 残影效果
 
-如果将鼠标跟踪和交错动画结合起来，就能创作出帅气的残影效果
+如果将鼠标跟踪和交错动画结合起来，再加点模糊滤镜，就能创作出帅气的残影效果
 
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ac887df0ffc349c0ab9418307a468161~tplv-k3u1fbpfcp-zoom-1.image?imageView2/2/w/800/q/85)
+![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/abe7f7ba794f4e759b7758e4ff25b64b~tplv-k3u1fbpfcp-zoom-1.image?imageslim)
 
 本 demo 地址：[Motion Table - Delay](https://codepen.io/alphardex/pen/xxVMEYp?editors=0110)
 
@@ -409,6 +409,6 @@ demo 地址：[Gradient Mask Divider](https://codepen.io/alphardex/pen/WNwyjqw)
 
 和 clip-path 结合也会相当有意思，如下图所示的加载特效
 
-<img src="https://user-gold-cdn.xitu.io/2020/7/7/17327c58fc62bf7d?imageView2/2/w/800/q/85">
+<img src="https://user-gold-cdn.xitu.io/2020/7/7/17327c58fc62bf7d?imageView2/2/w/800/q/85" referrerpolicy="no-referrer">
 
 demo 地址：[Mask Loader](https://codepen.io/alphardex/pen/LYGdxXa)
