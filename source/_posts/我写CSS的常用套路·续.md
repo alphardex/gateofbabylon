@@ -138,16 +138,6 @@ CSS.registerProperty({
 ![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/734029e9456449db98f013dde3d8dcfe~tplv-k3u1fbpfcp-zoom-1.image?imageView2/2/w/800/q/85)
 本 demo 地址：[3D Stair Loading](https://codepen.io/alphardex/pen/YzqrGXb)
 
-## 规律运动
-
-用 gsap 来控制方块的运动也会相当有趣
-
-![](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7e87bc25a2ce426993a84cfa0503419a~tplv-k3u1fbpfcp-zoom-1.image)
-
-该动画的灵感来源：[凭物语第 3 集开头](https://www.acfun.cn/bangumi/aa6003168_36123_1739764)
-
-本 demo 地址：[3D Puzzle Animation](https://codepen.io/alphardex/pen/wvGXwgL)
-
 # 文本分割
 
 在上一篇我们提到了如何用 JS 来分割文本，本篇将介绍一种更简洁的实现方法——gsap 的 SplitText 插件，利用它我们能用更少的代码来实现下图的效果
