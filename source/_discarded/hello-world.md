@@ -1,4 +1,3 @@
----
 title: JavaScript语言专属特性
 tags:
   - JavaScript

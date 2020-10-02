@@ -1,13 +1,12 @@
----
 title: CSS的常用属性速查表
 author: alphardex
 tags:
-  - CSS
   - Cheatsheet
+  - CSS
 categories:
   - 前端
 abbrlink: 28164
-date: 2020-06-06 17:11:00
+date: 2019-12-27 17:11:00
 ---
 要想写出优美的CSS作品，想象力固然很重要，然而基础也是不可忽略的。相信大部分人怕写CSS的原因是被它庞大的基础知识体系给吓到了，在此笔者推荐一个叫[freecodecamp](http://freecodecamp.com/)的网站，通过闯关的方式来学习前端三剑客，用它入门CSS是最佳的选择！
 
