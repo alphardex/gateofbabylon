@@ -6,7 +6,7 @@
   <link href="/gateofbabylon/atom.xml" rel="self"/>
   
   <link href="https://alphardex.github.io/gateofbabylon/"/>
-  <updated>2020-09-30T08:45:19.673Z</updated>
+  <updated>2020-10-02T11:45:50.073Z</updated>
   <id>https://alphardex.github.io/gateofbabylon/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/1514/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/1514/</id>
     <published>2020-09-29T05:49:39.000Z</published>
-    <updated>2020-09-30T08:45:19.673Z</updated>
+    <updated>2020-10-02T11:45:50.073Z</updated>
     
     <summary type="html">
     
@@ -39,29 +39,11 @@
   </entry>
   
   <entry>
-    <title>我写 CSS 的常用套路·续</title>
-    <link href="https://alphardex.github.io/gateofbabylon/posts/32261/"/>
-    <id>https://alphardex.github.io/gateofbabylon/posts/32261/</id>
-    <published>2020-09-14T02:09:09.000Z</published>
-    <updated>2020-09-30T08:45:19.673Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;本文正在写作中&lt;/p&gt;
-&lt;p&gt;前篇传送门：&lt;a href=&quot;https://juejin.im/post/6844904033405108232&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;猛戳这里&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>PC搬家指南</title>
     <link href="https://alphardex.github.io/gateofbabylon/posts/54698/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/54698/</id>
     <published>2020-09-13T01:57:00.000Z</published>
-    <updated>2020-09-30T08:45:19.673Z</updated>
+    <updated>2020-10-02T11:45:50.073Z</updated>
     
     <summary type="html">
     
@@ -82,7 +64,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/50603/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/50603/</id>
     <published>2020-08-10T08:55:00.000Z</published>
-    <updated>2020-09-30T08:45:19.673Z</updated>
+    <updated>2020-10-02T11:45:50.073Z</updated>
     
     <summary type="html">
     
@@ -99,11 +81,31 @@
   </entry>
   
   <entry>
+    <title>一个孤独中二患者的自白</title>
+    <link href="https://alphardex.github.io/gateofbabylon/posts/35620/"/>
+    <id>https://alphardex.github.io/gateofbabylon/posts/35620/</id>
+    <published>2020-01-01T11:37:00.000Z</published>
+    <updated>2020-10-02T11:45:50.073Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;大家好，欢迎来到CSS中二魔法使alphardex的领域🙌!&lt;/p&gt;
+&lt;p&gt;之前在掘金写下过2篇文章：&lt;a href=&quot;https://juejin.im/post/6844904031513477128&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;「请收下这72个炫酷的CSS技巧」&lt;/a&gt;和&lt;a href=&quot;https://juejin.im/post/6844904033405108232&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;「我写CSS的常用套路」&lt;/a&gt;。没过多久就受到如此多的关注，真是让我感到很意外又很惊喜。我希望这两篇文章能帮到那些希望自己能写出炫酷的特效的人以及想领略CSS真正的美的人。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="自传" scheme="https://alphardex.github.io/gateofbabylon/categories/%E8%87%AA%E4%BC%A0/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>我写CSS的常用套路</title>
     <link href="https://alphardex.github.io/gateofbabylon/posts/17061/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/17061/</id>
-    <published>2020-06-06T09:23:00.000Z</published>
-    <updated>2020-09-30T08:45:19.673Z</updated>
+    <published>2019-12-28T09:23:00.000Z</published>
+    <updated>2020-10-02T11:45:50.073Z</updated>
     
     <summary type="html">
     
@@ -122,60 +124,11 @@
   </entry>
   
   <entry>
-    <title>DOM的常用API速查表</title>
-    <link href="https://alphardex.github.io/gateofbabylon/posts/20873/"/>
-    <id>https://alphardex.github.io/gateofbabylon/posts/20873/</id>
-    <published>2020-06-06T09:22:00.000Z</published>
-    <updated>2020-09-30T08:45:19.673Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;大多数情况下，笔者坚信能用CSS解决的，就不会用JS来解决&lt;/p&gt;
-&lt;p&gt;但是，CSS在某些情况下还是有一定的局限性，比如跟踪鼠标事件，监视页面滚动等&lt;/p&gt;
-&lt;p&gt;这时，我们就要借助强大的DOM API了，在不用框架的基础上，就能用原生JS华丽地解决一些常见但CSS做不到的需求&lt;/p&gt;
-&lt;p&gt;本文罗列了笔者平时最常用的DOM API&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="https://alphardex.github.io/gateofbabylon/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="JavaScript" scheme="https://alphardex.github.io/gateofbabylon/tags/JavaScript/"/>
-    
-      <category term="DOM" scheme="https://alphardex.github.io/gateofbabylon/tags/DOM/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript的常用API速查表</title>
-    <link href="https://alphardex.github.io/gateofbabylon/posts/59160/"/>
-    <id>https://alphardex.github.io/gateofbabylon/posts/59160/</id>
-    <published>2020-06-06T09:13:00.000Z</published>
-    <updated>2020-09-30T08:45:19.673Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本文罗列了JavaScript的常用API。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="https://alphardex.github.io/gateofbabylon/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="JavaScript" scheme="https://alphardex.github.io/gateofbabylon/tags/JavaScript/"/>
-    
-      <category term="Cheatsheet" scheme="https://alphardex.github.io/gateofbabylon/tags/Cheatsheet/"/>
-    
-  </entry>
-  
-  <entry>
     <title>CSS的常用属性速查表</title>
     <link href="https://alphardex.github.io/gateofbabylon/posts/28164/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/28164/</id>
-    <published>2020-06-06T09:11:00.000Z</published>
-    <updated>2020-09-30T08:45:19.673Z</updated>
+    <published>2019-12-27T09:11:00.000Z</published>
+    <updated>2020-10-02T11:45:50.073Z</updated>
     
     <summary type="html">
     
@@ -195,11 +148,36 @@
   </entry>
   
   <entry>
+    <title>请收下这72个炫酷的CSS技巧</title>
+    <link href="https://alphardex.github.io/gateofbabylon/posts/18258/"/>
+    <id>https://alphardex.github.io/gateofbabylon/posts/18258/</id>
+    <published>2019-12-25T11:34:00.000Z</published>
+    <updated>2020-10-02T11:45:50.073Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;CSS是一门很特殊的语言，不像一般的编程语言那样需要抽象的思维和严密的逻辑，它真正需要的是&lt;strong&gt;想象力&lt;/strong&gt;——将你脑中所想的意象用代码来表现出来。那么意象又是如何产生的呢？最常用的方法就是&lt;strong&gt;探索和观察&lt;/strong&gt;。举个例子，笔者平时热爱看番，每看到有意思的场景画面总会下意识地记录下来，这对动画创作会非常有帮助；同样地，一旦笔者发现一个制作精良的网站，也会将网站上那些吸引人的元素仔细审查一遍，灵感也自然就有了。&lt;/p&gt;
+&lt;p&gt;演示网址1：&lt;a href=&quot;https://codepen.io/alphardex&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;codepen&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;演示网址2：&lt;a href=&quot;https://shiroi.netlify.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;shiroi&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;源码地址：&lt;a href=&quot;https://github.com/alphardex/shiro&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;github&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;本文的技巧将不会止步于72个。灵感不息，创作不止。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="https://alphardex.github.io/gateofbabylon/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="CSS" scheme="https://alphardex.github.io/gateofbabylon/tags/CSS/"/>
+    
+  </entry>
+  
+  <entry>
     <title>前端必备的实用工具</title>
     <link href="https://alphardex.github.io/gateofbabylon/posts/16823/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/16823/</id>
-    <published>2020-06-06T09:10:00.000Z</published>
-    <updated>2020-09-30T08:45:19.673Z</updated>
+    <published>2019-12-02T09:10:00.000Z</published>
+    <updated>2020-10-02T11:45:50.073Z</updated>
     
     <summary type="html">
     
@@ -212,27 +190,6 @@
     
     
       <category term="Tools" scheme="https://alphardex.github.io/gateofbabylon/tags/Tools/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript语言专属特性</title>
-    <link href="https://alphardex.github.io/gateofbabylon/posts/32589/"/>
-    <id>https://alphardex.github.io/gateofbabylon/posts/32589/</id>
-    <published>2020-06-06T08:57:00.000Z</published>
-    <updated>2020-09-30T08:45:19.673Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本文归纳了笔者最常用的 JavaScript 语言专属特性。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="https://alphardex.github.io/gateofbabylon/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="JavaScript" scheme="https://alphardex.github.io/gateofbabylon/tags/JavaScript/"/>
     
   </entry>
   

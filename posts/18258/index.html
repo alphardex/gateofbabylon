@@ -1,0 +1,212 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="请收下这72个炫酷的CSS技巧"><meta name="keywords" content="CSS"><meta name="author" content="alphardex"><meta name="copyright" content="alphardex"><title>请收下这72个炫酷的CSS技巧 | A大的图书馆</title><link rel="shortcut icon" href="/gateofbabylon/melody-favicon.ico"><link rel="stylesheet" href="/gateofbabylon/css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.9.0/css/all.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script src="https://v1.hitokoto.cn/?encode=js&amp;charset=utf-8&amp;select=.footer_custom_text" defer></script><script>var GLOBAL_CONFIG = { 
+  root: '/gateofbabylon/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script><meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/gateofbabylon/atom.xml" title="A大的图书馆" type="application/atom+xml">
+</head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注意"><span class="toc-number">2.</span> <span class="toc-text">注意</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#兼容性"><span class="toc-number">2.1.</span> <span class="toc-text">兼容性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#框架"><span class="toc-number">2.2.</span> <span class="toc-text">框架</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#教程"><span class="toc-number">2.3.</span> <span class="toc-text">教程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#动画"><span class="toc-number">3.</span> <span class="toc-text">动画</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#利用不同的delay实现交错动画"><span class="toc-number">3.1.</span> <span class="toc-text">利用不同的delay实现交错动画</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文本"><span class="toc-number">4.</span> <span class="toc-text">文本</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#利用background-clip-text配合color实现渐变文字效果"><span class="toc-number">4.1.</span> <span class="toc-text">利用background-clip:text配合color实现渐变文字效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用动态hsl颜色实现彩虹文字效果"><span class="toc-number">4.2.</span> <span class="toc-text">利用动态hsl颜色实现彩虹文字效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用text-shadow实现发光文字效果"><span class="toc-number">4.3.</span> <span class="toc-text">利用text-shadow实现发光文字效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用text-shadow实现伪3D文字效果"><span class="toc-number">4.4.</span> <span class="toc-text">利用text-shadow实现伪3D文字效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用web-animation实现冒泡文字效果"><span class="toc-number">4.5.</span> <span class="toc-text">利用web animation实现冒泡文字效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用动态max-width实现文本展开效果"><span class="toc-number">4.6.</span> <span class="toc-text">利用动态max-width实现文本展开效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用绝对定位、3D变换和JS实现翻转文字"><span class="toc-number">4.7.</span> <span class="toc-text">利用绝对定位、3D变换和JS实现翻转文字</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#视觉"><span class="toc-number">5.</span> <span class="toc-text">视觉</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#利用backdrop-filter实现毛玻璃背景效果"><span class="toc-number">5.1.</span> <span class="toc-text">利用backdrop-filter实现毛玻璃背景效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用背景、绝对定位和filter实现毛玻璃景深效果"><span class="toc-number">5.2.</span> <span class="toc-text">利用背景、绝对定位和filter实现毛玻璃景深效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用blur和contrast滤镜实现融合效果"><span class="toc-number">5.3.</span> <span class="toc-text">利用blur和contrast滤镜实现融合效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用元素叠加blur滤镜实现日光效果"><span class="toc-number">5.4.</span> <span class="toc-text">利用元素叠加blur滤镜实现日光效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用mix-blend-mode-screen实现文本遮罩效果"><span class="toc-number">5.5.</span> <span class="toc-text">利用mix-blend-mode:screen实现文本遮罩效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用-webkit-box-reflect实现倒影效果"><span class="toc-number">5.6.</span> <span class="toc-text">利用-webkit-box-reflect实现倒影效果</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#页面"><span class="toc-number">6.</span> <span class="toc-text">页面</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#利用3D变换实现视差效果"><span class="toc-number">6.1.</span> <span class="toc-text">利用3D变换实现视差效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用position-sticky实现粘性滚动效果"><span class="toc-number">6.2.</span> <span class="toc-text">利用position:sticky实现粘性滚动效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用绝对定位和交错动画实现镜头拉伸背景效果"><span class="toc-number">6.3.</span> <span class="toc-text">利用绝对定位和交错动画实现镜头拉伸背景效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用伪元素、绝对定位和动画实现滑动幻灯片"><span class="toc-number">6.4.</span> <span class="toc-text">利用伪元素、绝对定位和动画实现滑动幻灯片</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#组件"><span class="toc-number">7.</span> <span class="toc-text">组件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#利用border-radius实现曲边导航栏"><span class="toc-number">7.1.</span> <span class="toc-text">利用border-radius实现曲边导航栏</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用动画和绝对定位实现汉堡菜单"><span class="toc-number">7.2.</span> <span class="toc-text">利用动画和绝对定位实现汉堡菜单</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用伪元素和动画实现动态划线效果"><span class="toc-number">7.3.</span> <span class="toc-text">利用伪元素和动画实现动态划线效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用伪元素和overflow-hidden实现交错分割文本菜单"><span class="toc-number">7.4.</span> <span class="toc-text">利用伪元素和overflow:hidden实现交错分割文本菜单</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用伪元素和overflow-hidden实现填充按钮"><span class="toc-number">7.5.</span> <span class="toc-text">利用伪元素和overflow:hidden实现填充按钮</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用伪元素、渐变和overflow-hidden实现闪光按钮"><span class="toc-number">7.6.</span> <span class="toc-text">利用伪元素、渐变和overflow:hidden实现闪光按钮</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用绝对定位、动画、渐变和overflow-hidden实现蛇形边框按钮"><span class="toc-number">7.7.</span> <span class="toc-text">利用绝对定位、动画、渐变和overflow:hidden实现蛇形边框按钮</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用伪元素、渐变、背景运动实现动态渐变边框"><span class="toc-number">7.8.</span> <span class="toc-text">利用伪元素、渐变、背景运动实现动态渐变边框</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用oveflow-hidden、max-height和-target实现手风琴菜单"><span class="toc-number">7.9.</span> <span class="toc-text">利用oveflow:hidden、max-height和:target实现手风琴菜单</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用overflow-hidden和scroll相关属性实现无缝轮播图"><span class="toc-number">7.10.</span> <span class="toc-text">利用overflow:hidden和scroll相关属性实现无缝轮播图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用兄弟选择器配合伪元素自定义单复选框"><span class="toc-number">7.11.</span> <span class="toc-text">利用兄弟选择器配合伪元素自定义单复选框</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用各种属性实现各种按钮特效"><span class="toc-number">7.12.</span> <span class="toc-text">利用各种属性实现各种按钮特效</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用多重box-shadow阴影实现发光按钮菜单"><span class="toc-number">7.13.</span> <span class="toc-text">利用多重box-shadow阴影实现发光按钮菜单</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用counter在伪元素的content中显示var的值"><span class="toc-number">7.14.</span> <span class="toc-text">利用counter在伪元素的content中显示var的值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用-webkit-slider-thumb定制滑块"><span class="toc-number">7.15.</span> <span class="toc-text">利用-webkit-slider-thumb定制滑块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用伪类校验表单"><span class="toc-number">7.16.</span> <span class="toc-text">利用伪类校验表单</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用动画实现卡片展开"><span class="toc-number">7.17.</span> <span class="toc-text">利用动画实现卡片展开</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用clip-path实现卡片多方向展开"><span class="toc-number">7.18.</span> <span class="toc-text">利用clip-path实现卡片多方向展开</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用没有perspective的transform-style-preserve-3d实现等距3D效果"><span class="toc-number">7.19.</span> <span class="toc-text">利用没有perspective的transform-style:preserve-3d实现等距3D效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用3D变换实现3D下拉菜单"><span class="toc-number">7.20.</span> <span class="toc-text">利用3D变换实现3D下拉菜单</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用动画和JS实现简单的分页栏"><span class="toc-number">7.21.</span> <span class="toc-text">利用动画和JS实现简单的分页栏</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用伪元素、overflow-hidden、动画、JS实现标签页"><span class="toc-number">7.22.</span> <span class="toc-text">利用伪元素、overflow:hidden、动画、JS实现标签页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用伪元素、-checked、-兄弟选择器实现5星评分"><span class="toc-number">7.23.</span> <span class="toc-text">利用伪元素、:checked、~兄弟选择器实现5星评分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运用伪元素、层叠关系、3D变换、JS实现翻牌时钟"><span class="toc-number">7.24.</span> <span class="toc-text">运用伪元素、层叠关系、3D变换、JS实现翻牌时钟</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用鼠标事件监听和web-animation实现图片悬浮菜单"><span class="toc-number">7.25.</span> <span class="toc-text">利用鼠标事件监听和web animation实现图片悬浮菜单</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用conic-gradient，伪元素和CSS变量实现圆盘度量计"><span class="toc-number">7.26.</span> <span class="toc-text">利用conic-gradient，伪元素和CSS变量实现圆盘度量计</span></a></li></ol></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://i.loli.net/2020/06/06/J8LvW7ZgimqY26N.jpg"></div><div class="author-info__name text-center">alphardex</div><div class="author-info__description text-center">分享CSS、JavaScript等前端技术。</div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/gateofbabylon/archives"><span class="pull-left">Articles</span><span class="pull-right">8</span></a><a class="author-info-articles__tags article-meta" href="/gateofbabylon/tags"><span class="pull-left">Tags</span><span class="pull-right">6</span></a><a class="author-info-articles__categories article-meta" href="/gateofbabylon/categories"><span class="pull-left">Categories</span><span class="pull-right">3</span></a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://i.loli.net/2020/06/06/n1hAqjue5DxGYf3.jpg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/gateofbabylon/">A大的图书馆</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/gateofbabylon/">Home</a><a class="site-page" href="/gateofbabylon/archives">Archives</a><a class="site-page" href="/gateofbabylon/tags">Tags</a><a class="site-page" href="/gateofbabylon/categories">Categories</a><a class="site-page" href="/gateofbabylon/about">About</a></span><span class="pull-right"></span></div><div id="post-info"><div id="post-title">请收下这72个炫酷的CSS技巧</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-12-25</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/gateofbabylon/categories/%E5%89%8D%E7%AB%AF/">前端</a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>CSS是一门很特殊的语言，不像一般的编程语言那样需要抽象的思维和严密的逻辑，它真正需要的是<strong>想象力</strong>——将你脑中所想的意象用代码来表现出来。那么意象又是如何产生的呢？最常用的方法就是<strong>探索和观察</strong>。举个例子，笔者平时热爱看番，每看到有意思的场景画面总会下意识地记录下来，这对动画创作会非常有帮助；同样地，一旦笔者发现一个制作精良的网站，也会将网站上那些吸引人的元素仔细审查一遍，灵感也自然就有了。</p>
+<p>演示网址1：<a href="https://codepen.io/alphardex" target="_blank" rel="noopener">codepen</a></p>
+<p>演示网址2：<a href="https://shiroi.netlify.com" target="_blank" rel="noopener">shiroi</a></p>
+<p>源码地址：<a href="https://github.com/alphardex/shiro" target="_blank" rel="noopener">github</a></p>
+<p>本文的技巧将不会止步于72个。灵感不息，创作不止。</p>
+<a id="more"></a>
+
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><h3 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h3><p>本文的所有技巧都<strong>未考虑兼容性</strong>，因为个人认为兼容性是一种束缚，它会妨碍你写出优秀的作品。如果硬是要考虑的话请自行解决，<a href="https://caniuse.com" target="_blank" rel="noopener">这个网站</a>或许能帮到你。</p>
+<h3 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h3><p>本文所用到的技巧皆是SCSS+TypeScript。如果想移植到React或Vue上的话请根据框架本身的特点自行适配。笔者不用这类框架的原因很简单：框架很容易就会过时，原生CSS+JS才是王道。</p>
+<h3 id="教程"><a href="#教程" class="headerlink" title="教程"></a>教程</h3><p>笔者实在是不擅长写这类东西，不过倒是可以把常用的属性和模式列出来，供大家参考参考。</p>
+<p>常用属性：<a href="https://juejin.im/post/6844904033145061389" target="_blank" rel="noopener">猛戳这里</a></p>
+<p>常用模式：<a href="https://juejin.im/post/6844904033405108232" target="_blank" rel="noopener">猛戳这里</a></p>
+<h2 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h2><h3 id="利用不同的delay实现交错动画"><a href="#利用不同的delay实现交错动画" class="headerlink" title="利用不同的delay实现交错动画"></a>利用不同的<code>delay</code>实现交错动画</h3><ul>
+<li><a href="https://codepen.io/alphardex/pen/eYYMYXJ" target="_blank" rel="noopener">Reveal Text</a></li>
+<li><a href="https://codepen.io/alphardex/pen/MWWvRRR" target="_blank" rel="noopener">Staggered Stair Loading</a></li>
+<li><a href="https://codepen.io/alphardex/pen/LYYZZEz" target="_blank" rel="noopener">Staggered Square Loading</a></li>
+<li><a href="https://codepen.io/alphardex/pen/XWWWBmQ" target="_blank" rel="noopener">Staggered Wave Loading</a></li>
+<li><a href="https://codepen.io/alphardex/pen/QWLYVjV" target="_blank" rel="noopener">Gleaming Loading</a></li>
+<li><a href="https://codepen.io/alphardex/pen/pozqwrO" target="_blank" rel="noopener">Particle Burst</a></li>
+<li><a href="https://codepen.io/alphardex/pen/rNBrExx" target="_blank" rel="noopener">Gleaming Heading</a></li>
+<li><a href="https://codepen.io/alphardex/pen/eYmORVe" target="_blank" rel="noopener">Staggered Shrinking Loading</a></li>
+<li><a href="https://codepen.io/alphardex/pen/dyPorwJ" target="_blank" rel="noopener">Snow</a></li>
+<li><a href="https://codepen.io/alphardex/pen/qBEmGbw" target="_blank" rel="noopener">Staggered Rise In Text</a></li>
+<li><a href="https://codepen.io/alphardex/pen/KKwvKGY" target="_blank" rel="noopener">Staggered LandIn Text</a></li>
+</ul>
+<h2 id="文本"><a href="#文本" class="headerlink" title="文本"></a>文本</h2><h3 id="利用background-clip-text配合color实现渐变文字效果"><a href="#利用background-clip-text配合color实现渐变文字效果" class="headerlink" title="利用background-clip:text配合color实现渐变文字效果"></a>利用<code>background-clip:text</code>配合<code>color</code>实现渐变文字效果</h3><ul>
+<li><a href="https://codepen.io/alphardex/pen/VwweapQ" target="_blank" rel="noopener">Shining Text</a></li>
+<li><a href="https://codepen.io/alphardex/pen/QWwveZG" target="_blank" rel="noopener">Menu Hover Fill Text</a></li>
+</ul>
+<h3 id="利用动态hsl颜色实现彩虹文字效果"><a href="#利用动态hsl颜色实现彩虹文字效果" class="headerlink" title="利用动态hsl颜色实现彩虹文字效果"></a>利用动态<code>hsl</code>颜色实现彩虹文字效果</h3><ul>
+<li><a href="https://codepen.io/alphardex/pen/ExxQOWV" target="_blank" rel="noopener">Rainbow Color Text</a></li>
+</ul>
+<h3 id="利用text-shadow实现发光文字效果"><a href="#利用text-shadow实现发光文字效果" class="headerlink" title="利用text-shadow实现发光文字效果"></a>利用<code>text-shadow</code>实现发光文字效果</h3><ul>
+<li><a href="https://codepen.io/alphardex/pen/rNNwmZz" target="_blank" rel="noopener">Neon Text</a></li>
+<li><a href="https://codepen.io/alphardex/pen/Exxodoq" target="_blank" rel="noopener">Staggered Glow In Text</a></li>
+</ul>
+<h3 id="利用text-shadow实现伪3D文字效果"><a href="#利用text-shadow实现伪3D文字效果" class="headerlink" title="利用text-shadow实现伪3D文字效果"></a>利用<code>text-shadow</code>实现伪3D文字效果</h3><ul>
+<li><a href="https://codepen.io/alphardex/pen/QWWavvx" target="_blank" rel="noopener">Staggered Bouncing 3D Loading</a></li>
+</ul>
+<h3 id="利用web-animation实现冒泡文字效果"><a href="#利用web-animation实现冒泡文字效果" class="headerlink" title="利用web animation实现冒泡文字效果"></a>利用<code>web animation</code>实现冒泡文字效果</h3><ul>
+<li><a href="https://codepen.io/alphardex/pen/LYYLdoY" target="_blank" rel="noopener">Bubbling Text</a></li>
+</ul>
+<h3 id="利用动态max-width实现文本展开效果"><a href="#利用动态max-width实现文本展开效果" class="headerlink" title="利用动态max-width实现文本展开效果"></a>利用动态<code>max-width</code>实现文本展开效果</h3><ul>
+<li><a href="https://codepen.io/alphardex/pen/xxKvvMQ" target="_blank" rel="noopener">Abbr Expansion</a></li>
+</ul>
+<h3 id="利用绝对定位、3D变换和JS实现翻转文字"><a href="#利用绝对定位、3D变换和JS实现翻转文字" class="headerlink" title="利用绝对定位、3D变换和JS实现翻转文字"></a>利用绝对定位、3D变换和JS实现翻转文字</h3><ul>
+<li><a href="https://codepen.io/alphardex/pen/WNNVJeZ" target="_blank" rel="noopener">Rotating Text</a></li>
+</ul>
+<h2 id="视觉"><a href="#视觉" class="headerlink" title="视觉"></a>视觉</h2><h3 id="利用backdrop-filter实现毛玻璃背景效果"><a href="#利用backdrop-filter实现毛玻璃背景效果" class="headerlink" title="利用backdrop-filter实现毛玻璃背景效果"></a>利用<code>backdrop-filter</code>实现毛玻璃背景效果</h3><ul>
+<li><a href="https://codepen.io/alphardex/pen/pooQMVp" target="_blank" rel="noopener">Frosted Glass</a></li>
+</ul>
+<h3 id="利用背景、绝对定位和filter实现毛玻璃景深效果"><a href="#利用背景、绝对定位和filter实现毛玻璃景深效果" class="headerlink" title="利用背景、绝对定位和filter实现毛玻璃景深效果"></a>利用背景、绝对定位和<code>filter</code>实现毛玻璃景深效果</h3><ul>
+<li><a href="https://codepen.io/alphardex/pen/ZEEZpQG" target="_blank" rel="noopener">Frosted Glass Depth of Field</a></li>
+</ul>
+<h3 id="利用blur和contrast滤镜实现融合效果"><a href="#利用blur和contrast滤镜实现融合效果" class="headerlink" title="利用blur和contrast滤镜实现融合效果"></a>利用<code>blur</code>和<code>contrast</code>滤镜实现融合效果</h3><ul>
+<li><a href="https://codepen.io/alphardex/pen/BaBevXm" target="_blank" rel="noopener">Snow Scratch</a></li>
+</ul>
+<h3 id="利用元素叠加blur滤镜实现日光效果"><a href="#利用元素叠加blur滤镜实现日光效果" class="headerlink" title="利用元素叠加blur滤镜实现日光效果"></a>利用元素叠加<code>blur</code>滤镜实现日光效果</h3><ul>
+<li><a href="https://codepen.io/alphardex/pen/gOOPKJE" target="_blank" rel="noopener">Eclipse Loader</a></li>
+<li><a href="https://codepen.io/alphardex/pen/KKKLdaR" target="_blank" rel="noopener">Glowing List Hover</a></li>
+<li><a href="https://codepen.io/alphardex/pen/GRRaMOV" target="_blank" rel="noopener">Glowing Gradient Border</a></li>
+<li><a href="https://codepen.io/alphardex/pen/xxxNpad" target="_blank" rel="noopener">Glowing Gradient Button</a></li>
+<li><a href="https://codepen.io/alphardex/full/eYmGEGp" target="_blank" rel="noopener">Crimson Crescent Loading</a></li>
+</ul>
+<h3 id="利用mix-blend-mode-screen实现文本遮罩效果"><a href="#利用mix-blend-mode-screen实现文本遮罩效果" class="headerlink" title="利用mix-blend-mode:screen实现文本遮罩效果"></a>利用<code>mix-blend-mode:screen</code>实现文本遮罩效果</h3><ul>
+<li><a href="https://codepen.io/alphardex/pen/wvvLYpV" target="_blank" rel="noopener">Video Mask Text</a></li>
+</ul>
+<h3 id="利用-webkit-box-reflect实现倒影效果"><a href="#利用-webkit-box-reflect实现倒影效果" class="headerlink" title="利用-webkit-box-reflect实现倒影效果"></a>利用<code>-webkit-box-reflect</code>实现倒影效果</h3><ul>
+<li><a href="https://codepen.io/alphardex/pen/ExaZgxp" target="_blank" rel="noopener">Card Flip Reflection</a></li>
+</ul>
+<h2 id="页面"><a href="#页面" class="headerlink" title="页面"></a>页面</h2><h3 id="利用3D变换实现视差效果"><a href="#利用3D变换实现视差效果" class="headerlink" title="利用3D变换实现视差效果"></a>利用3D变换实现视差效果</h3><ul>
+<li><a href="https://codepen.io/alphardex/pen/qBEZELp" target="_blank" rel="noopener">Parallax</a></li>
+</ul>
+<h3 id="利用position-sticky实现粘性滚动效果"><a href="#利用position-sticky实现粘性滚动效果" class="headerlink" title="利用position:sticky实现粘性滚动效果"></a>利用<code>position:sticky</code>实现粘性滚动效果</h3><ul>
+<li><a href="https://codepen.io/alphardex/pen/YzPqeMm" target="_blank" rel="noopener">Sticky Sections</a></li>
+</ul>
+<h3 id="利用绝对定位和交错动画实现镜头拉伸背景效果"><a href="#利用绝对定位和交错动画实现镜头拉伸背景效果" class="headerlink" title="利用绝对定位和交错动画实现镜头拉伸背景效果"></a>利用绝对定位和交错动画实现镜头拉伸背景效果</h3><ul>
+<li><a href="https://codepen.io/alphardex/pen/wvBovww" target="_blank" rel="noopener">Ken Burns Effect</a></li>
+</ul>
+<h3 id="利用伪元素、绝对定位和动画实现滑动幻灯片"><a href="#利用伪元素、绝对定位和动画实现滑动幻灯片" class="headerlink" title="利用伪元素、绝对定位和动画实现滑动幻灯片"></a>利用伪元素、绝对定位和动画实现滑动幻灯片</h3><ul>
+<li><a href="https://codepen.io/alphardex/details/VwYWpJN" target="_blank" rel="noopener">Animated Image Slider</a></li>
+</ul>
+<h2 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h2><h3 id="利用border-radius实现曲边导航栏"><a href="#利用border-radius实现曲边导航栏" class="headerlink" title="利用border-radius实现曲边导航栏"></a>利用<code>border-radius</code>实现曲边导航栏</h3><ul>
+<li><a href="https://codepen.io/alphardex/pen/abbWOPR" target="_blank" rel="noopener">Nav Tab</a> </li>
+</ul>
+<h3 id="利用动画和绝对定位实现汉堡菜单"><a href="#利用动画和绝对定位实现汉堡菜单" class="headerlink" title="利用动画和绝对定位实现汉堡菜单"></a>利用动画和绝对定位实现汉堡菜单</h3><ul>
+<li><a href="https://codepen.io/alphardex/pen/BaaKvVZ" target="_blank" rel="noopener">Burger Menu</a></li>
+</ul>
+<h3 id="利用伪元素和动画实现动态划线效果"><a href="#利用伪元素和动画实现动态划线效果" class="headerlink" title="利用伪元素和动画实现动态划线效果"></a>利用伪元素和动画实现动态划线效果</h3><ul>
+<li><a href="https://codepen.io/alphardex/pen/MWWEmLK" target="_blank" rel="noopener">Menu Hover Underline</a></li>
+<li><a href="https://codepen.io/alphardex/pen/ExxPRXN" target="_blank" rel="noopener">Menu Hover Magnify</a></li>
+<li><a href="https://codepen.io/alphardex/pen/pooYKVa" target="_blank" rel="noopener">Button Hover Border Stroke With Float Text</a></li>
+<li><a href="https://codepen.io/alphardex/pen/jOEOEzZ" target="_blank" rel="noopener">Header With Slide Bar</a></li>
+<li><a href="https://codepen.io/alphardex/full/ZEYXomW" target="_blank" rel="noopener">Button Hover Multiple Border Stroke</a></li>
+</ul>
+<h3 id="利用伪元素和overflow-hidden实现交错分割文本菜单"><a href="#利用伪元素和overflow-hidden实现交错分割文本菜单" class="headerlink" title="利用伪元素和overflow:hidden实现交错分割文本菜单"></a>利用伪元素和<code>overflow:hidden</code>实现交错分割文本菜单</h3><ul>
+<li><a href="https://codepen.io/alphardex/pen/wvvxVPj" target="_blank" rel="noopener">Split Text Menu</a></li>
+<li><a href="https://codepen.io/alphardex/pen/wvBeXjd" target="_blank" rel="noopener">Staggered Float Text Menu</a></li>
+<li><a href="https://codepen.io/alphardex/pen/ExavZdV" target="_blank" rel="noopener">Shinchou Menu</a>（慎重勇者风格菜单）</li>
+</ul>
+<h3 id="利用伪元素和overflow-hidden实现填充按钮"><a href="#利用伪元素和overflow-hidden实现填充按钮" class="headerlink" title="利用伪元素和overflow:hidden实现填充按钮"></a>利用伪元素和<code>overflow:hidden</code>实现填充按钮</h3><ul>
+<li><a href="https://codepen.io/alphardex/pen/eYYxzBm" target="_blank" rel="noopener">Confirm Modal</a></li>
+</ul>
+<h3 id="利用伪元素、渐变和overflow-hidden实现闪光按钮"><a href="#利用伪元素、渐变和overflow-hidden实现闪光按钮" class="headerlink" title="利用伪元素、渐变和overflow:hidden实现闪光按钮"></a>利用伪元素、渐变和<code>overflow:hidden</code>实现闪光按钮</h3><ul>
+<li><a href="https://codepen.io/alphardex/pen/eYYzXBZ" target="_blank" rel="noopener">Button Hover Shining</a></li>
+</ul>
+<h3 id="利用绝对定位、动画、渐变和overflow-hidden实现蛇形边框按钮"><a href="#利用绝对定位、动画、渐变和overflow-hidden实现蛇形边框按钮" class="headerlink" title="利用绝对定位、动画、渐变和overflow:hidden实现蛇形边框按钮"></a>利用绝对定位、动画、渐变和<code>overflow:hidden</code>实现蛇形边框按钮</h3><ul>
+<li><a href="https://codepen.io/alphardex/pen/qBBGxqY" target="_blank" rel="noopener">Snake Border Button</a></li>
+</ul>
+<h3 id="利用伪元素、渐变、背景运动实现动态渐变边框"><a href="#利用伪元素、渐变、背景运动实现动态渐变边框" class="headerlink" title="利用伪元素、渐变、背景运动实现动态渐变边框"></a>利用伪元素、渐变、背景运动实现动态渐变边框</h3><ul>
+<li><a href="https://codepen.io/alphardex/pen/vYEYGzp" target="_blank" rel="noopener">Gradient Border</a></li>
+</ul>
+<h3 id="利用oveflow-hidden、max-height和-target实现手风琴菜单"><a href="#利用oveflow-hidden、max-height和-target实现手风琴菜单" class="headerlink" title="利用oveflow:hidden、max-height和:target实现手风琴菜单"></a>利用<code>oveflow:hidden</code>、<code>max-height</code>和<code>:target</code>实现手风琴菜单</h3><ul>
+<li><a href="https://codepen.io/alphardex/pen/xxxNbar" target="_blank" rel="noopener">Accordion Menu</a></li>
+<li><a href="https://codepen.io/alphardex/pen/LYEYaoJ" target="_blank" rel="noopener">Accordion Panel</a></li>
+</ul>
+<h3 id="利用overflow-hidden和scroll相关属性实现无缝轮播图"><a href="#利用overflow-hidden和scroll相关属性实现无缝轮播图" class="headerlink" title="利用overflow:hidden和scroll相关属性实现无缝轮播图"></a>利用<code>overflow:hidden</code>和<code>scroll</code>相关属性实现无缝轮播图</h3><ul>
+<li><a href="https://codepen.io/alphardex/pen/RwwqqJE" target="_blank" rel="noopener">Carousel</a></li>
+</ul>
+<h3 id="利用兄弟选择器配合伪元素自定义单复选框"><a href="#利用兄弟选择器配合伪元素自定义单复选框" class="headerlink" title="利用兄弟选择器配合伪元素自定义单复选框"></a>利用兄弟选择器配合伪元素自定义单复选框</h3><ul>
+<li><a href="https://codepen.io/alphardex/pen/rNNPQwa" target="_blank" rel="noopener">Todo List</a></li>
+<li><a href="https://codepen.io/alphardex/pen/JjjpNWQ" target="_blank" rel="noopener">Radio Button</a></li>
+<li><a href="https://codepen.io/alphardex/pen/yLLjoaL" target="_blank" rel="noopener">Checkbox</a></li>
+<li><a href="https://codepen.io/alphardex/pen/poopqvE" target="_blank" rel="noopener">Toggle</a></li>
+<li><a href="https://codepen.io/alphardex/pen/YzzMMPx" target="_blank" rel="noopener">Elevator Switch</a></li>
+</ul>
+<h3 id="利用各种属性实现各种按钮特效"><a href="#利用各种属性实现各种按钮特效" class="headerlink" title="利用各种属性实现各种按钮特效"></a>利用各种属性实现各种按钮特效</h3><ul>
+<li><a href="https://codepen.io/alphardex/pen/VwwVLdM" target="_blank" rel="noopener">Button Collection</a></li>
+<li><a href="https://codepen.io/alphardex/pen/qBBwXZm" target="_blank" rel="noopener">Share Button</a></li>
+<li><a href="https://codepen.io/alphardex/pen/VwZNqEK" target="_blank" rel="noopener">Login Button</a></li>
+<li><a href="https://codepen.io/alphardex/pen/xxxRPLE" target="_blank" rel="noopener">One-Field Login Form</a></li>
+</ul>
+<h3 id="利用多重box-shadow阴影实现发光按钮菜单"><a href="#利用多重box-shadow阴影实现发光按钮菜单" class="headerlink" title="利用多重box-shadow阴影实现发光按钮菜单"></a>利用多重<code>box-shadow</code>阴影实现发光按钮菜单</h3><ul>
+<li><a href="https://codepen.io/alphardex/pen/ExxKjEN" target="_blank" rel="noopener">Glowing Menu Buttons</a></li>
+</ul>
+<h3 id="利用counter在伪元素的content中显示var的值"><a href="#利用counter在伪元素的content中显示var的值" class="headerlink" title="利用counter在伪元素的content中显示var的值"></a>利用<code>counter</code>在伪元素的<code>content</code>中显示<code>var</code>的值</h3><ul>
+<li><a href="https://codepen.io/alphardex/pen/MWWwNeR" target="_blank" rel="noopener">Progress Bar</a></li>
+</ul>
+<h3 id="利用-webkit-slider-thumb定制滑块"><a href="#利用-webkit-slider-thumb定制滑块" class="headerlink" title="利用-webkit-slider-thumb定制滑块"></a>利用<code>-webkit-slider-thumb</code>定制滑块</h3><ul>
+<li><a href="https://codepen.io/alphardex/pen/QWWXyee" target="_blank" rel="noopener">Gradient Range Slider</a></li>
+</ul>
+<h3 id="利用伪类校验表单"><a href="#利用伪类校验表单" class="headerlink" title="利用伪类校验表单"></a>利用伪类校验表单</h3><ul>
+<li><a href="https://codepen.io/alphardex/pen/zYYZorR" target="_blank" rel="noopener">Transparent Material Login Form</a> </li>
+</ul>
+<h3 id="利用动画实现卡片展开"><a href="#利用动画实现卡片展开" class="headerlink" title="利用动画实现卡片展开"></a>利用动画实现卡片展开</h3><ul>
+<li><a href="https://codepen.io/alphardex/pen/YzzGjLL" target="_blank" rel="noopener">Card Hover Expand Body</a></li>
+</ul>
+<h3 id="利用clip-path实现卡片多方向展开"><a href="#利用clip-path实现卡片多方向展开" class="headerlink" title="利用clip-path实现卡片多方向展开"></a>利用<code>clip-path</code>实现卡片多方向展开</h3><ul>
+<li><a href="https://codepen.io/alphardex/pen/ZEEBRrq" target="_blank" rel="noopener">Name Card Hover Expand</a></li>
+</ul>
+<h3 id="利用没有perspective的transform-style-preserve-3d实现等距3D效果"><a href="#利用没有perspective的transform-style-preserve-3d实现等距3D效果" class="headerlink" title="利用没有perspective的transform-style:preserve-3d实现等距3D效果"></a>利用没有<code>perspective</code>的<code>transform-style:preserve-3d</code>实现等距3D效果</h3><ul>
+<li><a href="https://codepen.io/alphardex/pen/yLLrReg" target="_blank" rel="noopener">3D Cube</a></li>
+<li><a href="https://codepen.io/alphardex/pen/oNNRxGQ" target="_blank" rel="noopener">Isometric Icon Hover</a></li>
+<li><a href="https://codepen.io/alphardex/pen/QWWRMew" target="_blank" rel="noopener">Isometric Images Hover</a></li>
+<li><a href="https://codepen.io/alphardex/pen/YzPKENd" target="_blank" rel="noopener">Isometric Icon Nav Bar</a></li>
+</ul>
+<h3 id="利用3D变换实现3D下拉菜单"><a href="#利用3D变换实现3D下拉菜单" class="headerlink" title="利用3D变换实现3D下拉菜单"></a>利用3D变换实现3D下拉菜单</h3><ul>
+<li><a href="https://codepen.io/alphardex/pen/rNaNyev" target="_blank" rel="noopener">3D Dropdown Menu</a></li>
+</ul>
+<h3 id="利用动画和JS实现简单的分页栏"><a href="#利用动画和JS实现简单的分页栏" class="headerlink" title="利用动画和JS实现简单的分页栏"></a>利用动画和JS实现简单的分页栏</h3><ul>
+<li><a href="https://codepen.io/alphardex/pen/QWwwwpp" target="_blank" rel="noopener">Pagination</a></li>
+</ul>
+<h3 id="利用伪元素、overflow-hidden、动画、JS实现标签页"><a href="#利用伪元素、overflow-hidden、动画、JS实现标签页" class="headerlink" title="利用伪元素、overflow:hidden、动画、JS实现标签页"></a>利用伪元素、<code>overflow:hidden</code>、动画、JS实现标签页</h3><ul>
+<li><a href="https://codepen.io/alphardex/pen/vYEEdGK" target="_blank" rel="noopener">Tabs</a></li>
+</ul>
+<h3 id="利用伪元素、-checked、-兄弟选择器实现5星评分"><a href="#利用伪元素、-checked、-兄弟选择器实现5星评分" class="headerlink" title="利用伪元素、:checked、~兄弟选择器实现5星评分"></a>利用伪元素、<code>:checked</code>、<code>~</code>兄弟选择器实现5星评分</h3><ul>
+<li><a href="https://codepen.io/alphardex/pen/povvGNZ" target="_blank" rel="noopener">Star Rating</a></li>
+</ul>
+<h3 id="运用伪元素、层叠关系、3D变换、JS实现翻牌时钟"><a href="#运用伪元素、层叠关系、3D变换、JS实现翻牌时钟" class="headerlink" title="运用伪元素、层叠关系、3D变换、JS实现翻牌时钟"></a>运用伪元素、层叠关系、3D变换、JS实现翻牌时钟</h3><ul>
+<li><a href="https://codepen.io/alphardex/pen/vYYoBNR" target="_blank" rel="noopener">Flip Card Clock</a></li>
+</ul>
+<h3 id="利用鼠标事件监听和web-animation实现图片悬浮菜单"><a href="#利用鼠标事件监听和web-animation实现图片悬浮菜单" class="headerlink" title="利用鼠标事件监听和web animation实现图片悬浮菜单"></a>利用鼠标事件监听和<code>web animation</code>实现图片悬浮菜单</h3><ul>
+<li><a href="https://codepen.io/alphardex/pen/OJPmQGz" target="_blank" rel="noopener">Menu Hover Image</a></li>
+</ul>
+<h3 id="利用conic-gradient，伪元素和CSS变量实现圆盘度量计"><a href="#利用conic-gradient，伪元素和CSS变量实现圆盘度量计" class="headerlink" title="利用conic-gradient，伪元素和CSS变量实现圆盘度量计"></a>利用<code>conic-gradient</code>，伪元素和CSS变量实现圆盘度量计</h3><ul>
+<li><a href="https://codepen.io/alphardex/pen/BaydVvQ" target="_blank" rel="noopener">Gauge (No SVG)</a></li>
+</ul>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">alphardex</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://alphardex.github.io/gateofbabylon/posts/18258/">https://alphardex.github.io/gateofbabylon/posts/18258/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/gateofbabylon/tags/CSS/">CSS</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="/gateofbabylon/posts/28164/"><i class="fa fa-chevron-left">  </i><span>CSS的常用属性速查表</span></a></div><div class="next-post pull-right"><a href="/gateofbabylon/posts/16823/"><span>前端必备的实用工具</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="vcomment"></div><script src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var notify = 'false' == 'true';
+var verify = 'false' == 'true';
+var record_ip = 'false' == 'true';
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  recordIP:record_ip,
+  appId:'MUKqiaU6CnxOn2VeT4cUBLdG-gzGzoHsz',
+  appKey:'nxePlNHUgdOaABmHUoWz4TpR',
+  placeholder:'何が言いたいことがある？',
+  avatar:'mm',
+  guest_info:guest_info,
+  pageSize:'10',
+  lang: 'zh-cn'
+})</script></div></div><footer class="footer-bg" style="background-image: url(https://i.loli.net/2020/06/06/n1hAqjue5DxGYf3.jpg)"><div class="layout" id="footer"><div class="copyright">&copy;2020 By alphardex</div><div class="framework-info"><span>Driven - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="footer_custom_text">hitokoto</div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/gateofbabylon/js/utils.js?version=1.7.0"></script><script src="/gateofbabylon/js/fancybox.js?version=1.7.0"></script><script src="/gateofbabylon/js/sidebar.js?version=1.7.0"></script><script src="/gateofbabylon/js/copy.js?version=1.7.0"></script><script src="/gateofbabylon/js/fireworks.js?version=1.7.0"></script><script src="/gateofbabylon/js/transition.js?version=1.7.0"></script><script src="/gateofbabylon/js/scroll.js?version=1.7.0"></script><script src="/gateofbabylon/js/head.js?version=1.7.0"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script></body></html>
