@@ -46,6 +46,9 @@ h6 {
   color: #344c67;
   font-weight: bold;
 }
+img {
+  max-width: 100%;
+}
 #content-outer {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;

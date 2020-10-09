@@ -6,7 +6,7 @@
   <link href="/gateofbabylon/atom.xml" rel="self"/>
   
   <link href="https://alphardex.github.io/gateofbabylon/"/>
-  <updated>2020-10-02T11:45:50.073Z</updated>
+  <updated>2020-10-09T09:19:38.153Z</updated>
   <id>https://alphardex.github.io/gateofbabylon/</id>
   
   <author>
@@ -17,11 +17,29 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>我写 CSS 的常用套路·续</title>
+    <link href="https://alphardex.github.io/gateofbabylon/posts/32261/"/>
+    <id>https://alphardex.github.io/gateofbabylon/posts/32261/</id>
+    <published>2020-10-09T07:00:00.000Z</published>
+    <updated>2020-10-09T09:19:38.153Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;前篇传送门：&lt;a href=&quot;https://juejin.im/post/6844904033405108232&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;猛戳这里&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;其实大多数的技巧前篇都已经讲完了，本文算是具有补充性质的番外篇吧0.0&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>画物语——CSS动画之美</title>
     <link href="https://alphardex.github.io/gateofbabylon/posts/1514/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/1514/</id>
     <published>2020-09-29T05:49:39.000Z</published>
-    <updated>2020-10-02T11:45:50.073Z</updated>
+    <updated>2020-10-09T09:19:38.153Z</updated>
     
     <summary type="html">
     
@@ -43,7 +61,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/54698/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/54698/</id>
     <published>2020-09-13T01:57:00.000Z</published>
-    <updated>2020-10-02T11:45:50.073Z</updated>
+    <updated>2020-10-09T09:19:38.153Z</updated>
     
     <summary type="html">
     
@@ -64,7 +82,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/50603/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/50603/</id>
     <published>2020-08-10T08:55:00.000Z</published>
-    <updated>2020-10-02T11:45:50.073Z</updated>
+    <updated>2020-10-09T09:19:38.153Z</updated>
     
     <summary type="html">
     
@@ -85,7 +103,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/35620/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/35620/</id>
     <published>2020-01-01T11:37:00.000Z</published>
-    <updated>2020-10-02T11:45:50.073Z</updated>
+    <updated>2020-10-09T09:19:38.153Z</updated>
     
     <summary type="html">
     
@@ -105,7 +123,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/17061/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/17061/</id>
     <published>2019-12-28T09:23:00.000Z</published>
-    <updated>2020-10-02T11:45:50.073Z</updated>
+    <updated>2020-10-09T09:19:38.153Z</updated>
     
     <summary type="html">
     
@@ -128,7 +146,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/28164/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/28164/</id>
     <published>2019-12-27T09:11:00.000Z</published>
-    <updated>2020-10-02T11:45:50.073Z</updated>
+    <updated>2020-10-09T09:19:38.153Z</updated>
     
     <summary type="html">
     
@@ -152,7 +170,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/18258/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/18258/</id>
     <published>2019-12-25T11:34:00.000Z</published>
-    <updated>2020-10-02T11:45:50.073Z</updated>
+    <updated>2020-10-09T09:19:38.153Z</updated>
     
     <summary type="html">
     
@@ -177,7 +195,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/16823/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/16823/</id>
     <published>2019-12-02T09:10:00.000Z</published>
-    <updated>2020-10-02T11:45:50.073Z</updated>
+    <updated>2020-10-09T09:19:38.153Z</updated>
     
     <summary type="html">
     
