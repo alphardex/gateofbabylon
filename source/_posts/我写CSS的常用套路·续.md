@@ -1,8 +1,10 @@
 title: 我写 CSS 的常用套路·续
 author: alphardex
 abbrlink: 32261
-tags: []
-categories: []
+tags:
+  - CSS
+categories:
+  - 前端
 date: 2020-10-09 15:00:00
 ---
 # 前言
