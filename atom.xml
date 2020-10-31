@@ -6,7 +6,7 @@
   <link href="/gateofbabylon/atom.xml" rel="self"/>
   
   <link href="https://alphardex.github.io/gateofbabylon/"/>
-  <updated>2020-10-26T08:22:41.229Z</updated>
+  <updated>2020-10-31T10:30:40.117Z</updated>
   <id>https://alphardex.github.io/gateofbabylon/</id>
   
   <author>
@@ -20,22 +20,24 @@
     <title>纯CSS实现密室逃脱游戏</title>
     <link href="https://alphardex.github.io/gateofbabylon/posts/19835/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/19835/</id>
-    <published>2020-10-26T03:18:51.000Z</published>
-    <updated>2020-10-26T08:22:41.229Z</updated>
+    <published>2020-10-26T03:18:00.000Z</published>
+    <updated>2020-10-31T10:30:40.117Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;大家好，这里是CSS魔法使——alphardex。&lt;/p&gt;
+&lt;p&gt;“密室逃脱”这个词想必大家并不陌生，在以前的flash时代，这是一类很经典的益智游戏之一。玩家常常会被困在一间密室中，而过关的目的就是想法设法逃出这件密室。以下是笔者玩的最早的一个密室逃脱游戏——深红房间，它也可以说是密室逃脱类游戏的先祖。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/10/26/hxYi8IbmvDRwKHa.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;接下来，笔者要用纯CSS实现一款类似的密室逃脱类游戏。&lt;/p&gt;
+&lt;p&gt;是的，你没听错，纯CSS，也就意味着完全没有JS的参与。有人就纳闷了：WTF?CSS，一个网页布局的语言，居然还能写游戏？可惜的是，CSS还真能写游戏。接下来随笔者一起进入这个不思议的国度吧。&lt;/p&gt;
     
     </summary>
     
     
+      <category term="前端" scheme="https://alphardex.github.io/gateofbabylon/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="CSS" scheme="https://alphardex.github.io/gateofbabylon/tags/CSS/"/>
     
   </entry>
   
@@ -44,7 +46,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/32261/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/32261/</id>
     <published>2020-10-09T07:00:00.000Z</published>
-    <updated>2020-10-26T08:22:41.229Z</updated>
+    <updated>2020-10-31T10:30:40.117Z</updated>
     
     <summary type="html">
     
@@ -54,6 +56,10 @@
     </summary>
     
     
+      <category term="前端" scheme="https://alphardex.github.io/gateofbabylon/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="CSS" scheme="https://alphardex.github.io/gateofbabylon/tags/CSS/"/>
     
   </entry>
   
@@ -61,8 +67,8 @@
     <title>画物语——CSS动画之美</title>
     <link href="https://alphardex.github.io/gateofbabylon/posts/1514/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/1514/</id>
-    <published>2020-09-29T05:49:39.000Z</published>
-    <updated>2020-10-26T08:22:41.229Z</updated>
+    <published>2020-09-29T05:49:00.000Z</published>
+    <updated>2020-10-31T10:30:40.117Z</updated>
     
     <summary type="html">
     
@@ -76,6 +82,10 @@
     </summary>
     
     
+      <category term="前端" scheme="https://alphardex.github.io/gateofbabylon/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="CSS" scheme="https://alphardex.github.io/gateofbabylon/tags/CSS/"/>
     
   </entry>
   
@@ -84,7 +94,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/54698/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/54698/</id>
     <published>2020-09-13T01:57:00.000Z</published>
-    <updated>2020-10-26T08:22:41.229Z</updated>
+    <updated>2020-10-31T10:30:40.117Z</updated>
     
     <summary type="html">
     
@@ -105,7 +115,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/50603/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/50603/</id>
     <published>2020-08-10T08:55:00.000Z</published>
-    <updated>2020-10-26T08:22:41.229Z</updated>
+    <updated>2020-10-31T10:30:40.117Z</updated>
     
     <summary type="html">
     
@@ -126,7 +136,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/35620/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/35620/</id>
     <published>2020-01-01T11:37:00.000Z</published>
-    <updated>2020-10-26T08:22:41.229Z</updated>
+    <updated>2020-10-31T10:30:40.117Z</updated>
     
     <summary type="html">
     
@@ -146,7 +156,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/17061/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/17061/</id>
     <published>2019-12-28T09:23:00.000Z</published>
-    <updated>2020-10-26T08:22:41.229Z</updated>
+    <updated>2020-10-31T10:30:40.117Z</updated>
     
     <summary type="html">
     
@@ -169,7 +179,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/28164/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/28164/</id>
     <published>2019-12-27T09:11:00.000Z</published>
-    <updated>2020-10-26T08:22:41.229Z</updated>
+    <updated>2020-10-31T10:30:40.117Z</updated>
     
     <summary type="html">
     
@@ -182,9 +192,9 @@
       <category term="前端" scheme="https://alphardex.github.io/gateofbabylon/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="Cheatsheet" scheme="https://alphardex.github.io/gateofbabylon/tags/Cheatsheet/"/>
-    
       <category term="CSS" scheme="https://alphardex.github.io/gateofbabylon/tags/CSS/"/>
+    
+      <category term="Cheatsheet" scheme="https://alphardex.github.io/gateofbabylon/tags/Cheatsheet/"/>
     
   </entry>
   
@@ -193,7 +203,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/18258/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/18258/</id>
     <published>2019-12-25T11:34:00.000Z</published>
-    <updated>2020-10-26T08:22:41.229Z</updated>
+    <updated>2020-10-31T10:30:40.117Z</updated>
     
     <summary type="html">
     
@@ -218,7 +228,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/16823/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/16823/</id>
     <published>2019-12-02T09:10:00.000Z</published>
-    <updated>2020-10-26T08:22:41.229Z</updated>
+    <updated>2020-10-31T10:30:40.117Z</updated>
     
     <summary type="html">
     
