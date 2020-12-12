@@ -6,7 +6,7 @@
   <link href="/gateofbabylon/atom.xml" rel="self"/>
   
   <link href="https://alphardex.github.io/gateofbabylon/"/>
-  <updated>2020-12-03T01:49:49.869Z</updated>
+  <updated>2020-12-12T08:04:17.303Z</updated>
   <id>https://alphardex.github.io/gateofbabylon/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>three.js实现反应堆游戏</title>
+    <link href="https://alphardex.github.io/gateofbabylon/posts/8477/"/>
+    <id>https://alphardex.github.io/gateofbabylon/posts/8477/</id>
+    <published>2020-12-12T01:58:00.000Z</published>
+    <updated>2020-12-12T08:04:17.303Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;大家好，这里是CSS魔法使——alphardex。&lt;/p&gt;
+&lt;p&gt;之前在appstore上有这样一个游戏，叫stack（中文译名为“反应堆”），游戏规则是这样的：在竖直方向上会不停地有方块出现并来回移动，点击屏幕能叠方块，而你的目的是尽量使它们保持重合，不重合就会被削掉，叠得越多分数越高。玩法虽简单但极其令人上瘾。&lt;/p&gt;
+&lt;p&gt;碰巧笔者最近在学习three.js——一个基于webgl的3d框架，于是乎就思索着能不能用three.js来实现这样的效果，以摸清那些3D游戏的套路。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="https://alphardex.github.io/gateofbabylon/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="JavaScript" scheme="https://alphardex.github.io/gateofbabylon/tags/JavaScript/"/>
+    
+      <category term="three.js" scheme="https://alphardex.github.io/gateofbabylon/tags/three-js/"/>
+    
+  </entry>
+  
+  <entry>
     <title>纯CSS实现密室逃脱游戏</title>
     <link href="https://alphardex.github.io/gateofbabylon/posts/19835/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/19835/</id>
     <published>2020-10-26T03:18:00.000Z</published>
-    <updated>2020-12-03T01:49:49.869Z</updated>
+    <updated>2020-12-12T08:04:17.307Z</updated>
     
     <summary type="html">
     
@@ -46,7 +71,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/32261/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/32261/</id>
     <published>2020-10-09T07:00:00.000Z</published>
-    <updated>2020-12-03T01:49:49.869Z</updated>
+    <updated>2020-12-12T08:04:17.307Z</updated>
     
     <summary type="html">
     
@@ -68,7 +93,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/1514/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/1514/</id>
     <published>2020-09-29T05:49:00.000Z</published>
-    <updated>2020-12-03T01:49:49.869Z</updated>
+    <updated>2020-12-12T08:04:17.307Z</updated>
     
     <summary type="html">
     
@@ -94,7 +119,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/54698/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/54698/</id>
     <published>2020-09-13T01:57:00.000Z</published>
-    <updated>2020-12-03T01:49:49.869Z</updated>
+    <updated>2020-12-12T08:04:17.303Z</updated>
     
     <summary type="html">
     
@@ -115,7 +140,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/50603/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/50603/</id>
     <published>2020-08-10T08:55:00.000Z</published>
-    <updated>2020-12-03T01:49:49.869Z</updated>
+    <updated>2020-12-12T08:04:17.303Z</updated>
     
     <summary type="html">
     
@@ -136,7 +161,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/35620/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/35620/</id>
     <published>2020-01-01T11:37:00.000Z</published>
-    <updated>2020-12-03T01:49:49.869Z</updated>
+    <updated>2020-12-12T08:04:17.303Z</updated>
     
     <summary type="html">
     
@@ -156,7 +181,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/17061/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/17061/</id>
     <published>2019-12-28T09:23:00.000Z</published>
-    <updated>2020-12-03T01:49:49.869Z</updated>
+    <updated>2020-12-12T08:04:17.307Z</updated>
     
     <summary type="html">
     
@@ -179,7 +204,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/28164/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/28164/</id>
     <published>2019-12-27T09:11:00.000Z</published>
-    <updated>2020-12-03T01:49:49.869Z</updated>
+    <updated>2020-12-12T08:04:17.303Z</updated>
     
     <summary type="html">
     
@@ -203,7 +228,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/18258/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/18258/</id>
     <published>2019-12-25T11:34:00.000Z</published>
-    <updated>2020-12-03T01:49:49.869Z</updated>
+    <updated>2020-12-12T08:04:17.307Z</updated>
     
     <summary type="html">
     
@@ -228,7 +253,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/16823/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/16823/</id>
     <published>2019-12-02T09:10:00.000Z</published>
-    <updated>2020-12-03T01:49:49.869Z</updated>
+    <updated>2020-12-12T08:04:17.307Z</updated>
     
     <summary type="html">
     
