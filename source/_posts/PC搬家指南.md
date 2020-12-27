@@ -15,7 +15,7 @@ date: 2020-09-13 09:57:00
 
 ## 软件
 
-Installers文件夹里的安装包全部安装
+Installers文件夹里的安装包按需安装
 
 chrome-extensions在chrome浏览器里全部解压
 
@@ -32,16 +32,14 @@ vscode-extensions在vscode里全部解压
 首先装好所有全局包
 
 ```sh
-npm install -g @vue/cli @vue/cli-service-global cloc hexo-cli http-server npkill readme-md-generator rimraf typescript
+npm install -g @vue/cli @vue/cli-service-global cloc hexo-cli http-server npkill rimraf typescript
 ```
 
 ```sh
-pip install looter you-get 
+pip install looter
 ```
 
 然后将gitee上的python-gadgets里的batch_clone_repo.py搞到本地运行，将所有repo克隆到本地
-
-将devdocs上的数据缓存到本地
 
 ## 资源
 
