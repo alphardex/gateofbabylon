@@ -6,7 +6,7 @@
   <link href="/gateofbabylon/atom.xml" rel="self"/>
   
   <link href="https://alphardex.github.io/gateofbabylon/"/>
-  <updated>2020-12-27T10:14:41.825Z</updated>
+  <updated>2021-01-06T01:20:11.533Z</updated>
   <id>https://alphardex.github.io/gateofbabylon/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>纯CSS实现常见的UI效果</title>
+    <link href="https://alphardex.github.io/gateofbabylon/posts/24238/"/>
+    <id>https://alphardex.github.io/gateofbabylon/posts/24238/</id>
+    <published>2021-01-04T06:28:26.000Z</published>
+    <updated>2021-01-06T01:20:11.533Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;大家好，这里是CSS魔法使——alphardex。&lt;/p&gt;
+&lt;p&gt;切图仔，是大多数前端用来自嘲的称呼。相信很多人平时写页面的时候，大部分时间是在切图和排图，如此往复。这里并不是要否定切图本身，而是在质疑：一直切图到底对自己的功力增长有何好处？想想UI丢给你一套好看的界面，你却只需一个img标签，或者一个background-image属性即可搞定了它，但日后某个地方需要调整某些外观（颜色、文字等），你还不是会让UI再修改之前的素材，然后替换上去完事？这样就完全受制于UI，而无法发挥自己的能动性。&lt;/p&gt;
+&lt;p&gt;那么，如何打破这个僵局？很简单，如果你CSS玩的够溜，你就无需再进行那枯燥无比的切图工作，那些界面、元素都是通过你双手亲自缔造而成的，尽管创作它们可能会花一些功夫，但带来的回报也是巨大的，你不仅能够自由掌控你所创造出来的元素，而且能大幅提高自己的CSS功力。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>three.js实现反应堆游戏</title>
     <link href="https://alphardex.github.io/gateofbabylon/posts/8477/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/8477/</id>
     <published>2020-12-12T01:58:00.000Z</published>
-    <updated>2020-12-27T10:14:41.825Z</updated>
+    <updated>2021-01-06T01:20:11.533Z</updated>
     
     <summary type="html">
     
@@ -46,7 +65,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/19835/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/19835/</id>
     <published>2020-10-26T03:18:00.000Z</published>
-    <updated>2020-12-27T10:14:41.825Z</updated>
+    <updated>2021-01-06T01:20:11.533Z</updated>
     
     <summary type="html">
     
@@ -71,7 +90,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/32261/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/32261/</id>
     <published>2020-10-09T07:00:00.000Z</published>
-    <updated>2020-12-27T10:14:41.825Z</updated>
+    <updated>2021-01-06T01:20:11.533Z</updated>
     
     <summary type="html">
     
@@ -93,7 +112,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/1514/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/1514/</id>
     <published>2020-09-29T05:49:00.000Z</published>
-    <updated>2020-12-27T10:14:41.825Z</updated>
+    <updated>2021-01-06T01:20:11.533Z</updated>
     
     <summary type="html">
     
@@ -119,7 +138,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/54698/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/54698/</id>
     <published>2020-09-13T01:57:00.000Z</published>
-    <updated>2020-12-27T10:14:41.825Z</updated>
+    <updated>2021-01-06T01:20:11.533Z</updated>
     
     <summary type="html">
     
@@ -140,7 +159,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/50603/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/50603/</id>
     <published>2020-08-10T08:55:00.000Z</published>
-    <updated>2020-12-27T10:14:41.825Z</updated>
+    <updated>2021-01-06T01:20:11.533Z</updated>
     
     <summary type="html">
     
@@ -161,7 +180,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/35620/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/35620/</id>
     <published>2020-01-01T11:37:00.000Z</published>
-    <updated>2020-12-27T10:14:41.825Z</updated>
+    <updated>2021-01-06T01:20:11.533Z</updated>
     
     <summary type="html">
     
@@ -181,7 +200,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/17061/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/17061/</id>
     <published>2019-12-28T09:23:00.000Z</published>
-    <updated>2020-12-27T10:14:41.825Z</updated>
+    <updated>2021-01-06T01:20:11.533Z</updated>
     
     <summary type="html">
     
@@ -204,7 +223,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/28164/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/28164/</id>
     <published>2019-12-27T09:11:00.000Z</published>
-    <updated>2020-12-27T10:14:41.825Z</updated>
+    <updated>2021-01-06T01:20:11.533Z</updated>
     
     <summary type="html">
     
@@ -228,7 +247,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/18258/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/18258/</id>
     <published>2019-12-25T11:34:00.000Z</published>
-    <updated>2020-12-27T10:14:41.825Z</updated>
+    <updated>2021-01-06T01:20:11.533Z</updated>
     
     <summary type="html">
     
@@ -253,7 +272,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/16823/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/16823/</id>
     <published>2019-12-02T09:10:00.000Z</published>
-    <updated>2020-12-27T10:14:41.825Z</updated>
+    <updated>2021-01-06T01:20:11.533Z</updated>
     
     <summary type="html">
     
