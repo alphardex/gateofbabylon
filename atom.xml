@@ -6,7 +6,7 @@
   <link href="/gateofbabylon/atom.xml" rel="self"/>
   
   <link href="https://alphardex.github.io/gateofbabylon/"/>
-  <updated>2021-01-06T01:20:11.533Z</updated>
+  <updated>2021-01-12T01:35:02.641Z</updated>
   <id>https://alphardex.github.io/gateofbabylon/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>在轮播图里寻求新颖是不是搞错了什么</title>
+    <link href="https://alphardex.github.io/gateofbabylon/posts/47726/"/>
+    <id>https://alphardex.github.io/gateofbabylon/posts/47726/</id>
+    <published>2021-01-12T00:23:00.000Z</published>
+    <updated>2021-01-12T01:35:02.641Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;大家好，这里是CSS魔法使——alphardex。&lt;/p&gt;
+&lt;p&gt;轮播图（Carousel），相信大家并不陌生。平时大部分我们都是借助现有的框架来实现的，大都是swiper，或者UI框架里的某一个小组件。于是乎这东西就开始变得千篇一律：几张图片，外加几个小点，两边各有2个箭头，能够点击它们进行导航，这就完了。但是，为了追求更完美的体验，我们并不能止步于此，应该发挥自己的创造力和想象力，来创造与众不同的轮播图。&lt;/p&gt;
+&lt;p&gt;注：由于代码量过大，本文将只会说实现思路，具体代码请点击demo链接查看。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="https://alphardex.github.io/gateofbabylon/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="CSS" scheme="https://alphardex.github.io/gateofbabylon/tags/CSS/"/>
+    
+      <category term="JavaScript" scheme="https://alphardex.github.io/gateofbabylon/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>纯CSS实现常见的UI效果</title>
     <link href="https://alphardex.github.io/gateofbabylon/posts/24238/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/24238/</id>
-    <published>2021-01-04T06:28:26.000Z</published>
-    <updated>2021-01-06T01:20:11.533Z</updated>
+    <published>2021-01-04T06:28:00.000Z</published>
+    <updated>2021-01-12T01:35:02.641Z</updated>
     
     <summary type="html">
     
@@ -32,6 +57,10 @@
     </summary>
     
     
+      <category term="前端" scheme="https://alphardex.github.io/gateofbabylon/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="CSS" scheme="https://alphardex.github.io/gateofbabylon/tags/CSS/"/>
     
   </entry>
   
@@ -40,7 +69,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/8477/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/8477/</id>
     <published>2020-12-12T01:58:00.000Z</published>
-    <updated>2021-01-06T01:20:11.533Z</updated>
+    <updated>2021-01-12T01:35:02.641Z</updated>
     
     <summary type="html">
     
@@ -65,7 +94,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/19835/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/19835/</id>
     <published>2020-10-26T03:18:00.000Z</published>
-    <updated>2021-01-06T01:20:11.533Z</updated>
+    <updated>2021-01-12T01:35:02.641Z</updated>
     
     <summary type="html">
     
@@ -90,7 +119,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/32261/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/32261/</id>
     <published>2020-10-09T07:00:00.000Z</published>
-    <updated>2021-01-06T01:20:11.533Z</updated>
+    <updated>2021-01-12T01:35:02.641Z</updated>
     
     <summary type="html">
     
@@ -112,7 +141,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/1514/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/1514/</id>
     <published>2020-09-29T05:49:00.000Z</published>
-    <updated>2021-01-06T01:20:11.533Z</updated>
+    <updated>2021-01-12T01:35:02.641Z</updated>
     
     <summary type="html">
     
@@ -138,7 +167,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/54698/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/54698/</id>
     <published>2020-09-13T01:57:00.000Z</published>
-    <updated>2021-01-06T01:20:11.533Z</updated>
+    <updated>2021-01-12T01:35:02.641Z</updated>
     
     <summary type="html">
     
@@ -159,7 +188,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/50603/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/50603/</id>
     <published>2020-08-10T08:55:00.000Z</published>
-    <updated>2021-01-06T01:20:11.533Z</updated>
+    <updated>2021-01-12T01:35:02.641Z</updated>
     
     <summary type="html">
     
@@ -180,7 +209,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/35620/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/35620/</id>
     <published>2020-01-01T11:37:00.000Z</published>
-    <updated>2021-01-06T01:20:11.533Z</updated>
+    <updated>2021-01-12T01:35:02.641Z</updated>
     
     <summary type="html">
     
@@ -200,7 +229,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/17061/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/17061/</id>
     <published>2019-12-28T09:23:00.000Z</published>
-    <updated>2021-01-06T01:20:11.533Z</updated>
+    <updated>2021-01-12T01:35:02.641Z</updated>
     
     <summary type="html">
     
@@ -223,7 +252,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/28164/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/28164/</id>
     <published>2019-12-27T09:11:00.000Z</published>
-    <updated>2021-01-06T01:20:11.533Z</updated>
+    <updated>2021-01-12T01:35:02.641Z</updated>
     
     <summary type="html">
     
@@ -247,7 +276,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/18258/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/18258/</id>
     <published>2019-12-25T11:34:00.000Z</published>
-    <updated>2021-01-06T01:20:11.533Z</updated>
+    <updated>2021-01-12T01:35:02.641Z</updated>
     
     <summary type="html">
     
@@ -272,7 +301,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/16823/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/16823/</id>
     <published>2019-12-02T09:10:00.000Z</published>
-    <updated>2021-01-06T01:20:11.533Z</updated>
+    <updated>2021-01-12T01:35:02.641Z</updated>
     
     <summary type="html">
     
