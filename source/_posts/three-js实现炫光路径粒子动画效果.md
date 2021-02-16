@@ -12,9 +12,7 @@ date: 2021-02-15 17:03:00
 
 大家好，这里是 CSS 魔法使——alphardex。
 
-粒子动画，指的是许多微粒在某个空间内做出有序或无序的运动，并且颜色大小也能按照一定规律进行改变的动画。而本文要实现的，正是一种粒子按着路径发光移动的效果，以下是最终的效果图
-
-![particle-travelling.gif](https://i.loli.net/2021/02/15/Ffo7URK6J4StVAT.gif)
+粒子动画，指的是许多微粒在某个空间内做出有序或无序的运动，并且颜色大小也能按照一定规律进行改变的动画。而本文要实现的，正是一种粒子按着路径发光移动的效果
 
 <!--more-->
 
@@ -33,7 +31,13 @@ date: 2021-02-15 17:03:00
 
 ## 正片
 
-### 初始化数据
+### 搭好架子
+
+```html
+<div class="relative w-screen h-screen">
+  <div class="travelling-particles w-full h-full bg-black"></div>
+</div>
+```
 
 ```ts
 class TravellingParticles extends Base {
@@ -46,10 +50,12 @@ class TravellingParticles extends Base {
     this.pointSize = 4;
     this.activePointCount = 0;
     this.params = {
+      mapSizeX: 775,
+      mapSizeY: 574,
       mapOffsetX: 388,
       mapOffsetY: 285,
       activePointPerLine: 50,
-      opacityRate: 7.5,
+      opacityRate: 15,
       pointSize: 30000,
       pointSpeed: 1,
       pointColor: "#4ec0e9",
@@ -60,17 +66,71 @@ class TravellingParticles extends Base {
     this.createScene();
     this.createPerspectiveCamera();
     this.createRenderer();
-    this.getSvgPathsPointLineData(); 
-    this.createPoints();
+    this.createEverything();
     this.createLight();
     this.createOrbitControls();
     this.addListeners();
     this.setLoop();
   }
+  // 创建一切
+  createEverything() {
+    if (this.map) {
+      this.scene.remove(this.map);
+    }
+    this.lines = [];
+    if (this.points) {
+      this.scene.remove(this.points);
+      this.points = null;
+    }
+    this.createMap();
+    this.getSvgPathsPointLineData();
+    this.createPoints();
+  }
+}
+
+const start = () => {
+  const travellingParticles = new TravellingParticles(
+    ".travelling-particles",
+    true
+  );
+  travellingParticles.init();
+};
+
+start();
+```
+
+### 创建地图
+
+首先把图贴上去
+
+```ts
+const mapTextureUrl = "https://i.loli.net/2021/02/15/7zcyk9gHwaoWKVi.png";
+
+class TravellingParticles extends Base {
+  // 创建地图
+  createMap() {
+    const loader = new THREE.TextureLoader();
+    const mapTexture = loader.load(mapTextureUrl);
+    const map = this.createMesh({
+      geometry: new THREE.PlaneBufferGeometry(
+        this.params.mapSizeX,
+        this.params.mapSizeY
+      ),
+      material: new THREE.MeshBasicMaterial({
+        map: mapTexture,
+        side: THREE.DoubleSide,
+      }),
+    });
+    this.map = map;
+  }
 }
 ```
 
+![map.png](https://i.loli.net/2021/02/16/maNM5PgO1iKxW4S.png)
+
 ### 获取路径中点的数据
+
+接下来我们就需要路径的点数据了
 
 SVG 路径素材：https://www.amcharts.com/svg-maps/
 
@@ -104,6 +164,7 @@ class TravellingParticles extends Base {
           // 使点在屏幕正中央
           x -= this.params.mapOffsetX;
           y -= this.params.mapOffsetY;
+          // 翻转y轴
           y *= -1;
           // 加点随机性
           const randX = ky.randomNumberInRange(-1.5, 1.5);
@@ -124,7 +185,7 @@ class TravellingParticles extends Base {
 }
 ```
 
-首先，选中所有路径元素，并对它们一一处理：
+选中所有路径元素，并对它们一一处理：
 
 1. 获取路径上点的总数
 2. 根据点的总数能获取点距离路径原点的距离
@@ -138,11 +199,12 @@ class TravellingParticles extends Base {
   createPoints() {
     this.activePointCount = this.lines.length * this.params.activePointPerLine;
     const geometry = new THREE.BufferGeometry();
-    const lineCoords = this.lines.map((line) =>
-      line.points.map((point) => [point.x, point.y, point.z])
-    );
-    const pointCoords = lineCoords.flat(1).slice(0, this.activePointCount);
-    const positions = new Float32Array(pointCoords.flat(1) as []);
+    const pointCoords = this.lines
+      .map((line) => line.points.map((point) => [point.x, point.y, point.z]))
+      .flat(1)
+      .slice(0, this.activePointCount)
+      .flat(1);
+    const positions = new Float32Array(pointCoords);
     this.positions = positions;
     const opacitys = new Float32Array(positions.length).map(
       () => Math.random() / this.params.opacityRate
@@ -152,8 +214,8 @@ class TravellingParticles extends Base {
     geometry.setAttribute("aOpacity", new THREE.BufferAttribute(opacitys, 1));
     this.geometry = geometry;
     const material = new THREE.ShaderMaterial({
-      vertexShader: travellingParticlesVertexShader, // 顶点着色器字符串，内容见下文
-      fragmentShader: travellingParticlesFragmentShader, // 片元着色器字符串，内容见下文
+      vertexShader: travellingParticlesVertexShader,
+      fragmentShader: travellingParticlesFragmentShader,
       side: THREE.DoubleSide,
       transparent: true,
       depthTest: true,
@@ -183,7 +245,9 @@ class TravellingParticles extends Base {
 3. 创建自定义着色器材质，以实现炫光粒子的效果
 4. 最后创建 Points 实例，将其添加至场景中
 
-这里自定义着色器是重点
+`THREE.AdditiveBlending`是实现炫光效果的幕后功臣
+
+接下来让我们来编写着色器：顶点着色器`travellingParticlesVertexShader`和片元着色器`travellingParticlesFragmentShader`
 
 #### 顶点着色器
 
@@ -232,9 +296,9 @@ void main(){
 }
 ```
 
-以上的 color 公式计算看不懂也没关系，因为片元着色器也有很多通用的模板，这里的模板作用是形成发光圆点一般的图案，我们只需把颜色和透明度赋给它即可
+以上的 color 公式计算看不懂也没关系，因为片元着色器也有很多通用的公式，这里的公式作用是形成发光圆点一般的图案，我们只需把颜色和透明度赋给它即可
 
-![map.png](https://i.loli.net/2021/02/15/dN4sAylFcj2Ipon.png)
+![map.png](https://i.loli.net/2021/02/16/LNSDXlTs2fYBAK5.png)
 
 ### 动起来
 
@@ -252,7 +316,6 @@ class TravellingParticles extends Base {
       this.lines.forEach((line) => {
         // 使线的前n个点动起来
         line.currentPos += this.params.pointSpeed;
-        line.currentPos = line.currentPos % line.pointCount;
         for (let i = 0; i < this.params.activePointPerLine; i++) {
           const currentIndex = (line.currentPos + i) % line.pointCount;
           // 将数据同步到着色器上
@@ -261,12 +324,7 @@ class TravellingParticles extends Base {
             const { x, y, z } = point;
             this.positions.set([x, y, z], activePoint * 3);
             this.opacitys.set(
-              [
-                i /
-                  (this.params.activePointPerLine *
-                    this.params.opacityRate *
-                    2),
-              ],
+              [i / (this.params.activePointPerLine * this.params.opacityRate)],
               activePoint
             );
             activePoint++;
@@ -279,19 +337,9 @@ class TravellingParticles extends Base {
 }
 ```
 
-### 启动
+## 效果图
 
-```ts
-const start = () => {
-  const travellingParticles = new TravellingParticles(
-    ".travelling-particles",
-    true
-  );
-  travellingParticles.init();
-};
-
-start();
-```
+![particle-travelling.gif](https://i.loli.net/2021/02/15/Ffo7URK6J4StVAT.gif)
 
 ## 项目地址
 
@@ -299,4 +347,6 @@ https://codepen.io/alphardex/pen/JjbEObo
 
 ## 最后
 
-本文的路径可以不限于中国地图，也可以换成其他的路径，比如你附近的地区等等。
+本文的路径可以不限于中国地图，也可以换成其他的路径对象。
+
+three.js的自定义形状`BufferGeometry`配合着色器材质`ShaderMaterial`还能实现许多更加炫酷的效果，大家可以自行去发掘。
