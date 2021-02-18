@@ -29,6 +29,10 @@ date: 2021-02-15 17:03:00
 
 读者可以点击右下角fork一份后再开始本项目
 
+svg的路径可以直接CV以下demo的路径（用inkscape随便画的）
+
+https://codepen.io/alphardex/pen/JjbEObo
+
 ## 正片
 
 ### 搭好架子
@@ -36,6 +40,7 @@ date: 2021-02-15 17:03:00
 ```html
 <div class="relative w-screen h-screen">
   <div class="travelling-particles w-full h-full bg-black"></div>
+  <svg class="svg-particles hidden" xmlns="http://www.w3.org/2000/svg">（path数据CV到这儿）</svg>
 </div>
 ```
 
@@ -45,16 +50,14 @@ class TravellingParticles extends Base {
     super(sel, debug);
     this.perspectiveCameraParams.near = 100;
     this.perspectiveCameraParams.far = 1000;
-    this.cameraPosition = new THREE.Vector3(0, 0, 400);
+    this.cameraPosition = new THREE.Vector3(0, 0, 600);
     this.lines = [];
     this.pointSize = 4;
     this.activePointCount = 0;
     this.params = {
-      mapSizeX: 775,
-      mapSizeY: 574,
-      mapOffsetX: 388,
-      mapOffsetY: 285,
-      activePointPerLine: 50,
+      mapOffsetX: -80,
+      mapOffsetY: 160,
+      activePointPerLine: 100,
       opacityRate: 15,
       pointSize: 30000,
       pointSpeed: 1,
@@ -82,7 +85,6 @@ class TravellingParticles extends Base {
       this.scene.remove(this.points);
       this.points = null;
     }
-    this.createMap();
     this.getSvgPathsPointLineData();
     this.createPoints();
   }
@@ -99,57 +101,13 @@ const start = () => {
 start();
 ```
 
-### 创建地图
-
-首先把图贴上去
-
-```ts
-const mapTextureUrl = "https://i.loli.net/2021/02/15/7zcyk9gHwaoWKVi.png";
-
-class TravellingParticles extends Base {
-  // 创建地图
-  createMap() {
-    const loader = new THREE.TextureLoader();
-    const mapTexture = loader.load(mapTextureUrl);
-    const map = this.createMesh({
-      geometry: new THREE.PlaneBufferGeometry(
-        this.params.mapSizeX,
-        this.params.mapSizeY
-      ),
-      material: new THREE.MeshBasicMaterial({
-        map: mapTexture,
-        side: THREE.DoubleSide,
-      }),
-    });
-    this.map = map;
-  }
-}
-```
-
-![map.png](https://i.loli.net/2021/02/16/maNM5PgO1iKxW4S.png)
-
 ### 获取路径中点的数据
-
-接下来我们就需要路径的点数据了
-
-SVG 路径素材：https://www.amcharts.com/svg-maps/
-
-本文的中国地图：https://www.amcharts.com/svg-maps/?map=china
-
-```html
-<div class="relative w-screen h-screen">
-  <div class="travelling-particles w-full h-full bg-black"></div>
-  <svg class="svg-map hidden" xmlns="http://www.w3.org/2000/svg">（path数据CV到这儿）</svg>
-</div>
-```
-
-CV 到 HTML 里后，便可以开始获取路径的数据了
 
 ```ts
 class TravellingParticles extends Base {
   getSvgPathsPointLineData() {
     const paths = ([
-      ...document.querySelectorAll(".svg-map path"),
+      ...document.querySelectorAll(".svg-particles path"),
     ] as unknown) as SVGPathElement[];
     paths.forEach((path) => {
       const pathLength = path.getTotalLength();
@@ -164,8 +122,6 @@ class TravellingParticles extends Base {
           // 使点在屏幕正中央
           x -= this.params.mapOffsetX;
           y -= this.params.mapOffsetY;
-          // 翻转y轴
-          y *= -1;
           // 加点随机性
           const randX = ky.randomNumberInRange(-1.5, 1.5);
           const randY = ky.randomNumberInRange(-1.5, 1.5);
@@ -298,7 +254,7 @@ void main(){
 
 以上的 color 公式计算看不懂也没关系，因为片元着色器也有很多通用的公式，这里的公式作用是形成发光圆点一般的图案，我们只需把颜色和透明度赋给它即可
 
-![map.png](https://i.loli.net/2021/02/16/LNSDXlTs2fYBAK5.png)
+![map.png](https://i.loli.net/2021/02/18/NtoXnuPShlBj81U.png)
 
 ### 动起来
 
@@ -339,14 +295,8 @@ class TravellingParticles extends Base {
 
 ## 效果图
 
-![particle-travelling.gif](https://i.loli.net/2021/02/15/Ffo7URK6J4StVAT.gif)
-
-## 项目地址
-
-https://codepen.io/alphardex/pen/JjbEObo
+![particle-travelling.gif](https://i.loli.net/2021/02/18/X7BxbqrwFAUaVIN.gif)
 
 ## 最后
-
-本文的路径可以不限于中国地图，也可以换成其他的路径对象。
 
 three.js的自定义形状`BufferGeometry`配合着色器材质`ShaderMaterial`还能实现许多更加炫酷的效果，大家可以自行去发掘。
