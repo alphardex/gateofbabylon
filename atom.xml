@@ -6,7 +6,7 @@
   <link href="/gateofbabylon/atom.xml" rel="self"/>
   
   <link href="https://alphardex.github.io/gateofbabylon/"/>
-  <updated>2021-02-18T08:10:14.387Z</updated>
+  <updated>2021-02-21T09:39:52.681Z</updated>
   <id>https://alphardex.github.io/gateofbabylon/</id>
   
   <author>
@@ -17,11 +17,31 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>three.js 实现3D动态文字</title>
+    <link href="https://alphardex.github.io/gateofbabylon/posts/23487/"/>
+    <id>https://alphardex.github.io/gateofbabylon/posts/23487/</id>
+    <published>2021-02-21T08:38:46.000Z</published>
+    <updated>2021-02-21T09:39:52.681Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;大家好，这里是 CSS 魔法使——alphardex。&lt;/p&gt;
+&lt;p&gt;之前在逛国外网站的时候，发现有些网站的文字是刻在3D图形上的，并且能在图形上运动，视觉效果相当不错，于是笔者就也想用three.js来尝试复现出这种效果&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2021/02/21/UnEqc5uBYvofiKt.gif&quot; alt=&quot;kinetic-text.gif&quot;&gt;&lt;/p&gt;
+&lt;p&gt;上图只是所有效果的其中之一，接下来让我们一起开干吧~&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>three.js 实现炫光路径粒子动画效果</title>
     <link href="https://alphardex.github.io/gateofbabylon/posts/11010/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/11010/</id>
     <published>2021-02-15T09:03:00.000Z</published>
-    <updated>2021-02-18T08:10:14.387Z</updated>
+    <updated>2021-02-21T09:39:52.681Z</updated>
     
     <summary type="html">
     
@@ -45,7 +65,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/47726/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/47726/</id>
     <published>2021-01-12T00:23:00.000Z</published>
-    <updated>2021-02-18T08:10:14.387Z</updated>
+    <updated>2021-02-21T09:39:52.681Z</updated>
     
     <summary type="html">
     
@@ -70,7 +90,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/24238/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/24238/</id>
     <published>2021-01-04T06:28:00.000Z</published>
-    <updated>2021-02-18T08:10:14.387Z</updated>
+    <updated>2021-02-21T09:39:52.681Z</updated>
     
     <summary type="html">
     
@@ -93,7 +113,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/8477/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/8477/</id>
     <published>2020-12-12T01:58:00.000Z</published>
-    <updated>2021-02-18T08:10:14.387Z</updated>
+    <updated>2021-02-21T09:39:52.681Z</updated>
     
     <summary type="html">
     
@@ -118,7 +138,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/19835/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/19835/</id>
     <published>2020-10-26T03:18:00.000Z</published>
-    <updated>2021-02-18T08:10:14.387Z</updated>
+    <updated>2021-02-21T09:39:52.681Z</updated>
     
     <summary type="html">
     
@@ -143,7 +163,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/32261/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/32261/</id>
     <published>2020-10-09T07:00:00.000Z</published>
-    <updated>2021-02-18T08:10:14.387Z</updated>
+    <updated>2021-02-21T09:39:52.681Z</updated>
     
     <summary type="html">
     
@@ -165,7 +185,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/1514/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/1514/</id>
     <published>2020-09-29T05:49:00.000Z</published>
-    <updated>2021-02-18T08:10:14.387Z</updated>
+    <updated>2021-02-21T09:39:52.681Z</updated>
     
     <summary type="html">
     
@@ -191,7 +211,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/54698/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/54698/</id>
     <published>2020-09-13T01:57:00.000Z</published>
-    <updated>2021-02-18T08:10:14.387Z</updated>
+    <updated>2021-02-21T09:39:52.681Z</updated>
     
     <summary type="html">
     
@@ -212,7 +232,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/50603/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/50603/</id>
     <published>2020-08-10T08:55:00.000Z</published>
-    <updated>2021-02-18T08:10:14.387Z</updated>
+    <updated>2021-02-21T09:39:52.681Z</updated>
     
     <summary type="html">
     
@@ -233,7 +253,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/35620/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/35620/</id>
     <published>2020-01-01T11:37:00.000Z</published>
-    <updated>2021-02-18T08:10:14.387Z</updated>
+    <updated>2021-02-21T09:39:52.681Z</updated>
     
     <summary type="html">
     
@@ -253,7 +273,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/17061/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/17061/</id>
     <published>2019-12-28T09:23:00.000Z</published>
-    <updated>2021-02-18T08:10:14.387Z</updated>
+    <updated>2021-02-21T09:39:52.681Z</updated>
     
     <summary type="html">
     
@@ -276,7 +296,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/28164/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/28164/</id>
     <published>2019-12-27T09:11:00.000Z</published>
-    <updated>2021-02-18T08:10:14.387Z</updated>
+    <updated>2021-02-21T09:39:52.677Z</updated>
     
     <summary type="html">
     
@@ -300,7 +320,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/18258/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/18258/</id>
     <published>2019-12-25T11:34:00.000Z</published>
-    <updated>2021-02-18T08:10:14.387Z</updated>
+    <updated>2021-02-21T09:39:52.681Z</updated>
     
     <summary type="html">
     
@@ -325,7 +345,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/16823/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/16823/</id>
     <published>2019-12-02T09:10:00.000Z</published>
-    <updated>2021-02-18T08:10:14.387Z</updated>
+    <updated>2021-02-21T09:39:52.681Z</updated>
     
     <summary type="html">
     
