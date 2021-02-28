@@ -189,9 +189,9 @@ float sdf(vec3 p){
 
 画面上仍旧一片空白，因为我们的嘉宾——光线还尚未入场。
 
-#### 光线步进酱
+#### 光线步进
 
-接下来就是本文的头号人物——光线步进酱了。在介绍光线步进酱之前，我们先来看看她的好姬友光线追踪吧。
+接下来就是本文的头号人物——光线步进了。在介绍她之前，我们先来看看她的好姬友光线追踪吧。
 
 ![raytrace.png](https://i.loli.net/2021/02/28/8hrikXo9eTRtHcw.png)
 
@@ -205,7 +205,7 @@ float sdf(vec3 p){
 
 shadertoy上有一个[可交互的例子](https://www.shadertoy.com/view/4dKyRz)
 
-以下是光线步进酱的glsl代码实现
+以下是光线步进的glsl代码实现
 
 ```glsl
 const float EPSILON=.0001;
@@ -224,7 +224,7 @@ float rayMarch(vec3 eye,vec3 ray,float end,int maxIter){
 }
 ```
 
-在主函数中创建一条射线，将其投喂给光线步进酱，即可获得光线到表面的最短距离
+在主函数中创建一条射线，将其投喂给光线步进算法，即可获得光线到表面的最短距离
 
 ```glsl
 void main(){
@@ -244,7 +244,7 @@ void main(){
 
 ![3](https://i.loli.net/2021/02/28/pTNQr8qglxGuVLm.png)
 
-在光线步进酱的引诱下，野生的方块出现了！
+在光线步进的引诱下，野生的方块出现了！
 
 #### 居中材质
 
