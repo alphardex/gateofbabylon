@@ -1,8 +1,12 @@
 title: three.js 实现露珠滴落动画
 author: alphardex
 abbrlink: 9615
-date: 2021-02-28 09:17:47
 tags:
+  - three.js
+  - JavaScript
+categories:
+  - 前端
+date: 2021-02-28 09:17:00
 ---
 ## 前言
 
@@ -18,7 +22,7 @@ tags:
 
 ## 准备工作
 
-fork一份笔者的[three.js模板](https://codepen.io/alphardex/pen/yLaQdOq)
+笔者的[three.js模板](https://codepen.io/alphardex/pen/yLaQdOq)：点击右下角的fork即可复制一份
 
 ## 正片
 
@@ -70,12 +74,12 @@ class RayMarching extends Base {
 
 ### 创建材质
 
-创建好光线步进的材质，里面定义好所有要传递给着色器的参数
+创建好着色器材质，里面定义好所有要传递给着色器的参数
 
 ```ts
 const matcapTextureUrl = "https://i.loli.net/2021/02/27/7zhBySIYxEqUFW3.png";
 
-class Template extends Base {
+class RayMarching extends Base {
   // 创建光线追踪材质
   createRayMarchingMaterial() {
     const loader = new THREE.TextureLoader();
@@ -149,9 +153,11 @@ void main(){
 
 #### sdf
 
+如何在光照模型中创建物体呢？我们需要sdf。
+
 sdf的意思是符号距离函数：若传递给函数空间中的某个坐标，则返回那个点与某些平面之间的最短距离，返回值的符号表示点在平面的内部还是外部，故称符号距离函数。
 
-如果我们要创建一个球体，就得用球体的sdf来创建。球体方程可以用如下的glsl代码来表示
+如果我们要创建一个球，就得用球的sdf来创建。球体方程可以用如下的glsl代码来表示
 
 ```glsl
 float sdSphere(vec3 p,float r)
@@ -160,7 +166,7 @@ float sdSphere(vec3 p,float r)
 }
 ```
 
-长方体的代码如下
+方块的代码如下
 
 ```glsl
 float sdBox(vec3 p,vec3 b)
@@ -170,9 +176,9 @@ float sdBox(vec3 p,vec3 b)
 }
 ```
 
-看不懂怎么办？没关系，国外已经有大牛把[常用的sdf公式](https://www.iquilezles.org/www/articles/distfunctions/distfunctions.htm)都整理出来了，我们所要做的，就是CV一把梭就完事了。本文只用到了这2个几何体，其他的请读者自行取用。
+看不懂怎么办？没关系，国外已经有大牛把[常用的sdf公式](https://www.iquilezles.org/www/articles/distfunctions/distfunctions.htm)都整理出来了
 
-在sdf里先创建一个长方体
+在sdf里先创建一个方块
 
 ```glsl
 float sdf(vec3 p){
@@ -181,9 +187,11 @@ float sdf(vec3 p){
 }
 ```
 
-#### ray marching
+画面上仍旧一片空白，因为我们的嘉宾——光线还尚未入场。
 
-接下来就是重头戏——光线步进算法了。
+#### 光线步进酱
+
+接下来就是本文的头号人物——光线步进酱了。在介绍光线步进酱之前，我们先来看看她的好姬友光线追踪吧。
 
 ![raytrace.png](https://i.loli.net/2021/02/28/8hrikXo9eTRtHcw.png)
 
@@ -193,9 +201,9 @@ float sdf(vec3 p){
 
 ![spheretrace.jpg](https://i.loli.net/2021/02/28/523sMyGvTu4BLYd.jpg)
 
-上图中，p0是相机位置，蓝色的线代表射线。可以看出光线的第一步P0P1就迈的非常大，它也恰好是这一步到场景表面的最近距离。表面上的点尽管是最近距离，但并没有沿着视线的方向，因此要继续检测到p4这个点
+上图中，p0是相机位置，蓝色的线代表射线。可以看出光线的第一步p0p1就迈的非常大，它也恰好是这一步到场景表面的最近距离。表面上的点尽管是最近距离，但并没有沿着视线的方向，因此要继续检测到p4这个点
 
-以下是光线步进算法的glsl代码实现
+以下是光线步进酱的glsl代码实现
 
 ```glsl
 const float EPSILON=.0001;
@@ -213,6 +221,8 @@ float rayMarch(vec3 eye,vec3 ray,float end,int maxIter){
     return depth;
 }
 ```
+
+在主函数中创建一条射线，将其投喂给光线步进酱，即可获得光线行走的距离啦
 
 ```glsl
 void main(){
@@ -232,13 +242,13 @@ void main(){
 
 ![3](https://i.loli.net/2021/02/28/pTNQr8qglxGuVLm.png)
 
-通过应用这个算法，长方体被成功的显示了出来。
+在光线步进酱的引诱下，野生的方块出现了！
 
 #### 居中材质
 
-目前的显示有2个问题：1. 没有居中 2. x轴方向上被拉伸
+目前的方块有2个问题：1. 没有居中 2. x轴方向上被拉伸
 
-为了解决以上问题，我们就有了如下的代码
+居中+拉伸素质2连走起
 
 ```glsl
 vec2 centerUv(vec2 uv){
@@ -258,11 +268,11 @@ void main(){
 
 ![4](https://i.loli.net/2021/02/28/STcN24xr1lspnmJ.png)
 
+方块瞬间飘到了画面的正中央，但此时的她还没有颜色
+
 #### 计算表面法线
 
-光线步进完后，我们就要给材质赋予颜色
-
-在光照模型中，我们需要计算出表面法线，才能获取材质上的颜色信息，法线计算公式[这个大牛的博客](https://www.iquilezles.org/www/articles/normalsSDF/normalsSDF.htm)上也有写
+在光照模型中，我们需要[计算出表面法线](https://www.iquilezles.org/www/articles/normalsSDF/normalsSDF.htm)，才能给材质赋予颜色
 
 ```glsl
 vec3 calcNormal(in vec3 p)
@@ -287,9 +297,11 @@ void main(){
 
 ![5.png](https://i.loli.net/2021/02/28/oi5VcHN3sOqkm4P.png)
 
+此时方块被赋予了蓝色，但我们还看不出她是个立体图形
+
 #### 动起来
 
-让长方体360旋转起来吧，3D旋转函数直接在[gist](https://gist.github.com/yiwenl/3f804e80d0930e34a0b33359259b556c)上搜一下就有了
+让方块360°旋转起来吧，3D旋转函数直接在[gist](https://gist.github.com/yiwenl/3f804e80d0930e34a0b33359259b556c)上搜一下就有了
 
 ```glsl
 uniform float uVelocityBox;
@@ -322,7 +334,9 @@ float sdf(vec3 p){
 
 #### 融合效果
 
-如何使几何体融合起来呢？大牛的博客上提供了[smin](https://www.iquilezles.org/www/articles/smin/smin.htm)这个函数
+单单一个方块太孤单了，创建一个球来陪陪她吧
+
+如何让球和方块贴在一起呢，你需要[smin](https://www.iquilezles.org/www/articles/smin/smin.htm)这个函数
 
 ```glsl
 uniform float uProgress;
@@ -343,11 +357,11 @@ float sdf(vec3 p){
 }
 ```
 
-把`uProgress`的值设为0，我们会看到以下的图形，合体成功
+把`uProgress`的值设为0，她们成功地贴在了一起
 
 ![7.png](https://i.loli.net/2021/02/28/9ZUyXY7STNcQtsf.png)
 
-把`uProgress`的值调回1，融合怪消失了
+把`uProgress`的值调回1，她们又分开了
 
 #### 动态融合
 
