@@ -6,7 +6,7 @@
   <link href="/gateofbabylon/atom.xml" rel="self"/>
   
   <link href="https://alphardex.github.io/gateofbabylon/"/>
-  <updated>2021-02-28T07:56:08.273Z</updated>
+  <updated>2021-02-28T10:51:01.508Z</updated>
   <id>https://alphardex.github.io/gateofbabylon/</id>
   
   <author>
@@ -20,8 +20,8 @@
     <title>three.js 实现露珠滴落动画</title>
     <link href="https://alphardex.github.io/gateofbabylon/posts/9615/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/9615/</id>
-    <published>2021-02-28T01:17:47.000Z</published>
-    <updated>2021-02-28T07:56:08.273Z</updated>
+    <published>2021-02-28T01:17:00.000Z</published>
+    <updated>2021-02-28T10:51:01.508Z</updated>
     
     <summary type="html">
     
@@ -33,6 +33,12 @@
     </summary>
     
     
+      <category term="前端" scheme="https://alphardex.github.io/gateofbabylon/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="JavaScript" scheme="https://alphardex.github.io/gateofbabylon/tags/JavaScript/"/>
+    
+      <category term="three.js" scheme="https://alphardex.github.io/gateofbabylon/tags/three-js/"/>
     
   </entry>
   
@@ -40,8 +46,8 @@
     <title>three.js 实现3D动态文字</title>
     <link href="https://alphardex.github.io/gateofbabylon/posts/23487/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/23487/</id>
-    <published>2021-02-21T08:38:46.000Z</published>
-    <updated>2021-02-28T07:56:08.273Z</updated>
+    <published>2021-02-21T08:38:00.000Z</published>
+    <updated>2021-02-28T10:51:01.508Z</updated>
     
     <summary type="html">
     
@@ -53,6 +59,12 @@
     </summary>
     
     
+      <category term="前端" scheme="https://alphardex.github.io/gateofbabylon/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="JavaScript" scheme="https://alphardex.github.io/gateofbabylon/tags/JavaScript/"/>
+    
+      <category term="three.js" scheme="https://alphardex.github.io/gateofbabylon/tags/three-js/"/>
     
   </entry>
   
@@ -61,7 +73,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/11010/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/11010/</id>
     <published>2021-02-15T09:03:00.000Z</published>
-    <updated>2021-02-28T07:56:08.273Z</updated>
+    <updated>2021-02-28T10:51:01.512Z</updated>
     
     <summary type="html">
     
@@ -85,7 +97,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/47726/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/47726/</id>
     <published>2021-01-12T00:23:00.000Z</published>
-    <updated>2021-02-28T07:56:08.273Z</updated>
+    <updated>2021-02-28T10:51:01.512Z</updated>
     
     <summary type="html">
     
@@ -110,7 +122,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/24238/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/24238/</id>
     <published>2021-01-04T06:28:00.000Z</published>
-    <updated>2021-02-28T07:56:08.277Z</updated>
+    <updated>2021-02-28T10:51:01.512Z</updated>
     
     <summary type="html">
     
@@ -133,7 +145,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/8477/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/8477/</id>
     <published>2020-12-12T01:58:00.000Z</published>
-    <updated>2021-02-28T07:56:08.273Z</updated>
+    <updated>2021-02-28T10:51:01.512Z</updated>
     
     <summary type="html">
     
@@ -158,7 +170,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/19835/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/19835/</id>
     <published>2020-10-26T03:18:00.000Z</published>
-    <updated>2021-02-28T07:56:08.277Z</updated>
+    <updated>2021-02-28T10:51:01.512Z</updated>
     
     <summary type="html">
     
@@ -183,7 +195,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/32261/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/32261/</id>
     <published>2020-10-09T07:00:00.000Z</published>
-    <updated>2021-02-28T07:56:08.277Z</updated>
+    <updated>2021-02-28T10:51:01.512Z</updated>
     
     <summary type="html">
     
@@ -205,7 +217,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/1514/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/1514/</id>
     <published>2020-09-29T05:49:00.000Z</published>
-    <updated>2021-02-28T07:56:08.277Z</updated>
+    <updated>2021-02-28T10:51:01.512Z</updated>
     
     <summary type="html">
     
@@ -231,7 +243,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/54698/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/54698/</id>
     <published>2020-09-13T01:57:00.000Z</published>
-    <updated>2021-02-28T07:56:08.273Z</updated>
+    <updated>2021-02-28T10:51:01.508Z</updated>
     
     <summary type="html">
     
@@ -252,7 +264,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/50603/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/50603/</id>
     <published>2020-08-10T08:55:00.000Z</published>
-    <updated>2021-02-28T07:56:08.273Z</updated>
+    <updated>2021-02-28T10:51:01.508Z</updated>
     
     <summary type="html">
     
@@ -273,7 +285,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/35620/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/35620/</id>
     <published>2020-01-01T11:37:00.000Z</published>
-    <updated>2021-02-28T07:56:08.273Z</updated>
+    <updated>2021-02-28T10:51:01.512Z</updated>
     
     <summary type="html">
     
@@ -293,7 +305,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/17061/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/17061/</id>
     <published>2019-12-28T09:23:00.000Z</published>
-    <updated>2021-02-28T07:56:08.277Z</updated>
+    <updated>2021-02-28T10:51:01.512Z</updated>
     
     <summary type="html">
     
@@ -316,7 +328,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/28164/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/28164/</id>
     <published>2019-12-27T09:11:00.000Z</published>
-    <updated>2021-02-28T07:56:08.273Z</updated>
+    <updated>2021-02-28T10:51:01.508Z</updated>
     
     <summary type="html">
     
@@ -340,7 +352,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/18258/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/18258/</id>
     <published>2019-12-25T11:34:00.000Z</published>
-    <updated>2021-02-28T07:56:08.277Z</updated>
+    <updated>2021-02-28T10:51:01.512Z</updated>
     
     <summary type="html">
     
@@ -365,7 +377,7 @@
     <link href="https://alphardex.github.io/gateofbabylon/posts/16823/"/>
     <id>https://alphardex.github.io/gateofbabylon/posts/16823/</id>
     <published>2019-12-02T09:10:00.000Z</published>
-    <updated>2021-02-28T07:56:08.273Z</updated>
+    <updated>2021-02-28T10:51:01.512Z</updated>
     
     <summary type="html">
     
