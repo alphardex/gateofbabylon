@@ -30,9 +30,7 @@ date: 2021-03-06 21:14:00
 
 一旦两个世界同步了，各种炫酷的效果都可以应用在原生HTML元素上，且不影响基本的交互！
 
-但如何同步却是一个难题，接下来我们将一步步来研究如何进行同步
-
-## 正片
+## 世界同步
 
 ### 搭建HTML
 
@@ -110,7 +108,7 @@ class TwistedGallery extends Base {
 
 问题来了，如何使得webgl里的1单位长度===HTML里元素的1px？
 
-这里我们需要根据公式来计算fov，见下图，其实就是计算三角形的角度，用`arctan`即可算出
+这时我们就要搬上那张经典的透视示意图了，我们需要根据公式来计算出视场角fov
 
 ![fov](https://i.loli.net/2021/03/06/btZ8eK2jYV3Cp9n.png)
 
@@ -138,11 +136,11 @@ class TwistedGallery extends Base {
 
 ![1](https://i.loli.net/2021/03/06/V7Dah5HZGkCLucl.png)
 
-画面中的平面宽高皆为100px，和HTML完全一致，单位同步成功！
+画面中的平面宽高皆为100px，和HTML完全一致！
 
 ### 确保图片加载完毕
 
-在显示图片之前，我们要确保图片全部加载完毕，故用imagesLoaded库来进行判断
+在显示图片之前，我们要确保图片全部加载完毕，故用[imagesLoaded](https://github.com/desandro/imagesloaded)库来进行判断
 
 ```ts
 import imagesLoaded from "https://cdn.skypack.dev/imagesloaded@4.1.4";
@@ -156,7 +154,7 @@ const preloadImages = (sel = "img") => {
 
 ### 将图片显示在webgl上
 
-我们创建一个DOMMeshObject类，该类负责将DOM里的信息同步至webgl世界
+我们创建一个DOMMeshObject类，该类是一座桥梁，负责将DOM里的信息同步至webgl世界
 
 首先获取DOM元素的长宽和位置，再根据这些数据计算出它们在webgl中对应的位置和大小
 
@@ -186,7 +184,7 @@ class DOMMeshObject {
 }
 ```
 
-在webgl世界中创建出这些图片，并将HTML里的img元素作为贴图传给着色器，再同步好位置即可
+在webgl世界中创建出图片材质，并将HTML里的img元素作为贴图传给着色器，再同步好位置即可
 
 ```ts
 class TwistedGallery extends Base {
@@ -275,7 +273,7 @@ void main(){
 
 ### 滚动起来
 
-滚动用LocomotiveScroll库来实现，这个库能记录滚动的速度，而原生的监听`scroll`事件无法做到这一点
+这里的滚动监听原生的`scroll`事件即可实现，但本文并不会这么做，为什么呢？因为原生的`scroll`事件只能获取滚动的位置，而无法获取滚动的速度。如果用户滚得快，我们也要在我们的特效上体现出来。因此，我们将采用[locomotive-scroll](https://github.com/locomotivemtl/locomotive-scroll)这个库，它能捕获到用户滚动的位置和速度
 
 ```ts
 import LocomotiveScroll from "https://cdn.skypack.dev/locomotive-scroll@4.1.0";
@@ -296,13 +294,13 @@ class TwistedGallery extends Base {
 
 ![3](https://i.loli.net/2021/03/06/jnmSkbsa3hRX7I2.gif)
 
-图片终于在WEBGL的世界里滚动起来了，接下来就是重头戏了~
+图片终于在WEBGL的世界里滚动起来了，两个世界同步完成~
 
-### 屏幕扭曲特效
+接下来开始我们的重头戏——扭曲特效！
 
-其实在webgl中，大部分的屏幕扭曲特效都可以用后期处理（postprocessing）来实现
+## 扭曲特效
 
-后期处理说白了也是通过自定义着色器来实现的，只不过你有了整个画面作为贴图`tDiffuse`
+开头的那个特效可以看出是全屏幕上对图片进行扭曲的，因此我们将采用后期处理`postprocessing`来实现，它提供了屏幕`tDiffuse`
 
 ```ts
 import { RenderPass } from "https://cdn.skypack.dev/three@0.124.0/examples/jsm/postprocessing/RenderPass.js";
@@ -361,6 +359,8 @@ class TwistedGallery extends Base {
 }
 ```
 
+可以看出我们将滚动速度作为`uniform`传入了着色器，并且用[gsap](https://github.com/greensock/GSAP)来实现缓动效果，接下来就是着色器部分了
+
 顶点着色器`twistedGalleryPostprocessingVertexShader`跟模板一致，故略过
 
 片元着色器`twistedGalleryPostprocessingFragmentShader`负责动态计算uv坐标，实现起来稍有难度，关键是多调，里面的值用`gl_FragColor`显示出来，这样就容易理解值的变化
@@ -389,3 +389,7 @@ void main(){
 ## 项目地址
 
 [Twisted Gallery](https://codepen.io/alphardex/pen/eYBLWOY)
+
+## 最后
+
+本文所实现的特效仅仅是众多特效中的一种，但真正重要的是如何将HTML与webgl世界所同步起来的这个过程，一旦掌握了这一方法，想做出一个非常酷炫的网站将不再是一个难事。
