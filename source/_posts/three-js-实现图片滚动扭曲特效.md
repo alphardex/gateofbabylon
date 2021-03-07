@@ -80,26 +80,34 @@ img {
 }
 ```
 
-在我们的主类中，先创建一个总函数，里面的函数下文会慢慢地实现
+在我们的主类中，先创建一个总函数，里面未实现的函数可以先注释掉，下文会慢慢地实现它们
 
 ```ts
 class TwistedGallery extends Base {
+  ...
   async init() {
     this.createScene();
     this.createPerspectiveCamera();
     this.createRenderer();
-    await preloadImages();
-    this.createDistortImageMaterial();
-    this.createImageDOMMeshObjs();
-    this.setImagesPosition();
-    this.listenScroll();
-    this.createPostprocessingEffect()
+    this.createPlane();
+    // await preloadImages();
+    // this.createDistortImageMaterial();
+    // this.createImageDOMMeshObjs();
+    // this.setImagesPosition();
+    // this.listenScroll();
+    // this.createPostprocessingEffect()
     this.createLight();
     this.createOrbitControls();
     this.addListeners();
     this.setLoop();
   }
+  ...
 }
+
+const start = () => {
+  const twistedGallery = new TwistedGallery(".twisted-gallery", true);
+  twistedGallery.init();
+};
 ```
 
 ### 将HTML和webgl的单位同步
@@ -137,6 +145,8 @@ class TwistedGallery extends Base {
 ![1](https://i.loli.net/2021/03/06/V7Dah5HZGkCLucl.png)
 
 画面中的平面宽高皆为100px，和HTML完全一致！
+
+`createPlane`函数完成了它的测试使命，可以删掉了
 
 ### 确保图片加载完毕
 
@@ -192,7 +202,6 @@ class TwistedGallery extends Base {
     ...
     this.images = [...document.querySelectorAll("img")];
     this.imageDOMMeshObjs = [];
-    this.materials = [];
   }
   // 创建材质
   createDistortImageMaterial() {
@@ -210,18 +219,12 @@ class TwistedGallery extends Base {
   }
   // 创建图片DOM物体
   createImageDOMMeshObjs() {
-    this.materials = [];
-    this.imageDOMMeshObjs.forEach((obj) => {
-      const { mesh } = obj;
-      this.scene.remove(mesh);
-    });
     const { images, scene, distortImageMaterial } = this;
     const imageDOMMeshObjs = images.map((image) => {
       const texture = new THREE.Texture(image);
       texture.needsUpdate = true;
       const material = distortImageMaterial.clone();
       material.uniforms.uTexture.value = texture;
-      this.materials.push(material);
       const imageDOMMeshObj = new DOMMeshObject(image, scene, material);
       return imageDOMMeshObj;
     });
@@ -324,9 +327,6 @@ class TwistedGallery extends Base {
         tDiffuse: {
           value: null
         },
-        uTime: {
-          value: 0
-        },
         uRadius: {
           value: 0.75
         },
@@ -344,13 +344,12 @@ class TwistedGallery extends Base {
   setScrollSpeed() {
     const scrollSpeed = this.scroll.scroll.instance.speed || 0;
     gsap.to(this, {
-      scrollSpeed: Math.min(Math.abs(scrollSpeed), 2),
+      scrollSpeed: Math.min(Math.abs(scrollSpeed) * 1.25, 2),
       duration: 1
     });
   }
   // 动画
   update() {
-    ...
     if (this.customPass) {
       this.setScrollSpeed();
       this.customPass.uniforms.uPower.value = this.scrollSpeed;
@@ -361,7 +360,7 @@ class TwistedGallery extends Base {
 
 可以看出我们将滚动速度作为`uniform`传入了着色器，并且用[gsap](https://github.com/greensock/GSAP)来实现缓动效果，接下来就是着色器部分了
 
-顶点着色器`twistedGalleryPostprocessingVertexShader`跟模板一致，故略过
+顶点着色器`twistedGalleryPostprocessingVertexShader`跟上文所说的模板一致，故略过
 
 片元着色器`twistedGalleryPostprocessingFragmentShader`负责动态计算uv坐标，实现起来稍有难度，关键是多调，里面的值用`gl_FragColor`显示出来，这样就容易理解值的变化
 
@@ -388,7 +387,7 @@ void main(){
 
 ## 项目地址
 
-[Twisted Gallery](https://codepen.io/alphardex/pen/eYBLWOY)
+[Twisted Gallery](https://codepen.io/alphardex/full/eYBLWOY)
 
 ## 最后
 
