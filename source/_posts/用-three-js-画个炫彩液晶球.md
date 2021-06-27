@@ -1,8 +1,9 @@
 title: 用 three.js 画个炫彩液晶球
 author: alphardex
 abbrlink: 43069
-date: 2021-05-28 09:30:51
-tags:
+tags: []
+categories: []
+date: 2021-05-28 09:30:00
 ---
 ## 前言
 
