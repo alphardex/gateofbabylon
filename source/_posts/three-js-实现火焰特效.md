@@ -1,4 +1,4 @@
-title: three.js 实现火焰特效
+title: three.js 实现火花特效
 author: alphardex
 abbrlink: 23735
 date: 2021-06-30 14:17:55
@@ -8,7 +8,11 @@ tags:
 
 大家好，这里是 CSS兼WebGL 魔法使——alphardex。
 
-本文我们将用three.js来实现火焰特效，以下是最终实现的效果图
+上周末刚在原神里抽到了“火花骑士”可莉，于是就心血来潮，想用three.js来实现一种火系的特效，不是炸弹的爆炸，而是炸弹爆炸后在草上留下的火花效果
+
+[![RBvmVJ.jpg](https://z3.ax1x.com/2021/06/30/RBvmVJ.jpg)](https://imgtu.com/i/RBvmVJ)
+
+游戏里的效果相对比较卡通化，而本文的效果将更加逼近现实一点
 
 ![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1fc099781b8946eea833150f9ce6d915~tplv-k3u1fbpfcp-watermark.image)
 
@@ -32,7 +36,7 @@ tags:
 
 ### 场景搭建
 
-按之前的惯例，搭建一个场景，放一个铺满屏幕的平面，设定一些必要的参数（火焰的速度与颜色）
+按之前的惯例，搭建一个场景，放一个铺满屏幕的平面，设定一些必要的参数（火花的速度与颜色）
 
 ```ts
 class RayMarchingFire extends Base {
@@ -115,8 +119,8 @@ class RayMarchingFire extends Base {
 
 ### 创建发光渐变椭圆
 
-仔细观察火焰的形状你会发现其实它的大致形状像一个椭圆，而且还是发光的渐变椭圆，于是我们就要想办法来创建这种形状。
-简要说下思路：ray marching获取的值改成光线位置pos和光线移动的进度strength，光线位置的y轴将用于设定火焰的颜色；光线移动的进度strength用于设定火焰的形状（这里就是椭圆）
+仔细观察火花的形状你会发现其实它的大致形状像一个椭圆，而且还是发光的渐变椭圆，于是我们就要想办法来创建这种形状。
+简要说下思路：ray marching获取的值改成光线位置pos和光线移动的进度strength，光线位置的y轴将用于设定火花的颜色；光线移动的进度strength用于设定火花的形状（这里就是椭圆）
 
 ```glsl
 #pragma glslify:centerUv=require(../modules/centerUv)
@@ -229,7 +233,7 @@ mat3 setCamera(in vec3 ro,in vec3 ta,float cr)
 
 [![R0RM7Q.png](https://z3.ax1x.com/2021/06/30/R0RM7Q.png)](https://imgtu.com/i/R0RM7Q)
 
-### 用噪声生成火焰
+### 用噪声生成火花
 
 接下来就对这个椭圆应用上噪声（这里选了传统噪声，为了更好看的外观，也可以选择其他的噪声）
 
@@ -248,9 +252,9 @@ float fire(vec3 p){
 
 [![R0fRFH.gif](https://z3.ax1x.com/2021/06/30/R0fRFH.gif)](https://imgtu.com/i/R0fRFH)
 
-莫名感觉像黑魂3里的芙利德修女的黑焰，尽管这样也很cool，我们还是给它加上颜色，让它更像现实中的火焰
+莫名感觉像黑魂3里的芙莉德修女的黑焰，尽管这样也很cool，我们还是给它加上颜色，让它更像现实中的火花
 
-### 给火焰加上颜色
+### 给火花加上颜色
 
 将颜色通过mix函数混合起来（强度是光线位置的y轴），和之前的颜色相乘即可
 
