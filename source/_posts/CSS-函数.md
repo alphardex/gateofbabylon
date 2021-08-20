@@ -337,7 +337,7 @@ body {
 
 #### 另一种动画
 
-可以换一种动画，会产生另一种奇特的效果
+可以换一种动画 shuffle（穿梭），会产生另一种奇特的效果
 
 ```html
 <div class="grid shuffle middle-stagger">
