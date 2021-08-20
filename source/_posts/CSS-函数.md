@@ -334,3 +334,53 @@ body {
 [![fL2Ppt.gif](https://z3.ax1x.com/2021/08/20/fL2Ppt.gif)](https://imgtu.com/i/fL2Ppt)
 
 地址：[Symmetric Grid Animation](https://codepen.io/alphardex/pen/zYwgdZO)
+
+#### 另一种动画
+
+可以换一种动画，会产生另一种奇特的效果
+
+```html
+<div class="grid shuffle middle-stagger">
+  <div class="grid-item"></div>
+  ...(此处省略62个)
+  <div class="grid-item"></div>
+</div>
+```
+
+```scss
+.grid {
+  ...
+
+  &.shuffle {
+    .grid-item {
+      --t: 2s;
+
+      animation: shuffle var(--t) infinite ease-in-out alternate;
+    }
+  }
+}
+
+@keyframes shuffle {
+  0% {
+    transform: scaleY(0.1);
+  }
+
+  50% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+
+  50.01% {
+    transform-origin: top;
+  }
+
+  100% {
+    transform-origin: top;
+    transform: scaleY(0.1);
+  }
+}
+```
+
+[![fOJSZ8.gif](https://z3.ax1x.com/2021/08/20/fOJSZ8.gif)](https://imgtu.com/i/fOJSZ8)
+
+地址：[Shuffle Grid Animation](https://codepen.io/alphardex/pen/YzVmYaV)
