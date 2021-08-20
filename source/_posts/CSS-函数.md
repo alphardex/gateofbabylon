@@ -10,6 +10,12 @@ tags:
 
 大家好，这里是 CSS 兼 WebGL 魔法使——alphardex。
 
+之前一直在玩 three.js ，接触了很多数学函数，用它们创造过很多特效。于是我思考：能否在 CSS 中也用上这些数学函数，但发现 CSS 目前还没有，据说以后的新规范会纳入，估计也要等很久。
+
+然而，我们可以通过一些小技巧，来创作出一些属于自己的 CSS 数学函数。
+
+让我们开始吧！
+
 ## CSS 数学函数
 
 注意：以下的函数用原生CSS也都能实现，这里用SCSS函数只是为了方便封装，封装起来的话更方便调用
@@ -48,6 +54,8 @@ tags:
 ```
 
 ## 例子
+
+以下的几个动画特效演示了上面数学函数的作用
 
 ### 一维交错动画
 
@@ -174,7 +182,10 @@ body {
 
 #### 中间交错
 
-首先计算出元素下标的中位数，然后计算每个元素id到这个中位数的距离，根据距离算出比例，再根据比例算出delay即可
+1. 计算出元素下标的中位数
+2. 计算每个元素id到这个中位数的距离
+3. 根据距离算出比例
+4. 根据比例算出delay
 
 ```html
 <div class="list grow-melt middle-stagger" style="--n:16">
@@ -209,6 +220,8 @@ body {
 ### 二维交错动画
 
 #### 初始状态
+
+如何将一维的升成二维？应用网格系统即可
 
 ```html
 <div class="grid">
@@ -255,6 +268,8 @@ body {
 
 #### 应用动画
 
+跟上面的动画一模一样
+
 ```html
 <div class="grid grow-melt">
   <div class="grid-item"></div>
@@ -282,6 +297,11 @@ body {
 [![fLsGvD.gif](https://z3.ax1x.com/2021/08/20/fLsGvD.gif)](https://imgtu.com/i/fLsGvD)
 
 #### 中间交错
+
+1. 计算出网格行列的中位数
+2. 计算网格xy坐标到中位数的距离并求和
+3. 根据距离算出比例
+4. 根据比例算出delay
 
 ```html
 <div class="grid grow-melt middle-stagger">
