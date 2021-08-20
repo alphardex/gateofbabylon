@@ -342,14 +342,26 @@ body {
 ```html
 <div class="grid shuffle middle-stagger">
   <div class="grid-item"></div>
-  ...(此处省略62个)
+  ...(此处省略254个)
   <div class="grid-item"></div>
 </div>
 ```
 
 ```scss
 .grid {
+  $row: 16;
+  $col: 16;
+  --row: #{$row};
+  --col: #{$col};
+  --gap: 0.25vw;
   ...
+
+  &-item {
+    --p: 1vw;
+    ...
+    transform-origin: bottom;
+    transform: scaleY(0.1);
+  }
 
   &.shuffle {
     .grid-item {
