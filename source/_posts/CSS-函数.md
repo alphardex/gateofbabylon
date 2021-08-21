@@ -133,10 +133,10 @@ body {
 这里用了2个动画：grow负责将元素缩放出来；melt负责“融化”元素（即消除阴影的扩散半径）
 
 ```html
-<div class="list grow-melt" style="--n:16">
-  <div class="list-item" style="--i:1"></div>
-  ...
-  <div class="list-item" style="--i:16"></div>
+<div class="list grow-melt">
+  <div class="list-item"></div>
+  ...(此处省略14个)
+  <div class="list-item"></div>
 </div>
 ```
 
@@ -188,10 +188,10 @@ body {
 4. 根据比例算出delay
 
 ```html
-<div class="list grow-melt middle-stagger" style="--n:16">
-  <div class="list-item" style="--i:1"></div>
-  ...
-  <div class="list-item" style="--i:16"></div>
+<div class="list grow-melt middle-stagger">
+  <div class="list-item"></div>
+  ...(此处省略14个)
+  <div class="list-item"></div>
 </div>
 ```
 
