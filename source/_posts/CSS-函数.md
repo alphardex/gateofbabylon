@@ -18,13 +18,13 @@ tags:
 
 ## CSS 数学函数
 
-注意：以下的函数用原生CSS也都能实现，这里用SCSS函数只是为了方便封装，封装起来的话更方便调用
+注意：以下的函数用原生 CSS 也都能实现，这里用 SCSS 函数只是为了方便封装，封装起来的话更方便调用
 
 ### 绝对值
 
 绝对值就是正的还是正的，负的变为正的
 
-可以创造2个数，其中一个数是另一个数的相反数，比较它们的最大值，即可获得这个数的绝对值
+可以创造 2 个数，其中一个数是另一个数的相反数，比较它们的最大值，即可获得这个数的绝对值
 
 ```scss
 @function abs($v) {
@@ -34,7 +34,7 @@ tags:
 
 ### 中位数
 
-原数减1并乘以一半即可
+原数减 1 并乘以一半即可
 
 ```scss
 @function middle($v) {
@@ -50,6 +50,73 @@ tags:
 @function dist-1d($v1, $v2) {
   $v-delta: calc(#{$v1} - #{$v2});
   @return #{abs($v-delta)};
+}
+```
+
+### 三角函数
+
+其实这个笔者也不会实现~不过之前看到过[好友 chokcoco 的一篇文章](https://github.com/chokcoco/iCSS/issues/72)写到了如何在 CSS 中实现三角函数，在此表示感谢
+
+```scss
+@function fact($number) {
+  $value: 1;
+  @if $number>0 {
+    @for $i from 1 through $number {
+      $value: $value * $i;
+    }
+  }
+  @return $value;
+}
+
+@function pow($number, $exp) {
+  $value: 1;
+  @if $exp>0 {
+    @for $i from 1 through $exp {
+      $value: $value * $number;
+    }
+  } @else if $exp < 0 {
+    @for $i from 1 through -$exp {
+      $value: $value / $number;
+    }
+  }
+  @return $value;
+}
+
+@function rad($angle) {
+  $unit: unit($angle);
+  $unitless: $angle / ($angle * 0 + 1);
+  @if $unit==deg {
+    $unitless: $unitless / 180 * pi();
+  }
+  @return $unitless;
+}
+
+@function pi() {
+  @return 3.14159265359;
+}
+
+@function sin($angle) {
+  $sin: 0;
+  $angle: rad($angle);
+  // Iterate a bunch of times.
+  @for $i from 0 through 20 {
+    $sin: $sin + pow(-1, $i) * pow($angle, (2 * $i + 1)) / fact(2 * $i + 1);
+  }
+  @return $sin;
+}
+
+@function cos($angle) {
+  $cos: 0;
+  $angle: rad($angle);
+  // Iterate a bunch of times.
+  @for $i from 0 through 20 {
+    $cos: $cos + pow(-1, $i) * pow($angle, 2 * $i) / fact(2 * $i);
+  }
+  @return $cos;
+}
+
+@function tan($angle) {
+  @return sin($angle) / cos($angle);
 }
 ```
 
@@ -130,7 +197,7 @@ body {
 
 #### 应用动画
 
-这里用了2个动画：grow负责将元素缩放出来；melt负责“融化”元素（即消除阴影的扩散半径）
+这里用了 2 个动画：grow 负责将元素缩放出来；melt 负责“融化”元素（即消除阴影的扩散半径）
 
 ```html
 <div class="list grow-melt">
@@ -142,8 +209,6 @@ body {
 
 ```scss
 .list {
-	...
-
   &.grow-melt {
     .list-item {
       --t: 2s;
@@ -183,9 +248,9 @@ body {
 #### 中间交错
 
 1. 计算出元素下标的中位数
-2. 计算每个元素id到这个中位数的距离
+2. 计算每个元素 id 到这个中位数的距离
 3. 根据距离算出比例
-4. 根据比例算出delay
+4. 根据比例算出 delay
 
 ```html
 <div class="list grow-melt middle-stagger">
@@ -197,8 +262,6 @@ body {
 
 ```scss
 .list {
-  ...
-
   &.middle-stagger {
     .list-item {
       --m: #{middle(var(--n))}; // 中位数，这里是7.5
@@ -280,8 +343,6 @@ body {
 
 ```scss
 .grid {
-  ...
-
   &.grow-melt {
     .grid-item {
       --t: 2s;
@@ -299,9 +360,9 @@ body {
 #### 中间交错
 
 1. 计算出网格行列的中位数
-2. 计算网格xy坐标到中位数的距离并求和
+2. 计算网格 xy 坐标到中位数的距离并求和
 3. 根据距离算出比例
-4. 根据比例算出delay
+4. 根据比例算出 delay
 
 ```html
 <div class="grid grow-melt middle-stagger">
@@ -313,8 +374,6 @@ body {
 
 ```scss
 .grid {
-  ...
-
   &.middle-stagger {
     .grid-item {
       --m: #{middle(var(--col))}; // 中位数，这里是7.5
@@ -323,7 +382,9 @@ body {
       --dist-sum: calc(var(--x-m-dist) + var(--y-m-dist)); // 距离之和
       --ratio: calc(var(--dist-sum) / var(--m)); // 根据距离和计算比例
       --delay: calc(var(--ratio) * var(--t) * 0.5); // 根据比例算出delay
-      --n-delay: calc((var(--ratio) - 2) * var(--t) * 0.5); // 负delay表示动画提前开始
+      --n-delay: calc(
+        (var(--ratio) - 2) * var(--t) * 0.5
+      ); // 负delay表示动画提前开始
 
       animation-delay: var(--n-delay);
     }
@@ -354,11 +415,10 @@ body {
   --row: #{$row};
   --col: #{$col};
   --gap: 0.25vw;
-  ...
 
   &-item {
     --p: 1vw;
-    ...
+
     transform-origin: bottom;
     transform: scaleY(0.1);
   }
@@ -396,3 +456,5 @@ body {
 [![fOJSZ8.gif](https://z3.ax1x.com/2021/08/20/fOJSZ8.gif)](https://imgtu.com/i/fOJSZ8)
 
 地址：[Shuffle Grid Animation](https://codepen.io/alphardex/pen/YzVmYaV)
+
+### 余弦波动动画
