@@ -133,7 +133,7 @@ tags:
 ```html
 <div class="list">
   <div class="list-item"></div>
-  ...(此处省略14个)
+  ...(此处省略14个 list-item)
   <div class="list-item"></div>
 </div>
 ```
@@ -152,21 +152,7 @@ body {
   --blue-color-1: #6ee1f5;
 }
 
-// 绝对值
-@function abs($v) {
-  @return max(#{$v}, calc(-1 * #{$v}));
-}
-
-// 中位数
-@function middle($v) {
-  @return calc(0.5 * (#{$v} - 1));
-}
-
-// 数轴上两点距离
-@function dist-1d($v1, $v2) {
-  $v-delta: calc(#{$v1} - #{$v2});
-  @return #{abs($v-delta)};
-}
+(这里复制粘贴上文所有的数学公式)
 
 .list {
   --n: 16;
@@ -202,7 +188,7 @@ body {
 ```html
 <div class="list grow-melt">
   <div class="list-item"></div>
-  ...(此处省略14个)
+  ...(此处省略14个 list-item)
   <div class="list-item"></div>
 </div>
 ```
@@ -245,7 +231,7 @@ body {
 
 [![fqkIkF.gif](https://z3.ax1x.com/2021/08/19/fqkIkF.gif)](https://imgtu.com/i/fqkIkF)
 
-#### 中间交错
+#### 交错动画
 
 1. 计算出元素下标的中位数
 2. 计算每个元素 id 到这个中位数的距离
@@ -255,7 +241,7 @@ body {
 ```html
 <div class="list grow-melt middle-stagger">
   <div class="list-item"></div>
-  ...(此处省略14个)
+  ...(此处省略14个 list-item)
   <div class="list-item"></div>
 </div>
 ```
@@ -289,7 +275,7 @@ body {
 ```html
 <div class="grid">
   <div class="grid-item"></div>
-  ...(此处省略62个)
+  ...(此处省略62个 grid-item)
   <div class="grid-item"></div>
 </div>
 ```
@@ -336,7 +322,7 @@ body {
 ```html
 <div class="grid grow-melt">
   <div class="grid-item"></div>
-  ...(此处省略62个)
+  ...(此处省略62个 grid-item)
   <div class="grid-item"></div>
 </div>
 ```
@@ -357,7 +343,7 @@ body {
 
 [![fLsGvD.gif](https://z3.ax1x.com/2021/08/20/fLsGvD.gif)](https://imgtu.com/i/fLsGvD)
 
-#### 中间交错
+#### 交错动画
 
 1. 计算出网格行列的中位数
 2. 计算网格 xy 坐标到中位数的距离并求和
@@ -367,7 +353,7 @@ body {
 ```html
 <div class="grid grow-melt middle-stagger">
   <div class="grid-item"></div>
-  ...(此处省略62个)
+  ...(此处省略62个 grid-item)
   <div class="grid-item"></div>
 </div>
 ```
@@ -403,7 +389,7 @@ body {
 ```html
 <div class="grid shuffle middle-stagger">
   <div class="grid-item"></div>
-  ...(此处省略254个)
+  ...(此处省略254个 grid-item )
   <div class="grid-item"></div>
 </div>
 ```
@@ -458,3 +444,138 @@ body {
 地址：[Shuffle Grid Animation](https://codepen.io/alphardex/pen/YzVmYaV)
 
 ### 余弦波动动画
+
+#### 初始状态
+
+```html
+<div class="lists">
+  <div class="list">
+    <div class="list-item"></div>
+    ...(此处省略39个 list-item)
+  </div>
+  ...(此处省略6个 list)
+</div>
+```
+
+```scss
+.lists {
+  $list-count: 7;
+  $colors: red, orange, yellow, green, cyan, blue, purple;
+
+  position: relative;
+  width: 34vw;
+  height: 2vw;
+  transform-style: preserve-3d;
+  perspective: 800px;
+
+  .list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    transform: translateZ(var(--z));
+
+    @for $i from 1 through $list-count {
+      &:nth-child(#{$i}) {
+        --bg: #{nth($colors, $i)};
+        --z: #{$i * -1vw};
+        --basic-delay-ratio: #{$i / $list-count};
+      }
+    }
+
+    &-item {
+      --w: 0.6vw;
+      --gap: 0.15vw;
+
+      width: var(--w);
+      height: var(--w);
+      margin: var(--gap);
+      background: var(--bg);
+      border-radius: 50%;
+    }
+  }
+}
+```
+
+[![hSdtfI.png](https://z3.ax1x.com/2021/08/22/hSdtfI.png)](https://imgtu.com/i/hSdtfI)
+
+#### 余弦排列
+
+```scss
+.lists {
+  .list {
+    &-item {
+      $item-count: 40;
+      $offset: pi() * 0.5;
+      --wave-length: 21vw;
+
+      @for $i from 1 through $item-count {
+        &:nth-child(#{$i}) {
+          --i: #{$i};
+          $ratio: ($i - 1) / ($item-count - 1);
+          $angle-unit: pi() * $ratio;
+          $wave: cos($angle-unit + $offset);
+          --single-wave-length: calc(#{$wave} * var(--wave-length));
+          --n-single-wave-length: calc(var(--single-wave-length) * -1);
+        }
+      }
+
+      transform: translateY(var(--n-single-wave-length));
+    }
+  }
+}
+```
+
+[![hSwuNj.png](https://z3.ax1x.com/2021/08/22/hSwuNj.png)](https://imgtu.com/i/hSwuNj)
+
+#### 波动动画
+
+```scss
+.lists {
+  .list {
+    &-item {
+      --t: 2s;
+
+      animation: wave var(--t) infinite ease-in-out alternate;
+    }
+  }
+}
+
+@keyframes wave {
+  from {
+    transform: translateY(var(--n-single-wave-length));
+  }
+
+  to {
+    transform: translateY(var(--single-wave-length));
+  }
+}
+```
+
+[![hSwfPA.gif](https://z3.ax1x.com/2021/08/22/hSwfPA.gif)](https://imgtu.com/i/hSwfPA)
+
+#### 交错动画
+
+```scss
+.lists {
+  .list {
+    &-item {
+      --n: #{$item-count + 1};
+      --m: #{middle(var(--n))};
+      --i-m-dist: #{dist-1d(var(--i), var(--m))};
+      --ratio: calc(var(--i-m-dist) / var(--m));
+      --square: calc(var(--ratio) * var(--ratio));
+      --delay: calc(
+        calc(var(--square) + var(--basic-delay-ratio) + 1) * var(--t)
+      );
+      --n-delay: calc(var(--delay) * -1);
+
+      animation-delay: var(--n-delay);
+    }
+  }
+}
+```
+
+[![hSwqaQ.gif](https://z3.ax1x.com/2021/08/22/hSwqaQ.gif)](https://imgtu.com/i/hSwqaQ)
+
+地址：[Rainbow Sine](https://codepen.io/alphardex/pen/GREKJbL)
