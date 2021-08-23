@@ -591,3 +591,7 @@ body {
 [![hSwqaQ.gif](https://z3.ax1x.com/2021/08/22/hSwqaQ.gif)](https://imgtu.com/i/hSwqaQ)
 
 地址：[Rainbow Sine](https://codepen.io/alphardex/pen/GREKJbL)
+
+## 最后
+
+CSS 数学函数能实现的特效远不止于此，希望通过本文能激起大家创作特效的灵感~
