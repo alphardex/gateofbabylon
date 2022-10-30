@@ -193,7 +193,7 @@ this.mg.mojis.forEach((moji) => {
 });
 ```
 
-利用[噪音函数](https://gist.github.com/patriciogonzalezvivo/670c22f3966e662d2f83#generic-123-noise)配合`floor`函数来形成网格状图案
+利用[噪声函数](https://gist.github.com/patriciogonzalezvivo/670c22f3966e662d2f83#generic-123-noise)配合`floor`函数来形成网格状图案
 
 ```glsl
 vec2 grid=uGrid;
@@ -291,7 +291,7 @@ const cm = new kokomi.CustomPoints(base, {
 });
 ```
 
-在顶点着色器中，我们可以通过[噪音函数](https://github.com/hughsk/glsl-noise)来扭曲微粒的顶点坐标，以实现微粒随机飘动的效果
+在顶点着色器中，我们可以通过[噪声函数](https://github.com/hughsk/glsl-noise)来扭曲微粒的顶点坐标，以实现微粒随机飘动的效果
 
 ```glsl
 vec3 distort(vec3 p){
