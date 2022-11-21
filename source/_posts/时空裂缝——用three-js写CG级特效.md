@@ -22,7 +22,7 @@ https://code.juejin.cn/pen/7168065415069827124
 
 首先，创造一个最初始的平面
 
-![1.png](https://s2.loli.net/2022/11/21/4tHm6XEWSLZBaJO.png)
+![1.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fc3acd2597964c6ab88eef75a2a39bf7~tplv-k3u1fbpfcp-zoom-1.image)
 
 建模，也就是定制化`geometry`
 
@@ -125,7 +125,7 @@ const generatePolygons = (config = {}) => {
 
 将多边形组整体向上偏移，超出界限则重置高度
 
-![4.gif](https://s2.loli.net/2022/11/21/SNEALzRVBmT4hbt.gif)
+![4.gif](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/67e8fc1e7d3542c79b95e14751ba8899~tplv-k3u1fbpfcp-zoom-1.image)
 
 ```js
 let floatDistance = 0;
@@ -146,9 +146,12 @@ this.update(() => {
 
 将相机靠近，你就会觉得像是每个多边形在上升（其实是整体的容器在上升）
 
-![5.gif](https://s2.loli.net/2022/11/21/9mLvnPFzCrVMQaw.gif)
+![5.gif](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bdf2ed84be2141118a9edfb8ae65a1d1~tplv-k3u1fbpfcp-zoom-1.image)
 
-要想达成无限上升的动画“假象”，我们需要拷贝一份多边形组，将它和之前的那组错开，这样动画就能无限衔接了
+接下来还有2点可以优化下：
+
+1. 要想达成一种大小错落的层次感，我们可以拷贝一份多边形组，将其的z轴位置往后移即可
+2. 要想达成无限上升的动画“假象”，我们需要再整体拷贝一份多边形组（包括组本身和偏移z轴后的组），将它和之前的那组在y轴上错开，这样动画就能无限衔接了
 
 ## 光照
 
