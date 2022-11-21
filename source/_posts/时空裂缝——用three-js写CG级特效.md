@@ -1,4 +1,4 @@
-title: 用three.js创造时空裂缝
+title: 用three.js创造时空裂缝特效
 author: alphardex
 abbrlink: 11844
 date: 2022-11-21 14:48:05
@@ -6,7 +6,9 @@ tags:
 ---
 呀哈喽！这里是alphardex。
 
-最近受到轮回系作品（例如寒蝉等）中时空裂缝场景的启发，我用three.js来实现了一个实时渲染的时空裂缝场景。本文将简要地介绍下实现该效果的要点。
+![Snipaste_2022-11-21_22-35-00.jpg](https://s2.loli.net/2022/11/21/ZzaI37T2B5igGX4.jpg)
+
+最近受到轮回系作品[《寒蝉鸣泣之时》](https://www.agemys.net/detail/20200118)中时空裂缝场景的启发，我用three.js实现了一个实时渲染的时空裂缝场景。本文将简要地介绍下实现该效果的要点。
 
 以下特效全屏观看效果最佳~
 
