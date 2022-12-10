@@ -32,7 +32,7 @@ vscode-extensions在vscode里全部解压
 首先装好所有全局包
 
 ```sh
-npm install -g @vue/cli @vue/cli-service-global cloc hexo-cli http-server npkill rimraf typescript
+npm install -g cloc hexo-cli http-server npkill rimraf typescript
 ```
 
 ```sh
