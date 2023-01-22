@@ -1,8 +1,9 @@
 title: 用 kokomi.js 打造飘逸的3D轮播效果
 author: alphardex
 abbrlink: 29621
-date: 2022-09-12 17:04:21
-tags:
+tags: []
+categories: []
+date: 2022-09-12 17:04:00
 ---
 ## 前言
 

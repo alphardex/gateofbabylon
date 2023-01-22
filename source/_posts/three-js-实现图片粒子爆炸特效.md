@@ -1,11 +1,8 @@
 title: three.js 实现图片粒子爆炸特效
 author: alphardex
 abbrlink: 794
-tags:
-  - three.js
-  - JavaScript
-categories:
-  - 前端
+tags: []
+categories: []
 date: 2021-03-09 08:23:00
 ---
 ## 前言

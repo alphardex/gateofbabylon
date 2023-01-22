@@ -1,11 +1,8 @@
 title: 用 three.js 画个太阳
 author: alphardex
 abbrlink: 14082
-tags:
-  - three.js
-  - JavaScript
-categories:
-  - 前端
+tags: []
+categories: []
 date: 2021-03-25 12:40:00
 ---
 ## 前言

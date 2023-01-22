@@ -1,10 +1,8 @@
 title: PC搬家指南
 author: alphardex
 abbrlink: 54698
-tags:
-  - PC
-categories:
-  - 技巧
+tags: []
+categories: []
 date: 2020-09-13 09:57:00
 ---
 前提是把所有文件备份到了[百度网盘](https://pan.baidu.com/download/)上

@@ -1,8 +1,9 @@
 title: 用 raymarching 画一个精灵球
 author: alphardex
 abbrlink: 58379
-date: 2022-04-13 15:46:21
-tags:
+tags: []
+categories: []
+date: 2022-04-13 15:46:00
 ---
 ## 前言
 

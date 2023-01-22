@@ -1,11 +1,8 @@
 title: three.js 实现图片滚动扭曲特效
 author: alphardex
 abbrlink: 7601
-tags:
-  - JavaScript
-  - three.js
-categories:
-  - 前端
+tags: []
+categories: []
 date: 2021-03-06 21:14:00
 ---
 ## 前言

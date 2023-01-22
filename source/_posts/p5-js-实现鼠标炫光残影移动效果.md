@@ -1,9 +1,9 @@
 title: p5.js 实现鼠标炫光残影移动效果
 author: alphardex
 abbrlink: 54692
-date: 2021-08-30 10:21:32
-tags:
-
+tags: []
+categories: []
+date: 2021-08-30 10:21:00
 ---
 
 ## 前言

@@ -3,16 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: A大的图书馆
-subtitle: '我乃CSS魔法师是也！'
-description: '分享CSS、JavaScript等前端技术。'
+title: 魔法使之家
+subtitle: "青春で何が悪い"
+description: "分享WebGL、CSS等前端技术。"
 keywords:
+  - WebGL
   - CSS
-  - JavaScript
   - 前端
 author: alphardex
 language: zh-CN
-timezone: 'Asia/Shanghai'
+timezone: "Asia/Shanghai"
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -41,7 +41,7 @@ titlecase: false # Transform title into titlecase
 external_link:
   enable: true # Open external links in new tab
   field: site # Apply to the whole site
-  exclude: ''
+  exclude: ""
 filename_case: 0
 render_drafts: false
 post_asset_folder: false
@@ -51,7 +51,7 @@ highlight:
   enable: true
   line_number: true
   auto_detect: false
-  tab_replace: ''
+  tab_replace: ""
   wrap: true
   hljs: false
 
@@ -60,7 +60,7 @@ highlight:
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
-  path: ''
+  path: ""
   per_page: 10
   order_by: -date
 
@@ -106,13 +106,13 @@ feed:
   hub:
   content:
   content_limit: 140
-  content_limit_delim: ' '
+  content_limit_delim: " "
   order_by: -date
 
 # abbrlink config
 abbrlink:
-  alg: crc16  #support crc16(default) and crc32
-  rep: dec    #support dec(default) and hex
+  alg: crc16 #support crc16(default) and crc32
+  rep: dec #support dec(default) and hex
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

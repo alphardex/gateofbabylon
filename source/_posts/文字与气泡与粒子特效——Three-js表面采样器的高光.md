@@ -1,8 +1,9 @@
 title: 文字与气泡与粒子特效——玩转three.js的表面采样
 author: alphardex
 abbrlink: 8412
-date: 2022-11-10 09:51:54
-tags:
+tags: []
+categories: []
+date: 2022-11-10 09:51:00
 ---
 呀哈喽！这里是alphardex。
 

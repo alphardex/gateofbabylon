@@ -1,10 +1,8 @@
 title: 请收下这72个炫酷的CSS技巧
 author: alphardex
 abbrlink: 18258
-tags:
-  - CSS
-categories:
-  - 前端
+tags: []
+categories: []
 date: 2019-12-25 19:34:00
 ---
 ## 前言

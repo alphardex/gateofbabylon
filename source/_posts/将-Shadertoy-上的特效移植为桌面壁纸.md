@@ -1,8 +1,9 @@
 title: 将 Shadertoy 上的特效移植为桌面壁纸
 author: alphardex
 abbrlink: 11232
-date: 2022-06-19 11:23:40
-tags:
+tags: []
+categories: []
+date: 2022-06-19 11:23:00
 ---
 ## 前言
 

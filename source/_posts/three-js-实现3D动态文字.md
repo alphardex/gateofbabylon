@@ -1,11 +1,8 @@
 title: three.js 实现3D动态文字
 author: alphardex
 abbrlink: 23487
-tags:
-  - three.js
-  - JavaScript
-categories:
-  - 前端
+tags: []
+categories: []
 date: 2021-02-21 16:38:00
 ---
 ## 前言

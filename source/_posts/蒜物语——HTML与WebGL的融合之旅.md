@@ -1,8 +1,9 @@
 title: 蒜物语——HTML与WebGL的融合之旅
 author: alphardex
 abbrlink: 8368
-date: 2022-10-29 15:52:04
-tags:
+tags: []
+categories: []
+date: 2022-10-29 15:52:00
 ---
 哟哈喽！这里是alphardex。
 

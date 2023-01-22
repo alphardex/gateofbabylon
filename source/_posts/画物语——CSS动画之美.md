@@ -1,10 +1,8 @@
 title: 画物语——CSS动画之美
 author: alphardex
 abbrlink: 1514
-tags:
-  - CSS
-categories:
-  - 前端
+tags: []
+categories: []
 date: 2020-09-29 13:49:00
 ---
 ## 前言

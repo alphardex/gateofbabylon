@@ -1,11 +1,8 @@
 title: three.js 实现露珠滴落动画
 author: alphardex
 abbrlink: 9615
-tags:
-  - three.js
-  - JavaScript
-categories:
-  - 前端
+tags: []
+categories: []
 date: 2021-02-28 09:17:00
 ---
 ## 前言

@@ -53,11 +53,11 @@ highlight_theme: default
 # And you need to add the `fa` or `fab` prefix by your self.
 # ---------------
 social:
-  code fa: https://juejin.im/user/5901b4faac502e0063cf9e02
   github fab: https://github.com/alphardex
   codepen fab: https://codepen.io/alphardex
-  user fa: https://www.v2ex.com/member/alphardex
   twitter fab: https://twitter.com/alphardex007
+  code fa: https://juejin.im/user/5901b4faac502e0063cf9e02
+  user fa: https://www.v2ex.com/member/alphardex
   rss fa: https://alphardex.github.io/gateofbabylon/atom.xml
 
 # Algolia search
@@ -239,7 +239,7 @@ valine:
 
 # Footer Settings
 # ---------------
-since: 2020
+since: 2019
 
 footer_custom_text: hitokoto
 

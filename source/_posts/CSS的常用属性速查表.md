@@ -1,10 +1,7 @@
 title: CSS的常用属性速查表
 author: alphardex
-tags:
-  - Cheatsheet
-  - CSS
-categories:
-  - 前端
+tags: []
+categories: []
 abbrlink: 28164
 date: 2019-12-27 17:11:00
 ---

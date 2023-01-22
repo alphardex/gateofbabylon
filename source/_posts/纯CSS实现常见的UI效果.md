@@ -1,10 +1,8 @@
 title: 纯CSS实现常见的UI效果
 author: alphardex
 abbrlink: 24238
-tags:
-  - CSS
-categories:
-  - 前端
+tags: []
+categories: []
 date: 2021-01-04 14:28:00
 ---
 ## 前言

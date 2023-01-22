@@ -1,11 +1,8 @@
 title: three.js 实现炫光路径粒子动画效果
 author: alphardex
 abbrlink: 11010
-tags:
-  - JavaScript
-  - three.js
-categories:
-  - 前端
+tags: []
+categories: []
 date: 2021-02-15 17:03:00
 ---
 ## 前言

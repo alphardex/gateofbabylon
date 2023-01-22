@@ -1,11 +1,8 @@
 title: three.js实现反应堆游戏
 author: alphardex
 abbrlink: 8477
-tags:
-  - JavaScript
-  - three.js
-categories:
-  - 前端
+tags: []
+categories: []
 date: 2020-12-12 09:58:00
 ---
 ## 前言
