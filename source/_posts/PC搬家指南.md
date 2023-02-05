@@ -15,11 +15,9 @@ date: 2020-09-13 09:57:00
 
 Installers文件夹里的安装包按需安装
 
-chrome-extensions在chrome浏览器里全部解压
+解压ChromeGo.7z，并将[机场](https://dageyun.com/)节点导入
 
 将bookmarks.html导入chrome书签
-
-vscode-extensions在vscode里全部解压
 
 ## 配置
 
@@ -27,17 +25,17 @@ vscode-extensions在vscode里全部解压
 
 ## 开发
 
-首先装好所有全局包
+装好所有全局包
 
 ```sh
-npm install -g cloc hexo-cli http-server npkill rimraf typescript
+npm install -g cloc hexo-cli http-server npkill npm-check-updates readme-md-generator rimraf typescript
 ```
 
 ```sh
 pip install looter
 ```
 
-然后将gitee上的python-gadgets里的batch_clone_repo.py搞到本地运行，将所有repo克隆到本地
+Github上的[仓库](https://github.com/alphardex?tab=repositories)按需clone到本地
 
 ## 资源
 
