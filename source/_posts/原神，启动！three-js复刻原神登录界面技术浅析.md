@@ -3,9 +3,7 @@ author: alphardex
 abbrlink: 10700
 date: 2023-10-16 08:45:10
 tags:
-
 ---
-
 之前看到有人在浏览器端复刻了原神的登录界面，效果非常还原。
 
 本文就让我们一起来看看这种效果是如何实现的，主要分析`Shader`相关的部分。
@@ -13,6 +11,8 @@ tags:
 怀着学习的目的，我自己也写了一版，观看地址：https://genshin-replica.miaohezi.com/
 
 ![b86976a6-1228-4658-bae1-5b842e588206](https://s2.loli.net/2023/10/16/IK3H2qUd4o7BiEn.png)
+
+<!--more-->
 
 ## 背景
 
