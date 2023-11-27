@@ -1,4 +1,4 @@
-title: 尝试实现了这个跨窗口的粒子动画
+title: 尝试用 three.js 实现了这个跨窗口的粒子动画
 author: alphardex
 abbrlink: 2819
 date: 2023-11-27 16:25:16
