@@ -204,7 +204,7 @@ void main(){
 
 之前离散的点立马就变成了一个美丽的噪声球体。
 
-除了单个卷曲噪声外，我们还可以用多种噪声相结合（柏林噪声、`fbm`等），创建一个更加有机的球体。
+除了单个卷曲噪声外，我们还可以用`fbm`，产生一个更加混沌的结果。
 
 ```glsl
 vec3 fbm(vec3 p){
@@ -227,6 +227,20 @@ vec3 fbm(vec3 p){
     return value;
 }
 
+void main(){
+    vec2 uv=gl_FragCoord.xy/resolution.xy;
+    vec3 pos=texture(texturePosition,uv).xyz;
+    pos=curl(pos*uFreq);
+    pos=fbm(pos);
+    gl_FragColor=vec4(pos,1.);
+}
+```
+
+![b096ebdf-1f0f-4e78-819d-896dfedc5a10](https://s2.loli.net/2023/11/28/HdaEUyvsMhX8wxI.png)
+
+但这个结果太混沌了，跟之前的球体相差有点大。我们可以用`mix`函数来将它和球体有机地混合起来，混合因子也可以用其他的噪声函数来计算。
+
+```glsl
 void main(){
     vec2 uv=gl_FragCoord.xy/resolution.xy;
     vec3 col=vec3(0.);
@@ -268,7 +282,7 @@ void main(){
 
 ![Shader项目模板_(1)](https://s2.loli.net/2023/11/27/NDxVZtEcwkzean4.gif)
 
-至于两球相互纠缠，emmmm，说实话我直接用了原作者[开源的项目](https://github.com/bgstaal/multipleWindow3dScene)里的`WindowManager`来实现的，最终结果就是文章开头的那个动画。
+至于两球相互纠缠，emmmm，说实话我直接用了原作者[开源的项目](https://github.com/bgstaal/multipleWindow3dScene)里的`WindowManager`来实现的，把里面的方块替换成了我的粒子球体，最终结果就是文章开头的那个动画。
 
 ## 最后
 
