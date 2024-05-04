@@ -36,9 +36,11 @@ tags:
 
 第二步，你出 cos 想达成什么目的？
 
-出 cos 的目的可以有好几种：拍正片、上漫展、甚至直播出道，一举成名（大误）等等。
+按行为来分的话，可以有这几种：拍 cos 正片、上漫展、搞自媒体、直播等。
 
 这里我选择了上漫展，因为漫展上不仅能遇到很多的 ACG 同好和 coser，而且能将你 cos 的角色很好地展现给他人看，让他们不由自主地发出赞叹的声音：老师好美！cos 得非常还原！能被别人所认同，那么你为此付出的一系列努力也会感到值了。
+
+再者，大部分 coser 都是为爱发电的，如果你想用这个爱好来赚钱的话，可以去成为职业 coser，相当于是一种特殊的、具有二次元属性的模特，由于我只是业余玩玩的，对职业 coser 的世界并不是很了解，就不多涉及了吧。
 
 ## 物资准备
 
@@ -206,14 +208,50 @@ emmmm，早知道我就去实体店买鞋，以后再也不网购鞋子了 QAQ�
 
 同时，轮符雨的英文是`ref·rain`，轮符对应的是`ref`，`ref`是什么相信大家都已经知道了吧。
 
-## 用代码来诠释下 cosplay
+## 返图
+
+当你完成上面一整套的 cosplay 流程后，就可以开始享受你的成果啦！
+
+以下是我 cosplay 的一些返图：
+
+## 代码诠释
+
+用一段代码来诠释下 cosplay。
 
 ```js
+if (time && money) {
+  const charName = "xxx";
 
+  const purpose = "xxx";
+
+  const hair = money ? raw + cut : null;
+  const costume = money ? buy : diy;
+  const shoes = money ? buy : diy;
+  const items = money ? buy : diy;
+  const bigEyes = money && canWear ? buy : null;
+  const resources = {
+    hair,
+    costume,
+    shoes,
+    items,
+    bigEyes,
+  };
+  const cost = sumCost(resources);
+
+  modify(appearance);
+
+  makeUp(face);
+
+  takePhoto();
+
+  const coserName = "xxx";
+
+  enjoy();
+}
 ```
 
 ## 最后
 
-当你完成上面一整套的 cosplay 流程后，就可以开始享受你的成果啦！
+看完本文，是不是解锁了一个新的爱好呢？
 
-顺便透露下：我今年 27 岁了。但我觉得年龄大也不算啥，只要你有这个想法，并且有对应的动力去做，那么什么时候做都不是问题！
+尽管我今年也 27 岁了吧，但我觉得年龄大不算啥，只要你有这个想法，并且有对应的动力去做，那么什么时候做都不是问题！
