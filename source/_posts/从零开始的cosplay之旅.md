@@ -194,8 +194,6 @@ emmmm，早知道我就去实体店买鞋，以后再也不网购鞋子了 QAQ�
 
 `CN`的全称是`coser name`，也就是玩 cosplay 的人给自己取的一个名字。
 
-国内大部分 coser 的`CN`都是 2 个字的，也有后面带一些英文的。
-
 我给自己取的`CN`是“轮符”，出自 MyGO 的一首单曲名[《轮符雨》](https://www.bilibili.com/video/BV1rC41157Ci/)。
 
 同时，轮符雨的英文是`ref·rain`，轮符对应的是`ref`，`ref`是什么相信大家都已经知道了吧。
