@@ -10,7 +10,7 @@ tags:
 
 最近我想做一件事情，这件事情是我之前一直想做，但迟迟未能落成的事，那就是——cosplay！
 
-> cosplay 是一种潮流，它源自日本，指的是模仿并扮演动画、漫画、游戏（简称 ACG）等虚构作品中角色的活动。参与者通常会精心设计自己的服装和化妆，以尽可能地还原原作中角色的外貌和特点。这不仅是一种娱乐活动，也是一种表达对喜爱作品的热情和尊重的方式。无论是在展会、活动中，还是在社交媒体上，cosplay 都是一种展示个人创意和爱好的方式。（By 万能的 GPT）
+> cosplay 是一种潮流，它源自日本，指的是模仿并扮演动画、漫画、游戏（简称 ACG）等虚构作品中角色的活动。参与者通常会精心设计自己的服装和化妆，以尽可能地还原原作中角色的外貌和特点。这不仅是一种娱乐活动，也是一种表达对喜爱作品的热情和尊重的方式。无论是在展会、活动中，还是在社交媒体上，cosplay 都是一种展示个人创意和爱好的方式。（By ChatGPT）
 
 作为一个宅龄十年的 ACG 爱好者，不玩一次 cosplay 真的是有点对不住这个身份。
 
@@ -22,7 +22,7 @@ tags:
 
 第一步，也是最重要的一步，那就是你想 cos 谁？
 
-我的话，肯定会 cos 和自己各方面都很相似的一个角色。
+我的话，肯定会 cos 自己喜欢的，和自己各方面都很相似的一个角色。
 
 经过一系列的海选，我最终决定 cos[《BanG Dream! It's MyGO!!!!!》](https://bangumi.tv/subject/428735)里的主角[“高松灯”](https://bangumi.tv/character/127790)。
 
@@ -40,7 +40,7 @@ tags:
 
 除了容貌需要化妆以外，其他都是可以在不改变自身原貌的情况下来获得的。
 
-一般来讲，像淘宝、闲鱼、PDD 这类平台基本可以找到你所需要的东西。
+一般来讲，像淘宝、闲鱼这类平台基本可以找到你所需要的东西。
 
 ### 头发
 
@@ -204,45 +204,7 @@ emmmm，早知道我就去实体店买鞋，以后再也不网购鞋子了 QAQ�
 
 ## 返图
 
-当你完成上面一整套的 cosplay 流程后，就可以开始享受你的成果啦！
-
 以下是我 cosplay 的一些返图：
-
-## 代码诠释
-
-用一段代码来诠释下 cosplay。
-
-```js
-if (time && money) {
-  const charName = "xxx";
-
-  const purpose = "xxx";
-
-  const hair = money ? raw + cut : null;
-  const costume = money ? buy : diy;
-  const shoes = money ? buy : diy;
-  const items = money ? buy : diy;
-  const bigEyes = money && canWear ? buy : null;
-  const resources = {
-    hair,
-    costume,
-    shoes,
-    items,
-    bigEyes,
-  };
-  const cost = sumCost(resources);
-
-  modify(appearance);
-
-  makeUp(face);
-
-  takePhoto();
-
-  const coserName = "xxx";
-
-  enjoy();
-}
-```
 
 ## 最后
 
