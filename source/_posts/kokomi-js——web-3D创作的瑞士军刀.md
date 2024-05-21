@@ -31,7 +31,7 @@ date: 2022-03-24 13:21:00
 
 首先，我们点击右上角的`Create Sandbox`，从列表中找到`Vanilla Typescript`，创建一个最简单的ts模板
 
-[![qGpOfJ.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/87a8f1f6b9d24db598cc3e21dfb2cd2c~tplv-k3u1fbpfcp-zoom-1.image)](https://imgtu.com/i/qGpOfJ)
+![qGpOfJ.png](https://imgtu.com/i/qGpOfJ)
 
 该步骤地址：https://codesandbox.io/s/typescript-template-rz93pt?file=/src/index.ts
 
@@ -39,7 +39,7 @@ date: 2022-03-24 13:21:00
 
 在左边的`Dependencies`的下方的输入框中，输入`kokomi.js`，即可安装kokomi.js
 
-[![qG9Bh4.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5e198d58c70844668f124f4e753ad357~tplv-k3u1fbpfcp-zoom-1.image)](https://imgtu.com/i/qG9Bh4)
+![qG9Bh4.png](https://imgtu.com/i/qG9Bh4)
 
 由于kokomi.js依赖three.js，我们也需要安装它以及它的type：`three`和`@types/three`
 
@@ -135,7 +135,7 @@ class Sketch extends kokomi.Base {
 
 可以看到屏幕中心已经出现了一个白色的方块
 
-[![qGCQDx.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/51d351e0eca641138b35c3945eb616ae~tplv-k3u1fbpfcp-zoom-1.image)](https://imgtu.com/i/qGCQDx)
+![qGCQDx.png](https://imgtu.com/i/qGCQDx)
 
 接下来让我们添加轨道视角
 
@@ -152,7 +152,7 @@ class Sketch extends kokomi.Base {
 
 这样我们就能自由地拖拽画面了
 
-[![qGC8UO.gif](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/440af3bda2ef4651b32d8037a3d8115a~tplv-k3u1fbpfcp-zoom-1.image)](https://imgtu.com/i/qGC8UO)
+![qGC8UO.gif](https://imgtu.com/i/qGC8UO)
 
 让方块旋转起来吧
 
@@ -171,7 +171,7 @@ class Sketch extends kokomi.Base {
 }
 ```
 
-[![qGCt8H.gif](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3d6b1f00bd8c45b893b2f52ffef774f4~tplv-k3u1fbpfcp-zoom-1.image)](https://imgtu.com/i/qGCt8H)
+![qGCt8H.gif](https://imgtu.com/i/qGCt8H)
 
 恭喜，此刻你已经完成了最基础的3D场景的搭建
 
@@ -247,7 +247,7 @@ class Sketch extends kokomi.Base {
 }
 ```
 
-[![qGmJmQ.gif](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7f65cd46e3af419cb82ff789736d2c22~tplv-k3u1fbpfcp-zoom-1.image)](https://imgtu.com/i/qGmJmQ)
+![qGmJmQ.gif](https://imgtu.com/i/qGmJmQ)
 
 该步骤地址：https://codesandbox.io/s/kokomi-js-asset-manage-load-in2fcf?file=/src/app.ts
 
@@ -333,7 +333,7 @@ class Sketch extends kokomi.Base {
 }
 ```
 
-[![qGc80S.gif](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6e9abece22314c1ab34bb6c8030a429a~tplv-k3u1fbpfcp-zoom-1.image)](https://imgtu.com/i/qGc80S)
+![qGc80S.gif](https://imgtu.com/i/qGc80S)
 
 这里的fox实例拥有着属于自己的功能和状态，这样当我们创建别的`class`时就不会出现功能上的重复冲突
 
@@ -369,7 +369,7 @@ class Sketch extends kokomi.Base {
 }
 ```
 
-[![qGMUDU.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b83c7ca90ac74f2492cef1ad1cba9ab1~tplv-k3u1fbpfcp-zoom-1.image)](https://imgtu.com/i/qGMUDU)
+![qGMUDU.png](https://imgtu.com/i/qGMUDU)
 
 可以看到uv平面显示了出来，在上面我们可以进行 Shader 的创作
 
@@ -377,7 +377,7 @@ class Sketch extends kokomi.Base {
 
 比如说 Shadertoy 上最常见的 Raymarching
 
-[![qG3PMt.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d4a27cca888a4fe6a10ac31f1c08243d~tplv-k3u1fbpfcp-zoom-1.image)](https://imgtu.com/i/qG3PMt)
+![qG3PMt.png](https://imgtu.com/i/qG3PMt)
 
 该demo地址：https://codesandbox.io/s/raymarching-primitives-tqfuf8?file=/src/app.ts
 
