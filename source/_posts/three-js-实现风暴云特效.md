@@ -11,7 +11,7 @@ date: 2021-06-27 14:19:00
 
 本文我们将用three.js来实现风暴云特效，以下是最终实现的效果图
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e504adee900144eba347f9082564282d~tplv-k3u1fbpfcp-watermark.image)
+![](https://s2.loli.net/2024/05/21/qSy6rDJwTYQBRoz.gif)
 
 让我们开始吧！
 
@@ -203,7 +203,7 @@ void main(){
 
 最终效果如下
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e504adee900144eba347f9082564282d~tplv-k3u1fbpfcp-watermark.image)
+![](https://s2.loli.net/2024/05/21/qSy6rDJwTYQBRoz.gif)
 
 ## 项目地址
 

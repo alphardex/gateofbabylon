@@ -12,7 +12,7 @@ date: 2021-08-30 10:21:00
 
 最近开始玩起了 p5.js，发现这是一个很有意思的库，用它能创作出各种新奇有趣的特效，本文我们将一起来实现下图的鼠标移动特效。
 
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/60f484b9e2224fc78d5696d584c1e989~tplv-k3u1fbpfcp-zoom-mark-crop-v2:460:460:0:0.awebp)
+![](https://s2.loli.net/2024/05/21/Rrd2qoMWfPL1s3b.gif)
 
 让我们开始吧！
 
@@ -288,7 +288,7 @@ const sketch = (s: p5) => {
 };
 ```
 
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/60f484b9e2224fc78d5696d584c1e989~tplv-k3u1fbpfcp-zoom-mark-crop-v2:460:460:0:0.awebp)
+![](https://s2.loli.net/2024/05/21/Rrd2qoMWfPL1s3b.gif)
 
 ## 项目地址
 

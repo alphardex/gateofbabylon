@@ -15,7 +15,7 @@ date: 2021-06-30 14:17:00
 
 游戏里的效果相对比较卡通化，而本文的效果将更加逼近现实一点
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1fc099781b8946eea833150f9ce6d915~tplv-k3u1fbpfcp-watermark.image)
+![](https://s2.loli.net/2024/05/21/FYJqLmbOVTkn9fx.gif)
 
 让我们开始吧！
 
@@ -271,7 +271,7 @@ void main(){
 }
 ```
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1fc099781b8946eea833150f9ce6d915~tplv-k3u1fbpfcp-watermark.image)
+![](https://s2.loli.net/2024/05/21/FYJqLmbOVTkn9fx.gif)
 
 ## 项目地址
 
