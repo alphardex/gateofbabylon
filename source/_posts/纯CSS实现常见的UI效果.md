@@ -1,23 +1,25 @@
-title: 纯CSS实现常见的UI效果
+title: 纯 CSS 实现常见的 UI 效果
 author: alphardex
 abbrlink: 24238
 tags: []
 categories: []
 date: 2021-01-04 14:28:00
+
 ---
+
 ## 前言
 
-大家好，这里是CSS魔法使——alphardex。
+大家好，这里是 CSS 魔法使——alphardex。
 
-切图仔，是大多数前端用来自嘲的称呼。相信很多人平时写页面的时候，大部分时间是在切图和排图，如此往复。这里并不是要否定切图本身，而是在质疑：一直切图到底对自己的功力增长有何好处？想想UI丢给你一套好看的界面，你却只需一个img标签，或者一个background-image属性即可搞定了它，但日后某个地方需要调整某些外观（颜色、文字等），你还不是会让UI再修改之前的素材，然后替换上去完事？这样就完全受制于UI，而无法发挥自己的能动性。
+切图仔，是大多数前端用来自嘲的称呼。相信很多人平时写页面的时候，大部分时间是在切图和排图，如此往复。这里并不是要否定切图本身，而是在质疑：一直切图到底对自己的功力增长有何好处？想想 UI 丢给你一套好看的界面，你却只需一个 img 标签，或者一个 background-image 属性即可搞定了它，但日后某个地方需要调整某些外观（颜色、文字等），你还不是会让 UI 再修改之前的素材，然后替换上去完事？这样就完全受制于 UI，而无法发挥自己的能动性。
 
-那么，如何打破这个僵局？很简单，如果你CSS玩的够溜，你就无需再进行那枯燥无比的切图工作，那些界面、元素都是通过你双手亲自缔造而成的，尽管创作它们可能会花一些功夫，但带来的回报也是巨大的，你不仅能够自由掌控你所创造出来的元素，而且能大幅提高自己的CSS功力。
+那么，如何打破这个僵局？很简单，如果你 CSS 玩的够溜，你就无需再进行那枯燥无比的切图工作，那些界面、元素都是通过你双手亲自缔造而成的，尽管创作它们可能会花一些功夫，但带来的回报也是巨大的，你不仅能够自由掌控你所创造出来的元素，而且能大幅提高自己的 CSS 功力。
 
 <!--more-->
 
 ## 在此之前
 
-在用纯CSS实现这些效果之前，笔者先介绍几个常用的SCSS Mixin和一个得力武器，用它们来进行创作将会事半功倍
+在用纯 CSS 实现这些效果之前，笔者先介绍几个常用的 SCSS Mixin 和一个得力武器，用它们来进行创作将会事半功倍
 
 ### 覆盖 - cover
 
@@ -35,7 +37,7 @@ date: 2021-01-04 14:28:00
 
 ![1.png](https://i.loli.net/2021/01/05/VvBJf73FAjHXDiq.png)
 
-demo地址：[Blob Button](https://codepen.io/alphardex/pen/GRjEoBZ)
+demo 地址：[Blob Button](https://codepen.io/alphardex/pen/GRjEoBZ)
 
 ### 嵌入 - inset
 
@@ -51,33 +53,31 @@ demo地址：[Blob Button](https://codepen.io/alphardex/pen/GRjEoBZ)
 
 同样地，这也是在原先元素基础上复制出一个元素，只不过这个元素位置和原先的元素相同，大小会基于原先的元素而增减。
 
-举个例子，倘若你想创建多个半径不同的同心圆，这个Mixin将会很有帮助
+举个例子，倘若你想创建多个半径不同的同心圆，这个 Mixin 将会很有帮助
 
 ### aqua.css
 
-[aqua.css](https://aquacss.netlify.app/)是笔者开源的一个优雅的、轻量级的CSS框架。里面有很多常用的组件以及常用的样式类，用它来写CSS体验将会非常爽
+[aqua.css](https://aquacss.netlify.app/)是笔者开源的一个优雅的、轻量级的 CSS 框架。里面有很多常用的组件以及常用的样式类，用它来写 CSS 体验将会非常爽
 
-在codepen上，笔者准备了一个[aqua.css模版](https://codepen.io/alphardex/pen/LYVXwWd)，大家可以用它来进行CSS的创作
+在 codepen 上，笔者准备了一个[aqua.css 模版](https://codepen.io/alphardex/pen/LYVXwWd)，大家可以用它来进行 CSS 的创作
 
-## 常见UI效果
+## 常见 UI 效果
 
 ### 条纹效果
 
 ![2.png](https://i.loli.net/2021/01/05/F7cPMJte9aNqEx2.png)
 
-首先，我们要抓住“边框”这个词，如何创作出一个特殊的边框呢？如果一般的CSS属性实现不了的话，可以考虑用伪元素来实现，思路如下：在原先的元素下方创建一个有条纹背景的伪元素，并保证原先元素覆盖住它就行，这样就模拟了边框的效果。
+首先，我们要抓住“边框”这个词，如何创作出一个特殊的边框呢？如果一般的 CSS 属性实现不了的话，可以考虑用伪元素来实现，思路如下：在原先的元素下方创建一个有条纹背景的伪元素，并保证原先元素覆盖住它就行，这样就模拟了边框的效果。
 
 那么如何创建条纹背景呢？这里我们将使用`repeating-linear-gradient`来实现它
 
 ```html
 <div class="card w-80">
-  <div class="border-stripe rounded-xl">
-    Lorem ipsum...
-  </div>
+  <div class="border-stripe rounded-xl">Lorem ipsum...</div>
 </div>
 ```
 
-``` scss
+```scss
 .border-stripe {
   --stripe-width: 0.5rem;
   --stripe-deg: -45deg;
@@ -102,9 +102,9 @@ demo地址：[Blob Button](https://codepen.io/alphardex/pen/GRjEoBZ)
 }
 ```
 
-为了保证复用性，这里将其抽象成了`border-stripe`类，里面的值都可以通过CSS变量来动态调节
+为了保证复用性，这里将其抽象成了`border-stripe`类，里面的值都可以通过 CSS 变量来动态调节
 
-demo地址：[Stripe Border](https://codepen.io/alphardex/pen/VwKWvdG)
+demo 地址：[Stripe Border](https://codepen.io/alphardex/pen/VwKWvdG)
 
 ### 光泽效果
 
@@ -133,15 +133,13 @@ demo地址：[Stripe Border](https://codepen.io/alphardex/pen/VwKWvdG)
       circle at 50% 5%,
       #{transparentize(white, 0.5)},
       #eba262
-    ),
-    #eba262;
+    ), #eba262;
   --gold-grad-2: linear-gradient(88deg, #e7924e 0%, #f8ffee 50%, #e7924e 100%);
   --blue-grad-1: radial-gradient(
       circle at 50% 5%,
       #{transparentize(white, 0.8)},
       #091344
-    ),
-    #091344;
+    ), #091344;
   --primary-color: var(--blue-grad-1);
   --info-color: var(--gold-grad-1);
 }
@@ -166,13 +164,13 @@ demo地址：[Stripe Border](https://codepen.io/alphardex/pen/VwKWvdG)
 }
 ```
 
-demo地址：[Shine Button](https://codepen.io/alphardex/details/vYXZNez)
+demo 地址：[Shine Button](https://codepen.io/alphardex/details/vYXZNez)
 
 ### 不规则形状
 
 ![4.png](https://i.loli.net/2021/01/06/AnUpghKQa7y89Tt.png)
 
-首先，让我们先观察一下上图的缎带形状是由哪些基本形状组成的：中间是一个矩形，矩形下方有2个三角形，左右2侧各有一个被裁切过的矩形。一提裁切，就能想到`clip-path`这个属性，于是问题也就很好解决了
+首先，让我们先观察一下上图的缎带形状是由哪些基本形状组成的：中间是一个矩形，矩形下方有 2 个三角形，左右 2 侧各有一个被裁切过的矩形。一提裁切，就能想到`clip-path`这个属性，于是问题也就很好解决了
 
 ```html
 <div class="ribbon">
@@ -240,18 +238,22 @@ demo地址：[Shine Button](https://codepen.io/alphardex/details/vYXZNez)
 
 注意到有一行代码`transform: scaleX(-1);`，这起到了水平翻转的作用，它可以防止再写一遍`clip-path`
 
-demo地址：[Ribbon](https://codepen.io/alphardex/pen/OJRvaaR)
+demo 地址：[Ribbon](https://codepen.io/alphardex/pen/OJRvaaR)
 
 ### 浮雕效果
 
 ![5.png](https://i.loli.net/2021/01/06/mt5CahWAGYIRL86.png)
 
-通过仔细观察，你会发现这是由2个同心的元素组成的，于是自然就想到了`inset`这个Mixin。
+通过仔细观察，你会发现这是由 2 个同心的元素组成的，于是自然就想到了`inset`这个 Mixin。
 
-创建了2个同心元素后，就要想办法来创建它们的浮雕光泽了。这里的光泽可以用`box-shadow`来实现，通过叠加多重阴影，我们就能模拟出浮雕的效果了
+创建了 2 个同心元素后，就要想办法来创建它们的浮雕光泽了。这里的光泽可以用`box-shadow`来实现，通过叠加多重阴影，我们就能模拟出浮雕的效果了
 
 ```html
-<div class="px-6 py-2 text-xl embossed cursor-pointer" data-text="浮雕按钮" style="--emboss-radius: 1.5rem">
+<div
+  class="px-6 py-2 text-xl embossed cursor-pointer"
+  data-text="浮雕按钮"
+  style="--emboss-radius: 1.5rem"
+>
   浮雕按钮
 </div>
 ```
@@ -292,10 +294,10 @@ demo地址：[Ribbon](https://codepen.io/alphardex/pen/OJRvaaR)
     @include inset(var(--emboss-out-minus));
     content: "";
     background: var(--emboss-bg-1);
-    box-shadow: inset var(--emboss-inset-minus) var(--emboss-inset-minus)
-        var(--emboss-blur) var(--emboss-color-1),
-      inset var(--emboss-inset) var(--emboss-inset) var(--emboss-blur)
-        var(--emboss-color-2);
+    box-shadow: inset var(--emboss-inset-minus) var(--emboss-inset-minus) var(
+          --emboss-blur
+        ) var(--emboss-color-1), inset var(--emboss-inset) var(--emboss-inset)
+        var(--emboss-blur) var(--emboss-color-2);
     border-radius: calc(var(--emboss-radius) + var(--emboss-out));
   }
 
@@ -307,19 +309,20 @@ demo地址：[Ribbon](https://codepen.io/alphardex/pen/OJRvaaR)
     font-weight: bold;
     background: var(--emboss-bg-2);
     box-shadow: inset var(--emboss-inset) var(--emboss-inset) var(--emboss-blur)
-        var(--emboss-color-1),
-      inset var(--emboss-inset-minus) var(--emboss-inset-minus)
+        var(--emboss-color-1), inset var(--emboss-inset-minus) var(
+          --emboss-inset-minus
+        )
         var(--emboss-blur) var(--emboss-color-3);
     border-radius: var(--emboss-radius);
   }
 }
 ```
 
-demo地址：[Emboss Button](https://codepen.io/alphardex/pen/poEEERM?editors=0110)
+demo 地址：[Emboss Button](https://codepen.io/alphardex/pen/poEEERM?editors=0110)
 
 ## 课后作业
 
-尝试用纯CSS来实现下图的效果，不准切图哦~
+尝试用纯 CSS 来实现下图的效果，不准切图哦~
 
 ![6.png](https://i.loli.net/2021/01/06/CcD4mAPWZMHdSfr.png)
 

@@ -1,51 +1,53 @@
-title: kokomi.js——Web 3D创作的得力助手
+title: kokomi.js——Web 3D 创作的得力助手
 author: alphardex
 abbrlink: 56558
 tags: []
 categories: []
 date: 2022-03-24 13:21:00
+
 ---
+
 ## 前言
 
-大家好，这里是 CSS 兼 WebGL 魔法使——alphardex。本文我们将认识一位新的小伙伴——[kokomi.js](https://github.com/alphardex/kokomi.js)，她能带给大家绝赞的3D创作体验~
+大家好，这里是 CSS 兼 WebGL 魔法使——alphardex。本文我们将认识一位新的小伙伴——[kokomi.js](https://github.com/alphardex/kokomi.js)，她能带给大家绝赞的 3D 创作体验~
 
 <!--more-->
 
 ## kokomi.js 简介
 
-之前创作过很多[three.js相关的作品](https://github.com/alphardex/threejs-playground)，但后来发现能复用的东西太少了，并且项目结构也比较混乱。为了解决这两个问题，笔者决定亲手写一个轮子，用来封装three.js最常用的一些功能，并且使项目的结构也能变得更加清楚，于是就有了 kokomi.js
+之前创作过很多[three.js 相关的作品](https://github.com/alphardex/threejs-playground)，但后来发现能复用的东西太少了，并且项目结构也比较混乱。为了解决这两个问题，笔者决定亲手写一个轮子，用来封装 three.js 最常用的一些功能，并且使项目的结构也能变得更加清楚，于是就有了 kokomi.js
 
 她的名字来源：原神的珊瑚宫心海（Sangonomiya Kokomi）
 
-她的Github地址：https://github.com/alphardex/kokomi.js
+她的 Github 地址：https://github.com/alphardex/kokomi.js
 
 ## 准备工作
 
-本文我们将利用codesandbox平台来完成所有的编码工作。账号可以直接用Github的账号注册一个
+本文我们将利用 codesandbox 平台来完成所有的编码工作。账号可以直接用 Github 的账号注册一个
 
 平台地址：https://codesandbox.io
 
 ## 基础场景
 
-### 创建ts模板
+### 创建 ts 模板
 
-首先，我们点击右上角的`Create Sandbox`，从列表中找到`Vanilla Typescript`，创建一个最简单的ts模板
+首先，我们点击右上角的`Create Sandbox`，从列表中找到`Vanilla Typescript`，创建一个最简单的 ts 模板
 
 ![qGpOfJ.png](https://imgtu.com/i/qGpOfJ)
 
 该步骤地址：https://codesandbox.io/s/typescript-template-rz93pt?file=/src/index.ts
 
-### 安装kokomi.js
+### 安装 kokomi.js
 
-在左边的`Dependencies`的下方的输入框中，输入`kokomi.js`，即可安装kokomi.js
+在左边的`Dependencies`的下方的输入框中，输入`kokomi.js`，即可安装 kokomi.js
 
 ![qG9Bh4.png](https://imgtu.com/i/qG9Bh4)
 
-由于kokomi.js依赖three.js，我们也需要安装它以及它的type：`three`和`@types/three`
+由于 kokomi.js 依赖 three.js，我们也需要安装它以及它的 type：`three`和`@types/three`
 
 ### 场景搭建
 
-在index.ts中，将我们的canvas容器id修改为`#sketch`，同时引入`createSketch`函数（下文实现）
+在 index.ts 中，将我们的 canvas 容器 id 修改为`#sketch`，同时引入`createSketch`函数（下文实现）
 
 index.ts
 
@@ -60,7 +62,7 @@ document.getElementById("app").innerHTML = `
 createSketch();
 ```
 
-在style.css中，给容器设置一定的样式，使其铺满屏幕
+在 style.css 中，给容器设置一定的样式，使其铺满屏幕
 
 style.css
 
@@ -77,7 +79,7 @@ body {
 }
 ```
 
-新建文件app.ts，在里面输入如下代码
+新建文件 app.ts，在里面输入如下代码
 
 app.ts
 
@@ -97,32 +99,25 @@ const createSketch = () => {
 export default createSketch;
 ```
 
-右边画面会报错，提示我们先要配置下babel
+右边画面会报错，提示我们先要配置下 babel
 
-新建.babalrc文件，在里面拷贝如下代码
+新建.babalrc 文件，在里面拷贝如下代码
 
 .babalrc
 
 ```json
 {
-  "presets": [
-    "env"
-  ],
-  "plugins": [
-    "transform-runtime",
-    "@babel/plugin-proposal-class-properties"
-  ],
+  "presets": ["env"],
+  "plugins": ["transform-runtime", "@babel/plugin-proposal-class-properties"],
   "parserOpts": {
-    "plugins": [
-      "dynamicImport"
-    ]
+    "plugins": ["dynamicImport"]
   }
 }
 ```
 
-这时我们能看到一片黑屏，表明kokomi.js已经被顺利引入了
+这时我们能看到一片黑屏，表明 kokomi.js 已经被顺利引入了
 
-接下来让我们创建一个3D世界的Hello World——一个可爱的白色方块
+接下来让我们创建一个 3D 世界的 Hello World——一个可爱的白色方块
 
 ```ts
 class Sketch extends kokomi.Base {
@@ -173,22 +168,22 @@ class Sketch extends kokomi.Base {
 
 ![qGCt8H.gif](https://imgtu.com/i/qGCt8H)
 
-恭喜，此刻你已经完成了最基础的3D场景的搭建
+恭喜，此刻你已经完成了最基础的 3D 场景的搭建
 
 该步骤地址：https://codesandbox.io/s/kokomi-js-setup-phc3u6?file=/src/app.ts
 
 ## 素材管理
 
-kokomi.js提供了`AssetManager`类，用来统一管理素材的加载
+kokomi.js 提供了`AssetManager`类，用来统一管理素材的加载
 
 ### 定义素材
 
-首先，创建一个resources.ts文件，里面定义好素材列表
+首先，创建一个 resources.ts 文件，里面定义好素材列表
 
-素材列表对象有3个字段：
+素材列表对象有 3 个字段：
 
 - name：素材名
-- type：素材类型，目前支持texture（2D贴图）、cubeTexture（3D贴图）、gltfModel（模型）、font（字体）
+- type：素材类型，目前支持 texture（2D 贴图）、cubeTexture（3D 贴图）、gltfModel（模型）、font（字体）
 - path：素材路径
 
 resources.ts
@@ -202,14 +197,14 @@ const resourceList: kokomi.ResourceItem[] = [
   {
     name: "foxModel",
     type: "gltfModel",
-    path: foxModel
-  }
+    path: foxModel,
+  },
 ];
 
 export default resourceList;
 ```
 
-我们引入了一个神子，啊不狐狸的模型，这个模型是从[gltf样例模型](https://github.com/KhronosGroup/glTF-Sample-Models/tree/master/2.0/Fox)中取出来的，也可以替换成自己喜爱的其他模型
+我们引入了一个神子，啊不狐狸的模型，这个模型是从[gltf 样例模型](https://github.com/KhronosGroup/glTF-Sample-Models/tree/master/2.0/Fox)中取出来的，也可以替换成自己喜爱的其他模型
 
 ### 加载素材
 
@@ -251,7 +246,7 @@ class Sketch extends kokomi.Base {
 
 该步骤地址：https://codesandbox.io/s/kokomi-js-asset-manage-load-in2fcf?file=/src/app.ts
 
-这里有个优化点：可以将Fox模型抽成一个`class`组件，这样可以维护一个属于自己的组件逻辑
+这里有个优化点：可以将 Fox 模型抽成一个`class`组件，这样可以维护一个属于自己的组件逻辑
 
 ### 组件化
 
@@ -335,13 +330,13 @@ class Sketch extends kokomi.Base {
 
 ![qGc80S.gif](https://imgtu.com/i/qGc80S)
 
-这里的fox实例拥有着属于自己的功能和状态，这样当我们创建别的`class`时就不会出现功能上的重复冲突
+这里的 fox 实例拥有着属于自己的功能和状态，这样当我们创建别的`class`时就不会出现功能上的重复冲突
 
 该步骤地址：https://codesandbox.io/s/kokomi-js-asset-manager-13008e?file=/src/app.ts
 
 ## 特效创作
 
-新建shader文件夹，并在里面新建`fragment.glsl`片元着色器，里面拷贝如下代码
+新建 shader 文件夹，并在里面新建`fragment.glsl`片元着色器，里面拷贝如下代码
 
 ```glsl
 void mainImage(out vec4 fragColor,in vec2 fragCoord){
@@ -362,7 +357,7 @@ class Sketch extends kokomi.Base {
   create() {
     const screenQuad = new kokomi.ScreenQuad(this, {
       shadertoyMode: true,
-      fragmentShader
+      fragmentShader,
     });
     screenQuad.addExisting();
   }
@@ -371,7 +366,7 @@ class Sketch extends kokomi.Base {
 
 ![qGMUDU.png](https://imgtu.com/i/qGMUDU)
 
-可以看到uv平面显示了出来，在上面我们可以进行 Shader 的创作
+可以看到 uv 平面显示了出来，在上面我们可以进行 Shader 的创作
 
 该步骤地址：https://codesandbox.io/s/kokomi-js-shader-jbzygu?file=/src/app.ts
 
@@ -379,7 +374,7 @@ class Sketch extends kokomi.Base {
 
 ![qG3PMt.png](https://imgtu.com/i/qG3PMt)
 
-该demo地址：https://codesandbox.io/s/raymarching-primitives-tqfuf8?file=/src/app.ts
+该 demo 地址：https://codesandbox.io/s/raymarching-primitives-tqfuf8?file=/src/app.ts
 
 ## 最后
 

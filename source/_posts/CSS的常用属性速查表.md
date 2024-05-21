@@ -1,13 +1,15 @@
-title: CSS的常用属性速查表
+title: CSS 的常用属性速查表
 author: alphardex
 tags: []
 categories: []
 abbrlink: 28164
 date: 2019-12-27 17:11:00
----
-要想写出优美的CSS作品，想象力固然很重要，然而基础也是不可忽略的。相信大部分人怕写CSS的原因是被它庞大的基础知识体系给吓到了，在此笔者推荐一个叫[freecodecamp](http://freecodecamp.com/)的网站，通过闯关的方式来学习前端三剑客，用它入门CSS是最佳的选择！
 
-当你成功地入了门之后，便可以开始探索CSS的全貌了。本文是CSS属性的速查表，配合[在线API文档](https://devdocs.io)使用即可
+---
+
+要想写出优美的 CSS 作品，想象力固然很重要，然而基础也是不可忽略的。相信大部分人怕写 CSS 的原因是被它庞大的基础知识体系给吓到了，在此笔者推荐一个叫[freecodecamp](http://freecodecamp.com/)的网站，通过闯关的方式来学习前端三剑客，用它入门 CSS 是最佳的选择！
+
+当你成功地入了门之后，便可以开始探索 CSS 的全貌了。本文是 CSS 属性的速查表，配合[在线 API 文档](https://devdocs.io)使用即可
 
 <!--more-->
 
@@ -63,7 +65,7 @@ id，`p#id`
 
 ### :nth-child
 
-第n个子元素
+第 n 个子元素
 
 ### :not
 
@@ -71,7 +73,7 @@ id，`p#id`
 
 ### :target
 
-URL的锚点
+URL 的锚点
 
 ### :checked
 
@@ -97,15 +99,15 @@ URL的锚点
 
 空标签元素
 
-常用场景：字段缺失、ajax加载数据为空
+常用场景：字段缺失、ajax 加载数据为空
 
 ## Pseudo-element
 
-伪元素，在原先的元素基础上插入额外的元素，并且它不充当HTML的标签
+伪元素，在原先的元素基础上插入额外的元素，并且它不充当 HTML 的标签
 
 ### ::before | ::after
 
-标签的额外2个可绘制的元素
+标签的额外 2 个可绘制的元素
 
 ### ::selection
 
@@ -387,7 +389,7 @@ URL的锚点
 盒模型类型
 
 - content-box：默认，标准盒模型
-- border-box：IE盒模型（将`border`和·`padding`一并算作长宽）
+- border-box：IE 盒模型（将`border`和·`padding`一并算作长宽）
 
 ## cursor
 
@@ -430,7 +432,7 @@ URL的锚点
 
 定义了文本水平或垂直排布以及在块级元素中文本的行进方向。
 
-这里我们默认是ltr文本（左对齐文本）
+这里我们默认是 ltr 文本（左对齐文本）
 
 - horizontal-tb：从左到右水平流动，是默认值
 - vertical-lr：从上到下垂直流动，下一垂直行位于上一行右侧
@@ -454,7 +456,7 @@ URL的锚点
 ## transform-style
 
 - flat：默认
-- preserve-3d：3d场景
+- preserve-3d：3d 场景
 
 ## perspective
 
@@ -542,7 +544,7 @@ URL的锚点
 
 ## var()
 
-CSS自定义变量
+CSS 自定义变量
 
 ## calc()
 
@@ -558,7 +560,7 @@ CSS自定义变量
 
 ## percentage
 
-一些数值型单位具有百分比写法，那么这些百分比相对的对象是什么呢？有2种：父元素和自身。
+一些数值型单位具有百分比写法，那么这些百分比相对的对象是什么呢？有 2 种：父元素和自身。
 
 相对父元素：`width`、`height`、`top`、`left`、`margin`、`padding`
 

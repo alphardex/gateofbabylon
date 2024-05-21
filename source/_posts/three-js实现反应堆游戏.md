@@ -1,17 +1,19 @@
-title: three.js实现反应堆游戏
+title: three.js 实现反应堆游戏
 author: alphardex
 abbrlink: 8477
 tags: []
 categories: []
 date: 2020-12-12 09:58:00
+
 ---
+
 ## 前言
 
-大家好，这里是CSS魔法使——alphardex。
+大家好，这里是 CSS 魔法使——alphardex。
 
-之前在appstore上有这样一个游戏，叫stack（中文译名为“反应堆”），游戏规则是这样的：在竖直方向上会不停地有方块出现并来回移动，点击屏幕能叠方块，而你的目的是尽量使它们保持重合，不重合就会被削掉，叠得越多分数越高。玩法虽简单但极其令人上瘾。
+之前在 appstore 上有这样一个游戏，叫 stack（中文译名为“反应堆”），游戏规则是这样的：在竖直方向上会不停地有方块出现并来回移动，点击屏幕能叠方块，而你的目的是尽量使它们保持重合，不重合就会被削掉，叠得越多分数越高。玩法虽简单但极其令人上瘾。
 
-碰巧笔者最近在学习three.js——一个基于webgl的3d框架，于是乎就思索着能不能用three.js来实现这样的效果，以摸清那些3D游戏的套路。
+碰巧笔者最近在学习 three.js——一个基于 webgl 的 3d 框架，于是乎就思索着能不能用 three.js 来实现这样的效果，以摸清那些 3D 游戏的套路。
 
 <!--more-->
 
@@ -23,12 +25,12 @@ date: 2020-12-12 09:58:00
 
 - [three.js](https://github.com/mrdoob/three.js)：本文主角
 - [gsap](https://github.com/greensock/GSAP)：使数值动起来的工具人
-- [kyouka](https://github.com/alphardex/kyouka)：我的TS工具库，名字来源于公主连结的冰川镜华（xcw）
-- [aqua.css](https://github.com/alphardex/aqua.css)：我的CSS框架，名字来源于素晴的智慧女神阿库娅
+- [kyouka](https://github.com/alphardex/kyouka)：我的 TS 工具库，名字来源于公主连结的冰川镜华（xcw）
+- [aqua.css](https://github.com/alphardex/aqua.css)：我的 CSS 框架，名字来源于素晴的智慧女神阿库娅
 
 ## 规则解析
 
-- 每一关创建一个方块，并使其在x轴或者z轴上来回移动，方块的高度和速度是递增的
+- 每一关创建一个方块，并使其在 x 轴或者 z 轴上来回移动，方块的高度和速度是递增的
 - 点击时进行重叠的判定，将不重叠的部分削掉，重叠的部分固定在原先的位置，完全不重叠则游戏结束
 - 方块的颜色随关卡数的增加进行有规律的变换
 
@@ -36,7 +38,7 @@ date: 2020-12-12 09:58:00
 
 ## 基础场景
 
-首先先创建一个最简单的场景，也是three.js里的hello world
+首先先创建一个最简单的场景，也是 three.js 里的 hello world
 
 ```ts
 interface Cube {
@@ -102,7 +104,15 @@ class Base {
   }
   // 创建方块
   createBox(cube: Cube) {
-    const { width = 1, height = 1, depth = 1, color = new Color("#d9dfc8"), x = 0, y = 0, z = 0 } = cube;
+    const {
+      width = 1,
+      height = 1,
+      depth = 1,
+      color = new Color("#d9dfc8"),
+      x = 0,
+      y = 0,
+      z = 0,
+    } = cube;
     const geo = new BoxBufferGeometry(width, height, depth);
     const material = new MeshToonMaterial({ color, flatShading: true });
     const box = new Mesh(geo, material);
@@ -132,7 +142,10 @@ class Base {
       const camera = this.camera as PerspectiveCamera;
       camera.aspect = aspect;
       camera.updateProjectionMatrix();
-      this.renderer.setSize(this.container!.clientWidth, this.container!.clientHeight);
+      this.renderer.setSize(
+        this.container!.clientWidth,
+        this.container!.clientHeight
+      );
     });
   }
   // 动画
@@ -148,7 +161,8 @@ class Base {
   }
 }
 ```
-这个场景把three.js最基本的要素都囊括在内了：场景、相机、渲染、物体、光源、事件、动画。效果图如下：
+
+这个场景把 three.js 最基本的要素都囊括在内了：场景、相机、渲染、物体、光源、事件、动画。效果图如下：
 
 ![](https://i.loli.net/2020/12/12/CZuzv4aAOw1bkHF.png)
 
@@ -187,7 +201,15 @@ class Stack extends Base {
     this.cameraPosition = new Vector3(2, 2, 2);
     this.lookAtPosition = new Vector3(0, 0, 0);
     this.colorOffset = ky.randomIntegerInRange(0, 255);
-    this.boxParams = { width: 1, height: 0.2, depth: 1, x: 0, y: 0, z: 0, color: new Color("#d9dfc8") };
+    this.boxParams = {
+      width: 1,
+      height: 0.2,
+      depth: 1,
+      x: 0,
+      y: 0,
+      z: 0,
+      color: new Color("#d9dfc8"),
+    };
     this.level = 0;
     this.moveLimit = 1.2;
     this.moveAxis = "x";
@@ -205,7 +227,14 @@ class Stack extends Base {
     const { container } = this;
     const aspect = calcAspect(container!);
     const zoom = 2;
-    this.cameraParams = { left: -zoom * aspect, right: zoom * aspect, top: zoom, bottom: -zoom, near: -100, far: 1000 };
+    this.cameraParams = {
+      left: -zoom * aspect,
+      right: zoom * aspect,
+      top: zoom,
+      bottom: -zoom,
+      near: -100,
+      far: 1000,
+    };
   }
   // 创建正交相机
   createCamera() {
@@ -262,7 +291,7 @@ class Stack extends Base {
 
 每开始一个关卡，我们就要做以下的事情：
 
-- 确定方块是在x轴还是z轴上移动
+- 确定方块是在 x 轴还是 z 轴上移动
 - 增加方块的高度和移动速度
 - 更新方块颜色
 - 创建方块
@@ -347,11 +376,12 @@ class Stack extends Base {
   }
 }
 ```
+
 ![](https://i.loli.net/2020/12/12/jl1SaeEOQkzmrxN.gif)
 
 ### 调试模式
 
-由于某些数值的计算对本游戏来说很是关键，因此我们要弄一个调试模式，在这个模式下，我们能通过键盘来暂停方块的运动，并动态改变方块的位置，配合[three.js扩展程序](https://chrome.google.com/webstore/detail/threejs-developer-tools/ebpnegggocnnhleeicgljbedjkganaek?hl=zh-CN)来调试各个数值
+由于某些数值的计算对本游戏来说很是关键，因此我们要弄一个调试模式，在这个模式下，我们能通过键盘来暂停方块的运动，并动态改变方块的位置，配合[three.js 扩展程序](https://chrome.google.com/webstore/detail/threejs-developer-tools/ebpnegggocnnhleeicgljbedjkganaek?hl=zh-CN)来调试各个数值
 
 ```ts
 class Stack extends Base {
@@ -382,11 +412,11 @@ class Stack extends Base {
 
 本游戏最难的部分来了，笔者调了很久才成功，一句话：耐心就是胜利。
 
-方块切下来的效果是怎么实现的呢？其实这是一个障眼法：方块本身并没有被“切开”，而是在同一个位置创建了2个方块：一个就是重叠的方块，另一个就是不重叠的方块，即被“切开”的那个方块。
+方块切下来的效果是怎么实现的呢？其实这是一个障眼法：方块本身并没有被“切开”，而是在同一个位置创建了 2 个方块：一个就是重叠的方块，另一个就是不重叠的方块，即被“切开”的那个方块。
 
-尽管我们现在知道了要创建这两个方块，但确定它俩的参数可绝非易事，建议拿一个草稿纸将方块移动的位置画下来，再动手计算那几个数值（想起我可怜的数学水平），如果实在是算不来，就直接CV笔者的公式吧:)
+尽管我们现在知道了要创建这两个方块，但确定它俩的参数可绝非易事，建议拿一个草稿纸将方块移动的位置画下来，再动手计算那几个数值（想起我可怜的数学水平），如果实在是算不来，就直接 CV 笔者的公式吧:)
 
-计算完后，一切就豁然开朗了，将那两个方块创建出来，并用gsap将不重叠的那个方块落下，本游戏就算正式完成了
+计算完后，一切就豁然开朗了，将那两个方块创建出来，并用 gsap 将不重叠的那个方块落下，本游戏就算正式完成了
 
 ```ts
 class Stack extends Base {

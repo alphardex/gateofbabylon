@@ -4,12 +4,14 @@ abbrlink: 34341
 tags: []
 categories: []
 date: 2021-06-27 14:19:00
+
 ---
+
 ## 前言
 
-大家好，这里是 CSS兼WebGL 魔法使——alphardex。
+大家好，这里是 CSS 兼 WebGL 魔法使——alphardex。
 
-本文我们将用three.js来实现风暴云特效，以下是最终实现的效果图
+本文我们将用 three.js 来实现风暴云特效，以下是最终实现的效果图
 
 ![](https://s2.loli.net/2024/05/21/UrX5tH1upRiIYLq.gif)
 
@@ -19,9 +21,9 @@ date: 2021-06-27 14:19:00
 
 ## 预备知识
 
-为了实现这个特效，我们先简要了解一下FBM吧
+为了实现这个特效，我们先简要了解一下 FBM 吧
 
-FBM中文意思是分形布朗运动，另一种称呼是分形噪声（说明它也属于噪声的一种）。它常用于描绘各种自然之中的形状（山脉、云层、河流等）。概念是在一个for循环内叠加几次噪声（往往是6次，相当于一个八度octave），并在叠加的同时升高频率，降低振幅。以下是一个[简易的fbm实现的噪声图案](https://codepen.io/alphardex/pen/xxdKpyy)
+FBM 中文意思是分形布朗运动，另一种称呼是分形噪声（说明它也属于噪声的一种）。它常用于描绘各种自然之中的形状（山脉、云层、河流等）。概念是在一个 for 循环内叠加几次噪声（往往是 6 次，相当于一个八度 octave），并在叠加的同时升高频率，降低振幅。以下是一个[简易的 fbm 实现的噪声图案](https://codepen.io/alphardex/pen/xxdKpyy)
 
 [![RJXl11.jpg](https://z3.ax1x.com/2021/06/27/RJXl11.jpg)](https://imgtu.com/i/RJXl11)
 
@@ -61,11 +63,11 @@ void main(){
 
 ## 准备工作
 
-笔者的[three.js模板](https://codepen.io/alphardex/pen/yLaQdOq)：点击右下角的fork即可复制一份
+笔者的[three.js 模板](https://codepen.io/alphardex/pen/yLaQdOq)：点击右下角的 fork 即可复制一份
 
 为了将着色器模块化，需要用到[glslify](https://github.com/glslify/glslify)
 
-同时也需要安装如下的npm包：`glsl-noise`
+同时也需要安装如下的 npm 包：`glsl-noise`
 
 ## 正片
 
@@ -151,7 +153,7 @@ class CloudySky extends Base {
 
 ### 片元着色器
 
-思路也是基本的fbm写法，只是在外层连续应用了16次（这样特别烧显卡，但是实现的效果很炫酷，帅就完事了），并且加上了随着时间的x轴位移
+思路也是基本的 fbm 写法，只是在外层连续应用了 16 次（这样特别烧显卡，但是实现的效果很炫酷，帅就完事了），并且加上了随着时间的 x 轴位移
 
 ```glsl
 #pragma glslify:centerUv=require(../modules/centerUv)

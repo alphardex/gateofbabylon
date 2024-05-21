@@ -4,7 +4,9 @@ abbrlink: 11010
 tags: []
 categories: []
 date: 2021-02-15 17:03:00
+
 ---
+
 ## 前言
 
 大家好，这里是 CSS 魔法使——alphardex。
@@ -22,11 +24,11 @@ date: 2021-02-15 17:03:00
 
 ## 准备工作
 
-笔者自行封装的three.js模板：[Three.js Starter](https://codepen.io/alphardex/pen/yLaQdOq)
+笔者自行封装的 three.js 模板：[Three.js Starter](https://codepen.io/alphardex/pen/yLaQdOq)
 
-读者可以点击右下角fork一份后再开始本项目
+读者可以点击右下角 fork 一份后再开始本项目
 
-svg的路径可以直接CV以下demo的路径（用inkscape随便画的）
+svg 的路径可以直接 CV 以下 demo 的路径（用 inkscape 随便画的）
 
 https://codepen.io/alphardex/pen/JjbEObo
 
@@ -37,7 +39,9 @@ https://codepen.io/alphardex/pen/JjbEObo
 ```html
 <div class="relative w-screen h-screen">
   <div class="travelling-particles w-full h-full bg-black"></div>
-  <svg class="svg-particles hidden" xmlns="http://www.w3.org/2000/svg">（path数据CV到这儿）</svg>
+  <svg class="svg-particles hidden" xmlns="http://www.w3.org/2000/svg">
+    （path数据CV到这儿）
+  </svg>
 </div>
 ```
 
@@ -103,9 +107,9 @@ start();
 ```ts
 class TravellingParticles extends Base {
   getSvgPathsPointLineData() {
-    const paths = ([
+    const paths = [
       ...document.querySelectorAll(".svg-particles path"),
-    ] as unknown) as SVGPathElement[];
+    ] as unknown as SVGPathElement[];
     paths.forEach((path) => {
       const pathLength = path.getTotalLength();
       const pointCount = Math.floor(pathLength / this.pointSize);
@@ -296,4 +300,4 @@ class TravellingParticles extends Base {
 
 ## 最后
 
-three.js的自定义形状`BufferGeometry`配合着色器材质`ShaderMaterial`还能实现许多更加炫酷的效果，大家可以自行去发掘。
+three.js 的自定义形状`BufferGeometry`配合着色器材质`ShaderMaterial`还能实现许多更加炫酷的效果，大家可以自行去发掘。

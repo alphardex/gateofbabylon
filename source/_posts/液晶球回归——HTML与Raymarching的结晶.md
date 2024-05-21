@@ -1,13 +1,15 @@
-title: 液晶球回归——HTML与Raymarching的结晶
+title: 液晶球回归——HTML 与 Raymarching 的结晶
 author: alphardex
 abbrlink: 54631
 tags: []
 categories: []
 date: 2022-11-04 08:58:00
----
-呀哈喽！这里是alphardex。
 
-之前我写过一篇[液晶球相关的文章](https://juejin.cn/post/6967162668595544095)，里面是用顶点着色器和片元着色器来实现液晶球效果的，不过呢，之前同样写过一篇[Raymarching相关的文章](https://juejin.cn/post/6934461126977519629)，于是乎我在想能不能把这两种方法给结合起来，实现一个第二版的液晶球呢，经过几天的实验，最终写出了如下的效果（全屏打开最佳）：
+---
+
+呀哈喽！这里是 alphardex。
+
+之前我写过一篇[液晶球相关的文章](https://juejin.cn/post/6967162668595544095)，里面是用顶点着色器和片元着色器来实现液晶球效果的，不过呢，之前同样写过一篇[Raymarching 相关的文章](https://juejin.cn/post/6934461126977519629)，于是乎我在想能不能把这两种方法给结合起来，实现一个第二版的液晶球呢，经过几天的实验，最终写出了如下的效果（全屏打开最佳）：
 
 https://code.juejin.cn/pen/7161774000031399943
 
@@ -19,7 +21,7 @@ https://code.juejin.cn/pen/7161774000031399943
 
 ### 建模
 
-首先用球体的SDF函数描画出一个球体
+首先用球体的 SDF 函数描画出一个球体
 
 ```glsl
 float sdSphere(vec3 p,float s)
@@ -35,21 +37,21 @@ float sdSphere(vec3 p,float s)
 ```glsl
 vec3 distort(vec3 p){
     float t=iTime*.5;
-    
+
     float distortStr=1.6;
     vec3 distortP=p+cnoise(vec3(p*PI*distortStr+t));
     float perlinStr=cnoise(vec3(distortP*PI*distortStr*.1));
-    
+
     vec3 dispP=p;
     dispP+=(p*perlinStr*.1);
-    
+
     return dispP;
 }
 ```
 
 ![2.gif](https://s2.loli.net/2022/11/04/TRvgp7JnUuQNzC5.gif)
 
-创建2个球体，并用融合函数将它们融合起来
+创建 2 个球体，并用融合函数将它们融合起来
 
 ```glsl
 float opSmoothUnion(float d1,float d2,float k)
@@ -59,7 +61,7 @@ float opSmoothUnion(float d1,float d2,float k)
 }
 ```
 
-它们的位移由用户鼠标的位置所决定，创建2个`uMouse`并运用插值函数即可
+它们的位移由用户鼠标的位置所决定，创建 2 个`uMouse`并运用插值函数即可
 
 ```js
 let offsetX1 = 0;
@@ -170,11 +172,11 @@ lin=blendScreen(lin,mf);
 
 ![9.gif](https://s2.loli.net/2022/11/04/QoMj1DCYsgIOexZ.gif)
 
-## 与HTML相结合
+## 与 HTML 相结合
 
 最近刚写过一篇[类似的文章](https://juejin.cn/post/7160463663504031781)，具体方法就不再赘述了。
 
-唯一要提的一点是球体的内部其实是可以折射出HTML的内容的，这个是怎么实现的呢？答案是用离屏渲染，在kokomi.js中[RenderTexture](https://github.com/alphardex/kokomi.js/blob/main/src/renderTargets/renderTexture.ts)可以轻松做到这一点。创建另一个`THREE.Scene`场景对象，将所有的WebGL对象`clone`到这个场景中，创建`RenderTexture`，应用该场景对象，将其作为液晶球折射的材质即可，甚至可以加上RGBShift来扭曲颜色通道，看起来更酷哦。
+唯一要提的一点是球体的内部其实是可以折射出 HTML 的内容的，这个是怎么实现的呢？答案是用离屏渲染，在 kokomi.js 中[RenderTexture](https://github.com/alphardex/kokomi.js/blob/main/src/renderTargets/renderTexture.ts)可以轻松做到这一点。创建另一个`THREE.Scene`场景对象，将所有的 WebGL 对象`clone`到这个场景中，创建`RenderTexture`，应用该场景对象，将其作为液晶球折射的材质即可，甚至可以加上 RGBShift 来扭曲颜色通道，看起来更酷哦。
 
 ```glsl
 vec3 refra=refract(vec3(0.,0.,-2.),nor,1./2.);

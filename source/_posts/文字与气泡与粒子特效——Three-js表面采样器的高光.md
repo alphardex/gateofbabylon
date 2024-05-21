@@ -1,25 +1,27 @@
-title: 文字与气泡与粒子特效——玩转three.js的表面采样
+title: 文字与气泡与粒子特效——玩转 three.js 的表面采样
 author: alphardex
 abbrlink: 8412
 tags: []
 categories: []
 date: 2022-11-10 09:51:00
----
-呀哈喽！这里是alphardex。
 
-[MeshSurfaceSampler](https://threejs.org/docs/#examples/en/math/MeshSurfaceSampler)，是three.js的表面采样器，通过它，我们可以在一个`Mesh`的表面拾取一定数量的随机点位，从而实现一些炫酷的粒子特效，请看以下的效果（全屏最佳）：
+---
+
+呀哈喽！这里是 alphardex。
+
+[MeshSurfaceSampler](https://threejs.org/docs/#examples/en/math/MeshSurfaceSampler)，是 three.js 的表面采样器，通过它，我们可以在一个`Mesh`的表面拾取一定数量的随机点位，从而实现一些炫酷的粒子特效，请看以下的效果（全屏最佳）：
 
 https://code.juejin.cn/pen/7164008029766025223
 
 本文将简要地介绍一下实现这个效果的思路
 
-PS：本文标题neta了[《孤独摇滚》](https://bangumi.tv/subject/328609)的live曲[《吉他与孤独与蓝色星球》](https://www.bilibili.com/video/BV1sv4y1U7j6/?spm_id_from=333.337.search-card.all.click)
+PS：本文标题 neta 了[《孤独摇滚》](https://bangumi.tv/subject/328609)的 live 曲[《吉他与孤独与蓝色星球》](https://www.bilibili.com/video/BV1sv4y1U7j6/?spm_id_from=333.337.search-card.all.click)
 
 <!--more-->
 
 ## 表面采样
 
-首先用kokomi.js的[Text3D](https://github.com/alphardex/kokomi.js/blob/main/src/shapes/text3D.ts)类来创建3D文字
+首先用 kokomi.js 的[Text3D](https://github.com/alphardex/kokomi.js/blob/main/src/shapes/text3D.ts)类来创建 3D 文字
 
 ```js
 const font = await kokomi.loadFont();
@@ -55,7 +57,7 @@ t3d.addExisting();
 
 ![1.png](https://s2.loli.net/2022/11/10/dSoEIYFzmL6k9ta.png)
 
-利用kokomi.js封装好的函数[sampleParticlesPositionFromMesh](https://github.com/alphardex/kokomi.js/blob/main/src/utils/misc.ts#L48)来采样文字表面的点位数据
+利用 kokomi.js 封装好的函数[sampleParticlesPositionFromMesh](https://github.com/alphardex/kokomi.js/blob/main/src/utils/misc.ts#L48)来采样文字表面的点位数据
 
 ```js
 const sampledPos = kokomi.sampleParticlesPositionFromMesh(
@@ -128,7 +130,7 @@ varying vec3 vPosition;
 void main(){
     vec3 p=position;
     gl_Position=projectionMatrix*modelViewMatrix*vec4(p,1.);
-    
+
     vUv=uv;
     gl_PointSize=uPointSize;
 }
@@ -150,9 +152,9 @@ varying vec3 vPosition;
 
 void main(){
     vec2 p=gl_PointCoord;
-    
+
     vec3 col=uColor;
-    
+
     gl_FragColor=vec4(col,1.);
 }
 ```
@@ -171,11 +173,11 @@ float shape=spot(p,.1,2.5);
 gl_FragColor=vec4(col,shape);
 ```
 
-将uPointSize微粒大小略微调大点，我们会看到下面的效果
+将 uPointSize 微粒大小略微调大点，我们会看到下面的效果
 
 ![3.png](https://s2.loli.net/2022/11/10/wlEMPFgGsRKbydC.png)
 
-接下来我们要在顶点着色器中变换顶点的y轴坐标，用到了随机函数和噪声函数，这里贴一下随机函数的实现吧，噪声函数请自行查看[Github链接](https://github.com/hughsk/glsl-noise/blob/master/classic/2d.glsl)
+接下来我们要在顶点着色器中变换顶点的 y 轴坐标，用到了随机函数和噪声函数，这里贴一下随机函数的实现吧，噪声函数请自行查看[Github 链接](https://github.com/hughsk/glsl-noise/blob/master/classic/2d.glsl)
 
 ```glsl
 float random(float n){
@@ -214,7 +216,7 @@ void main(){
     ...
     float alpha=1.-saturate(abs(vPosition.y*1.2));
     shape*=alpha;
-    
+
     col*=vOpacity;
     ...
 }

@@ -1,21 +1,24 @@
-title: 请收下这72个炫酷的CSS技巧
+title: 请收下这 72 个炫酷的 CSS 技巧
 author: alphardex
 abbrlink: 18258
 tags: []
 categories: []
 date: 2019-12-25 19:34:00
+
 ---
+
 ## 前言
 
-CSS是一门很特殊的语言，不像一般的编程语言那样需要抽象的思维和严密的逻辑，它真正需要的是**想象力**——将你脑中所想的意象用代码来表现出来。那么意象又是如何产生的呢？最常用的方法就是**探索和观察**。举个例子，笔者平时热爱看番，每看到有意思的场景画面总会下意识地记录下来，这对动画创作会非常有帮助；同样地，一旦笔者发现一个制作精良的网站，也会将网站上那些吸引人的元素仔细审查一遍，灵感也自然就有了。
+CSS 是一门很特殊的语言，不像一般的编程语言那样需要抽象的思维和严密的逻辑，它真正需要的是**想象力**——将你脑中所想的意象用代码来表现出来。那么意象又是如何产生的呢？最常用的方法就是**探索和观察**。举个例子，笔者平时热爱看番，每看到有意思的场景画面总会下意识地记录下来，这对动画创作会非常有帮助；同样地，一旦笔者发现一个制作精良的网站，也会将网站上那些吸引人的元素仔细审查一遍，灵感也自然就有了。
 
-演示网址1：[codepen](https://codepen.io/alphardex)
+演示网址 1：[codepen](https://codepen.io/alphardex)
 
-演示网址2：[shiroi](https://shiroi.netlify.com)
+演示网址 2：[shiroi](https://shiroi.netlify.com)
 
 源码地址：[github](https://github.com/alphardex/shiro)
 
-本文的技巧将不会止步于72个。灵感不息，创作不止。
+本文的技巧将不会止步于 72 个。灵感不息，创作不止。
+
 <!--more-->
 
 ## 注意
@@ -26,7 +29,7 @@ CSS是一门很特殊的语言，不像一般的编程语言那样需要抽象�
 
 ### 框架
 
-本文所用到的技巧皆是SCSS+TypeScript。如果想移植到React或Vue上的话请根据框架本身的特点自行适配。笔者不用这类框架的原因很简单：框架很容易就会过时，原生CSS+JS才是王道。
+本文所用到的技巧皆是 SCSS+TypeScript。如果想移植到 React 或 Vue 上的话请根据框架本身的特点自行适配。笔者不用这类框架的原因很简单：框架很容易就会过时，原生 CSS+JS 才是王道。
 
 ### 教程
 
@@ -68,7 +71,7 @@ CSS是一门很特殊的语言，不像一般的编程语言那样需要抽象�
 - [Neon Text](https://codepen.io/alphardex/pen/rNNwmZz)
 - [Staggered Glow In Text](https://codepen.io/alphardex/pen/Exxodoq)
 
-### 利用`text-shadow`实现伪3D文字效果
+### 利用`text-shadow`实现伪 3D 文字效果
 
 - [Staggered Bouncing 3D Loading](https://codepen.io/alphardex/pen/QWWavvx)
 
@@ -80,7 +83,7 @@ CSS是一门很特殊的语言，不像一般的编程语言那样需要抽象�
 
 - [Abbr Expansion](https://codepen.io/alphardex/pen/xxKvvMQ)
 
-### 利用绝对定位、3D变换和JS实现翻转文字
+### 利用绝对定位、3D 变换和 JS 实现翻转文字
 
 - [Rotating Text](https://codepen.io/alphardex/pen/WNNVJeZ)
 
@@ -116,7 +119,7 @@ CSS是一门很特殊的语言，不像一般的编程语言那样需要抽象�
 
 ## 页面
 
-### 利用3D变换实现视差效果
+### 利用 3D 变换实现视差效果
 
 - [Parallax](https://codepen.io/alphardex/pen/qBEZELp)
 
@@ -136,7 +139,7 @@ CSS是一门很特殊的语言，不像一般的编程语言那样需要抽象�
 
 ### 利用`border-radius`实现曲边导航栏
 
-- [Nav Tab](https://codepen.io/alphardex/pen/abbWOPR) 
+- [Nav Tab](https://codepen.io/alphardex/pen/abbWOPR)
 
 ### 利用动画和绝对定位实现汉堡菜单
 
@@ -210,7 +213,7 @@ CSS是一门很特殊的语言，不像一般的编程语言那样需要抽象�
 
 ### 利用伪类校验表单
 
-- [Transparent Material Login Form](https://codepen.io/alphardex/pen/zYYZorR) 
+- [Transparent Material Login Form](https://codepen.io/alphardex/pen/zYYZorR)
 
 ### 利用动画实现卡片展开
 
@@ -220,30 +223,30 @@ CSS是一门很特殊的语言，不像一般的编程语言那样需要抽象�
 
 - [Name Card Hover Expand](https://codepen.io/alphardex/pen/ZEEBRrq)
 
-### 利用没有`perspective`的`transform-style:preserve-3d`实现等距3D效果
+### 利用没有`perspective`的`transform-style:preserve-3d`实现等距 3D 效果
 
 - [3D Cube](https://codepen.io/alphardex/pen/yLLrReg)
 - [Isometric Icon Hover](https://codepen.io/alphardex/pen/oNNRxGQ)
 - [Isometric Images Hover](https://codepen.io/alphardex/pen/QWWRMew)
 - [Isometric Icon Nav Bar](https://codepen.io/alphardex/pen/YzPKENd)
 
-### 利用3D变换实现3D下拉菜单
+### 利用 3D 变换实现 3D 下拉菜单
 
 - [3D Dropdown Menu](https://codepen.io/alphardex/pen/rNaNyev)
 
-### 利用动画和JS实现简单的分页栏
+### 利用动画和 JS 实现简单的分页栏
 
 - [Pagination](https://codepen.io/alphardex/pen/QWwwwpp)
 
-### 利用伪元素、`overflow:hidden`、动画、JS实现标签页
+### 利用伪元素、`overflow:hidden`、动画、JS 实现标签页
 
 - [Tabs](https://codepen.io/alphardex/pen/vYEEdGK)
 
-### 利用伪元素、`:checked`、`~`兄弟选择器实现5星评分
+### 利用伪元素、`:checked`、`~`兄弟选择器实现 5 星评分
 
 - [Star Rating](https://codepen.io/alphardex/pen/povvGNZ)
 
-### 运用伪元素、层叠关系、3D变换、JS实现翻牌时钟
+### 运用伪元素、层叠关系、3D 变换、JS 实现翻牌时钟
 
 - [Flip Card Clock](https://codepen.io/alphardex/pen/vYYoBNR)
 
@@ -251,6 +254,6 @@ CSS是一门很特殊的语言，不像一般的编程语言那样需要抽象�
 
 - [Menu Hover Image](https://codepen.io/alphardex/pen/OJPmQGz)
 
-### 利用`conic-gradient`，伪元素和CSS变量实现圆盘度量计
+### 利用`conic-gradient`，伪元素和 CSS 变量实现圆盘度量计
 
 - [Gauge (No SVG)](https://codepen.io/alphardex/pen/BaydVvQ)

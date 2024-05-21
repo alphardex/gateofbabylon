@@ -4,12 +4,14 @@ abbrlink: 9615
 tags: []
 categories: []
 date: 2021-02-28 09:17:00
+
 ---
+
 ## 前言
 
 大家好，这里是 CSS 魔法使——alphardex。
 
-本文我们将用three.js来实现一种很酷的光学效果——露珠滴落。我们知道，在露珠从一个物体表面滴落的时候，会产生一种粘着的效果。2D平面中，这种粘着效果其实用css滤镜就可以轻松实现。但是到了3D世界，就没那么简单了，这时我们就得依靠光照来实现，其中涉及到了一个关键算法——光线步进（Ray Marching）。以下是最终实现的效果图
+本文我们将用 three.js 来实现一种很酷的光学效果——露珠滴落。我们知道，在露珠从一个物体表面滴落的时候，会产生一种粘着的效果。2D 平面中，这种粘着效果其实用 css 滤镜就可以轻松实现。但是到了 3D 世界，就没那么简单了，这时我们就得依靠光照来实现，其中涉及到了一个关键算法——光线步进（Ray Marching）。以下是最终实现的效果图
 
 ![ray-marching.gif](https://i.loli.net/2021/02/28/1Zs4rTinGw2PbtU.gif)
 
@@ -19,13 +21,13 @@ date: 2021-02-28 09:17:00
 
 ## 准备工作
 
-笔者的[three.js模板](https://codepen.io/alphardex/pen/yLaQdOq)：点击右下角的fork即可复制一份
+笔者的[three.js 模板](https://codepen.io/alphardex/pen/yLaQdOq)：点击右下角的 fork 即可复制一份
 
 ## 正片
 
 ### 全屏相机
 
-首先将相机换成正交相机，再将平面的长度调整为2，使其填满屏幕
+首先将相机换成正交相机，再将平面的长度调整为 2，使其填满屏幕
 
 ```ts
 class RayMarching extends Base {
@@ -40,7 +42,7 @@ class RayMarching extends Base {
       bottom: -1,
       near: 0,
       far: 1,
-      zoom: 1
+      zoom: 1,
     };
   }
   // 初始化
@@ -61,7 +63,7 @@ class RayMarching extends Base {
     const material = this.rayMarchingMaterial;
     this.createMesh({
       geometry,
-      material
+      material,
     });
   }
 }
@@ -87,33 +89,33 @@ class RayMarching extends Base {
       side: THREE.DoubleSide,
       uniforms: {
         uTime: {
-          value: 0
+          value: 0,
         },
         uMouse: {
-          value: new THREE.Vector2(0, 0)
+          value: new THREE.Vector2(0, 0),
         },
         uResolution: {
-          value: new THREE.Vector2(window.innerWidth, window.innerHeight)
+          value: new THREE.Vector2(window.innerWidth, window.innerHeight),
         },
         uTexture: {
-          value: texture
+          value: texture,
         },
         uProgress: {
-          value: 1
+          value: 1,
         },
         uVelocityBox: {
-          value: 0.25
+          value: 0.25,
         },
         uVelocitySphere: {
-          value: 0.5
+          value: 0.5,
         },
         uAngle: {
-          value: 1.5
+          value: 1.5,
         },
         uDistance: {
-          value: 1.2
-        }
-      }
+          value: 1.2,
+        },
+      },
     });
     this.rayMarchingMaterial = rayMarchingMaterial;
   }
@@ -150,11 +152,11 @@ void main(){
 
 #### sdf
 
-如何在光照模型中创建物体呢？我们需要sdf。
+如何在光照模型中创建物体呢？我们需要 sdf。
 
-sdf的意思是符号距离函数：若传递给函数空间中的某个坐标，则返回那个点与某些平面之间的最短距离，返回值的符号表示点在平面的内部还是外部，故称符号距离函数。
+sdf 的意思是符号距离函数：若传递给函数空间中的某个坐标，则返回那个点与某些平面之间的最短距离，返回值的符号表示点在平面的内部还是外部，故称符号距离函数。
 
-如果我们要创建一个球，就得用球的sdf来创建。球体方程可以用如下的glsl代码来表示
+如果我们要创建一个球，就得用球的 sdf 来创建。球体方程可以用如下的 glsl 代码来表示
 
 ```glsl
 float sdSphere(vec3 p,float r)
@@ -173,9 +175,9 @@ float sdBox(vec3 p,vec3 b)
 }
 ```
 
-看不懂怎么办？没关系，国外已经有大牛把[常用的sdf公式](https://www.iquilezles.org/www/articles/distfunctions/distfunctions.htm)都整理出来了
+看不懂怎么办？没关系，国外已经有大牛把[常用的 sdf 公式](https://www.iquilezles.org/www/articles/distfunctions/distfunctions.htm)都整理出来了
 
-在sdf里先创建一个方块
+在 sdf 里先创建一个方块
 
 ```glsl
 float sdf(vec3 p){
@@ -194,15 +196,15 @@ float sdf(vec3 p){
 
 首先，我们需要知道光线追踪是如何进行的：给相机一个位置`eye`，在前面放一个网格，从相机的位置发射一束射线`ray`，穿过网格打在物体上，所成的像的每一个像素对应着网格上的每一个点。
 
-而在光线步进中，整个场景会由一系列的sdf的角度定义。为了找到场景和视线之间的边界，我们会从相机的位置开始，沿着射线，一点一点地移动每个点，每一步都会判断这个点在不在场景的某个表面内部，如果在则完成，表示光线击中了某东西，如果不在则光线继续步进。
+而在光线步进中，整个场景会由一系列的 sdf 的角度定义。为了找到场景和视线之间的边界，我们会从相机的位置开始，沿着射线，一点一点地移动每个点，每一步都会判断这个点在不在场景的某个表面内部，如果在则完成，表示光线击中了某东西，如果不在则光线继续步进。
 
 ![spheretrace.jpg](https://i.loli.net/2021/02/28/523sMyGvTu4BLYd.jpg)
 
-上图中，p0是相机位置，蓝色的线代表射线。可以看出光线的第一步p0p1就迈的非常大，它也恰好是此时光线到表面的最短距离。表面上的点尽管是最短距离，但并没有沿着视线的方向，因此要继续检测到p4这个点
+上图中，p0 是相机位置，蓝色的线代表射线。可以看出光线的第一步 p0p1 就迈的非常大，它也恰好是此时光线到表面的最短距离。表面上的点尽管是最短距离，但并没有沿着视线的方向，因此要继续检测到 p4 这个点
 
-shadertoy上有一个[可交互的例子](https://www.shadertoy.com/view/4dKyRz)
+shadertoy 上有一个[可交互的例子](https://www.shadertoy.com/view/4dKyRz)
 
-以下是光线步进的glsl代码实现
+以下是光线步进的 glsl 代码实现
 
 ```glsl
 const float EPSILON=.0001;
@@ -245,9 +247,9 @@ void main(){
 
 #### 居中材质
 
-目前的方块有2个问题：1. 没有居中 2. x轴方向上被拉伸
+目前的方块有 2 个问题：1. 没有居中 2. x 轴方向上被拉伸
 
-居中+拉伸素质2连走起
+居中+拉伸素质 2 连走起
 
 ```glsl
 vec2 centerUv(vec2 uv){
@@ -300,7 +302,7 @@ void main(){
 
 #### 动起来
 
-让方块360°旋转起来吧，3D旋转函数直接在[gist](https://gist.github.com/yiwenl/3f804e80d0930e34a0b33359259b556c)上搜一下就有了
+让方块 360° 旋转起来吧，3D 旋转函数直接在[gist](https://gist.github.com/yiwenl/3f804e80d0930e34a0b33359259b556c)上搜一下就有了
 
 ```glsl
 uniform float uVelocityBox;
@@ -310,7 +312,7 @@ mat4 rotationMatrix(vec3 axis,float angle){
     float s=sin(angle);
     float c=cos(angle);
     float oc=1.-c;
-    
+
     return mat4(oc*axis.x*axis.x+c,oc*axis.x*axis.y-axis.z*s,oc*axis.z*axis.x+axis.y*s,0.,
         oc*axis.x*axis.y+axis.z*s,oc*axis.y*axis.y+c,oc*axis.y*axis.z-axis.x*s,0.,
         oc*axis.z*axis.x-axis.y*s,oc*axis.y*axis.z+axis.x*s,oc*axis.z*axis.z+c,0.,
@@ -356,11 +358,11 @@ float sdf(vec3 p){
 }
 ```
 
-把`uProgress`的值设为0，她们成功地贴在了一起
+把`uProgress`的值设为 0，她们成功地贴在了一起
 
 ![7.png](https://i.loli.net/2021/02/28/9ZUyXY7STNcQtsf.png)
 
-把`uProgress`的值调回1，她们又分开了
+把`uProgress`的值调回 1，她们又分开了
 
 #### 动态融合
 
@@ -394,9 +396,9 @@ float sdf(vec3 p){
 
 ![8.gif](https://i.loli.net/2021/02/28/zJXiRHpIhdZ1SQf.gif)
 
-#### matcap贴图
+#### matcap 贴图
 
-默认的材质太土了？我们有帅气的matcap贴图来助阵
+默认的材质太土了？我们有帅气的 matcap 贴图来助阵
 
 ```glsl
 uniform sampler2D uTexture;
@@ -428,7 +430,7 @@ void main(){
 
 ![ray-marching.gif](https://i.loli.net/2021/02/28/1Zs4rTinGw2PbtU.gif)
 
-安排上了matcap和菲涅尔公式后，瞬间cool了有没有？！
+安排上了 matcap 和菲涅尔公式后，瞬间 cool 了有没有？！
 
 ## 项目地址
 

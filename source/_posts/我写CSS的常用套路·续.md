@@ -1,21 +1,23 @@
-title: 我写CSS的常用套路·续
+title: 我写 CSS 的常用套路·续
 author: alphardex
 abbrlink: 32261
 tags: []
 categories: []
 date: 2020-10-09 15:00:00
+
 ---
+
 # 前言
 
 前篇传送门：[猛戳这里](https://juejin.im/post/6844904033405108232)
 
-其实大多数的技巧前篇都已经讲完了，本文算是具有补充性质的番外篇吧0.0
+其实大多数的技巧前篇都已经讲完了，本文算是具有补充性质的番外篇吧 0.0
 
 <!--more-->
 
 # 3D 方块
 
-如何在 CSS 中创建立体的方块呢？在SCSS中用以下的 mixin 即可
+如何在 CSS 中创建立体的方块呢？在 SCSS 中用以下的 mixin 即可
 
 方块的长度、高度、深度都可以通过 CSS 变量自由调节
 
@@ -48,25 +50,28 @@ date: 2020-10-09 15:00:00
   width: var($width);
   height: var($height);
   transform-origin: bottom left;
-  transform: rotateX(-90deg) translateZ(calc(calc(var(#{$depth}) * 2) - var(#{$height})));
+  transform: rotateX(-90deg) translateZ(
+      calc(calc(var(#{$depth}) * 2) - var(#{$height}))
+    );
 }
 
 @mixin cube-back($width, $height, $depth) {
   width: var($width);
   height: var($height);
   transform-origin: top left;
-  transform: rotateX(-90deg) rotateY(180deg) translateX(calc(var(#{$width}) * -1)) translateY(
-      calc(var(#{$height}) * -1)
-    );
+  transform: rotateX(-90deg) rotateY(180deg) translateX(
+      calc(var(#{$width}) * -1)
+    ) translateY(calc(var(#{$height}) * -1));
 }
 
 @mixin cube-right($width, $height, $depth) {
   width: calc(var(#{$depth}) * 2);
   height: var($height);
   transform-origin: top left;
-  transform: rotateY(90deg) rotateZ(-90deg) translateZ(var(#{$width})) translateX(calc(var(#{$depth}) * -2)) translateY(calc(var(
-            #{$height}
-          ) * -1));
+  transform: rotateY(90deg) rotateZ(-90deg) translateZ(var(#{$width})) translateX(
+      calc(var(#{$depth}) * -2)
+    )
+    translateY(calc(var(#{$height}) * -1));
 }
 
 @mixin cube-left($width, $height, $depth) {
@@ -269,7 +274,12 @@ SVG 滤镜则更加灵活强大，以下是几个常见的滤镜使用场景
       in="blur"
       result="colormatrix"
     />
-    <feComposite in="SourceGraphic" in2="colormatrix" operator="over" result="composite" />
+    <feComposite
+      in="SourceGraphic"
+      in2="colormatrix"
+      operator="over"
+      result="composite"
+    />
   </filter>
 </svg>
 ```
@@ -289,7 +299,12 @@ SVG 滤镜则更加灵活强大，以下是几个常见的滤镜使用场景
 ```html
 <svg width="0" height="0" class="absolute">
   <filter id="glitch">
-    <feTurbulence type="fractalNoise" baseFrequency="0.00001 0.000001" numOctaves="1" result="turbulence1">
+    <feTurbulence
+      type="fractalNoise"
+      baseFrequency="0.00001 0.000001"
+      numOctaves="1"
+      result="turbulence1"
+    >
       <animate
         attributeName="baseFrequency"
         from="0.00001 0.000001"
@@ -339,7 +354,13 @@ CSS 滤镜的 blur 是全方位模糊，而 SVG 滤镜的 blur 可以控制单�
 <svg width="0" height="0" class="absolute">
   <filter id="motion-blur" filterUnits="userSpaceOnUse">
     <feGaussianBlur stdDeviation="100 0" in="SourceGraphic" result="blur">
-      <animate dur="0.6s" attributeName="stdDeviation" from="100 0" to="0 0" fill="freeze"></animate>
+      <animate
+        dur="0.6s"
+        attributeName="stdDeviation"
+        from="100 0"
+        to="0 0"
+        fill="freeze"
+      ></animate>
     </feGaussianBlur>
   </filter>
 </svg>
@@ -365,7 +386,11 @@ CSS 滤镜的 blur 是全方位模糊，而 SVG 滤镜的 blur 可以控制单�
 
 ```css
 .divider-grad-mask {
-  background: linear-gradient(90deg, var(--blue-color) 0 50%, transparent 0 100%) 0 0 / 2rem 1rem;
+  background: linear-gradient(
+      90deg,
+      var(--blue-color) 0 50%,
+      transparent 0 100%
+    ) 0 0 / 2rem 1rem;
   mask: linear-gradient(-90deg, black, transparent);
 }
 ```
@@ -436,11 +461,11 @@ window.addEventListener("resize", () => {
 
 ## 图片分割
 
-为了做出一个图片碎片运动相关的动画，或者是一个拼图游戏，我们就要对一张图片进行分割，且块数、大小等都能随意控制，这时CSS变量就能发挥它的用场了
+为了做出一个图片碎片运动相关的动画，或者是一个拼图游戏，我们就要对一张图片进行分割，且块数、大小等都能随意控制，这时 CSS 变量就能发挥它的用场了
 
 ![](https://s2.loli.net/2024/05/21/t4uAWDa91EpjGQh.gif)
 
-``` scss
+```scss
 .puzzle {
   --puzzle-width: 16rem;
   --puzzle-height: 24rem;
@@ -453,26 +478,32 @@ window.addEventListener("resize", () => {
 
   display: flex;
   flex-wrap: wrap;
-  width: calc(var(--puzzle-width) + calc(var(--puzzle-col) * var(--puzzle-gap) * 2));
-  height: calc(var(--puzzle-height) + calc(var(--puzzle-row) * var(--puzzle-gap) * 2));
+  width: calc(
+    var(--puzzle-width) + calc(var(--puzzle-col) * var(--puzzle-gap) * 2)
+  );
+  height: calc(
+    var(--puzzle-height) + calc(var(--puzzle-row) * var(--puzzle-gap) * 2)
+  );
 
   .fragment {
     --x-offset: calc(var(--x) * var(--puzzle-frag-width) * -1);
     --y-offset: calc(var(--y) * var(--puzzle-frag-height) * -1);
- 
+
     width: var(--puzzle-frag-width);
     height: var(--puzzle-frag-height);
     margin: var(--puzzle-gap);
-    background: var(--puzzle-img) var(--x-offset) var(--y-offset) / var(--puzzle-width) var(--puzzle-height) no-repeat;
+    background: var(--puzzle-img) var(--x-offset) var(--y-offset) / var(
+        --puzzle-width
+      ) var(--puzzle-height) no-repeat;
   }
 }
 ```
 
 1. 设定好分割的行列，根据行列来动态计算切片的大小
 2. 拼图的总宽|高=拼图宽|高+列|行数 \* 间隙 \* 2
-3. 切片的显示利用背景定位的xy轴偏移，偏移量的计算方式：x|y坐标 \* 切片宽|高 \* -1
+3. 切片的显示利用背景定位的 xy 轴偏移，偏移量的计算方式：x|y 坐标 \* 切片宽|高 \* -1
 
-在JS中，设定好变量值并动态生成切片的xy坐标，即可完成图片的分割
+在 JS 中，设定好变量值并动态生成切片的 xy 坐标，即可完成图片的分割
 
 ```js
 class Puzzle {
@@ -514,39 +545,39 @@ class Puzzle {
 const puzzle = new Puzzle(document.querySelector(".puzzle"));
 ```
 
-本demo地址：[Split Image With CSS Variable](https://codepen.io/alphardex/pen/XWdypva)
+本 demo 地址：[Split Image With CSS Variable](https://codepen.io/alphardex/pen/XWdypva)
 
 # 复杂动画
 
-## 案例1
+## 案例 1
 
 <img src="https://user-gold-cdn.xitu.io/2020/2/28/1708a99b931467d7?imageView2/2/w/800/q/85">
 
-本demo地址：[Elastic Love](https://codepen.io/alphardex/pen/gOpWpjq)
+本 demo 地址：[Elastic Love](https://codepen.io/alphardex/pen/gOpWpjq)
 
-## 案例2
+## 案例 2
 
 ![](https://i.loli.net/2020/10/09/APNQgjZLomvqVJ2.gif)
 
-本demo地址：[Infinite Line Animation](https://codepen.io/alphardex/pen/YzqOZOW)
+本 demo 地址：[Infinite Line Animation](https://codepen.io/alphardex/pen/YzqOZOW)
 
-## 案例3
+## 案例 3
 
 ![](https://s2.loli.net/2024/05/21/2ZKsqOiGob1LXP9.gif)
 
-本demo地址：[Orbit Reverse](https://codepen.io/alphardex/pen/jOqgyRm)
+本 demo 地址：[Orbit Reverse](https://codepen.io/alphardex/pen/jOqgyRm)
 
-## 案例4
+## 案例 4
 
 ![](https://s2.loli.net/2024/05/21/ihwOQl9WkeIpsLA.gif)
 
-本demo地址：[Motion Table - Solid Rotation](https://codepen.io/alphardex/pen/ExKzwwX)
+本 demo 地址：[Motion Table - Solid Rotation](https://codepen.io/alphardex/pen/ExKzwwX)
 
-## 案例5
+## 案例 5
 
 ![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/dee916d09aab4f2ea6d60aa482627b1d~tplv-k3u1fbpfcp-zoom-1.image?imageView2/2/w/800/q/85)
 
-本demo地址：[Motion Table - Symmetric Move](https://codepen.io/alphardex/pen/jOqQgzy)
+本 demo 地址：[Motion Table - Symmetric Move](https://codepen.io/alphardex/pen/jOqQgzy)
 
 ## 小结
 
@@ -554,16 +585,16 @@ const puzzle = new Puzzle(document.querySelector(".puzzle"));
 
 1. `div`很多，对布局的要求很高
 2. `@keyframes`很多，对动画的要求很高
-3. 有的动画有较多的3d变换
+3. 有的动画有较多的 3d 变换
 
-案例5的教程已经写在之前的博文“[画物语——CSS动画之美](https://juejin.im/post/6878192439732109326)”里了，其余案例亦可以用此文提到的方法进行研究
+案例 5 的教程已经写在之前的博文“[画物语——CSS 动画之美](https://juejin.im/post/6878192439732109326)”里了，其余案例亦可以用此文提到的方法进行研究
 
-笔者的CSS动画作品全放在这个集合里了：[CSS Animation Collection](https://codepen.io/collection/DrPkOq?cursor=ZD0xJm89MSZwPTEmdj0xNg==)
+笔者的 CSS 动画作品全放在这个集合里了：[CSS Animation Collection](https://codepen.io/collection/DrPkOq?cursor=ZD0xJm89MSZwPTEmdj0xNg==)
 
 # 彩蛋
 
-螺旋阶梯动画（灵感来自灰色的果实OP）
+螺旋阶梯动画（灵感来自灰色的果实 OP）
 
 ![](https://user-gold-cdn.xitu.io/2020/6/14/172b14fc0e9d22c1?imageView2/1/w/460/h/316/q/85/format/jpg/interlace/1)
 
-本demo地址：[Spiral Stair Loading](https://codepen.io/alphardex/pen/OJMXOVR)
+本 demo 地址：[Spiral Stair Loading](https://codepen.io/alphardex/pen/OJMXOVR)

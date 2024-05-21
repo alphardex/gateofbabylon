@@ -4,12 +4,14 @@ abbrlink: 7601
 tags: []
 categories: []
 date: 2021-03-06 21:14:00
+
 ---
+
 ## 前言
 
 大家好，这里是 CSS 魔法使——alphardex。
 
-平时我们见过很多的图片悬浮和滚动特效，大部分是用CSS和SVG实现的，但是有一种特效它们绝对实现不了——扭曲特效。为何？CSS擅长直线型变换，而SVG擅长曲线型变换。扭曲特效则两者都不是，它是像素级变换，能做到像素级变换的只有canvas，而webgl的片元着色器其实特别擅长这一点，我们可以利用它来实现各种酷炫的扭曲特效。以下是最终实现的效果图
+平时我们见过很多的图片悬浮和滚动特效，大部分是用 CSS 和 SVG 实现的，但是有一种特效它们绝对实现不了——扭曲特效。为何？CSS 擅长直线型变换，而 SVG 擅长曲线型变换。扭曲特效则两者都不是，它是像素级变换，能做到像素级变换的只有 canvas，而 webgl 的片元着色器其实特别擅长这一点，我们可以利用它来实现各种酷炫的扭曲特效。以下是最终实现的效果图
 
 ![scroll.gif](https://i.loli.net/2021/03/06/EgYx4XAb29tOIRG.gif)
 
@@ -19,40 +21,70 @@ date: 2021-03-06 21:14:00
 
 ## 准备工作
 
-笔者的[three.js模板](https://codepen.io/alphardex/pen/yLaQdOq)：点击右下角的fork即可复制一份
+笔者的[three.js 模板](https://codepen.io/alphardex/pen/yLaQdOq)：点击右下角的 fork 即可复制一份
 
 ## 实现思路
 
-实现本文效果最重要的一点是：将HTML世界与webgl世界同步起来！
+实现本文效果最重要的一点是：将 HTML 世界与 webgl 世界同步起来！
 
-一旦两个世界同步了，各种炫酷的效果都可以应用在原生HTML元素上，且不影响基本的交互！
+一旦两个世界同步了，各种炫酷的效果都可以应用在原生 HTML 元素上，且不影响基本的交互！
 
 ## 世界同步
 
-### 搭建HTML
+### 搭建 HTML
 
-第一步：将你想展示的所有图片搭成一个简单的HTML页面
+第一步：将你想展示的所有图片搭成一个简单的 HTML 页面
 
 ```html
 <main class="overflow-hidden">
   <div data-scroll>
     <div class="relative w-screen h-screen flex-center">
-      <img class="w-240 h-120" src="https://i.loli.net/2019/11/16/cqyJiYlRwnTeHmj.jpg" alt="" crossorigin="anonymous" />
+      <img
+        class="w-240 h-120"
+        src="https://i.loli.net/2019/11/16/cqyJiYlRwnTeHmj.jpg"
+        alt=""
+        crossorigin="anonymous"
+      />
     </div>
     <div class="relative w-screen h-screen flex-center">
-      <img class="w-240 h-120" src="https://i.loli.net/2019/10/18/Ujf6n75o8TtIsWX.jpg" alt="" crossorigin="anonymous" />
+      <img
+        class="w-240 h-120"
+        src="https://i.loli.net/2019/10/18/Ujf6n75o8TtIsWX.jpg"
+        alt=""
+        crossorigin="anonymous"
+      />
     </div>
     <div class="relative w-screen h-screen flex-center">
-      <img class="w-240 h-120" src="https://i.loli.net/2019/10/18/buDT4YS6zUMfHst.jpg" alt="" crossorigin="anonymous" />
+      <img
+        class="w-240 h-120"
+        src="https://i.loli.net/2019/10/18/buDT4YS6zUMfHst.jpg"
+        alt=""
+        crossorigin="anonymous"
+      />
     </div>
     <div class="relative w-screen h-screen flex-center">
-      <img class="w-240 h-120" src="https://i.loli.net/2019/10/18/uXF1Kx7lzELB6wf.jpg" alt="" crossorigin="anonymous" />
+      <img
+        class="w-240 h-120"
+        src="https://i.loli.net/2019/10/18/uXF1Kx7lzELB6wf.jpg"
+        alt=""
+        crossorigin="anonymous"
+      />
     </div>
     <div class="relative w-screen h-screen flex-center">
-      <img class="w-240 h-120" src="https://i.loli.net/2019/11/03/RtVq2wxQYySDb8L.jpg" alt="" crossorigin="anonymous" />
+      <img
+        class="w-240 h-120"
+        src="https://i.loli.net/2019/11/03/RtVq2wxQYySDb8L.jpg"
+        alt=""
+        crossorigin="anonymous"
+      />
     </div>
     <div class="relative w-screen h-screen flex-center">
-      <img class="w-240 h-120" src="https://i.loli.net/2019/11/16/FLnzi5Kq4tkRZSm.jpg" alt="" crossorigin="anonymous" />
+      <img
+        class="w-240 h-120"
+        src="https://i.loli.net/2019/11/16/FLnzi5Kq4tkRZSm.jpg"
+        alt=""
+        crossorigin="anonymous"
+      />
     </div>
   </div>
 </main>
@@ -107,13 +139,13 @@ const start = () => {
 };
 ```
 
-### 将HTML和webgl的单位同步
+### 将 HTML 和 webgl 的单位同步
 
-为了在webgl中渲染出HTML里的所有img，我们需要把HTML里的img的像素信息同步给webgl
+为了在 webgl 中渲染出 HTML 里的所有 img，我们需要把 HTML 里的 img 的像素信息同步给 webgl
 
-问题来了，如何使得webgl里的1单位长度===HTML里元素的1px？
+问题来了，如何使得 webgl 里的 1 单位长度===HTML 里元素的 1px？
 
-这时我们就要搬上那张经典的透视示意图了，我们需要根据公式来计算出视场角fov
+这时我们就要搬上那张经典的透视示意图了，我们需要根据公式来计算出视场角 fov
 
 ![fov](https://i.loli.net/2021/03/06/btZ8eK2jYV3Cp9n.png)
 
@@ -137,11 +169,11 @@ class TwistedGallery extends Base {
 }
 ```
 
-为了验证，我们将createPlane函数里的PlaneBufferGeometry的宽高都调为100
+为了验证，我们将 createPlane 函数里的 PlaneBufferGeometry 的宽高都调为 100
 
 ![1](https://i.loli.net/2021/03/06/V7Dah5HZGkCLucl.png)
 
-画面中的平面宽高皆为100px，和HTML完全一致！
+画面中的平面宽高皆为 100px，和 HTML 完全一致！
 
 `createPlane`函数完成了它的测试使命，可以删掉了
 
@@ -159,11 +191,11 @@ const preloadImages = (sel = "img") => {
 };
 ```
 
-### 将图片显示在webgl上
+### 将图片显示在 webgl 上
 
-我们创建一个DOMMeshObject类，该类是一座桥梁，负责将DOM里的信息同步至webgl世界
+我们创建一个 DOMMeshObject 类，该类是一座桥梁，负责将 DOM 里的信息同步至 webgl 世界
 
-首先获取DOM元素的长宽和位置，再根据这些数据计算出它们在webgl中对应的位置和大小
+首先获取 DOM 元素的长宽和位置，再根据这些数据计算出它们在 webgl 中对应的位置和大小
 
 ```ts
 class DOMMeshObject {
@@ -191,7 +223,7 @@ class DOMMeshObject {
 }
 ```
 
-在webgl世界中创建出图片材质，并将HTML里的img元素作为贴图传给着色器，再同步好位置即可
+在 webgl 世界中创建出图片材质，并将 HTML 里的 img 元素作为贴图传给着色器，再同步好位置即可
 
 ```ts
 class TwistedGallery extends Base {
@@ -247,7 +279,7 @@ void main(){
     vec4 viewPosition=viewMatrix*modelPosition;
     vec4 projectedPosition=projectionMatrix*viewPosition;
     gl_Position=projectedPosition;
-    
+
     vUv=uv;
 }
 ```
@@ -282,7 +314,7 @@ class TwistedGallery extends Base {
   // 监听滚动
   listenScroll() {
     const scroll = new LocomotiveScroll({
-      getSpeed: true
+      getSpeed: true,
     });
     scroll.on("scroll", () => {
       this.setImagesPosition();
@@ -294,7 +326,7 @@ class TwistedGallery extends Base {
 
 ![3](https://i.loli.net/2021/03/06/jnmSkbsa3hRX7I2.gif)
 
-图片终于在WEBGL的世界里滚动起来了，两个世界同步完成~
+图片终于在 WEBGL 的世界里滚动起来了，两个世界同步完成~
 
 接下来开始我们的重头戏——扭曲特效！
 
@@ -359,7 +391,7 @@ class TwistedGallery extends Base {
 
 顶点着色器`twistedGalleryPostprocessingVertexShader`跟上文所说的模板一致，故略过
 
-片元着色器`twistedGalleryPostprocessingFragmentShader`负责动态计算uv坐标，实现起来稍有难度，关键是多调，里面的值用`gl_FragColor`显示出来，这样就容易理解值的变化
+片元着色器`twistedGalleryPostprocessingFragmentShader`负责动态计算 uv 坐标，实现起来稍有难度，关键是多调，里面的值用`gl_FragColor`显示出来，这样就容易理解值的变化
 
 ```glsl
 uniform sampler2D tDiffuse;
@@ -388,4 +420,4 @@ void main(){
 
 ## 最后
 
-本文所实现的特效仅仅是众多特效中的一种，但真正重要的是如何将HTML与webgl世界所同步起来的这个过程，一旦掌握了这一方法，想做出一个非常酷炫的网站将不再是一个难事。
+本文所实现的特效仅仅是众多特效中的一种，但真正重要的是如何将 HTML 与 webgl 世界所同步起来的这个过程，一旦掌握了这一方法，想做出一个非常酷炫的网站将不再是一个难事。

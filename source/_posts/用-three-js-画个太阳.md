@@ -4,12 +4,14 @@ abbrlink: 14082
 tags: []
 categories: []
 date: 2021-03-25 12:40:00
+
 ---
+
 ## 前言
 
 大家好，这里是 CSS 魔法使——alphardex。
 
-本文我们将用three.js来模拟出太阳的动画效果，以下是最终实现的效果图
+本文我们将用 three.js 来模拟出太阳的动画效果，以下是最终实现的效果图
 
 ![sun.gif](https://i.loli.net/2021/03/25/qGy6ZjJ5vQ7bEOs.gif)
 
@@ -19,7 +21,7 @@ date: 2021-03-25 12:40:00
 
 ## 准备工作
 
-笔者的[three.js模板](https://codepen.io/alphardex/pen/yLaQdOq)：点击右下角的fork即可复制一份
+笔者的[three.js 模板](https://codepen.io/alphardex/pen/yLaQdOq)：点击右下角的 fork 即可复制一份
 
 ## 画太阳
 
@@ -28,7 +30,7 @@ date: 2021-03-25 12:40:00
 实现太阳的主要思路如下：
 
 1. 创建噪声（本文选了`simplex noise`作为噪声）
-2. 将噪声作为Cube贴图渲染在球体上
+2. 将噪声作为 Cube 贴图渲染在球体上
 3. 给球体的贴图进行多重采样，模拟太阳运动的效果
 4. 创建一个渐变辐射，作为太阳外围的环
 
@@ -64,15 +66,15 @@ class Sun extends Base {
       side: THREE.DoubleSide,
       uniforms: {
         uTime: {
-          value: 0
+          value: 0,
         },
         uMouse: {
-          value: new THREE.Vector2(0, 0)
+          value: new THREE.Vector2(0, 0),
         },
         uResolution: {
-          value: new THREE.Vector2(window.innerWidth, window.innerHeight)
-        }
-      }
+          value: new THREE.Vector2(window.innerWidth, window.innerHeight),
+        },
+      },
     });
     this.sunNoiseMaterial = sunNoiseMaterial;
   }
@@ -88,7 +90,7 @@ class Sun extends Base {
     this.createMesh(
       {
         geometry,
-        material
+        material,
       },
       cubeScene
     );
@@ -102,27 +104,27 @@ class Sun extends Base {
       side: THREE.DoubleSide,
       uniforms: {
         uTime: {
-          value: 0
+          value: 0,
         },
         uMouse: {
-          value: new THREE.Vector2(0, 0)
+          value: new THREE.Vector2(0, 0),
         },
         uResolution: {
-          value: new THREE.Vector2(window.innerWidth, window.innerHeight)
+          value: new THREE.Vector2(window.innerWidth, window.innerHeight),
         },
         uNoiseTexture: {
-          value: null
+          value: null,
         },
         uVelocity: {
-          value: 0.05
+          value: 0.05,
         },
         uBrightness: {
-          value: 0.33
+          value: 0.33,
         },
         uStagger: {
-          value: 16
-        }
-      }
+          value: 16,
+        },
+      },
     });
     this.sunShapeMaterial = sunShapeMaterial;
   }
@@ -132,7 +134,7 @@ class Sun extends Base {
     const material = this.sunShapeMaterial;
     this.createMesh({
       geometry,
-      material
+      material,
     });
   }
   // 创建太阳环材质
@@ -143,15 +145,15 @@ class Sun extends Base {
       side: THREE.BackSide,
       uniforms: {
         uTime: {
-          value: 0
+          value: 0,
         },
         uMouse: {
-          value: new THREE.Vector2(0, 0)
+          value: new THREE.Vector2(0, 0),
         },
         uResolution: {
-          value: new THREE.Vector2(window.innerWidth, window.innerHeight)
-        }
-      }
+          value: new THREE.Vector2(window.innerWidth, window.innerHeight),
+        },
+      },
     });
     this.sunRingMaterial = sunRingMaterial;
   }
@@ -161,7 +163,7 @@ class Sun extends Base {
     const material = this.sunRingMaterial;
     this.createMesh({
       geometry,
-      material
+      material,
     });
   }
   // 动画
@@ -354,7 +356,7 @@ void main(){
 
 #### 顶点
 
-创建了3个运动层（分别沿着xy、xz和yz轴旋转），为片元的多重采样提供位置基础
+创建了 3 个运动层（分别沿着 xy、xz 和 yz 轴旋转），为片元的多重采样提供位置基础
 
 ```glsl
 mat2 rotation2d(float angle) {
@@ -415,7 +417,7 @@ void main(){
     vec4 viewPosition=viewMatrix*modelPosition;
     vec4 projectedPosition=projectionMatrix*viewPosition;
     gl_Position=projectedPosition;
-    
+
     vec3 pos=position;
     float displacement1=uVelocity*uTime;
     float displacement2=uVelocity*(uTime*1.5+uStagger*1.);
@@ -426,7 +428,7 @@ void main(){
     vec3 layer1=rotate(pos,xy,displacement1);
     vec3 layer2=rotate(pos,xz,displacement2);
     vec3 layer3=rotate(pos,yz,displacement3);
-    
+
     vUv=uv;
     vPosition=position;
     vLayer1=layer1;

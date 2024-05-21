@@ -4,10 +4,12 @@ abbrlink: 58379
 tags: []
 categories: []
 date: 2022-04-13 15:46:00
+
 ---
+
 ## 前言
 
-大家好，这里是 CSS 兼 WebGL 魔法使——alphardex。本文就让我们来用[kokomi.js](https://github.com/alphardex/kokomi.js)的[raymarching组件](https://github.com/alphardex/marcher.js)来画一个精灵球吧~
+大家好，这里是 CSS 兼 WebGL 魔法使——alphardex。本文就让我们来用[kokomi.js](https://github.com/alphardex/kokomi.js)的[raymarching 组件](https://github.com/alphardex/marcher.js)来画一个精灵球吧~
 
 泼给莫，给托打贼！
 
@@ -17,7 +19,7 @@ date: 2022-04-13 15:46:00
 
 ## 绘画开始
 
-首先fork下这个模板
+首先 fork 下这个模板
 
 https://codesandbox.io/s/kokomi-js-raymarching-starter-lk17vs
 
@@ -25,9 +27,9 @@ https://codesandbox.io/s/kokomi-js-raymarching-starter-lk17vs
 
 ### 材质
 
-精灵球有3种颜色：黑色、白色和红色
+精灵球有 3 种颜色：黑色、白色和红色
 
-首先定义好3种颜色的材质
+首先定义好 3 种颜色的材质
 
 ```ts
 // 材质
@@ -75,7 +77,7 @@ layer.addPrimitive(button);
 
 ### 上下球壳
 
-raymarching里只能创造整个球体，那如果只想要球体的一半呢？
+raymarching 里只能创造整个球体，那如果只想要球体的一半呢？
 
 创建一个临时用的方块，将其移动到球的半侧，再和球体求交集，就能获取一半的球体了
 
@@ -129,7 +131,7 @@ shellLower.intersect(clipBoxLower);
 
 ### 中间镂空
 
-创建2个圆柱体（类似之前的按钮），半径和高度稍微调大点，用它们分别对上下的球壳进行扣除操作就能起到挖空中间的效果
+创建 2 个圆柱体（类似之前的按钮），半径和高度稍微调大点，用它们分别对上下的球壳进行扣除操作就能起到挖空中间的效果
 
 ```ts
 // 球壳（上）：挖除中间镂空部分后

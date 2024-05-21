@@ -4,12 +4,14 @@ abbrlink: 43069
 tags: []
 categories: []
 date: 2021-05-28 09:30:00
+
 ---
+
 ## 前言
 
 大家好，这里是 CSS 魔法使——alphardex。
 
-本文我们将用three.js来画个炫彩液晶球，以下是最终实现的效果图
+本文我们将用 three.js 来画个炫彩液晶球，以下是最终实现的效果图
 
 ![ball.gif](https://s2.loli.net/2024/05/21/teT46XhKy29YMIV.webp)
 
@@ -19,11 +21,11 @@ date: 2021-05-28 09:30:00
 
 ## 准备工作
 
-笔者的[three.js模板](https://codepen.io/alphardex/pen/yLaQdOq)：点击右下角的fork即可复制一份
+笔者的[three.js 模板](https://codepen.io/alphardex/pen/yLaQdOq)：点击右下角的 fork 即可复制一份
 
 为了将着色器模块化，需要用到[glslify](https://github.com/glslify/glslify)
 
-同时也需要安装如下的npm包：`glsl-noise`、`glsl-constants`
+同时也需要安装如下的 npm 包：`glsl-noise`、`glsl-constants`
 
 ## 正片
 
@@ -72,10 +74,10 @@ class LiquidCrystal extends Base {
         },
         // 下面几行先注释掉，等写片元着色器时再恢复
         // uIriMap: {
-          // value: new ThinFilmFresnelMap(1000, 1.2, 3.2, 64),
+        // value: new ThinFilmFresnelMap(1000, 1.2, 3.2, 64),
         // },
         // uIriBoost: {
-          // value: this.params.iriBoost,
+        // value: this.params.iriBoost,
         // },
       },
     });
@@ -107,7 +109,7 @@ class LiquidCrystal extends Base {
 
 ### 顶点着色器
 
-用simplex noise实现扭曲效果，这里比较自由，想怎么扭曲就怎么扭曲，只要好看就行
+用 simplex noise 实现扭曲效果，这里比较自由，想怎么扭曲就怎么扭曲，只要好看就行
 
 有个注意点：扭曲位置`position`后要修正法线`normal`，不然会显示错误，国外论坛上已经有一个比较好的解法，直接拿来用了
 
@@ -127,31 +129,31 @@ vec3 distort(vec3 p){
     vec3 mousePoint=vec3(uMouse,1.);
     vec3 mouseDirection=normalize(mousePoint);
     float mousePointAngle=dot(pointDirection,mouseDirection);
-    
+
     float freq=1.5;
     float t=uTime*100.;
-    
+
     float f=PI*freq;
     float fc=mousePointAngle*f;
-    
+
     vec3 n11=pointDirection*1.5;
     vec3 n12=vec3(uTime)*4.;
     float dist=smoothstep(.4,1.,mousePointAngle);
     float n1a=dist*2.;
     float noise1=snoise(n11+n12)*n1a;
-    
+
     vec3 n21=pointDirection*1.5;
     vec3 n22=vec3(0.,0.,uTime)*2.;
     vec3 n23=vec3(uMouse,0.)*.2;
     float n2a=.8;
     float noise2=snoise(n21+n22+n23)*n2a;
-    
+
     float mouseN1=sin(fc+PI+t);
     float mouseN2=smoothstep(f,f*2.,fc+t);
     float mouseN3=smoothstep(f*2.,f,fc+t);
     float mouseNa=4.;
     float mouseNoise=mouseN1*mouseN2*mouseN3*mouseNa;
-    
+
     float noise=noise1+noise2+mouseNoise;
     vec3 distortion=pointDirection*(noise+length(p));
     return distortion;
@@ -166,9 +168,9 @@ void main(){
     vec4 viewPosition=viewMatrix*modelPosition;
     vec4 projectedPosition=projectionMatrix*viewPosition;
     gl_Position=projectedPosition;
-    
+
     vec3 distortedNormal=fixNormal(position,pos,normal);
-    
+
     vUv=uv;
     vWorldNormal=getWorldNormal(modelMatrix,distortedNormal).xyz;
 }
@@ -176,7 +178,7 @@ void main(){
 
 修正法线函数 fixNormal.glsl
 
-``` glsl
+```glsl
 #pragma glslify:orthogonal=require(./orthogonal)
 
 vec3 fixNormal(vec3 position,vec3 distortedPosition,vec3 normal){
@@ -198,7 +200,7 @@ vec3 fixNormal(vec3 position,vec3 distortedPosition,vec3 normal){
 
 正交函数 orthogonal.glsl
 
-``` glsl
+```glsl
 vec3 orthogonal(vec3 v){
     return normalize(abs(v.x)>abs(v.z)?vec3(-v.y,v.x,0.)
     :vec3(0.,-v.z,v.y));
@@ -221,9 +223,9 @@ vec4 getWorldNormal(mat4 modelMat,vec3 normal){
 
 ### 片元着色器
 
-利用pbr生成光照，再加上一个[炫彩材质](https://github.com/DerSchmale/threejs-thin-film-iridescence)
+利用 pbr 生成光照，再加上一个[炫彩材质](https://github.com/DerSchmale/threejs-thin-film-iridescence)
 
-炫彩材质直接将`ThinFilmFresnelMap.js`拉到本地，在LiquidCrystal类里引入即可（也就是把上面的注释删除就行）
+炫彩材质直接将`ThinFilmFresnelMap.js`拉到本地，在 LiquidCrystal 类里引入即可（也就是把上面的注释删除就行）
 
 ```glsl
 #pragma glslify:snoise=require(glsl-noise/simplex/3d)
@@ -240,7 +242,7 @@ varying vec3 vWorldNormal;
 
 void main(){
     vec2 newUv=vUv;
-    
+
     // pbr
     float noise=snoise(vWorldNormal*5.)*.3;
     vec3 N=normalize(vWorldNormal+vec3(noise));
@@ -248,15 +250,15 @@ void main(){
     float NdotV=max(dot(N,V),0.);
     float colorStrength=smoothstep(0.,.8,NdotV);
     vec3 color=invert(vec3(colorStrength));
-    
+
     // iri
     vec3 airy=texture2D(uIriMap,vec2(NdotV*.99,0.)).rgb;
     airy*=airy;
     vec3 specularLight=vWorldNormal*airy*uIriBoost;
-    
+
     float mixStrength=smoothstep(.3,.6,NdotV);
     vec3 finalColor=mix(specularLight,color,mixStrength);
-    
+
     gl_FragColor=vec4(finalColor,0.);
 }
 ```

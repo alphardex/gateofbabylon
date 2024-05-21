@@ -1,10 +1,12 @@
-title: PC搬家指南
+title: PC 搬家指南
 author: alphardex
 abbrlink: 54698
 tags: []
 categories: []
 date: 2020-09-13 09:57:00
+
 ---
+
 前提是把所有文件备份到了[百度网盘](https://pan.baidu.com/download/)上
 
 <!--more-->
@@ -13,15 +15,15 @@ date: 2020-09-13 09:57:00
 
 ## 软件
 
-Installers文件夹里的安装包按需安装
+Installers 文件夹里的安装包按需安装
 
-解压ChromeGo.7z，并将[机场](https://dageyun.com/)节点导入
+解压 ChromeGo.7z，并将[机场](https://dageyun.com/)节点导入
 
-将bookmarks.html导入chrome书签
+将 bookmarks.html 导入 chrome 书签
 
 ## 配置
 
-将Installers里的config.zip解压到C盘的用户文件下
+将 Installers 里的 config.zip 解压到 C 盘的用户文件下
 
 ## 开发
 
@@ -35,7 +37,7 @@ npm install -g cloc hexo-cli http-server npkill npm-check-updates readme-md-gene
 pip install looter
 ```
 
-Github上的[仓库](https://github.com/alphardex?tab=repositories)按需clone到本地
+Github 上的[仓库](https://github.com/alphardex?tab=repositories)按需 clone 到本地
 
 ## 资源
 

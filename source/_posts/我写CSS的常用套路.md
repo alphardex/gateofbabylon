@@ -1,13 +1,15 @@
-title: 我写CSS的常用套路
+title: 我写 CSS 的常用套路
 author: alphardex
 tags: []
 categories: []
 abbrlink: 17061
 date: 2019-12-28 17:23:00
+
 ---
+
 # 前言
 
-本文是笔者写CSS时常用的套路。不论效果再怎么华丽，万变不离其宗。
+本文是笔者写 CSS 时常用的套路。不论效果再怎么华丽，万变不离其宗。
 
 <!--more-->
 
@@ -17,21 +19,21 @@ date: 2019-12-28 17:23:00
 
 有时候，我们需要给多个元素添加同一个动画，播放后，不难发现它们会一起运动，一起结束，这样就会显得很平淡无奇。
 
-那么如何将动画变得稍微有趣一点呢？很简单，既然它们都是同一时刻开始运动的，那么让它们不在同一时刻运动不就可以了吗。如何让它们不在同一时刻运动呢？注意到CSS动画有延迟（`delay`）这一属性。举个栗子，比如有十个元素播放十个动画，将第二个元素的动画播放时间设定为比第一个元素晚0.5秒（也就是将延迟设为0.5秒），其他元素以此类推，这样它们就会错开来，形成一种独特的视觉效果。
+那么如何将动画变得稍微有趣一点呢？很简单，既然它们都是同一时刻开始运动的，那么让它们不在同一时刻运动不就可以了吗。如何让它们不在同一时刻运动呢？注意到 CSS 动画有延迟（`delay`）这一属性。举个栗子，比如有十个元素播放十个动画，将第二个元素的动画播放时间设定为比第一个元素晚 0.5 秒（也就是将延迟设为 0.5 秒），其他元素以此类推，这样它们就会错开来，形成一种独特的视觉效果。
 
 ![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee0514569bd2?w=1110&h=726&f=gif&s=135799)
 
 这就是所谓的交错动画：通过设置不同的延迟时间，达到动画交错播放的效果。
 
-本demo地址：[Staggered Wave Loading](https://codepen.io/alphardex/pen/XWWWBmQ)
+本 demo 地址：[Staggered Wave Loading](https://codepen.io/alphardex/pen/XWWWBmQ)
 
-## 用JS分割文本
+## 用 JS 分割文本
 
-还有一种经常用到的玩法：用JS将句子或单词分割成字母，并给每个字母加上不同延时的动画，同样也很华丽
+还有一种经常用到的玩法：用 JS 将句子或单词分割成字母，并给每个字母加上不同延时的动画，同样也很华丽
 
 ![](https://user-gold-cdn.xitu.io/2020/2/8/1702507ba8f9dbf3?w=1110&h=726&f=gif&s=903374)
 
-本demo地址：[Staggered LandIn Text](https://codepen.io/alphardex/full/KKwvKGY)
+本 demo 地址：[Staggered LandIn Text](https://codepen.io/alphardex/full/KKwvKGY)
 
 ## 不同位置的交错动画
 
@@ -39,15 +41,15 @@ date: 2019-12-28 17:23:00
 
 ![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee051b0e892b?w=1134&h=588&f=gif&s=125063)
 
-本demo地址：[Reveal Text](https://codepen.io/alphardex/full/eYYMYXJ)
+本 demo 地址：[Reveal Text](https://codepen.io/alphardex/full/eYYMYXJ)
 
 ## 随机粒子动画
 
-说到随机性，我们可以实现一种更疯狂的效果：给几百个粒子添加交错动画，并且交错时间随机，位置大小也都是随机。如此一来我们就能用纯CSS模拟出下雪的效果。
+说到随机性，我们可以实现一种更疯狂的效果：给几百个粒子添加交错动画，并且交错时间随机，位置大小也都是随机。如此一来我们就能用纯 CSS 模拟出下雪的效果。
 
 ![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee051cbfc17a?w=1898&h=787&f=png&s=342134)
 
-本demo地址：[Snow (Pure CSS)](https://codepen.io/alphardex/full/dyPorwJ)
+本 demo 地址：[Snow (Pure CSS)](https://codepen.io/alphardex/full/dyPorwJ)
 
 # 伪类和伪元素
 
@@ -55,31 +57,31 @@ date: 2019-12-28 17:23:00
 
 ![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee051cf6ac5e?w=1110&h=726&f=gif&s=25256)
 
-HTML元素的状态是可以动态变化的。举个栗子，当你的鼠标悬浮到一个按钮上时，按钮就会变成“悬浮”状态，这时我们就可以利用伪类`:hover`来选中这一状态的按钮，并对其样式进行改变。
+HTML 元素的状态是可以动态变化的。举个栗子，当你的鼠标悬浮到一个按钮上时，按钮就会变成“悬浮”状态，这时我们就可以利用伪类`:hover`来选中这一状态的按钮，并对其样式进行改变。
 
 `:hover`是笔者最最常用的一个伪类。还有一个很常用的伪类是`:nth-child`，用于选中元素的某一个子元素。其他的类似`:focus`、`:focus-within`等也有一定的使用。
 
-本demo地址：[Button Hover Border Stroke With Float Text](https://codepen.io/alphardex/pen/pooYKVa)
+本 demo 地址：[Button Hover Border Stroke With Float Text](https://codepen.io/alphardex/pen/pooYKVa)
 
 ### 绝对定位实现多重边框
 
-谁规定按钮只能有一套边框的？利用绝对定位和`padding`，我们可以给按钮做出3套大小不一的边框来，这样效果更炫了
+谁规定按钮只能有一套边框的？利用绝对定位和`padding`，我们可以给按钮做出 3 套大小不一的边框来，这样效果更炫了
 
 ![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee05232b8519?w=1312&h=669&f=gif&s=18569)
 
-本demo地址：[Button Hover Multiple Border Stroke](https://codepen.io/alphardex/full/ZEYXomW)
+本 demo 地址：[Button Hover Multiple Border Stroke](https://codepen.io/alphardex/full/ZEYXomW)
 
 ## 伪元素
 
 ![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee056d1fae71?w=1110&h=726&f=gif&s=40196)
 
-简而言之，伪元素就是在原先的元素基础上插入额外的元素，而且这个元素不充当HTML的标签，这样就能保持HTML结构的整洁。
+简而言之，伪元素就是在原先的元素基础上插入额外的元素，而且这个元素不充当 HTML 的标签，这样就能保持 HTML 结构的整洁。
 
-我们知道每个元素都有`::before`和`::after`这两个伪元素，也就是说每个元素都提供了3个矩形（元素本身1个，伪元素2个）来供我们进行形状的绘制。现在又有了`clip-path`这个属性，几乎任意的形状都可以被绘制出来，全凭你的想象力
+我们知道每个元素都有`::before`和`::after`这两个伪元素，也就是说每个元素都提供了 3 个矩形（元素本身 1 个，伪元素 2 个）来供我们进行形状的绘制。现在又有了`clip-path`这个属性，几乎任意的形状都可以被绘制出来，全凭你的想象力
 
 上面的动图是条子划过文本的动画，条子就是每个文本所对应的伪元素，对每个文本和其伪元素应用动画，就能达到上图的效果了
 
-本demo地址：[Header With Slide Bar](https://codepen.io/alphardex/pen/jOEOEzZ)
+本 demo 地址：[Header With Slide Bar](https://codepen.io/alphardex/pen/jOEOEzZ)
 
 ### attr()生成文本内容
 
@@ -91,13 +93,13 @@ HTML元素的状态是可以动态变化的。举个栗子，当你的鼠标悬�
 
 ![attr_text.png](https://user-gold-cdn.xitu.io/2020/2/10/1702ee05bd378d59?w=750&h=398&f=png&s=21239)
 
-看上去有点乱糟糟的对吧？没事，给它加上`overflow: hidden`，把多余的文本遮住。通过JS分割文本并应用交错动画，就得到了如下的效果，这也是接下来本文要讲的`overflow`障眼法
+看上去有点乱糟糟的对吧？没事，给它加上`overflow: hidden`，把多余的文本遮住。通过 JS 分割文本并应用交错动画，就得到了如下的效果，这也是接下来本文要讲的`overflow`障眼法
 
 ![attr_text_hidden.gif](https://user-gold-cdn.xitu.io/2020/2/10/1702ee07142525a2?w=1381&h=669&f=gif&s=101942)
 
-本demo地址：[Staggered Float Text Menu](https://codepen.io/alphardex/full/wvBeXjd)
+本 demo 地址：[Staggered Float Text Menu](https://codepen.io/alphardex/full/wvBeXjd)
 
-# overflow障眼法
+# overflow 障眼法
 
 之前有做过闪光按钮的效果：鼠标悬浮按钮上时一道光从左到右划过去。
 
@@ -111,9 +113,9 @@ HTML元素的状态是可以动态变化的。举个栗子，当你的鼠标悬�
 
 ![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee05f2da6fd5?w=1110&h=726&f=gif&s=134168)
 
-本demo地址：[Button Hover Shining](https://codepen.io/alphardex/pen/eYYzXBZ)
+本 demo 地址：[Button Hover Shining](https://codepen.io/alphardex/pen/eYYzXBZ)
 
-# 自定义input
+# 自定义 input
 
 默认的`input`太丑怎么办？那就把它先抹掉，设置`opacity: 0`即可
 
@@ -123,11 +125,11 @@ HTML元素的状态是可以动态变化的。举个栗子，当你的鼠标悬�
 
 ![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee063382adbe?w=1312&h=669&f=gif&s=133528)
 
-本demo地址：[Todo List](https://codepen.io/alphardex/full/rNNPQwa)
+本 demo 地址：[Todo List](https://codepen.io/alphardex/full/rNNPQwa)
 
-# CSS特性
+# CSS 特性
 
-善用某些CSS特性，也可以为你的作品增色不少哦
+善用某些 CSS 特性，也可以为你的作品增色不少哦
 
 ## animation
 
@@ -143,7 +145,7 @@ HTML元素的状态是可以动态变化的。举个栗子，当你的鼠标悬�
 
 最后，社交图标的依次出现用到了交错动画
 
-本demo地址：[Profile Card](https://codepen.io/alphardex/full/jOExoLp)
+本 demo 地址：[Profile Card](https://codepen.io/alphardex/full/jOExoLp)
 
 ## border-radius
 
@@ -157,7 +159,7 @@ HTML元素的状态是可以动态变化的。举个栗子，当你的鼠标悬�
 
 ![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee06bbbfc49d?w=1128&h=603&f=gif&s=134933)
 
-本demo地址：[Nav Tab](https://codepen.io/alphardex/full/abbWOPR)
+本 demo 地址：[Nav Tab](https://codepen.io/alphardex/full/abbWOPR)
 
 ## box-shadow
 
@@ -165,7 +167,7 @@ HTML元素的状态是可以动态变化的。举个栗子，当你的鼠标悬�
 
 ![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee06bc72977a?w=1128&h=603&f=gif&s=68238)
 
-本demo地址：[Pagination](https://codepen.io/alphardex/full/QWwwwpp)
+本 demo 地址：[Pagination](https://codepen.io/alphardex/full/QWwwwpp)
 
 ### 内发光
 
@@ -179,31 +181,31 @@ HTML元素的状态是可以动态变化的。举个栗子，当你的鼠标悬�
 
 ![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee0710ee13f8?w=1312&h=669&f=gif&s=436447)
 
-注意到它散发着淡淡的红光，其实就是2个伪元素应用了模糊滤镜所产生的效果
+注意到它散发着淡淡的红光，其实就是 2 个伪元素应用了模糊滤镜所产生的效果
 
-本demo地址：[Crimson Crescent Loading](https://codepen.io/alphardex/full/eYmGEGp)
+本 demo 地址：[Crimson Crescent Loading](https://codepen.io/alphardex/full/eYmGEGp)
 
 ## text-shadow
 
-文本阴影，本质上和`box-shadow`相同，只不过是相对于文本而言，常用于文本发光，也可通过多层叠加来制作霓虹文本和伪3D文本等效果
+文本阴影，本质上和`box-shadow`相同，只不过是相对于文本而言，常用于文本发光，也可通过多层叠加来制作霓虹文本和伪 3D 文本等效果
 
 ### 发光文本
 
 ![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee0751c9e13e?w=1597&h=603&f=gif&s=2015749)
 
-本demo地址：[Staggered GlowIn Text](https://codepen.io/alphardex/full/Exxodoq)
+本 demo 地址：[Staggered GlowIn Text](https://codepen.io/alphardex/full/Exxodoq)
 
 ### 霓虹文本
 
 ![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee076a90febb?w=1312&h=669&f=gif&s=1083873)
 
-本demo地址：[Neon Text](https://codepen.io/alphardex/full/rNNwmZz)
+本 demo 地址：[Neon Text](https://codepen.io/alphardex/full/rNNwmZz)
 
-### 伪3D文本
+### 伪 3D 文本
 
 ![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee0770616364?w=1312&h=669&f=gif&s=454544)
 
-本demo地址：[Staggered Bouncing 3D Loading](https://codepen.io/alphardex/full/QWWavvx)
+本 demo 地址：[Staggered Bouncing 3D Loading](https://codepen.io/alphardex/full/QWWavvx)
 
 ## background-clip:text
 
@@ -211,7 +213,7 @@ HTML元素的状态是可以动态变化的。举个栗子，当你的鼠标悬�
 
 ![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee07ea23e5ac?w=1597&h=622&f=gif&s=46919)
 
-本demo地址：[Menu Hover Fill Text](https://codepen.io/alphardex/full/QWwveZG)
+本 demo 地址：[Menu Hover Fill Text](https://codepen.io/alphardex/full/QWwveZG)
 
 ## gradient
 
@@ -223,19 +225,19 @@ HTML元素的状态是可以动态变化的。举个栗子，当你的鼠标悬�
 
 ![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee08051eab40?w=1312&h=669&f=gif&s=731765)
 
-这个作品用到了HTML的`dialog`标签，线性渐变背景，动画以及`overflow`障眼法，细心的你看出来了吗:)
+这个作品用到了 HTML 的`dialog`标签，线性渐变背景，动画以及`overflow`障眼法，细心的你看出来了吗:)
 
-本demo地址：[Confirm Modal](https://codepen.io/alphardex/full/eYYxzBm)
+本 demo 地址：[Confirm Modal](https://codepen.io/alphardex/full/eYYxzBm)
 
 ### radial-gradient
 
-径向渐变常用于生成圆形背景，上面例子中[Snow的背景](https://codepen.io/alphardex/full/dyPorwJ)就是一个椭圆形的径向渐变
+径向渐变常用于生成圆形背景，上面例子中[Snow 的背景](https://codepen.io/alphardex/full/dyPorwJ)就是一个椭圆形的径向渐变
 
 此外，由于背景可以叠加，我们可以叠加多个不同位置大小的径向渐变来生成圆点群，再加上动画就产生了一种微粒效果，无需多余的`div`元素
 
 ![radial-particle.gif](https://user-gold-cdn.xitu.io/2020/2/10/1702ee0834f82a09?w=1074&h=657&f=gif&s=113535)
 
-本demo地址：[Particle Button](https://codepen.io/alphardex/full/OJPvMGx)
+本 demo 地址：[Particle Button](https://codepen.io/alphardex/full/OJPvMGx)
 
 ### conic-gradient
 
@@ -243,15 +245,15 @@ HTML元素的状态是可以动态变化的。举个栗子，当你的鼠标悬�
 
 ![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee08546f0887?w=1138&h=508&f=png&s=14302)
 
-用一个伪元素叠在饼图上面，并将`content`设为某个值（这个值通过CSS变量计算出来），就能制作出度量计的效果，障眼法又一次完成了它的使命
+用一个伪元素叠在饼图上面，并将`content`设为某个值（这个值通过 CSS 变量计算出来），就能制作出度量计的效果，障眼法又一次完成了它的使命
 
 ![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee08695df44f?w=1188&h=577&f=png&s=21433)
 
-本demo地址：[Gauge (No SVG)](https://codepen.io/alphardex/full/BaydVvQ)
+本 demo 地址：[Gauge (No SVG)](https://codepen.io/alphardex/full/BaydVvQ)
 
 ## filter
 
-PS里的滤镜，`blur`最常用
+PS 里的滤镜，`blur`最常用
 
 ### 融合效果
 
@@ -259,7 +261,7 @@ PS里的滤镜，`blur`最常用
 
 ![gooey.gif](https://user-gold-cdn.xitu.io/2020/2/10/1702ee089a916bc7?w=1324&h=705&f=gif&s=643477)
 
-本demo地址：[Snow Scratch](https://codepen.io/alphardex/full/BaBevXm)
+本 demo 地址：[Snow Scratch](https://codepen.io/alphardex/full/BaBevXm)
 
 ## backdrop-filter
 
@@ -267,25 +269,25 @@ PS里的滤镜，`blur`最常用
 
 ![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee08b2840155?w=1597&h=622&f=gif&s=2724918)
 
-本demo地址：[Frosted Glass](https://codepen.io/alphardex/full/pooQMVp)
+本 demo 地址：[Frosted Glass](https://codepen.io/alphardex/full/pooQMVp)
 
 ## mix-blend-mode
 
-PS里的混合模式，常用于文本在背景下的特殊效果
+PS 里的混合模式，常用于文本在背景下的特殊效果
 
 以下利用滤色模式（`screen`）实现文本视频蒙版效果
 
 ![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee08ca1668c6?w=1381&h=669&f=gif&s=3012320)
 
-本demo地址：[Video Mask Text](https://codepen.io/alphardex/full/wvvLYpV)
+本 demo 地址：[Video Mask Text](https://codepen.io/alphardex/full/wvvLYpV)
 
 ## clip-path
 
-PS里的裁切，可以制作各种不规则形状。如果和动画结合也会相当有意思
+PS 里的裁切，可以制作各种不规则形状。如果和动画结合也会相当有意思
 
 ![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee08d117617e?w=1312&h=669&f=gif&s=271533)
 
-本demo地址：[Name Card Hover Expand](https://codepen.io/alphardex/full/ZEEBRrq)
+本 demo 地址：[Name Card Hover Expand](https://codepen.io/alphardex/full/ZEEBRrq)
 
 ### 故障效果
 
@@ -293,11 +295,11 @@ PS里的裁切，可以制作各种不规则形状。如果和动画结合也会
 
 ![glitch.gif](https://user-gold-cdn.xitu.io/2020/2/10/1702ee090c67ca6a?w=1563&h=577&f=gif&s=34542)
 
-本demo地址：[Cross Bar Glitch Text](https://codepen.io/alphardex/full/VwLLLNG)
+本 demo 地址：[Cross Bar Glitch Text](https://codepen.io/alphardex/full/VwLLLNG)
 
 ## mask
 
-PS里的遮罩。所谓遮罩，就是原始图片只显示遮罩图片非透明的部分
+PS 里的遮罩。所谓遮罩，就是原始图片只显示遮罩图片非透明的部分
 
 ### 镂空效果
 
@@ -307,11 +309,11 @@ PS里的遮罩。所谓遮罩，就是原始图片只显示遮罩图片非透明
 
 假设，你想制作一个空心的圆环，那么你只需将一个径向渐变作为元素的遮罩，并且第一个`color-stop`设置为透明，其他的`color-stop`设置为其他颜色即可，因为遮罩的定义就是只显示遮罩图片非透明的部分
 
-注意：为了消除锯齿，这个径向渐变的中间需要有一个额外的`color-stop`用于缓冲，长度设置为原长度加0.5px即可
+注意：为了消除锯齿，这个径向渐变的中间需要有一个额外的`color-stop`用于缓冲，长度设置为原长度加 0.5px 即可
 
 ![1LxcPs.gif](https://user-gold-cdn.xitu.io/2020/2/13/1703e7bb22182d04?w=1348&h=634&f=gif&s=63533)
 
-本demo地址：[Circle Arrow Nav](https://codepen.io/alphardex/full/MWwadod)
+本 demo 地址：[Circle Arrow Nav](https://codepen.io/alphardex/full/MWwadod)
 
 ## -webkit-box-reflect
 
@@ -319,29 +321,29 @@ PS里的遮罩。所谓遮罩，就是原始图片只显示遮罩图片非透明
 
 ![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee091c74c545?w=1632&h=669&f=gif&s=2683334)
 
-本demo地址：[Card Flip Reflection](https://codepen.io/alphardex/full/ExaZgxp)
+本 demo 地址：[Card Flip Reflection](https://codepen.io/alphardex/full/ExaZgxp)
 
 ## web animations
 
-虽然这并不是一个CSS特性，但是它经常用于完成那些CSS所做不到的事情
+虽然这并不是一个 CSS 特性，但是它经常用于完成那些 CSS 所做不到的事情
 
-那么何时用它呢？当CSS动画中有属性无法从CSS中获取时，自然就会使用到它了
+那么何时用它呢？当 CSS 动画中有属性无法从 CSS 中获取时，自然就会使用到它了
 
 ### 跟踪鼠标的位置
 
-目前CSS还尚未有获取鼠标位置的API，因此考虑用JS来进行
+目前 CSS 还尚未有获取鼠标位置的 API，因此考虑用 JS 来进行
 
-通过查阅相关的DOM API，发现在监听鼠标事件的API中，可通过`e.clientX`和`e.clientY`来获得鼠标当前的位置
+通过查阅相关的 DOM API，发现在监听鼠标事件的 API 中，可通过`e.clientX`和`e.clientY`来获得鼠标当前的位置
 
 既然能够获取鼠标的位置，那么跟踪鼠标的位置也就不是什么难事了：通过监听`mouseenter`和`mouseleave`事件，来获取鼠标出入一个元素时的位置，并用此坐标来当作鼠标的位移距离，监听`mousemove`事件，来获取鼠标在元素上移动时的位置，同样地用此坐标来当作鼠标的位移距离，这样一个跟踪鼠标的效果就实现了
 
 ![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee0949a76b86?w=1632&h=639&f=gif&s=1805253)
 
-本demo地址：[Menu Hover Image](https://codepen.io/alphardex/full/OJPmQGz)
+本 demo 地址：[Menu Hover Image](https://codepen.io/alphardex/full/OJPmQGz)
 
 ## CSS Houdini
 
-CSS Houdini是CSS的底层API，它使我们能够通过这套接口来扩展CSS的功能
+CSS Houdini 是 CSS 的底层 API，它使我们能够通过这套接口来扩展 CSS 的功能
 
 ### 让渐变动起来
 
@@ -357,7 +359,7 @@ CSS Houdini是CSS的底层API，它使我们能够通过这套接口来扩展CSS
 
 ![mawaru.gif](https://user-gold-cdn.xitu.io/2020/2/10/1702ee0a2594a4c1?w=1375&h=898&f=gif&s=204827)
 
-本demo地址：[Mawaru](https://codepen.io/alphardex/full/RwNxpXQ)
+本 demo 地址：[Mawaru](https://codepen.io/alphardex/full/RwNxpXQ)
 
 # 彩蛋
 
@@ -365,8 +367,8 @@ CSS Houdini是CSS的底层API，它使我们能够通过这套接口来扩展CSS
 
 将交错动画和伪类伪元素结合起来写出来的慎重勇者风格的菜单
 
-本demo地址：[Shinchou Menu](https://codepen.io/alphardex/full/ExavZdV)
+本 demo 地址：[Shinchou Menu](https://codepen.io/alphardex/full/ExavZdV)
 
 # 最后
 
-恭喜你将本文读完了。不论是过了一场视觉盛宴也好，还是学到了不少东西也好，还是直接从书签那导航到这里也好（笑），CSS的力量始终超乎你的想象。只要敢于创作，你就是这个世界的神。
+恭喜你将本文读完了。不论是过了一场视觉盛宴也好，还是学到了不少东西也好，还是直接从书签那导航到这里也好（笑），CSS 的力量始终超乎你的想象。只要敢于创作，你就是这个世界的神。

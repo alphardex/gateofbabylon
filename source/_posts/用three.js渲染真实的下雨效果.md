@@ -1,12 +1,14 @@
-title: 用three.js渲染真实的下雨效果
+title: 用 three.js 渲染真实的下雨效果
 author: alphardex
 abbrlink: 5999
 date: 2023-02-15 16:23:21
 tags:
----
-呀哈喽！这里是alphardex。
 
-最近我用three.js模拟了一下现实中的下雨效果，让我们一起来看看它是怎么实现的吧。
+---
+
+呀哈喽！这里是 alphardex。
+
+最近我用 three.js 模拟了一下现实中的下雨效果，让我们一起来看看它是怎么实现的吧。
 
 https://code.juejin.cn/pen/7200287096689393720
 
@@ -16,7 +18,7 @@ https://code.juejin.cn/pen/7200287096689393720
 
 首先我们需要一些贴图素材
 
-贴图素材一般可以在[3dtextures](https://3dtextures.me/)网站上找到，这里我找了2份，包含了墙的法线贴图和潮湿地面的法线、透明度、粗糙度贴图
+贴图素材一般可以在[3dtextures](https://3dtextures.me/)网站上找到，这里我找了 2 份，包含了墙的法线贴图和潮湿地面的法线、透明度、粗糙度贴图
 
 通过[kokomi.AssetManager](https://github.com/alphardex/kokomi.js/blob/main/src/components/assetManager.ts)将贴图素材一次性全部加载出来，将它们应用到`Mesh`上，加上基本的环境光照，即可完成最基本的建模
 
@@ -79,11 +81,11 @@ mirror.rotation.x = -Math.PI / 2;
 
 ![reflector.jpg](https://s2.loli.net/2023/02/16/q9JiwlFgvrAXN4W.jpg)
 
-普通的反射器仅仅是一面镜子，因此我们要自定义反射器的Shader
+普通的反射器仅仅是一面镜子，因此我们要自定义反射器的 Shader
 
 ### 涟漪效果
 
-之前逛shadertoy时看到了一个很棒的[涟漪特效](https://www.shadertoy.com/view/ldfyzl)，就直接拿来用了
+之前逛 shadertoy 时看到了一个很棒的[涟漪特效](https://www.shadertoy.com/view/ldfyzl)，就直接拿来用了
 
 ```glsl
 // https://www.shadertoy.com/view/4djSRW
@@ -125,11 +127,11 @@ for(int j=-MAX_RADIUS;j<=MAX_RADIUS;++j)
         vec2 hsh=pi;
         #endif
         vec2 p=pi+hash22(hsh);
-        
+
         float t=fract(.8*iTime+hash12(hsh));
         vec2 v=p-rippleUv;
         float d=length(v)-(float(MAX_RADIUS)+1.)*t+(rainStrength*.1*t);
-        
+
         float h=1e-3;
         float d1=d-h;
         float d2=d+h;
@@ -152,9 +154,9 @@ vec2 rainUv=intensity*n.xy;
 
 光有涟漪效果也不够，要将它与地面的贴图相结合起来
 
-这里采用了`自定义mipmap`技术，利用[kokomi.PackedMipMapGenerator](https://github.com/alphardex/kokomi.js/blob/main/src/lib/custom-mipmap-generation/PackedMipMapGenerator.ts)生成了多个贴图的mipmap
+这里采用了`自定义mipmap`技术，利用[kokomi.PackedMipMapGenerator](https://github.com/alphardex/kokomi.js/blob/main/src/lib/custom-mipmap-generation/PackedMipMapGenerator.ts)生成了多个贴图的 mipmap
 
-自定义mipmap除了能捆绑贴图外，还有个好处就是可以动态控制贴图的模糊程度
+自定义 mipmap 除了能捆绑贴图外，还有个好处就是可以动态控制贴图的模糊程度
 
 ```js
 const mipmapper = new kokomi.PackedMipMapGenerator();
@@ -228,7 +230,7 @@ transformed=billboardPos;
 
 ### 下落动画
 
-我们可以给雨滴赋予随机的高度和速度attribute，并在顶点着色器中让它动起来
+我们可以给雨滴赋予随机的高度和速度 attribute，并在顶点着色器中让它动起来
 
 ```js
 const progressArr = [];
@@ -271,7 +273,7 @@ transformed=distort(transformed);
 
 ### 反射效果
 
-创建背景的离屏渲染FBO，将其作为反射的主要材质
+创建背景的离屏渲染 FBO，将其作为反射的主要材质
 
 ```js
 const bgFBO = new kokomi.FBO(this, {
@@ -317,24 +319,24 @@ varying vec2 vScreenspace;
 
 void main(){
     vec2 p=vUv;
-    
+
     vec4 normalColor=texture(uNormalTexture,p);
-    
+
     if(normalColor.a<.5){
         discard;
     }
-    
+
     vec3 normal=normalize(normalColor.rgb);
-    
+
     vec2 bgUv=vScreenspace+normal.xy*uRefraction;
     vec4 bgColor=texture(uBgRt,bgUv);
-    
+
     float brightness=uBaseBrightness*pow(normal.b,10.);
-    
+
     vec3 col=bgColor.rgb+vec3(brightness);
 
     col=vec3(p,0.);
-    
+
     gl_FragColor=vec4(col,1.);
 }
 ```
@@ -389,7 +391,7 @@ flicker();
 
 为了让文字灯光看上去更加明亮，可以用`Bloom`滤镜来照亮文字
 
-由于后期处理中原先renderer的抗锯齿会失效，故用`SMAA`滤镜来实现抗锯齿
+由于后期处理中原先 renderer 的抗锯齿会失效，故用`SMAA`滤镜来实现抗锯齿
 
 ```js
 // postprocessing

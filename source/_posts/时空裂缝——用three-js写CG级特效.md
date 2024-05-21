@@ -1,15 +1,17 @@
-title: 用three.js创造时空裂缝特效
+title: 用 three.js 创造时空裂缝特效
 author: alphardex
 abbrlink: 11844
 tags: []
 categories: []
 date: 2022-11-21 14:48:00
+
 ---
-呀哈喽！这里是alphardex。
+
+呀哈喽！这里是 alphardex。
 
 ![Snipaste_2022-11-21_22-35-00.jpg](https://s2.loli.net/2022/11/21/ZzaI37T2B5igGX4.jpg)
 
-最近受到轮回系作品[《寒蝉鸣泣之时》](https://www.agemys.net/detail/20200118)中时空裂缝场景的启发，我用three.js实现了一个实时渲染的时空裂缝场景。本文将简要地介绍下实现该效果的要点。
+最近受到轮回系作品[《寒蝉鸣泣之时》](https://www.agemys.net/detail/20200118)中时空裂缝场景的启发，我用 three.js 实现了一个实时渲染的时空裂缝场景。本文将简要地介绍下实现该效果的要点。
 
 以下特效全屏观看效果最佳~
 
@@ -29,9 +31,9 @@ https://code.juejin.cn/pen/7168065415069827124
 
 要想创建玻璃碎片一般的形状的话，也就是要创造一个多边形的形状
 
-这就要用到kokomi.js的这2个函数[createPolygonShape](https://github.com/alphardex/kokomi.js/blob/main/src/utils/misc.ts#L146)和[polySort](https://github.com/alphardex/kokomi.js/blob/main/src/utils/math.ts#L16)：前者能接收一系列的点来创造一个多边形`Shape`，后者能给无序的点进行排序以符合多边形的描画
+这就要用到 kokomi.js 的这 2 个函数[createPolygonShape](https://github.com/alphardex/kokomi.js/blob/main/src/utils/misc.ts#L146)和[polySort](https://github.com/alphardex/kokomi.js/blob/main/src/utils/math.ts#L16)：前者能接收一系列的点来创造一个多边形`Shape`，后者能给无序的点进行排序以符合多边形的描画
 
-创建形状`Shape`后，再传进`ExtrudeGeometry`将其3D化成`geometry`即可，这里`depth`等值故意设得很小，是为了模拟玻璃碎片的纤细程度
+创建形状`Shape`后，再传进`ExtrudeGeometry`将其 3D 化成`geometry`即可，这里`depth`等值故意设得很小，是为了模拟玻璃碎片的纤细程度
 
 ```js
 let points = [
@@ -149,24 +151,24 @@ this.update(() => {
 
 ![5.gif](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bdf2ed84be2141118a9edfb8ae65a1d1~tplv-k3u1fbpfcp-zoom-1.image)
 
-接下来还有2点可以优化下：
+接下来还有 2 点可以优化下：
 
-1. 要想达成一种大小错落的层次感，我们可以拷贝一份多边形组，将其的z轴位置往后移即可
-2. 要想达成无限上升的动画“假象”，我们需要再整体拷贝一份多边形组（包括组本身和偏移z轴后的组），将它和之前的那组在y轴上错开，这样动画就能无限衔接了
+1. 要想达成一种大小错落的层次感，我们可以拷贝一份多边形组，将其的 z 轴位置往后移即可
+2. 要想达成无限上升的动画“假象”，我们需要再整体拷贝一份多边形组（包括组本身和偏移 z 轴后的组），将它和之前的那组在 y 轴上错开，这样动画就能无限衔接了
 
 ## 光照
 
 这里可以自由表现，可以尝试以下几种手法：
 
 1. 漫反射光和镜面反射光相结合
-2. 扭曲顶点、法线和uv
+2. 扭曲顶点、法线和 uv
 3. 根据光线动态计算透明度，以形成玻璃般的效果
 
 ## 后期处理
 
 同样也可以自由表现，可以尝试以下几种手法：
 
-1. RGB扭曲（该特效所采用的）
+1. RGB 扭曲（该特效所采用的）
 2. 色差
 3. 景深效果
 4. 噪声点阵

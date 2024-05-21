@@ -4,12 +4,14 @@ abbrlink: 23735
 tags: []
 categories: []
 date: 2021-06-30 14:17:00
+
 ---
+
 ## 前言
 
-大家好，这里是 CSS兼WebGL 魔法使——alphardex。
+大家好，这里是 CSS 兼 WebGL 魔法使——alphardex。
 
-上周末刚在原神里抽到了“火花骑士”可莉，于是就心血来潮，想用three.js来实现一种火系的特效，不是炸弹的爆炸，而是炸弹爆炸后在草上留下的火花效果
+上周末刚在原神里抽到了“火花骑士”可莉，于是就心血来潮，想用 three.js 来实现一种火系的特效，不是炸弹的爆炸，而是炸弹爆炸后在草上留下的火花效果
 
 [![RBvmVJ.jpg](https://z3.ax1x.com/2021/06/30/RBvmVJ.jpg)](https://imgtu.com/i/RBvmVJ)
 
@@ -23,15 +25,15 @@ date: 2021-06-30 14:17:00
 
 ## 准备工作
 
-在开始本项目之前，你首先要了解ray marching这个概念，如果不了解也没关系，笔者之前写过一篇介绍它的[入门文章](https://juejin.cn/post/6934461126977519629)，或者通过[这篇文章](http://jamie-wong.com/2016/07/15/ray-marching-signed-distance-functions/)也可以入门，掌握了基础概念后就可以开始了
+在开始本项目之前，你首先要了解 ray marching 这个概念，如果不了解也没关系，笔者之前写过一篇介绍它的[入门文章](https://juejin.cn/post/6934461126977519629)，或者通过[这篇文章](http://jamie-wong.com/2016/07/15/ray-marching-signed-distance-functions/)也可以入门，掌握了基础概念后就可以开始了
 
 本项目需要用到：
 
-笔者的[three.js模板](https://codepen.io/alphardex/pen/yLaQdOq)：点击右下角的fork即可复制一份
+笔者的[three.js 模板](https://codepen.io/alphardex/pen/yLaQdOq)：点击右下角的 fork 即可复制一份
 
 着色器模块化：[glslify](https://github.com/glslify/glslify)
 
-着色器npm包：`glsl-noise`,`glsl-sdf-primitives`,`glsl-sdf-ops`
+着色器 npm 包：`glsl-noise`,`glsl-sdf-primitives`,`glsl-sdf-ops`
 
 ## 正文
 
@@ -121,7 +123,7 @@ class RayMarchingFire extends Base {
 ### 创建发光渐变椭圆
 
 仔细观察火花的形状你会发现其实它的大致形状像一个椭圆，而且还是发光的渐变椭圆，于是我们就要想办法来创建这种形状。
-简要说下思路：ray marching获取的值改成光线位置pos和光线移动的进度strength，光线位置的y轴将用于设定火花的颜色；光线移动的进度strength用于设定火花的形状（这里就是椭圆）
+简要说下思路：ray marching 获取的值改成光线位置 pos 和光线移动的进度 strength，光线位置的 y 轴将用于设定火花的颜色；光线移动的进度 strength 用于设定火花的形状（这里就是椭圆）
 
 ```glsl
 #pragma glslify:centerUv=require(../modules/centerUv)
@@ -172,20 +174,20 @@ vec4 rayMarch(vec3 eye,vec3 ray){
 void main(){
     vec2 p=centerUv(vUv,uResolution);
     p=p*vec2(1.6,-1);
-    
+
     vec3 ro=vec3(0.,-2.,4.);
     vec3 ta=vec3(0.,-2.5,-1.5);
     float fl=1.25;
     vec3 rd=getRayDirection(p,ro,ta,fl);
-    
+
     vec3 color=vec3(0.);
-    
+
     vec4 result=rayMarch(ro,rd);
-    
+
     float strength=pow(result.w*2.,4.);
     vec3 ellipse=vec3(strength);
     color=ellipse;
-    
+
     gl_FragColor=vec4(color,1.);
 }
 ```
@@ -238,7 +240,7 @@ mat3 setCamera(in vec3 ro,in vec3 ta,float cr)
 
 接下来就对这个椭圆应用上噪声（这里选了传统噪声，为了更好看的外观，也可以选择其他的噪声）
 
-``` glsl
+```glsl
 float fire(vec3 p){
     vec3 p2=p*vec3(1.,.5,1.)+vec3(0.,1.,0.);
     float geo=sdSphere(p2,1.);
@@ -253,20 +255,20 @@ float fire(vec3 p){
 
 [![R0fRFH.gif](https://z3.ax1x.com/2021/06/30/R0fRFH.gif)](https://imgtu.com/i/R0fRFH)
 
-莫名感觉像黑魂3里的芙莉德修女的黑焰，尽管这样也很cool，我们还是给它加上颜色，让它更像现实中的火花
+莫名感觉像黑魂 3 里的芙莉德修女的黑焰，尽管这样也很 cool，我们还是给它加上颜色，让它更像现实中的火花
 
 ### 给火花加上颜色
 
-将颜色通过mix函数混合起来（强度是光线位置的y轴），和之前的颜色相乘即可
+将颜色通过 mix 函数混合起来（强度是光线位置的 y 轴），和之前的颜色相乘即可
 
 ```glsl
 void main(){
     ...
-    
+
     float fireBody=result.y/64.;
     vec3 mixColor=mix(uColor1,uColor2,fireBody);
     color*=mixColor;
-    
+
     gl_FragColor=vec4(color,1.);
 }
 ```

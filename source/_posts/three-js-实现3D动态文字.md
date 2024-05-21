@@ -1,15 +1,17 @@
-title: three.js 实现3D动态文字
+title: three.js 实现 3D 动态文字
 author: alphardex
 abbrlink: 23487
 tags: []
 categories: []
 date: 2021-02-21 16:38:00
+
 ---
+
 ## 前言
 
 大家好，这里是 CSS 魔法使——alphardex。
 
-之前在逛国外网站的时候，发现有些网站的文字是刻在3D图形上的，并且能在图形上运动，视觉效果相当不错，于是笔者就也想用three.js来尝试复现出这种效果
+之前在逛国外网站的时候，发现有些网站的文字是刻在 3D 图形上的，并且能在图形上运动，视觉效果相当不错，于是笔者就也想用 three.js 来尝试复现出这种效果
 
 ![kinetic-text.gif](https://i.loli.net/2021/02/21/UnEqc5uBYvofiKt.gif)
 
@@ -19,13 +21,13 @@ date: 2021-02-21 16:38:00
 
 ## 准备工作
 
-笔者自行封装的three.js模板：[Three.js Starter](https://codepen.io/alphardex/pen/yLaQdOq)
+笔者自行封装的 three.js 模板：[Three.js Starter](https://codepen.io/alphardex/pen/yLaQdOq)
 
-读者可以点击右下角fork一份后再开始本项目
+读者可以点击右下角 fork 一份后再开始本项目
 
-本项目需要用到位图字体，可以直接复制[demo](https://codepen.io/alphardex/pen/wvoqjer)的HTML里的font字体代码
+本项目需要用到位图字体，可以直接复制[demo](https://codepen.io/alphardex/pen/wvoqjer)的 HTML 里的 font 字体代码
 
-一个注意点：`three-bmfont-text`这个库依赖全局的three.js，因此要在JS里额外引入一次three.js，如下图
+一个注意点：`three-bmfont-text`这个库依赖全局的 three.js，因此要在 JS 里额外引入一次 three.js，如下图
 
 ![Snipaste_2021-02-21_16-53-54.png](https://i.loli.net/2021/02/21/XK95mTdu8BozYch.png)
 
@@ -33,7 +35,7 @@ date: 2021-02-21 16:38:00
 
 1. 加载位图字体文件，将其转化为文字对象所需要的形状和材质
 2. 创建文字对象
-3. 创建渲染目标，可以理解为canvas中的canvas，因为接下来我们要将文字对象本身当做贴图
+3. 创建渲染目标，可以理解为 canvas 中的 canvas，因为接下来我们要将文字对象本身当做贴图
 4. 创建承载字体的容器，将文字对象作为贴图贴上去
 5. 动画
 
@@ -45,9 +47,7 @@ date: 2021-02-21 16:38:00
 <div class="relative w-screen h-screen">
   <div class="kinetic-text w-full h-full bg-blue-1"></div>
   <div class="font">
-    <font>
-      一坨从demo里CV而来的字体代码
-    </font>
+    <font> 一坨从demo里CV而来的字体代码 </font>
   </div>
 </div>
 ```
@@ -83,8 +83,8 @@ class KineticText extends Base {
       torusKnot: {
         vertexShader: kineticTextTorusKnotVertexShader,
         fragmentShader: kineticTextTorusKnotFragmentShader,
-        geometry: new THREE.TorusKnotGeometry(9, 3, 768, 3, 4, 3)
-      }
+        geometry: new THREE.TorusKnotGeometry(9, 3, 768, 3, 4, 3),
+      },
     };
     this.meshNames = Object.keys(this.meshConfig);
     this.params = {
@@ -94,7 +94,7 @@ class KineticText extends Base {
       color: "#000000",
       frequency: 0.5,
       text: "ALPHARDEX",
-      cameraZ: 2.5
+      cameraZ: 2.5,
     };
   }
   // 初始化
@@ -127,7 +127,7 @@ class KineticText extends Base {
     return new Promise((resolve) => {
       const fontGeo = createGeometry({
         font,
-        text
+        text,
       });
       const loader = new THREE.TextureLoader();
       loader.load(fontAtlas, (texture) => {
@@ -137,7 +137,7 @@ class KineticText extends Base {
             side: THREE.DoubleSide,
             transparent: true,
             negate: false,
-            color: 0xffffff
+            color: 0xffffff,
           })
         );
         resolve({ fontGeo, fontMat });
@@ -148,7 +148,7 @@ class KineticText extends Base {
     const { fontGeo, fontMat } = await this.loadFontText(text);
     const textMesh = this.createMesh({
       geometry: fontGeo,
-      material: fontMat
+      material: fontMat,
     });
     textMesh.position.set(-0.965, -0.525, 0);
     textMesh.rotation.set(ky.deg2rad(180), 0, 0);
@@ -162,7 +162,7 @@ class KineticText extends Base {
 
 #### 顶点着色器
 
-通用模板，直接CV即可
+通用模板，直接 CV 即可
 
 ```glsl
 varying vec2 vUv;
@@ -173,7 +173,7 @@ void main(){
     vec4 viewPosition=viewMatrix*modelPosition;
     vec4 projectedPosition=projectionMatrix*viewPosition;
     gl_Position=projectedPosition;
-    
+
     vUv=uv;
     vPosition=position;
 }
@@ -181,7 +181,7 @@ void main(){
 
 #### 片元着色器
 
-利用`fract`函数创建重复的贴图，加上位移距离`displacement`使得贴图能随着时间的增加而动起来，再用`clamp`函数来根据z轴大小限定阴影的范围，意思是离画面越远则阴影越重，反之离画面越近则阴影越轻
+利用`fract`函数创建重复的贴图，加上位移距离`displacement`使得贴图能随着时间的增加而动起来，再用`clamp`函数来根据 z 轴大小限定阴影的范围，意思是离画面越远则阴影越重，反之离画面越近则阴影越轻
 
 ```glsl
 uniform sampler2D uTexture;
@@ -252,26 +252,26 @@ class KineticText extends Base {
       fragmentShader: meshConfig.fragmentShader,
       uniforms: {
         uTime: {
-          value: 0
+          value: 0,
         },
         uVelocity: {
-          value: this.params.velocity
+          value: this.params.velocity,
         },
         uTexture: {
-          value: this.rt.texture
+          value: this.rt.texture,
         },
         uShadow: {
-          value: this.params.shadow
+          value: this.params.shadow,
         },
         uFrequency: {
-          value: this.params.frequency
-        }
-      }
+          value: this.params.frequency,
+        },
+      },
     });
     this.material = material;
     const mesh = this.createMesh({
       geometry,
-      material
+      material,
     });
     this.mesh = mesh;
   }
@@ -303,4 +303,4 @@ this.cameraPosition = new THREE.Vector3(0, 0, 40);
 
 [Kinetic Text](https://codepen.io/alphardex/pen/wvoqjer)
 
-demo里不止本文创建的这一种形状，大家可以随意把玩。
+demo 里不止本文创建的这一种形状，大家可以随意把玩。
