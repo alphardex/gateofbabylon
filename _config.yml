@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 魔法使之家
-subtitle: "青春で何が悪い"
-description: "分享WebGL、CSS等前端技术。"
+title: 名無声
+subtitle: "迷子でもいい、迷子でも進め"
+description: '"普通"とか"あたりまえ"ってなんだろう'
 keywords:
-  - WebGL
-  - CSS
+  - Three.js
+  - Shader
   - 前端
 author: alphardex
 language: zh-CN
@@ -16,8 +16,8 @@ timezone: "Asia/Shanghai"
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://alphardex.github.io/gateofbabylon/
-root: /gateofbabylon/
+url: https://alphardex.github.io/mygo/
+root: /mygo/
 permalink: posts/:abbrlink/
 permalink_defaults:
 pretty_urls:
@@ -118,4 +118,5 @@ abbrlink:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
+  repo: git@github.com:alphardex/mygo.git
   branch: gh-pages

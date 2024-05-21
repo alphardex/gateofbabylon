@@ -2,26 +2,26 @@
 # Theme color for customize
 # Notice: color value must in double quotes like "#000" or may cause error!
 # ---------------
-# theme_color:
-#   enable: true
-#   main: "#49B1F5"
-#   paginator: "#00C4B6"
-#   button_hover: "#FF7242"
-#   text_selection: "#00C4B6"
-#   link_color: "#858585"
-#   hr_color: "#A4D8FA"
-#   tag_start_color: "#A4D8FA"
-#   tag_end_color: "#1B9EF3"
-#   header_text_color: "#EEEEEE"
-#   footer_text_color: "#EEEEEE"
+theme_color:
+  enable: true
+  main: "#3388BB"
+  paginator: "#3388BB"
+  button_hover: "#287AAC"
+  text_selection: "#3388BB"
+  link_color: "#3388BB"
+  hr_color: "rgba(51, 135, 187, .15)"
+  tag_start_color: "rgba(51, 135, 187, .15)"
+  tag_end_color: "#3388BB"
+  header_text_color: "#FFFFFF"
+  footer_text_color: "#FFFFFF"
 
 # Main menu navigation
 menu:
-  Home: /gateofbabylon/
-  Archives: /gateofbabylon/archives
-  Tags: /gateofbabylon/tags
-  Categories: /gateofbabylon/categories
-  About: /gateofbabylon/about
+  Home: /mygo/
+  Archives: /mygo/archives
+  # Tags: /mygo/tags
+  # Categories: /mygo/categories
+  About: /mygo/about
   #XXX: /xxx
 
 # Favicon
@@ -53,12 +53,12 @@ highlight_theme: default
 # And you need to add the `fa` or `fab` prefix by your self.
 # ---------------
 social:
+  user fa: https://haobinwang-2023.netlify.app/
   github fab: https://github.com/alphardex
   codepen fab: https://codepen.io/alphardex
   twitter fab: https://twitter.com/alphardex007
   code fa: https://juejin.im/user/5901b4faac502e0063cf9e02
-  user fa: https://www.v2ex.com/member/alphardex
-  rss fa: https://alphardex.github.io/gateofbabylon/atom.xml
+  rss fa: https://alphardex.github.io/mygo/atom.xml
 
 # Algolia search
 # ---------------
@@ -133,9 +133,9 @@ cdn:
 
 # Post info settings
 # ---------------
-avatar: https://i.loli.net/2020/06/06/J8LvW7ZgimqY26N.jpg
+avatar: https://s2.loli.net/2024/05/21/NhyV4THWaAgOwED.jpg
 
-top_img: https://i.loli.net/2020/06/06/n1hAqjue5DxGYf3.jpg
+top_img: https://s2.loli.net/2024/05/21/HtNjkzv1FEdAVby.jpg
 
 top_img_height: 60 # best range: 60 - 100
 
