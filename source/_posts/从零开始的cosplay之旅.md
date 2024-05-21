@@ -222,7 +222,7 @@ emmmm，早知道我就去实体店买鞋，以后再也不网购鞋子了 QAQ�
 
 以下是我 cosplay 的其中一张返图：
 
-![tomori](https://s2.loli.net/2024/05/20/Gy2RTIBMKiVLEps.jpg)
+![tomori](https://s2.loli.net/2024/05/21/xEIUtai5wn9CumL.jpg)
 
 尽管还有很多可以改进的地方，但第一次能这么玩 cos，我也算是满足了吧。
 
