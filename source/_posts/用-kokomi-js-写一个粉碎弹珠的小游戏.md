@@ -250,7 +250,7 @@ const createSketch = () => {
 export default createSketch;
 ```
 
-[![qOpPXQ.png](https://s1.ax1x.com/2022/04/05/qOpPXQ.png)](https://imgtu.com/i/qOpPXQ)
+[![qOpPXQ.png](https://s1.ax1x.com/2022/04/05/qOpPXQ.png)](https://imgse.com/i/qOpPXQ)
 
 ### 本阶段地址
 
@@ -351,7 +351,7 @@ class Shooter extends kokomi.Component {
 }
 ```
 
-[![qOFrf1.gif](https://s1.ax1x.com/2022/04/05/qOFrf1.gif)](https://imgtu.com/i/qOFrf1)
+[![qOFrf1.gif](https://s1.ax1x.com/2022/04/05/qOFrf1.gif)](https://imgse.com/i/qOFrf1)
 
 ### 发出 shoot 事件
 
@@ -600,7 +600,7 @@ class Breaker extends kokomi.Component {
 }
 ```
 
-[![qjaWfH.gif](https://s1.ax1x.com/2022/04/06/qjaWfH.gif)](https://imgtu.com/i/qjaWfH)
+[![qjaWfH.gif](https://s1.ax1x.com/2022/04/06/qjaWfH.gif)](https://imgse.com/i/qjaWfH)
 
 可以看到方块被瞬间击碎成无数个小碎片，简直完美！
 
@@ -853,7 +853,7 @@ const createSketch = () => {
 export default createSketch;
 ```
 
-[![qjjNff.gif](https://s1.ax1x.com/2022/04/06/qjjNff.gif)](https://imgtu.com/i/qjjNff)
+[![qjjNff.gif](https://s1.ax1x.com/2022/04/06/qjjNff.gif)](https://imgse.com/i/qjjNff)
 
 ### 本阶段地址
 
@@ -870,7 +870,7 @@ https://codesandbox.io/s/4-xz30nb?file=/src/app.ts
 
 个人美化后的结果如下
 
-[![qvovq0.gif](https://s1.ax1x.com/2022/04/06/qvovq0.gif)](https://imgtu.com/i/qvovq0)
+[![qvovq0.gif](https://s1.ax1x.com/2022/04/06/qvovq0.gif)](https://imgse.com/i/qvovq0)
 
 ### 本阶段地址
 

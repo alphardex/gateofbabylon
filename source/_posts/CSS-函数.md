@@ -182,7 +182,7 @@ body {
 }
 ```
 
-[![fb7wZV.png](https://z3.ax1x.com/2021/08/19/fb7wZV.png)](https://imgtu.com/i/fb7wZV)
+[![fb7wZV.png](https://z3.ax1x.com/2021/08/19/fb7wZV.png)](https://imgse.com/i/fb7wZV)
 
 #### 应用动画
 
@@ -232,7 +232,7 @@ body {
 }
 ```
 
-[![fqkIkF.gif](https://z3.ax1x.com/2021/08/19/fqkIkF.gif)](https://imgtu.com/i/fqkIkF)
+[![fqkIkF.gif](https://z3.ax1x.com/2021/08/19/fqkIkF.gif)](https://imgse.com/i/fqkIkF)
 
 #### 交错动画
 
@@ -265,7 +265,7 @@ body {
 }
 ```
 
-[![fqkzkD.gif](https://z3.ax1x.com/2021/08/19/fqkzkD.gif)](https://imgtu.com/i/fqkzkD)
+[![fqkzkD.gif](https://z3.ax1x.com/2021/08/19/fqkzkD.gif)](https://imgse.com/i/fqkzkD)
 
 地址：[Symmetric Line Animation](https://codepen.io/alphardex/pen/vYmqvpe)
 
@@ -316,7 +316,7 @@ body {
 }
 ```
 
-[![fLsvPx.png](https://z3.ax1x.com/2021/08/20/fLsvPx.png)](https://imgtu.com/i/fLsvPx)
+[![fLsvPx.png](https://z3.ax1x.com/2021/08/20/fLsvPx.png)](https://imgse.com/i/fLsvPx)
 
 #### 应用动画
 
@@ -344,7 +344,7 @@ body {
 }
 ```
 
-[![fLsGvD.gif](https://z3.ax1x.com/2021/08/20/fLsGvD.gif)](https://imgtu.com/i/fLsGvD)
+[![fLsGvD.gif](https://z3.ax1x.com/2021/08/20/fLsGvD.gif)](https://imgse.com/i/fLsGvD)
 
 #### 交错动画
 
@@ -381,7 +381,7 @@ body {
 }
 ```
 
-[![fL2Ppt.gif](https://z3.ax1x.com/2021/08/20/fL2Ppt.gif)](https://imgtu.com/i/fL2Ppt)
+[![fL2Ppt.gif](https://z3.ax1x.com/2021/08/20/fL2Ppt.gif)](https://imgse.com/i/fL2Ppt)
 
 地址：[Symmetric Grid Animation](https://codepen.io/alphardex/pen/zYwgdZO)
 
@@ -442,7 +442,7 @@ body {
 }
 ```
 
-[![fOJSZ8.gif](https://z3.ax1x.com/2021/08/20/fOJSZ8.gif)](https://imgtu.com/i/fOJSZ8)
+[![fOJSZ8.gif](https://z3.ax1x.com/2021/08/20/fOJSZ8.gif)](https://imgse.com/i/fOJSZ8)
 
 地址：[Shuffle Grid Animation](https://codepen.io/alphardex/pen/YzVmYaV)
 
@@ -504,7 +504,7 @@ body {
 }
 ```
 
-[![hSdtfI.png](https://z3.ax1x.com/2021/08/22/hSdtfI.png)](https://imgtu.com/i/hSdtfI)
+[![hSdtfI.png](https://z3.ax1x.com/2021/08/22/hSdtfI.png)](https://imgse.com/i/hSdtfI)
 
 #### 余弦排列
 
@@ -535,7 +535,7 @@ body {
 }
 ```
 
-[![hSwuNj.png](https://z3.ax1x.com/2021/08/22/hSwuNj.png)](https://imgtu.com/i/hSwuNj)
+[![hSwuNj.png](https://z3.ax1x.com/2021/08/22/hSwuNj.png)](https://imgse.com/i/hSwuNj)
 
 #### 波动动画
 
@@ -563,7 +563,7 @@ body {
 }
 ```
 
-[![hSwfPA.gif](https://z3.ax1x.com/2021/08/22/hSwfPA.gif)](https://imgtu.com/i/hSwfPA)
+[![hSwfPA.gif](https://z3.ax1x.com/2021/08/22/hSwfPA.gif)](https://imgse.com/i/hSwfPA)
 
 #### 交错动画
 
@@ -589,7 +589,7 @@ body {
 }
 ```
 
-[![hSwqaQ.gif](https://z3.ax1x.com/2021/08/22/hSwqaQ.gif)](https://imgtu.com/i/hSwqaQ)
+[![hSwqaQ.gif](https://z3.ax1x.com/2021/08/22/hSwqaQ.gif)](https://imgse.com/i/hSwqaQ)
 
 地址：[Rainbow Sine](https://codepen.io/alphardex/pen/GREKJbL)
 

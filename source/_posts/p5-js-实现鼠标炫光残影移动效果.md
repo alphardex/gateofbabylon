@@ -92,7 +92,7 @@ const sketch = (s: p5) => {
 };
 ```
 
-[![hYVmng.png](https://z3.ax1x.com/2021/08/30/hYVmng.png)](https://imgtu.com/i/hYVmng)
+[![hYVmng.png](https://z3.ax1x.com/2021/08/30/hYVmng.png)](https://imgse.com/i/hYVmng)
 
 ### 由线组成的任意多边形
 
@@ -159,7 +159,7 @@ const sketch = (s: p5) => {
 };
 ```
 
-[![hYVdE9.png](https://z3.ax1x.com/2021/08/30/hYVdE9.png)](https://imgtu.com/i/hYVdE9)
+[![hYVdE9.png](https://z3.ax1x.com/2021/08/30/hYVdE9.png)](https://imgse.com/i/hYVdE9)
 
 ### 高斯随机函数
 
@@ -220,7 +220,7 @@ const sketch = (s: p5) => {
 };
 ```
 
-[![hYVogf.gif](https://z3.ax1x.com/2021/08/30/hYVogf.gif)](https://imgtu.com/i/hYVogf)
+[![hYVogf.gif](https://z3.ax1x.com/2021/08/30/hYVogf.gif)](https://imgse.com/i/hYVogf)
 
 ### 跟随鼠标移动
 
@@ -257,7 +257,7 @@ const sketch = (s: p5) => {
 };
 ```
 
-[![hJj84H.gif](https://z3.ax1x.com/2021/08/30/hJj84H.gif)](https://imgtu.com/i/hJj84H)
+[![hJj84H.gif](https://z3.ax1x.com/2021/08/30/hJj84H.gif)](https://imgse.com/i/hJj84H)
 
 ### 炫起来！
 

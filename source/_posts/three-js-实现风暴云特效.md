@@ -25,7 +25,7 @@ date: 2021-06-27 14:19:00
 
 FBM 中文意思是分形布朗运动，另一种称呼是分形噪声（说明它也属于噪声的一种）。它常用于描绘各种自然之中的形状（山脉、云层、河流等）。概念是在一个 for 循环内叠加几次噪声（往往是 6 次，相当于一个八度 octave），并在叠加的同时升高频率，降低振幅。以下是一个[简易的 fbm 实现的噪声图案](https://codepen.io/alphardex/pen/xxdKpyy)
 
-[![RJXl11.jpg](https://z3.ax1x.com/2021/06/27/RJXl11.jpg)](https://imgtu.com/i/RJXl11)
+[![RJXl11.jpg](https://z3.ax1x.com/2021/06/27/RJXl11.jpg)](https://imgse.com/i/RJXl11)
 
 ```glsl
 #pragma glslify:centerUv=require(../modules/centerUv)
