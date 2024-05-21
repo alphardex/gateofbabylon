@@ -438,7 +438,7 @@ window.addEventListener("resize", () => {
 
 为了做出一个图片碎片运动相关的动画，或者是一个拼图游戏，我们就要对一张图片进行分割，且块数、大小等都能随意控制，这时CSS变量就能发挥它的用场了
 
-![](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/64639f4345124481abf3f088eee194a8~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://s2.loli.net/2024/05/21/t4uAWDa91EpjGQh.gif)
 
 ``` scss
 .puzzle {
@@ -532,13 +532,13 @@ const puzzle = new Puzzle(document.querySelector(".puzzle"));
 
 ## 案例3
 
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/135abf85ba5c40a9a5b2d6dec69c0d7c~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://s2.loli.net/2024/05/21/2ZKsqOiGob1LXP9.gif)
 
 本demo地址：[Orbit Reverse](https://codepen.io/alphardex/pen/jOqgyRm)
 
 ## 案例4
 
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c0d528f8b4634bd4acd3422723d8f772~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://s2.loli.net/2024/05/21/ihwOQl9WkeIpsLA.gif)
 
 本demo地址：[Motion Table - Solid Rotation](https://codepen.io/alphardex/pen/ExKzwwX)
 

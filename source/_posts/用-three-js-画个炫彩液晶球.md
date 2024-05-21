@@ -11,7 +11,7 @@ date: 2021-05-28 09:30:00
 
 本文我们将用three.js来画个炫彩液晶球，以下是最终实现的效果图
 
-![ball.gif](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bef735d3a39c4d34b253d628ae5d60a7~tplv-k3u1fbpfcp-zoom-mark-crop-v2:460:460:0:0.awebp)
+![ball.gif](https://s2.loli.net/2024/05/21/teT46XhKy29YMIV.webp)
 
 让我们开始吧！
 
@@ -103,7 +103,7 @@ class LiquidCrystal extends Base {
 }
 ```
 
-![1](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/644cf4e303e2441096955c892ce0a6c3~tplv-k3u1fbpfcp-zoom-1.image)
+![1](https://s2.loli.net/2024/05/21/zcCgUmyVh84WqDo.png)
 
 ### 顶点着色器
 
@@ -277,7 +277,7 @@ vec3 invert(vec3 n){
 
 最终效果如下
 
-![ball.gif](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bef735d3a39c4d34b253d628ae5d60a7~tplv-k3u1fbpfcp-zoom-mark-crop-v2:460:460:0:0.awebp)
+![ball.gif](https://s2.loli.net/2024/05/21/teT46XhKy29YMIV.webp)
 
 ## 项目地址
 

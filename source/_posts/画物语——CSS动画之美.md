@@ -29,7 +29,7 @@ date: 2020-09-29 13:49:00
 
 首先，让我们来看以下的一个动画
 
-![](https://s2.loli.net/2024/05/21/UsywpO1W2FjQxi4.gif)
+![](https://s2.loli.net/2024/05/21/vxPZ6rYFhIKakTt.gif)
 
 感觉如何？有点酷对吧，但当我们看它的源代码时，才发现居然要整整 12 个关键帧，还没算上时间轴的编排
 
@@ -460,7 +460,7 @@ split.chars.forEach((item, i) => {
 
 ### 交错
 
-![](https://s2.loli.net/2024/05/21/OC9KLuHGPbxF2an.gif)
+![](https://s2.loli.net/2024/05/21/4nxMpiyCNrSYcwR.gif)
 
 以上是一个缩放相关的动画，注意到放大的方块有 4 个，且都是放大到自身的大小，如果给它们加上不同的延时，就能达成交错的动画效果
 
@@ -509,7 +509,7 @@ split.chars.forEach((item, i) => {
 
 ### 描边
 
-![](https://s2.loli.net/2024/05/21/JQgFDlzeuIjNnOx.gif)
+![](https://s2.loli.net/2024/05/21/eUuRTVtXfAHgPON.gif)
 
 六边形可以通过矢量绘图软件绘制而成（笔者用的是[InkScape](https://inkscape.org/)）
 
@@ -571,7 +571,7 @@ split.chars.forEach((item, i) => {
 
 ### 环形运动
 
-![](https://s2.loli.net/2024/05/21/LOZfHhNjI4zMQVR.gif)
+![](https://s2.loli.net/2024/05/21/Sk6ma9TGvnDgMr2.gif)
 
 首先父元素毫无疑问是绕中心 360 旋转，关键就是子元素的位移距离要等于环的半径，这样就能达成环形旋转的效果了
 
@@ -607,7 +607,7 @@ split.chars.forEach((item, i) => {
 
 ### 3d 视角
 
-![](https://s2.loli.net/2024/05/21/i9obRstEvMe5AQj.gif)
+![](https://s2.loli.net/2024/05/21/5YElzQ7ic2dKHTA.gif)
 
 父元素设置`transform-style: preserve-3d`和`perspective`，子元素进行 3D 变换即可
 
@@ -632,7 +632,7 @@ split.chars.forEach((item, i) => {
 
 其实 ios 通知的折叠也是典型的 3d 变换，以下是它的 CSS 动画版实现
 
-![](https://s2.loli.net/2024/05/21/mApiTnPDqIoSthG.gif)
+![](https://s2.loli.net/2024/05/21/INLCkpl9GU2Euhz.gif)
 
 看到彩蛋了吗？没错，是春物
 
@@ -670,7 +670,7 @@ split.chars.forEach((item, i) => {
 
 依旧是一个彩蛋
 
-![](https://s2.loli.net/2024/05/21/a6ETNdJpAhHVROD.gif)
+![](https://s2.loli.net/2024/05/21/clVp7x6Z91FdJki.gif)
 
 该动画的灵感来源：[凭物语第 3 集开头](https://www.acfun.cn/bangumi/aa6003168_36123_1739764)
 
