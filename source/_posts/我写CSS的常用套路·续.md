@@ -110,7 +110,7 @@ date: 2020-10-09 15:00:00
 
 给多个方块应用交错动画会产生如下效果
 
-![](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b9b079bad28b4971a438db1960436d43~tplv-k3u1fbpfcp-zoom-1.image?imageView2/2/w/800/q/85)
+![b9b079bad28b4971a438db1960436d43~tplv-k3u1fbpfcp-zoom-1](https://s2.loli.net/2024/05/22/VDjPCGkqbZxSQpU.gif)
 
 ```scss
 .spiral-tower {
@@ -171,7 +171,8 @@ CSS.registerProperty({
 });
 ```
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/734029e9456449db98f013dde3d8dcfe~tplv-k3u1fbpfcp-zoom-1.image?imageView2/2/w/800/q/85)
+![734029e9456449db98f013dde3d8dcfe~tplv-k3u1fbpfcp-zoom-1](https://s2.loli.net/2024/05/22/ZiPTtLYSaBWJIN8.gif)
+
 本 demo 地址：[3D Stair Loading](https://codepen.io/alphardex/pen/YzqrGXb)
 
 # 文本分割
@@ -290,7 +291,7 @@ SVG 滤镜则更加灵活强大，以下是几个常见的滤镜使用场景
 }
 ```
 
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/cc85f2aef03c49d2bcf28f0e04b21625~tplv-k3u1fbpfcp-zoom-1.image?imageView2/2/w/800/q/85)
+![cc85f2aef03c49d2bcf28f0e04b21625~tplv-k3u1fbpfcp-zoom-1](https://s2.loli.net/2024/05/22/UDjFzYAVLCgENWl.gif)
 
 本 demo 地址：[SVG Filter Gooey Menu](https://codepen.io/alphardex/pen/GRZOvwJ)
 
@@ -342,7 +343,7 @@ SVG 滤镜则更加灵活强大，以下是几个常见的滤镜使用场景
 }
 ```
 
-![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/45881c14da48420b87f70a0b03296eb1~tplv-k3u1fbpfcp-zoom-1.image?imageView2/2/w/800/q/85)
+![45881c14da48420b87f70a0b03296eb1~tplv-k3u1fbpfcp-zoom-1](https://s2.loli.net/2024/05/22/VGsJEAL4KrNSikt.gif)
 
 本 demo 地址：[SVG Filter Glitch Button](https://codepen.io/alphardex/pen/mdPqmaM)
 
@@ -372,7 +373,7 @@ CSS 滤镜的 blur 是全方位模糊，而 SVG 滤镜的 blur 可以控制单�
 }
 ```
 
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/dc2320c3f44b4d29891eedfc5c09a94b~tplv-k3u1fbpfcp-zoom-1.image?imageView2/2/w/800/q/85)
+![dc2320c3f44b4d29891eedfc5c09a94b~tplv-k3u1fbpfcp-zoom-1](https://s2.loli.net/2024/05/22/y1GZ6HSFdsRcDxq.gif)
 
 本 demo 地址：[SVG Filter Motion Blur](https://codepen.io/alphardex/pen/KKzeLVO?editors=0110)
 
@@ -455,7 +456,7 @@ window.addEventListener("resize", () => {
 
 如果将鼠标跟踪和交错动画结合起来，再加点模糊滤镜，就能创作出帅气的残影效果
 
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/abe7f7ba794f4e759b7758e4ff25b64b~tplv-k3u1fbpfcp-zoom-1.image?imageslim)
+![abe7f7ba794f4e759b7758e4ff25b64b~tplv-k3u1fbpfcp-zoom-1](https://s2.loli.net/2024/05/22/XuPTxJgGrBjwE9H.gif)
 
 本 demo 地址：[Motion Table - Delay](https://codepen.io/alphardex/pen/xxVMEYp?editors=0110)
 
@@ -575,7 +576,7 @@ const puzzle = new Puzzle(document.querySelector(".puzzle"));
 
 ## 案例 5
 
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/dee916d09aab4f2ea6d60aa482627b1d~tplv-k3u1fbpfcp-zoom-1.image?imageView2/2/w/800/q/85)
+![dee916d09aab4f2ea6d60aa482627b1d~tplv-k3u1fbpfcp-zoom-1](https://s2.loli.net/2024/05/22/srfOpvG1eL3zSkR.gif)
 
 本 demo 地址：[Motion Table - Symmetric Move](https://codepen.io/alphardex/pen/jOqQgzy)
 
