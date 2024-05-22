@@ -9,7 +9,7 @@ date: 2022-11-21 14:48:00
 
 呀哈喽！这里是 alphardex。
 
-![Snipaste_2022-11-21_22-35-00.jpg](https://s2.loli.net/2022/11/21/ZzaI37T2B5igGX4.jpg)
+![Snipaste_2022-11-21_22-35-00.jpg](https://s2.loli.net/2024/05/22/jOlc4aJW1kXuz7M.jpg)
 
 最近受到轮回系作品[《寒蝉鸣泣之时》](https://www.agemys.net/detail/20200118)中时空裂缝场景的启发，我用 three.js 实现了一个实时渲染的时空裂缝场景。本文将简要地介绍下实现该效果的要点。
 
@@ -25,7 +25,7 @@ https://code.juejin.cn/pen/7168065415069827124
 
 首先，创造一个最初始的平面
 
-![1.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fc3acd2597964c6ab88eef75a2a39bf7~tplv-k3u1fbpfcp-zoom-1.image)
+![1.png](https://s2.loli.net/2024/05/22/uXiQUmTJMlxwqVd.png)
 
 建模，也就是定制化`geometry`
 
@@ -57,7 +57,7 @@ const geometry = new THREE.ExtrudeGeometry(shape, {
 geometry.center();
 ```
 
-![2.png](https://s2.loli.net/2022/11/21/Ik6m2Kzr3C1b7d8.png)
+![2.png](https://s2.loli.net/2024/05/22/2tRvTCauK3Y1NVE.png)
 
 ### 随机多边形
 
@@ -122,13 +122,13 @@ const generatePolygons = (config = {}) => {
 
 用该算法来创建多边形组，再调整下相机和多边形组的位置和缩放，就有了下图的效果
 
-![3.png](https://s2.loli.net/2022/11/21/rKUQM7spOq52Ddj.png)
+![3.png](https://s2.loli.net/2024/05/22/vWicgJeQ8bdCyBT.png)
 
 ## 漂浮动画
 
 将多边形组整体向上偏移，超出界限则重置高度
 
-![4.gif](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/67e8fc1e7d3542c79b95e14751ba8899~tplv-k3u1fbpfcp-zoom-1.image)
+![4.gif](https://s2.loli.net/2024/05/22/rCMd9sKfYo73cEG.gif)
 
 ```js
 let floatDistance = 0;
@@ -149,7 +149,7 @@ this.update(() => {
 
 将相机靠近，你就会觉得像是每个多边形在上升（其实是整体的容器在上升）
 
-![5.gif](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bdf2ed84be2141118a9edfb8ae65a1d1~tplv-k3u1fbpfcp-zoom-1.image)
+![5.gif](https://s2.loli.net/2024/05/22/DjdroncJSOgmAhq.gif)
 
 接下来还有 2 点可以优化下：
 
