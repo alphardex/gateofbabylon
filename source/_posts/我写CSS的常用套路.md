@@ -15,13 +15,13 @@ date: 2019-12-28 17:23:00
 
 # 交错动画
 
-![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee051447ef55?w=1110&h=726&f=gif&s=135905)
+![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/2/10/1702ee051447ef55~tplv-t2oaga2asx-image.image)
 
 有时候，我们需要给多个元素添加同一个动画，播放后，不难发现它们会一起运动，一起结束，这样就会显得很平淡无奇。
 
 那么如何将动画变得稍微有趣一点呢？很简单，既然它们都是同一时刻开始运动的，那么让它们不在同一时刻运动不就可以了吗。如何让它们不在同一时刻运动呢？注意到 CSS 动画有延迟（`delay`）这一属性。举个栗子，比如有十个元素播放十个动画，将第二个元素的动画播放时间设定为比第一个元素晚 0.5 秒（也就是将延迟设为 0.5 秒），其他元素以此类推，这样它们就会错开来，形成一种独特的视觉效果。
 
-![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee0514569bd2?w=1110&h=726&f=gif&s=135799)
+![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/2/10/1702ee0514569bd2~tplv-t2oaga2asx-image.image)
 
 这就是所谓的交错动画：通过设置不同的延迟时间，达到动画交错播放的效果。
 
@@ -31,7 +31,7 @@ date: 2019-12-28 17:23:00
 
 还有一种经常用到的玩法：用 JS 将句子或单词分割成字母，并给每个字母加上不同延时的动画，同样也很华丽
 
-![](https://user-gold-cdn.xitu.io/2020/2/8/1702507ba8f9dbf3?w=1110&h=726&f=gif&s=903374)
+![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/2/8/1702507ba8f9dbf3~tplv-t2oaga2asx-image.image)
 
 本 demo 地址：[Staggered LandIn Text](https://codepen.io/alphardex/full/KKwvKGY)
 
@@ -39,7 +39,7 @@ date: 2019-12-28 17:23:00
 
 一般我们都是从第一个元素开始交错的。但如果要从中间元素开始交错的话，就要给当前元素的延时各加上一个值，这个值就是中间元素的下标到当前元素的下标的距离（也就是下标之差的绝对值）与步长的乘积
 
-![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee051b0e892b?w=1134&h=588&f=gif&s=125063)
+![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/2/10/1702ee051b0e892b~tplv-t2oaga2asx-image.image)
 
 本 demo 地址：[Reveal Text](https://codepen.io/alphardex/full/eYYMYXJ)
 
@@ -47,7 +47,7 @@ date: 2019-12-28 17:23:00
 
 说到随机性，我们可以实现一种更疯狂的效果：给几百个粒子添加交错动画，并且交错时间随机，位置大小也都是随机。如此一来我们就能用纯 CSS 模拟出下雪的效果。
 
-![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee051cbfc17a?w=1898&h=787&f=png&s=342134)
+![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/2/10/1702ee051cbfc17a~tplv-t2oaga2asx-image.image)
 
 本 demo 地址：[Snow (Pure CSS)](https://codepen.io/alphardex/full/dyPorwJ)
 
@@ -55,7 +55,7 @@ date: 2019-12-28 17:23:00
 
 ## 伪类
 
-![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee051cf6ac5e?w=1110&h=726&f=gif&s=25256)
+![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/2/10/1702ee051cf6ac5e~tplv-t2oaga2asx-image.image)
 
 HTML 元素的状态是可以动态变化的。举个栗子，当你的鼠标悬浮到一个按钮上时，按钮就会变成“悬浮”状态，这时我们就可以利用伪类`:hover`来选中这一状态的按钮，并对其样式进行改变。
 
@@ -67,13 +67,13 @@ HTML 元素的状态是可以动态变化的。举个栗子，当你的鼠标悬
 
 谁规定按钮只能有一套边框的？利用绝对定位和`padding`，我们可以给按钮做出 3 套大小不一的边框来，这样效果更炫了
 
-![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee05232b8519?w=1312&h=669&f=gif&s=18569)
+![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/2/10/1702ee05232b8519~tplv-t2oaga2asx-image.image)
 
 本 demo 地址：[Button Hover Multiple Border Stroke](https://codepen.io/alphardex/full/ZEYXomW)
 
 ## 伪元素
 
-![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee056d1fae71?w=1110&h=726&f=gif&s=40196)
+![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/2/10/1702ee056d1fae71~tplv-t2oaga2asx-image.image)
 
 简而言之，伪元素就是在原先的元素基础上插入额外的元素，而且这个元素不充当 HTML 的标签，这样就能保持 HTML 结构的整洁。
 
@@ -91,11 +91,11 @@ HTML 元素的状态是可以动态变化的。举个栗子，当你的鼠标悬
 
 利用这个函数，我们可以用伪元素在原先文本的基础上“复制”出另一个文本，如下图所示
 
-![attr_text.png](https://user-gold-cdn.xitu.io/2020/2/10/1702ee05bd378d59?w=750&h=398&f=png&s=21239)
+![attr_text.png](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/2/10/1702ee05bd378d59~tplv-t2oaga2asx-image.image)
 
 看上去有点乱糟糟的对吧？没事，给它加上`overflow: hidden`，把多余的文本遮住。通过 JS 分割文本并应用交错动画，就得到了如下的效果，这也是接下来本文要讲的`overflow`障眼法
 
-![attr_text_hidden.gif](https://user-gold-cdn.xitu.io/2020/2/10/1702ee07142525a2?w=1381&h=669&f=gif&s=101942)
+![attr_text_hidden.gif](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/2/10/1702ee07142525a2~tplv-t2oaga2asx-image.image)
 
 本 demo 地址：[Staggered Float Text Menu](https://codepen.io/alphardex/full/wvBeXjd)
 
@@ -105,13 +105,13 @@ HTML 元素的状态是可以动态变化的。举个栗子，当你的鼠标悬
 
 笔者就用渐变来模拟那道光，通过`transform: translateX()`将其平移至右边
 
-![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee05e9a4d10a?w=1110&h=726&f=gif&s=318104)
+![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/2/10/1702ee05e9a4d10a~tplv-t2oaga2asx-image.image)
 
 但这样明显不对啊，这光为啥能被看见呢？不应该把它给“挡”起来吗？
 
 于是乎，给按钮加上`overflow: hidden`，光在按钮外的位置时就被隐藏起来了
 
-![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee05f2da6fd5?w=1110&h=726&f=gif&s=134168)
+![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/2/10/1702ee05f2da6fd5~tplv-t2oaga2asx-image.image)
 
 本 demo 地址：[Button Hover Shining](https://codepen.io/alphardex/pen/eYYzXBZ)
 
@@ -123,7 +123,7 @@ HTML 元素的状态是可以动态变化的。举个栗子，当你的鼠标悬
 
 目前来说，`input`元素也支持伪元素了，这就带来了另一种思路：用`appearance: none`消除`input`的默认样式，再用伪元素对其进行定制，这样`label`就可以保留它原先的样式了。
 
-![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee063382adbe?w=1312&h=669&f=gif&s=133528)
+![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/2/10/1702ee063382adbe~tplv-t2oaga2asx-image.image)
 
 本 demo 地址：[Todo List](https://codepen.io/alphardex/full/rNNPQwa)
 
@@ -137,7 +137,7 @@ HTML 元素的状态是可以动态变化的。举个栗子，当你的鼠标悬
 
 以下是我的个人名片，猜猜看里面用到了哪些技巧？
 
-![profile.gif](https://user-gold-cdn.xitu.io/2020/2/10/1702ee06bb76a3b3?w=1324&h=705&f=gif&s=441440)
+![profile.gif](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/2/10/1702ee06bb76a3b3~tplv-t2oaga2asx-image.image)
 
 首先，刚开始的四条边框出现的动画用到了`overflow`障眼法
 
@@ -157,7 +157,7 @@ HTML 元素的状态是可以动态变化的。举个栗子，当你的鼠标悬
 
 调整多个顶点的`border-radius`可以做出不规则的曲边形状
 
-![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee06bbbfc49d?w=1128&h=603&f=gif&s=134933)
+![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/2/10/1702ee06bbbfc49d~tplv-t2oaga2asx-image.image)
 
 本 demo 地址：[Nav Tab](https://codepen.io/alphardex/full/abbWOPR)
 
@@ -165,7 +165,7 @@ HTML 元素的状态是可以动态变化的。举个栗子，当你的鼠标悬
 
 为盒子添加阴影，增加盒子的立体感，可以多层叠加，并且会使阴影更加丝滑
 
-![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee06bc72977a?w=1128&h=603&f=gif&s=68238)
+![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/2/10/1702ee06bc72977a~tplv-t2oaga2asx-image.image)
 
 本 demo 地址：[Pagination](https://codepen.io/alphardex/full/QWwwwpp)
 
@@ -175,11 +175,11 @@ HTML 元素的状态是可以动态变化的。举个栗子，当你的鼠标悬
 
 利用这个特性我们可以在盒子内部的某个范围内设定颜色，做出一个新月形
 
-![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee06bdae7a82?w=1152&h=663&f=png&s=7496)
+![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/2/10/1702ee06bdae7a82~tplv-t2oaga2asx-image.image)
 
 再加点动画和滤镜效果，“猩红之月”闪亮登场！
 
-![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee0710ee13f8?w=1312&h=669&f=gif&s=436447)
+![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/2/10/1702ee0710ee13f8~tplv-t2oaga2asx-image.image)
 
 注意到它散发着淡淡的红光，其实就是 2 个伪元素应用了模糊滤镜所产生的效果
 
@@ -191,19 +191,19 @@ HTML 元素的状态是可以动态变化的。举个栗子，当你的鼠标悬
 
 ### 发光文本
 
-![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee0751c9e13e?w=1597&h=603&f=gif&s=2015749)
+![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/2/10/1702ee0751c9e13e~tplv-t2oaga2asx-image.image)
 
 本 demo 地址：[Staggered GlowIn Text](https://codepen.io/alphardex/full/Exxodoq)
 
 ### 霓虹文本
 
-![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee076a90febb?w=1312&h=669&f=gif&s=1083873)
+![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/2/10/1702ee076a90febb~tplv-t2oaga2asx-image.image)
 
 本 demo 地址：[Neon Text](https://codepen.io/alphardex/full/rNNwmZz)
 
 ### 伪 3D 文本
 
-![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee0770616364?w=1312&h=669&f=gif&s=454544)
+![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/2/10/1702ee0770616364~tplv-t2oaga2asx-image.image)
 
 本 demo 地址：[Staggered Bouncing 3D Loading](https://codepen.io/alphardex/full/QWWavvx)
 
@@ -211,7 +211,7 @@ HTML 元素的状态是可以动态变化的。举个栗子，当你的鼠标悬
 
 能将背景裁剪成文字的前景色，常用来和`color: transparent`配合生成渐变文本
 
-![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee07ea23e5ac?w=1597&h=622&f=gif&s=46919)
+![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/2/10/1702ee07ea23e5ac~tplv-t2oaga2asx-image.image)
 
 本 demo 地址：[Menu Hover Fill Text](https://codepen.io/alphardex/full/QWwveZG)
 
@@ -223,7 +223,7 @@ HTML 元素的状态是可以动态变化的。举个栗子，当你的鼠标悬
 
 线性渐变是笔者最常用的渐变
 
-![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee08051eab40?w=1312&h=669&f=gif&s=731765)
+![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/2/10/1702ee08051eab40~tplv-t2oaga2asx-image.image)
 
 这个作品用到了 HTML 的`dialog`标签，线性渐变背景，动画以及`overflow`障眼法，细心的你看出来了吗:)
 
@@ -235,7 +235,7 @@ HTML 元素的状态是可以动态变化的。举个栗子，当你的鼠标悬
 
 此外，由于背景可以叠加，我们可以叠加多个不同位置大小的径向渐变来生成圆点群，再加上动画就产生了一种微粒效果，无需多余的`div`元素
 
-![radial-particle.gif](https://user-gold-cdn.xitu.io/2020/2/10/1702ee0834f82a09?w=1074&h=657&f=gif&s=113535)
+![radial-particle.gif](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/2/10/1702ee0834f82a09~tplv-t2oaga2asx-image.image)
 
 本 demo 地址：[Particle Button](https://codepen.io/alphardex/full/OJPvMGx)
 
@@ -243,11 +243,11 @@ HTML 元素的状态是可以动态变化的。举个栗子，当你的鼠标悬
 
 圆锥渐变可以用于制作饼图
 
-![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee08546f0887?w=1138&h=508&f=png&s=14302)
+![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/2/10/1702ee08546f0887~tplv-t2oaga2asx-image.image)
 
 用一个伪元素叠在饼图上面，并将`content`设为某个值（这个值通过 CSS 变量计算出来），就能制作出度量计的效果，障眼法又一次完成了它的使命
 
-![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee08695df44f?w=1188&h=577&f=png&s=21433)
+![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/2/10/1702ee08695df44f~tplv-t2oaga2asx-image.image)
 
 本 demo 地址：[Gauge (No SVG)](https://codepen.io/alphardex/full/BaydVvQ)
 
@@ -259,7 +259,7 @@ PS 里的滤镜，`blur`最常用
 
 当`blur`滤镜和`contrast`滤镜一起使用时，会产生一种融合（`gooey`）的奇特效果
 
-![gooey.gif](https://user-gold-cdn.xitu.io/2020/2/10/1702ee089a916bc7?w=1324&h=705&f=gif&s=643477)
+![gooey.gif](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/2/10/1702ee089a916bc7~tplv-t2oaga2asx-image.image)
 
 本 demo 地址：[Snow Scratch](https://codepen.io/alphardex/full/BaBevXm)
 
@@ -267,7 +267,7 @@ PS 里的滤镜，`blur`最常用
 
 对背景应用滤镜，产生毛玻璃的效果
 
-![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee08b2840155?w=1597&h=622&f=gif&s=2724918)
+![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/2/10/1702ee08b2840155~tplv-t2oaga2asx-image.image)
 
 本 demo 地址：[Frosted Glass](https://codepen.io/alphardex/full/pooQMVp)
 
@@ -277,7 +277,7 @@ PS 里的混合模式，常用于文本在背景下的特殊效果
 
 以下利用滤色模式（`screen`）实现文本视频蒙版效果
 
-![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee08ca1668c6?w=1381&h=669&f=gif&s=3012320)
+![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/2/10/1702ee08ca1668c6~tplv-t2oaga2asx-image.image)
 
 本 demo 地址：[Video Mask Text](https://codepen.io/alphardex/full/wvvLYpV)
 
@@ -285,7 +285,7 @@ PS 里的混合模式，常用于文本在背景下的特殊效果
 
 PS 里的裁切，可以制作各种不规则形状。如果和动画结合也会相当有意思
 
-![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee08d117617e?w=1312&h=669&f=gif&s=271533)
+![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/2/10/1702ee08d117617e~tplv-t2oaga2asx-image.image)
 
 本 demo 地址：[Name Card Hover Expand](https://codepen.io/alphardex/full/ZEEBRrq)
 
@@ -293,7 +293,7 @@ PS 里的裁切，可以制作各种不规则形状。如果和动画结合也�
 
 由于`clip-path`有裁切功能，因此可以将多个文字叠在一起，并按比例裁切成多分，再应用交错动画，就能制作出酷炫的故障效果（`glitch`）。
 
-![glitch.gif](https://user-gold-cdn.xitu.io/2020/2/10/1702ee090c67ca6a?w=1563&h=577&f=gif&s=34542)
+![glitch.gif](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/2/10/1702ee090c67ca6a~tplv-t2oaga2asx-image.image)
 
 本 demo 地址：[Cross Bar Glitch Text](https://codepen.io/alphardex/full/VwLLLNG)
 
@@ -311,7 +311,7 @@ PS 里的遮罩。所谓遮罩，就是原始图片只显示遮罩图片非透�
 
 注意：为了消除锯齿，这个径向渐变的中间需要有一个额外的`color-stop`用于缓冲，长度设置为原长度加 0.5px 即可
 
-![1LxcPs.gif](https://user-gold-cdn.xitu.io/2020/2/13/1703e7bb22182d04?w=1348&h=634&f=gif&s=63533)
+![1LxcPs.gif](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/2/13/1703e7bb22182d04~tplv-t2oaga2asx-image.image)
 
 本 demo 地址：[Circle Arrow Nav](https://codepen.io/alphardex/full/MWwadod)
 
@@ -319,7 +319,7 @@ PS 里的遮罩。所谓遮罩，就是原始图片只显示遮罩图片非透�
 
 投影效果，不怎么常用，适合立体感强的作品
 
-![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee091c74c545?w=1632&h=669&f=gif&s=2683334)
+![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/2/10/1702ee091c74c545~tplv-t2oaga2asx-image.image)
 
 本 demo 地址：[Card Flip Reflection](https://codepen.io/alphardex/full/ExaZgxp)
 
@@ -337,7 +337,7 @@ PS 里的遮罩。所谓遮罩，就是原始图片只显示遮罩图片非透�
 
 既然能够获取鼠标的位置，那么跟踪鼠标的位置也就不是什么难事了：通过监听`mouseenter`和`mouseleave`事件，来获取鼠标出入一个元素时的位置，并用此坐标来当作鼠标的位移距离，监听`mousemove`事件，来获取鼠标在元素上移动时的位置，同样地用此坐标来当作鼠标的位移距离，这样一个跟踪鼠标的效果就实现了
 
-![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee0949a76b86?w=1632&h=639&f=gif&s=1805253)
+![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/2/10/1702ee0949a76b86~tplv-t2oaga2asx-image.image)
 
 本 demo 地址：[Menu Hover Image](https://codepen.io/alphardex/full/OJPmQGz)
 
@@ -353,17 +353,17 @@ CSS Houdini 是 CSS 的底层 API，它使我们能够通过这套接口来扩�
 
 还记得上文提到的圆锥渐变`conic-gradient()`吗？既然它可以用来制作饼图，那么我们能不能让饼图动起来呢？答案是肯定的，定义三个变量：`--color1`、`--color2`和`--pos`，其中`--pos`的语法类型为长度百分比`<length-percentage>`，将其从`0`变为`100%`，饼图就会顺时针旋转出现
 
-![conic-animate-basic.gif](https://user-gold-cdn.xitu.io/2020/2/10/1702ee09cad803ba?w=1204&h=573&f=gif&s=4239)
+![conic-animate-basic.gif](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/2/10/1702ee09cad803ba~tplv-t2oaga2asx-image.image)
 
 利用绝对定位和层叠上下文，我们可以叠加多个从小到大的饼图，再给它们设置不同的颜色，应用交错动画，就有了下面这个炫丽的效果
 
-![mawaru.gif](https://user-gold-cdn.xitu.io/2020/2/10/1702ee0a2594a4c1?w=1375&h=898&f=gif&s=204827)
+![mawaru.gif](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/2/10/1702ee0a2594a4c1~tplv-t2oaga2asx-image.image)
 
 本 demo 地址：[Mawaru](https://codepen.io/alphardex/full/RwNxpXQ)
 
 # 彩蛋
 
-![](https://user-gold-cdn.xitu.io/2020/2/10/1702ee0a43b8c2ed?w=1110&h=726&f=gif&s=337081)
+![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/2/10/1702ee0a43b8c2ed~tplv-t2oaga2asx-image.image)
 
 将交错动画和伪类伪元素结合起来写出来的慎重勇者风格的菜单
 
