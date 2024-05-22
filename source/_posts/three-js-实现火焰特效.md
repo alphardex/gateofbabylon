@@ -13,7 +13,7 @@ date: 2021-06-30 14:17:00
 
 上周末刚在原神里抽到了“火花骑士”可莉，于是就心血来潮，想用 three.js 来实现一种火系的特效，不是炸弹的爆炸，而是炸弹爆炸后在草上留下的火花效果
 
-[![RBvmVJ.jpg](https://z3.ax1x.com/2021/06/30/RBvmVJ.jpg)](https://imgse.com/i/RBvmVJ)
+![RBvmVJ.jpg](https://s2.loli.net/2024/05/22/T8uX6ZqyIec9GPd.jpg)
 
 游戏里的效果相对比较卡通化，而本文的效果将更加逼近现实一点
 
@@ -234,7 +234,7 @@ mat3 setCamera(in vec3 ro,in vec3 ta,float cr)
 #pragma glslify:export(setCamera)
 ```
 
-[![R0RM7Q.png](https://z3.ax1x.com/2021/06/30/R0RM7Q.png)](https://imgse.com/i/R0RM7Q)
+![R0RM7Q.png](https://s2.loli.net/2024/05/22/fAm7yc431HFdSqj.png)
 
 ### 用噪声生成火花
 
@@ -253,7 +253,7 @@ float fire(vec3 p){
 }
 ```
 
-[![R0fRFH.gif](https://z3.ax1x.com/2021/06/30/R0fRFH.gif)](https://imgse.com/i/R0fRFH)
+![R0fRFH.gif](https://s2.loli.net/2024/05/22/rPAuUct6ECGxbKl.gif)
 
 莫名感觉像黑魂 3 里的芙莉德修女的黑焰，尽管这样也很 cool，我们还是给它加上颜色，让它更像现实中的火花
 

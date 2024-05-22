@@ -13,7 +13,7 @@ date: 2022-04-13 15:46:00
 
 泼给莫，给托打贼！
 
-[![LKobMF.gif](https://s1.ax1x.com/2022/04/13/LKobMF.gif)](https://imgse.com/i/LKobMF)
+![LKobMF.gif](https://s2.loli.net/2024/05/22/Pk2d4hmnUBCeFSj.gif)
 
 <!--more-->
 
@@ -56,7 +56,7 @@ const sphere = new marcher.SphereSDF({
 layer.addPrimitive(sphere);
 ```
 
-[![LK4vIP.png](https://s1.ax1x.com/2022/04/13/LK4vIP.png)](https://imgse.com/i/LK4vIP)
+![LK4vIP.png](https://s2.loli.net/2024/05/22/VxuhfepCFP6diBX.png)
 
 ### 按钮
 
@@ -73,7 +73,7 @@ button.rotate(90, "x");
 layer.addPrimitive(button);
 ```
 
-[![LK5GIx.png](https://s1.ax1x.com/2022/04/13/LK5GIx.png)](https://imgse.com/i/LK5GIx)
+![LK5GIx.png](https://s2.loli.net/2024/05/22/enaQgK89iujW4v1.png)
 
 ### 上下球壳
 
@@ -125,7 +125,7 @@ layer.addPrimitive(shellLower);
 shellLower.intersect(clipBoxLower);
 ```
 
-[![LKI0pT.png](https://s1.ax1x.com/2022/04/13/LKI0pT.png)](https://imgse.com/i/LKI0pT)
+![LKI0pT.png](https://s2.loli.net/2024/05/22/ghei61qNyvPscfm.png)
 
 这里法线中间的按钮还是被球壳给挡住了，我们就要把挡住的部分给挖空
 
@@ -165,7 +165,7 @@ clipCylinderCenter2.subtract(shellLower);
 shellLower.hide();
 ```
 
-[![LKoECV.png](https://s1.ax1x.com/2022/04/13/LKoECV.png)](https://imgse.com/i/LKoECV)
+![LKoECV.png](https://s2.loli.net/2024/05/22/tev5Lb9VHN4IDnK.png)
 
 ### 美化
 
@@ -173,7 +173,7 @@ shellLower.hide();
 
 笔者优化后的结果如下
 
-[![LKobMF.gif](https://s1.ax1x.com/2022/04/13/LKobMF.gif)](https://imgse.com/i/LKobMF)
+![LKobMF.gif](https://s2.loli.net/2024/05/22/Pk2d4hmnUBCeFSj.gif)
 
 ## 项目地址
 
