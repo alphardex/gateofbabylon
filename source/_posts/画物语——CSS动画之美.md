@@ -640,7 +640,7 @@ split.chars.forEach((item, i) => {
 
 ### 随机性
 
-<img data-v-be216176="" src="https://user-gold-cdn.xitu.io/2020/6/22/172db1ae3f13f363?imageView2/2/w/800/q/85" class="carousel-image" style="left: 0px; transform: rotate(0deg) translate(0px, 0px);">
+![5cc31222734e4fc58faf1d23d4e9d562~tplv-k3u1fbpfcp-zoom-1](https://s2.loli.net/2024/05/22/HdARsq9xbQFmDjz.gif)
 
 主要用到以下 2 个 SCSS 的 Mixin 来生成随机的数据
 
@@ -660,7 +660,7 @@ split.chars.forEach((item, i) => {
 
 ### 截断法
 
-<img data-v-be216176="" src="https://user-gold-cdn.xitu.io/2020/5/29/1725e482d4266054?imageView2/2/w/800/q/85" class="carousel-image" style="left: 0px; transform: rotate(0deg) translate(0px, 0px); width: 583px; height: 540px;">
+![a82e7f3f4c0f41489cc59359dca90ead~tplv-k3u1fbpfcp-zoom-1](https://s2.loli.net/2024/05/22/f2WwYAe6Qxhk8zK.gif)
 
 主要利用了`overflow: hidden`这个属性来把多余的部分截掉，可以用来模拟各种效果（比如描边）
 
