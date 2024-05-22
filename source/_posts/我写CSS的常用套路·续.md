@@ -110,7 +110,7 @@ date: 2020-10-09 15:00:00
 
 给多个方块应用交错动画会产生如下效果
 
-![](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b9b079bad28b4971a438db1960436d43~tplv-k3u1fbpfcp-zoom-1.image?imageView2/2/w/800/q/85)
+![b9b079bad28b4971a438db1960436d43~tplv-k3u1fbpfcp-zoom-1.gif](https://s2.loli.net/2024/05/22/NQIYi5Hrfjn4xuG.gif)
 
 ```scss
 .spiral-tower {
@@ -171,7 +171,7 @@ CSS.registerProperty({
 });
 ```
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/734029e9456449db98f013dde3d8dcfe~tplv-k3u1fbpfcp-zoom-1.image?imageView2/2/w/800/q/85)
+![734029e9456449db98f013dde3d8dcfe~tplv-k3u1fbpfcp-zoom-1.gif](https://s2.loli.net/2024/05/22/AVP7aHhD4jsZMkI.gif)
 
 本 demo 地址：[3D Stair Loading](https://codepen.io/alphardex/pen/YzqrGXb)
 
@@ -196,7 +196,7 @@ t1.from(staggeredLandInText.chars, {
 });
 ```
 
-<img src="//p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6df36dee47cf479ba5e911a05ecf7a7b~tplv-k3u1fbpfcp-zoom-1.image" referrerpolicy="no-referrer"/>
+![6df36dee47cf479ba5e911a05ecf7a7b~tplv-k3u1fbpfcp-zoom-1.gif](https://s2.loli.net/2024/05/22/KkuphtmaOES3D1n.gif)
 
 简化版 demo 地址：[SplitText Starter](https://codepen.io/alphardex/pen/ZEWRBJp)
 
@@ -248,7 +248,7 @@ t1.to(staggeredScaleInChars, {
 });
 ```
 
-![](//p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5e2a7b70d00847c0bba699c38fb70d3f~tplv-k3u1fbpfcp-zoom-1.image)
+![5e2a7b70d00847c0bba699c38fb70d3f~tplv-k3u1fbpfcp-zoom-1.gif](https://s2.loli.net/2024/05/22/KAOVn5RX8UTWswh.gif)
 
 本 demo 地址：[Staggered Scale In Text](https://codepen.io/alphardex/pen/eYZLJqw)
 
@@ -291,7 +291,7 @@ SVG 滤镜则更加灵活强大，以下是几个常见的滤镜使用场景
 }
 ```
 
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/cc85f2aef03c49d2bcf28f0e04b21625~tplv-k3u1fbpfcp-zoom-1.image?imageView2/2/w/800/q/85)
+![cc85f2aef03c49d2bcf28f0e04b21625~tplv-k3u1fbpfcp-zoom-1.gif](https://s2.loli.net/2024/05/22/iF4dGrlqJSOMKUE.gif)
 
 本 demo 地址：[SVG Filter Gooey Menu](https://codepen.io/alphardex/pen/GRZOvwJ)
 
@@ -343,7 +343,7 @@ SVG 滤镜则更加灵活强大，以下是几个常见的滤镜使用场景
 }
 ```
 
-![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/45881c14da48420b87f70a0b03296eb1~tplv-k3u1fbpfcp-zoom-1.image?imageView2/2/w/800/q/85)
+![45881c14da48420b87f70a0b03296eb1~tplv-k3u1fbpfcp-zoom-1.gif](https://s2.loli.net/2024/05/22/vsFMbKUGZg6aBLk.gif)
 
 本 demo 地址：[SVG Filter Glitch Button](https://codepen.io/alphardex/pen/mdPqmaM)
 
@@ -373,7 +373,7 @@ CSS 滤镜的 blur 是全方位模糊，而 SVG 滤镜的 blur 可以控制单�
 }
 ```
 
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/dc2320c3f44b4d29891eedfc5c09a94b~tplv-k3u1fbpfcp-zoom-1.image?imageView2/2/w/800/q/85)
+![dc2320c3f44b4d29891eedfc5c09a94b~tplv-k3u1fbpfcp-zoom-1.gif](https://s2.loli.net/2024/05/22/iUZDmkPHWQE4nxr.gif)
 
 本 demo 地址：[SVG Filter Motion Blur](https://codepen.io/alphardex/pen/KKzeLVO?editors=0110)
 
@@ -381,7 +381,7 @@ CSS 滤镜的 blur 是全方位模糊，而 SVG 滤镜的 blur 可以控制单�
 
 有时候我们想做出一种过渡式的半透明效果，类似下图这样的
 
-![](//p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c5f6eec25ca84c62afbb83d6046e83f4~tplv-k3u1fbpfcp-zoom-1.image)
+![c5f6eec25ca84c62afbb83d6046e83f4~tplv-k3u1fbpfcp-zoom-1.png](https://s2.loli.net/2024/05/22/MIgSwm1AQdZPbTK.png)
 
 这时候就得借助 mask 属性了，因为图片与 mask 生成的渐变的 transparent 的重叠部分会变透明
 
@@ -400,7 +400,7 @@ demo 地址：[Gradient Mask Divider](https://codepen.io/alphardex/pen/WNwyjqw)
 
 和 clip-path 结合也会相当有意思，如下图所示的加载特效
 
-<img src="//p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bc6150dc5eca4582978200ac4cacf201~tplv-k3u1fbpfcp-zoom-1.image" referrerpolicy="no-referrer">
+![bc6150dc5eca4582978200ac4cacf201~tplv-k3u1fbpfcp-zoom-1.gif](https://s2.loli.net/2024/05/22/rv6XNU2WP9tGMnS.gif)
 
 demo 地址：[Mask Loader](https://codepen.io/alphardex/pen/LYGdxXa)
 
@@ -448,7 +448,7 @@ window.addEventListener("resize", () => {
 });
 ```
 
-<img src="//p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b3c933e3f4d3451ab80b8db3ba738d26~tplv-k3u1fbpfcp-zoom-1.image" referrerpolicy="no-referrer"/>
+![b3c933e3f4d3451ab80b8db3ba738d26~tplv-k3u1fbpfcp-zoom-1.gif](https://s2.loli.net/2024/05/22/PMgVXsoR3BN5Tz2.gif)
 
 简化版地址：[Mousemove Starter](https://codepen.io/alphardex/pen/abNKBdJ)
 
@@ -456,7 +456,7 @@ window.addEventListener("resize", () => {
 
 如果将鼠标跟踪和交错动画结合起来，再加点模糊滤镜，就能创作出帅气的残影效果
 
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/abe7f7ba794f4e759b7758e4ff25b64b~tplv-k3u1fbpfcp-zoom-1.image?imageslim)
+![abe7f7ba794f4e759b7758e4ff25b64b~tplv-k3u1fbpfcp-zoom-1.gif](https://s2.loli.net/2024/05/22/mzyA6OITCWelQs3.gif)
 
 本 demo 地址：[Motion Table - Delay](https://codepen.io/alphardex/pen/xxVMEYp?editors=0110)
 
@@ -464,7 +464,7 @@ window.addEventListener("resize", () => {
 
 为了做出一个图片碎片运动相关的动画，或者是一个拼图游戏，我们就要对一张图片进行分割，且块数、大小等都能随意控制，这时 CSS 变量就能发挥它的用场了
 
-![](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/64639f4345124481abf3f088eee194a8~tplv-k3u1fbpfcp-zoom-1.image)
+![64639f4345124481abf3f088eee194a8~tplv-k3u1fbpfcp-zoom-1.gif](https://s2.loli.net/2024/05/22/KT1ZEru8Cs6i5cJ.gif)
 
 ```scss
 .puzzle {
@@ -552,31 +552,31 @@ const puzzle = new Puzzle(document.querySelector(".puzzle"));
 
 ## 案例 1
 
-<img src="//p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/653e6a95e3ba4de492b4abf231aae84d~tplv-k3u1fbpfcp-zoom-1.image">
+![653e6a95e3ba4de492b4abf231aae84d~tplv-k3u1fbpfcp-zoom-1.gif](https://s2.loli.net/2024/05/22/85iM3XGxUA2eWFp.gif)
 
 本 demo 地址：[Elastic Love](https://codepen.io/alphardex/pen/gOpWpjq)
 
 ## 案例 2
 
-![](//p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/58470f3c1dd84ba398e6c89a435526cc~tplv-k3u1fbpfcp-zoom-1.image)
+![58470f3c1dd84ba398e6c89a435526cc~tplv-k3u1fbpfcp-zoom-1.gif](https://s2.loli.net/2024/05/22/8HgCGTXE4ODh1Jj.gif)
 
 本 demo 地址：[Infinite Line Animation](https://codepen.io/alphardex/pen/YzqOZOW)
 
 ## 案例 3
 
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/135abf85ba5c40a9a5b2d6dec69c0d7c~tplv-k3u1fbpfcp-zoom-1.image)
+![135abf85ba5c40a9a5b2d6dec69c0d7c~tplv-k3u1fbpfcp-zoom-1.gif](https://s2.loli.net/2024/05/22/jNSqAXGQ2Onl9Rb.gif)
 
 本 demo 地址：[Orbit Reverse](https://codepen.io/alphardex/pen/jOqgyRm)
 
 ## 案例 4
 
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c0d528f8b4634bd4acd3422723d8f772~tplv-k3u1fbpfcp-zoom-1.image)
+![c0d528f8b4634bd4acd3422723d8f772~tplv-k3u1fbpfcp-zoom-1.gif](https://s2.loli.net/2024/05/22/3RXIQZpASkiMtKv.gif)
 
 本 demo 地址：[Motion Table - Solid Rotation](https://codepen.io/alphardex/pen/ExKzwwX)
 
 ## 案例 5
 
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/dee916d09aab4f2ea6d60aa482627b1d~tplv-k3u1fbpfcp-zoom-1.image?imageView2/2/w/800/q/85)
+![dee916d09aab4f2ea6d60aa482627b1d~tplv-k3u1fbpfcp-zoom-1.gif](https://s2.loli.net/2024/05/22/UqB29XnpeDFAtyH.gif)
 
 本 demo 地址：[Motion Table - Symmetric Move](https://codepen.io/alphardex/pen/jOqQgzy)
 
@@ -596,6 +596,6 @@ const puzzle = new Puzzle(document.querySelector(".puzzle"));
 
 螺旋阶梯动画（灵感来自灰色的果实 OP）
 
-![](//p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/cdae6c6b5f32432d95829d696121e6bf~tplv-k3u1fbpfcp-zoom-1.image)
+![cdae6c6b5f32432d95829d696121e6bf~tplv-k3u1fbpfcp-zoom-1.png](https://s2.loli.net/2024/05/22/ayUD6bLEkn8VpAF.jpg)
 
 本 demo 地址：[Spiral Stair Loading](https://codepen.io/alphardex/pen/OJMXOVR)
