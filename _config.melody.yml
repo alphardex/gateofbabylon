@@ -110,6 +110,7 @@ tencent_analytics:
 # ---------------
 stylesheets:
   - /css/index.css
+  - /css/mygo.css
 # scripts loaded in the end of the body
 # ---------------
 scripts:
