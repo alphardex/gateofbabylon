@@ -19,7 +19,8 @@ a:hover {
 .article-container,
 #archive,
 .post-copyright,
-#vcomment {
+#vcomment,
+.social-share {
   padding: 56px 80px 56px;
   background: white;
   box-shadow: 0 2px 10px rgba(11, 38, 54, 0.15);
@@ -42,6 +43,11 @@ a:hover {
 
 .post-copyright:hover {
   box-shadow: 0 2px 10px rgba(11, 38, 54, 0.15);
+}
+
+.social-share {
+  width: 100%;
+  float: none !important;
 }
 
 #nav {

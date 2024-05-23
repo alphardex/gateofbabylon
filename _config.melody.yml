@@ -207,9 +207,9 @@ addThis:
   enable: false
   #pubid:
 
-# sharejs:
-# enable: false
-# disabled_sites:
+sharejs:
+  enable: true
+  disabled_sites:
 
 # Comments System
 # ---------------
