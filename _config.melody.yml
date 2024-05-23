@@ -142,7 +142,7 @@ avatar: https://s2.loli.net/2024/05/21/NhyV4THWaAgOwED.jpg
 
 top_img: https://s2.loli.net/2024/05/21/HtNjkzv1FEdAVby.jpg
 
-top_img_height: 60 # best range: 60 - 100
+top_img_height: 100 # best range: 60 - 100
 
 post_meta:
   date_type: created # created or updated
