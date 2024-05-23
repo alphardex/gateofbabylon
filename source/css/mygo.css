@@ -110,11 +110,13 @@ a:hover {
   line-height: 1.8rem;
 }
 
-#pagination a {
+#pagination a.page-number,
+a.extend {
   transition: 0.2s;
 }
 
-#pagination a:hover {
+#pagination a.page-number:hover,
+a.extend:hover {
   color: #0b2636;
   background: rgba(51, 135, 187, 0.15);
 }
