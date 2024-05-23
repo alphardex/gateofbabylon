@@ -17,7 +17,7 @@ date: 2021-06-30 14:17:00
 
 游戏里的效果相对比较卡通化，而本文的效果将更加逼近现实一点
 
-![](https://s2.loli.net/2024/05/21/ZFatTGLpQom4jXb.gif)
+![](https://s2.loli.net/2024/05/23/JRbsUDMTFGSyECm.gif)
 
 让我们开始吧！
 
@@ -273,7 +273,7 @@ void main(){
 }
 ```
 
-![](https://s2.loli.net/2024/05/21/ZFatTGLpQom4jXb.gif)
+![](https://s2.loli.net/2024/05/23/JRbsUDMTFGSyECm.gif)
 
 ## 项目地址
 

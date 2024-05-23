@@ -13,7 +13,7 @@ date: 2021-03-09 08:23:00
 
 以下是最终实现的效果图
 
-![explode.gif](https://i.loli.net/2021/03/09/behulLMfdQA8oRF.gif)
+![explode.gif](https://s2.loli.net/2024/05/23/tD2Twni3JUbCKYE.gif)
 
 撒，哈吉马路由！
 
@@ -396,7 +396,7 @@ class ParticleExplode extends Base {
 }
 ```
 
-![explode.gif](https://i.loli.net/2021/03/09/behulLMfdQA8oRF.gif)
+![explode.gif](https://s2.loli.net/2024/05/23/tD2Twni3JUbCKYE.gif)
 
 ## 项目地址
 

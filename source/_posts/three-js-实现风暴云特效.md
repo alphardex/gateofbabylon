@@ -13,7 +13,7 @@ date: 2021-06-27 14:19:00
 
 本文我们将用 three.js 来实现风暴云特效，以下是最终实现的效果图
 
-![](https://s2.loli.net/2024/05/21/UrX5tH1upRiIYLq.gif)
+![](https://s2.loli.net/2024/05/23/hjOzBTPLYAq8iEI.gif)
 
 让我们开始吧！
 
@@ -205,7 +205,7 @@ void main(){
 
 最终效果如下
 
-![](https://s2.loli.net/2024/05/21/UrX5tH1upRiIYLq.gif)
+![](https://s2.loli.net/2024/05/23/hjOzBTPLYAq8iEI.gif)
 
 ## 项目地址
 

@@ -193,7 +193,7 @@ vec3 rt2Tex=texture(uRt2,screenUv).xyz;
 lin=blendScreen(lin,rt2Tex*uRt2Opacity);
 ```
 
-![10.gif](https://s2.loli.net/2022/11/04/YUn9AEBeX6G8w5s.gif)
+![10.gif](https://s2.loli.net/2024/05/23/9FiJGI1LzecgNQ7.gif)
 
 ## 最后
 
