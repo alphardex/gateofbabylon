@@ -6,7 +6,7 @@ date: 2024-06-18 17:15:10
 tags:
 ---
 
-[TUIKit](https://cloud.tencent.com/document/product/269/64506)是腾讯的一个基于 Chat SDK 的组件库，目前支持 H5、小程序、uni-app，但并没有对 Taro 的支持。
+[TUIKit](https://cloud.tencent.com/document/product/269/64506)是腾讯的一个基于 Chat SDK 的 UI 组件库，目前支持 H5、小程序、uni-app，但并没有对 Taro 的支持。
 
 由于我的项目是基于 Taro 的，因此我先要把它 uni-app 的版本迁移到 Taro 上去。
 
@@ -410,6 +410,6 @@ module.exports = {
 
 ## 最后
 
-至此，基本迁移完成。
+费了一番功夫，总算迁移完成。
 
 只能说 TX 你做得好啊，你做的好。
