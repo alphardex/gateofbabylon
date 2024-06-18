@@ -16,6 +16,8 @@ tags:
 
 将[chat-uikit-uniapp](https://github.com/TencentCloud/chat-uikit-uniapp)克隆到本地，把里面原有的 .git 和 sample 删掉，自己初始化一个 git。
 
+当然，在初始化 git 之前，可以把项目名先改成`chat-uikit-taro`，毕竟 Taro 才是主体目标嘛。
+
 ```sh
 git clone https://github.com/TencentCloud/chat-uikit-uniapp.git
 cd chat-uikit-uniapp
