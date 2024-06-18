@@ -366,7 +366,7 @@ export default defineAppConfig({
 });
 ```
 
-## 优化包体积过大问题
+## 优化主包体积过大问题
 
 在`app.ts`中，光这一行代码，就会引入体积大小将近 700k 的`SDK`包。
 
@@ -378,9 +378,31 @@ import { TUILogin } from "@tencentcloud/tui-core";
 
 如果项目里有`echarts`这个大头，把它也放到分包里吧。
 
+建议用`webpack-bundle-analyzer`插件来直观地查看依赖大小，以进一步地优化体积。
+
+```sh
+npm i webpack-bundle-analyzer -D
+```
+
+`config/prod.ts`中这么配置：
+
+```ts
+module.exports = {
+  ...
+  mini: {
+    webpackChain(chain, webpack) {
+      chain
+        .plugin("analyzer")
+        .use(require("webpack-bundle-analyzer").BundleAnalyzerPlugin, []);
+    },
+  },
+  ...
+};
+```
+
 ## 其他优化
 
-进一步地魔改`TUIKit/components`里的组件吧，根据项目需求来进行取舍。
+可以根据项目需求来进一步地魔改`TUIKit/components`里的组件。
 
 ## 最后
 
