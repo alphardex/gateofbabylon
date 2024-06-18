@@ -6,7 +6,7 @@ date: 2024-06-18 17:15:10
 tags:
 ---
 
-[TUIKit](https://cloud.tencent.com/document/product/269/64506)是腾讯的一个 IM 的 SDK，目前支持 H5、小程序、uni-app，但并没有对 Taro 的支持。
+[TUIKit](https://cloud.tencent.com/document/product/269/64506)是腾讯的一个基于 Chat SDK 的组件库，目前支持 H5、小程序、uni-app，但并没有对 Taro 的支持。
 
 由于我的项目是基于 Taro 的，因此我先要把它 uni-app 的版本迁移到 Taro 上去。
 
@@ -69,6 +69,8 @@ Taro 的事件处理和 uni-app 也不一样，做以下的替换：
 
 ### 编译宏
 
+Taro 的编译宏和 uni-app 并不相同。
+
 先搜索`#ifdef`。
 
 `adapter-vue.ts`中，直接把`vue`指定为`vue3`版本。
@@ -111,6 +113,8 @@ export const initChat = (options: Record<string, string>) => {
 
 ### 去除 ts 里对 vue 的引入
 
+Taro 的 ts 文件里不能直接引入 vue 文件，不然会把编译好的字符串全部直出到页面上。
+
 `TUIKit/index.ts`中：
 
 ```ts
@@ -143,13 +147,15 @@ export {
 
 ### 重命名重名组件
 
+`TUIKit`有一个`Icon.vue`的组件，很容易跟项目所用的组件库里的组件重名，要给它换个名称。
+
 在所有`vue`文件中搜索`Icon.vue`，替换成`IconImage.vue`，同时将`import Icon from`替换成`import IconImage from`，再把`<Icon`替换成`<IconImage`，把`components/common`目录下的`Icon.vue`重命名为`IconImage.vue`。
 
 ### 调整样式
 
 搜索`:not(not)`相关样式，把它们全部注释掉。
 
-把所有的`scoped`去除。
+Taro 不支持局部样式，把所有的`scoped`去除。
 
 在`TUIKit/assets/styles/common.scss`中，把最顶上的样式重置删除（不是注释，直接删）。
 
@@ -165,13 +171,15 @@ export {
 
 ### 解决样式覆盖冲突
 
-上一步把`scoped`去除后，就可能会有样式污染的问题，最常见的是`.btn`。
+上一步把`scoped`去除后，样式就变成了全局样式，可能会产生样式污染的问题，最常见的是`.btn`会污染项目里原本就有的`.btn`。
 
 将`.btn`改个名吧，统一替换成`.tui-btn`，注意要只改样式和`html`，不要影响到其他逻辑里的`btn`。
 
 ### 替换导航路径
 
-在所有文件中搜索`/TUIKit/components/`，以以下规则进行替换：
+下面会写到 Taro 的页面跟 uni-app 并不相同，因此导航的路径也会不同。
+
+在所有文件中搜索`/TUIKit/components/`，按以下规则进行替换：
 
 - `/TUIKit/components/TUIChat/video-play` —— `/TUIKit/pages/TUIChat-video-play/TUIChat-video-play`
 - `/TUIKit/components/TUIChat/index` —— `/TUIKit/pages/TUIChat/TUIChat`
