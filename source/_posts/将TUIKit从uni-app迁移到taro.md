@@ -408,7 +408,7 @@ module.exports = {
 
 ## 其他优化
 
-可以根据项目需求来进一步地魔改`TUIKit/components`里的组件。
+可以根据项目需求来进一步地改进和优化`TUIKit/components`里的组件。
 
 ## 最后
 
