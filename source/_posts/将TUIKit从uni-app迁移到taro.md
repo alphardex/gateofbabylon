@@ -339,7 +339,7 @@ import TUIChat from "@/TUIKit/components/TUIChat/index.vue";
 </template>
 ```
 
-最后在`app.config.ts`里添加对应的分包。
+最后在`app.config.ts`里添加对应的分包（要看项目，不一定加所有的页面）。
 
 ```ts
 export default defineAppConfig({
@@ -368,17 +368,7 @@ export default defineAppConfig({
 
 ## 优化主包体积过大问题
 
-在`app.ts`中，光这一行代码，就会引入体积大小将近 700k 的`SDK`包。
-
-```ts
-import { TUILogin } from "@tencentcloud/tui-core";
-```
-
-这部分大小是算在主包里的，如果你小程序主包的页面很多且体积很大，就把除了`tab`页以外的页面全放到分包里吧。
-
-如果项目里有`echarts`这个大头，把它也放到分包里吧。
-
-建议用`webpack-bundle-analyzer`插件来直观地查看依赖大小，以进一步地优化体积。
+可以用`webpack-bundle-analyzer`插件来直观地查看依赖大小，以进一步地优化体积。
 
 ```sh
 npm i webpack-bundle-analyzer -D
@@ -399,6 +389,12 @@ module.exports = {
   ...
 };
 ```
+
+这样就能很直观地看到`TUIKit`相关的依赖足足占了 1 个多`M`，WTF！
+
+如果你小程序主包的页面很多且体积很大，就把除了`tab`页以外的页面全放到分包里吧。
+
+项目里有`echarts`这个大头的话，把它也放到分包里吧。
 
 ## 其他优化
 
