@@ -237,7 +237,8 @@ watch(
     "@tencentcloud/call-uikit-wechat": "latest",
     "@tencentcloud/call-uikit-vue2.6": "latest",
     "@tencentcloud/call-uikit-vue": "latest",
-    "@tencentcloud/tui-customer-service-plugin": "latest"
+    "@tencentcloud/tui-customer-service-plugin": "latest",
+    "@vue/composition-api": "^1.7.2"
   }
 }
 ```
